@@ -126,11 +126,15 @@ namespace BusinessLayer
 
         private bool _AddNewPerson()
         {
-
+            this.PersonID = clsPeopleDataAccess.AddNewPerson(this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.NationalNo, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
 
             return (this.PersonID != -1);
         }
 
+        public static DataTable GetCountries()
+        {
+            return clsPeopleDataAccess.GetCountries();
+        }
 
     }
 }

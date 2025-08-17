@@ -12,11 +12,25 @@ namespace Project19
 {
     public partial class UsrCtrlEditPerson : UserControl
     {
-        public UsrCtrlEditPerson()
+        
+        public UsrCtrlEditPerson(DataTable countrydt)
         {
             InitializeComponent();
+            SetUpUserControls(countrydt);
         }
+        public void SetUpUserControls(DataTable countries)
+        {
+            //DateTime MinAdultDate = DateTime.Today.AddYears(-18);
 
-        
+            //dtpDateOfBirth.MaxDate = MinAdultDate;
+            cmbCountry.DataSource = countries;
+            cmbCountry.DisplayMember = "CountryName";
+            cmbCountry.ValueMember = "CountryID";
+            cmbCountry.SelectedValue = 3;
+
+
+        }
+       
+
     }
 }

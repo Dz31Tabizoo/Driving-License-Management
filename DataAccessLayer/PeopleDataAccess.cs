@@ -124,5 +124,25 @@ namespace DataAccessLayer
             }            
         }
 
+
+
+        public static DataTable GetCountries()
+        {
+            string Query = "Select * From Countries ORDER BY CountryName;";
+            DataTable dt = new DataTable();
+
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            using (SqlCommand cmd = new SqlCommand(Query, cnx))
+            {
+                cnx.Open();
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    dt.Load(reader);
+                }
+            }
+
+            return dt;
+        }
     }
 }

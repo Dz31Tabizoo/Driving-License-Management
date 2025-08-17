@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,14 +15,19 @@ namespace Project19
 {
     public partial class Add_Edit_Person : KryptonForm
     {
-        public Add_Edit_Person()
-        {
-            InitializeComponent();
+        
+        public Add_Edit_Person(DataTable Country)
+        {            
+            InitializeComponent(Country);
         }
+        
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+
+        
     }
 }
