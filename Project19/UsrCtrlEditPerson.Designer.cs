@@ -70,6 +70,7 @@
             this.lblName = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblPersonID = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.svImage = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
             this.kryptonGroupBox1.Panel.SuspendLayout();
@@ -512,10 +513,11 @@
             // 
             this.lblEditPicture.Location = new System.Drawing.Point(642, 217);
             this.lblEditPicture.Name = "lblEditPicture";
-            this.lblEditPicture.Size = new System.Drawing.Size(97, 26);
+            this.lblEditPicture.Size = new System.Drawing.Size(99, 26);
             this.lblEditPicture.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditPicture.TabIndex = 13;
-            this.lblEditPicture.Values.Text = "Edit picture";
+            this.lblEditPicture.Values.Text = "Add Picture";
+            this.lblEditPicture.LinkClicked += new System.EventHandler(this.lblEditPicture_LinkClicked);
             // 
             // pictureBox1
             // 
@@ -707,5 +709,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtpDateOfBirth;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbCountry;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.SaveFileDialog svImage;
     }
 }
