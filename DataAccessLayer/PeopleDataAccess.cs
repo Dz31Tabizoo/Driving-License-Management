@@ -77,7 +77,52 @@ namespace DataAccessLayer
         }
 
 
+        public static int AddNewPerson(string firstname,  string secondname,  string thirdname,  string lastname,
+             string nationalNo,  DateTime dateofbirth,  byte gender,  string address,  string phone,  string email,
+             int nationalcountryid,  string imagepath)
+        {
 
+
+            string query = "INSERT INTO People (NationalNo,FirstName,SecondName,ThirdName,LastName,DateOfBirth,Gendor,Address,Phone,Email,NationalityCountryID,ImagePath)" +
+                "VALUES (@nationalNo,@firstname,@secondname,@thirdname,@lastname,@dateofbirth,@gender,@address,@phone,@email,@nationalitycountryid,@imagepath);" +
+                "SELECT SCOPE_IDENTITY();";
+
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            using (SqlCommand cmd = new SqlCommand(query, cnx))
+            {
+                cmd.Parameters.AddWithValue("@nationalNo", nationalNo);
+                cmd.Parameters.AddWithValue("@firstname", firstname);
+                cmd.Parameters.AddWithValue("@secondtname", secondname);
+                cmd.Parameters.AddWithValue("@thirdname", thirdname);
+                cmd.Parameters.AddWithValue("@lastname", lastname);
+                cmd.Parameters.AddWithValue("@dateofbirth", dateofbirth);
+                cmd.Parameters.AddWithValue("@gender", gender);
+                cmd.Parameters.AddWithValue("@address", address);
+                cmd.Parameters.AddWithValue("@phone", phone);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@nationalitycountryid", nationalcountryid);
+                cmd.Parameters.AddWithValue("@imagepath", imagepath);
+
+                try
+                {
+                    cnx.Open();
+
+                    object Result = cmd.ExecuteScalar();
+                    if (Result != null && int.TryParse(Result.ToString(), out int InsertedID))
+                    {
+                        return InsertedID;
+                    }
+                    else
+                    {
+                        return -1;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return -1;
+                }
+            }            
+        }
 
     }
 }

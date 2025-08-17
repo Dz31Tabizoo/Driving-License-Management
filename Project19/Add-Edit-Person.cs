@@ -7,16 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComponentFactory.Krypton.Toolkit;
+
 
 namespace Project19
 {
-    public partial class UsrCtrlEditPerson : UserControl
+    public partial class Add_Edit_Person : KryptonForm
     {
-        public UsrCtrlEditPerson()
+        public Add_Edit_Person()
         {
             InitializeComponent();
         }
 
-        
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

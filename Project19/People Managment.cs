@@ -109,5 +109,17 @@ namespace Project19
             
 
         }
+
+        
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblAddPerson_Click(object sender, EventArgs e)
+        {
+            KryptonForm form = new Add_Edit_Person();
+            form.ShowDialog();
+        }
     }
 }
