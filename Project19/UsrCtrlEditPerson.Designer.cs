@@ -70,7 +70,6 @@
             this.lblName = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblPersonID = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.svImage = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
             this.kryptonGroupBox1.Panel.SuspendLayout();
@@ -189,10 +188,10 @@
             this.dtpDateOfBirth.CalendarShowTodayCircle = false;
             this.dtpDateOfBirth.CalendarTodayDate = new System.DateTime(2025, 8, 17, 14, 3, 8, 0);
             this.dtpDateOfBirth.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.LowProfile;
-            this.dtpDateOfBirth.Location = new System.Drawing.Point(403, 143);
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(396, 143);
             this.dtpDateOfBirth.MinDate = new System.DateTime(2007, 12, 31, 0, 0, 0, 0);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
-            this.dtpDateOfBirth.Size = new System.Drawing.Size(196, 20);
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(203, 20);
             this.dtpDateOfBirth.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.dtpDateOfBirth.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.dtpDateOfBirth.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -522,7 +521,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Project19.Properties.Resources.user__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(616, 53);
+            this.pictureBox1.Location = new System.Drawing.Point(615, 43);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(158, 158);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -709,6 +708,5 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtpDateOfBirth;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbCountry;
         private System.Windows.Forms.ErrorProvider errorProvider;
-        private System.Windows.Forms.SaveFileDialog svImage;
     }
 }

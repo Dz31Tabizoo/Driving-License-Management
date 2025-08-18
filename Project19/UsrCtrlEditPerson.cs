@@ -32,9 +32,15 @@ namespace Project19
 
         private void lblEditPicture_LinkClicked(object sender, EventArgs e)
         {
-                       
+            ImageHandler imageHandler = new ImageHandler();
+
+            string imagePath = imageHandler.SelectAndSaveImage();
+            pictureBox1.Image = Image.FromFile(imagePath);
+            pictureBox1.BackColor = Color.Transparent;
+            if (string.IsNullOrEmpty(imagePath))
+            {
+                return ;
+            }
         }
-
-
     }
 }

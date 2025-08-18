@@ -110,6 +110,7 @@
     <Compile Include="Frm_Main_Menu.Designer.cs">
       <DependentUpon>Frm_Main_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImageHandler.cs" />
     <Compile Include="People Managment.cs">
       <SubType>Form</SubType>
     </Compile>
