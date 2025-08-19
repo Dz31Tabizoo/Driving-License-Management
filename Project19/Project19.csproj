@@ -92,11 +92,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add-Edit-Person.cs">
+    <Compile Include="UselessEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add-Edit-Person.Designer.cs">
-      <DependentUpon>Add-Edit-Person.cs</DependentUpon>
+    <Compile Include="UselessEdit.Designer.cs">
+      <DependentUpon>UselessEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Login.cs">
       <SubType>Form</SubType>
@@ -109,6 +109,12 @@
     </Compile>
     <Compile Include="Frm_Main_Menu.Designer.cs">
       <DependentUpon>Frm_Main_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Person_Add_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Person_Add_Edit.Designer.cs">
+      <DependentUpon>Frm_Person_Add_Edit.cs</DependentUpon>
     </Compile>
     <Compile Include="ImageHandler.cs" />
     <Compile Include="People Managment.cs">
@@ -143,14 +149,17 @@
     <Compile Include="UsrCtrlEditPerson.Designer.cs">
       <DependentUpon>UsrCtrlEditPerson.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Add-Edit-Person.resx">
-      <DependentUpon>Add-Edit-Person.cs</DependentUpon>
+    <EmbeddedResource Include="UselessEdit.resx">
+      <DependentUpon>UselessEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Main_Menu.resx">
       <DependentUpon>Frm_Main_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Person_Add_Edit.resx">
+      <DependentUpon>Frm_Person_Add_Edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People Managment.resx">
       <DependentUpon>People Managment.cs</DependentUpon>

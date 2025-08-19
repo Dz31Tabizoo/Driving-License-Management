@@ -2,7 +2,7 @@
 
 namespace Project19
 {
-    partial class Add_Edit_Person
+    partial class Frm_Person_Add_Edit
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,18 @@ namespace Project19
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent(DataTable DTC)
+        private void InitializeComponent( )
         {
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.usrCtrlEditPerson1 = new Project19.UsrCtrlEditPerson(DTC);
             this.btnSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.usrCtrlEditPerson1 = new Project19.UsrCtrlEditPerson();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(12, 12);
+            this.kryptonLabel1.Location = new System.Drawing.Point(15, 6);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(273, 39);
             this.kryptonLabel1.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
@@ -50,18 +50,9 @@ namespace Project19
             this.kryptonLabel1.TabIndex = 2;
             this.kryptonLabel1.Values.Text = "Add New Person";
             // 
-            // usrCtrlEditPerson1
-            // 
-            this.usrCtrlEditPerson1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.usrCtrlEditPerson1.Location = new System.Drawing.Point(19, 55);
-            this.usrCtrlEditPerson1.Margin = new System.Windows.Forms.Padding(2);
-            this.usrCtrlEditPerson1.Name = "usrCtrlEditPerson1";
-            this.usrCtrlEditPerson1.Size = new System.Drawing.Size(850, 450);
-            this.usrCtrlEditPerson1.TabIndex = 5;
-            // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(744, 511);
+            this.btnSave.Location = new System.Drawing.Point(753, 509);
             this.btnSave.Name = "btnSave";
             this.btnSave.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.btnSave.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
@@ -131,8 +122,9 @@ namespace Project19
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = global::Project19.Properties.Resources.close;
-            this.pictureBox2.Location = new System.Drawing.Point(858, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(860, 1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -140,19 +132,28 @@ namespace Project19
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // Add_Edit_Person
+            // usrCtrlEditPerson1
+            // 
+            this.usrCtrlEditPerson1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.usrCtrlEditPerson1.Location = new System.Drawing.Point(20, 51);
+            this.usrCtrlEditPerson1.Margin = new System.Windows.Forms.Padding(2);
+            this.usrCtrlEditPerson1.Name = "usrCtrlEditPerson1";
+            this.usrCtrlEditPerson1.Size = new System.Drawing.Size(850, 450);
+            this.usrCtrlEditPerson1.TabIndex = 7;
+            // 
+            // Frm_Person_Add_Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(888, 557);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.usrCtrlEditPerson1);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.kryptonLabel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Add_Edit_Person";
+            this.Name = "Frm_Person_Add_Edit";
             this.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -168,7 +169,7 @@ namespace Project19
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.StateCommon.Header.ButtonEdgeInset = 5;
-            this.Text = "Person_Details";
+            this.Text = "Frm_Person_Add_Edit";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -176,9 +177,10 @@ namespace Project19
         }
 
         #endregion
+
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSave;
         private System.Windows.Forms.PictureBox pictureBox2;
         private UsrCtrlEditPerson usrCtrlEditPerson1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSave;
     }
 }

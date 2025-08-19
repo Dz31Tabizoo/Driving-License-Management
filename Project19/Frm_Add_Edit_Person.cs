@@ -4,23 +4,29 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 
-
 namespace Project19
 {
-    public partial class Add_Edit_Person : KryptonForm
+    public partial class Frm_Add_Edit_Person : KryptonForm
     {
-        
-        public Add_Edit_Person(DataTable Country)
-        {            
-            InitializeComponent(Country);
+
+        public Frm_Add_Edit_Person(DataTable Country)
+        {
+            if (!DesignMode)
+            {
+                InitializeComponent(Country);
+            }
+            else
+            {
+                // Design-time initialization
+                InitializeComponent(new DataTable());
+            }
         }
-        
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -28,6 +34,6 @@ namespace Project19
         }
 
 
-        
+
     }
 }

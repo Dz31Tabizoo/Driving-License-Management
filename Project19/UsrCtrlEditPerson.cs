@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,14 +14,22 @@ namespace Project19
 {
     public partial class UsrCtrlEditPerson : UserControl
     {
-        
-        public UsrCtrlEditPerson(DataTable countrydt)
+        public UsrCtrlEditPerson()
         {
             InitializeComponent();
-            SetUpUserControls(countrydt);
+            SetUpUserControls();
         }
-        public void SetUpUserControls(DataTable countries)
+
+        //public UsrCtrlEditPerson(DataTable countrydt) : this()
+        //{
+        //    InitializeComponent();
+        //    SetUpUserControls(countrydt);
+        //}
+
+        public void SetUpUserControls()
         {
+            DataTable countries = new DataTable();
+            countries= clsPeopleBusinessLayer.GetCountries();
             //DateTime MinAdultDate = DateTime.Today.AddYears(-18);
 
             //dtpDateOfBirth.MaxDate = MinAdultDate;

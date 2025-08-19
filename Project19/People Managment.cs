@@ -116,13 +116,15 @@ namespace Project19
 
         private void lblAddPerson_Click(object sender, EventArgs e)
         {
-            DataTable dtCountries = clsPeopleBusinessLayer.GetCountries();
-
-            KryptonForm form = new Add_Edit_Person(dtCountries);
+            KryptonForm form = new Frm_Person_Add_Edit();
 
             form.ShowDialog();
             
         }
 
+        private void lblAddPerson_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
