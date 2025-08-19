@@ -305,7 +305,6 @@
             this.lblAddPerson.Values.Image = global::Project19.Properties.Resources.add_user;
             this.lblAddPerson.Values.Text = "Add Person";
             this.lblAddPerson.Click += new System.EventHandler(this.lblAddPerson_Click);
-            this.lblAddPerson.Paint += new System.Windows.Forms.PaintEventHandler(this.lblAddPerson_Paint);
             // 
             // btnClear
             // 
@@ -495,9 +494,9 @@
             this.TxtSearchTerm.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtSearchTerm.StateNormal.Content.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtSearchTerm.TabIndex = 4;
-            this.TxtSearchTerm.Text = "Search barre ...";
+            this.TxtSearchTerm.Text = "Search ...";
             this.TxtSearchTerm.TextChanged += new System.EventHandler(this.TxtSearchTerm_TextChanged);
-            this.TxtSearchTerm.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TxtSearchTerm_MouseClick);
+            this.TxtSearchTerm.MouseEnter += new System.EventHandler(this.TxtSearchTerm_MouseEnter);
             // 
             // kryptonLabel2
             // 
