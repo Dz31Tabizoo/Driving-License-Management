@@ -236,6 +236,7 @@
             this.txtEmal.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.txtEmal.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmal.TabIndex = 8;
+            this.txtEmal.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmal_Validating);
             // 
             // rdbFemale
             // 
@@ -382,6 +383,7 @@
             this.txtFirstName.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.txtFirstName.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.TabIndex = 2;
+            this.txtFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.txtFirstName_Validating);
             // 
             // txtPhone
             // 
@@ -398,6 +400,7 @@
             this.txtPhone.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.txtPhone.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.TabIndex = 10;
+            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhone_Validating);
             // 
             // txtNationalnumb
             // 
@@ -414,6 +417,7 @@
             this.txtNationalnumb.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.txtNationalnumb.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNationalnumb.TabIndex = 1;
+            this.txtNationalnumb.Validating += new System.ComponentModel.CancelEventHandler(this.txtNationalnumb_Validating);
             // 
             // kryptonWrapLabel1
             // 

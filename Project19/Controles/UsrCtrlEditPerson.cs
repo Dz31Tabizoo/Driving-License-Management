@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using Project19.Handlers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,5 +52,75 @@ namespace Project19
                 return ;
             }
         }
+
+        private void txtFirstName_Validating(object sender, CancelEventArgs e)
+        {
+            if (!ValidationHaldler.NameValidation(txtFirstName.Text))
+            {
+                e.Cancel = true;
+                txtFirstName.Focus();
+                errorProvider.SetError(txtFirstName, "Wrong Input");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(txtFirstName, "");
+            }
+            
+        }
+
+        private void txtNationalnumb_Validating(object sender, CancelEventArgs e)
+        {
+            if (!ValidationHaldler.NationalNumbValidation(txtNationalnumb.Text))
+            {
+                e.Cancel = true;
+                txtNationalnumb.Focus();
+                errorProvider.SetError(txtNationalnumb, "Wrong National Number Input");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(txtNationalnumb, "");
+            }
+        }
+
+       
+
+      
+
+        
+
+        private void txtEmal_Validating(object sender, CancelEventArgs e)
+        {
+            if(ValidationHaldler.EmailValidation(txtEmal.Text))
+            {
+
+                e.Cancel = true;
+                txtEmal.Focus();
+                errorProvider.SetError(txtEmal, "Wrong Input");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(txtEmal, "");
+            }
+        }
+
+        private void txtPhone_Validating(object sender, CancelEventArgs e)
+        {
+            if (ValidationHaldler.PhoneValidation(txtPhone.Text))
+            {
+
+                e.Cancel = true;
+                txtEmal.Focus();
+                errorProvider.SetError(txtPhone, "Wrong Input");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(txtPhone, "");
+            }
+        }
     }
+    
 }
