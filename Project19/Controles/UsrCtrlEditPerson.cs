@@ -21,6 +21,7 @@ namespace Project19
             SetUpUserControls();
         }
 
+        //Error desginTime
         //public UsrCtrlEditPerson(DataTable countrydt) : this()
         //{
         //    InitializeComponent();
@@ -84,12 +85,6 @@ namespace Project19
             }
         }
 
-       
-
-      
-
-        
-
         private void txtEmal_Validating(object sender, CancelEventArgs e)
         {
             if(ValidationHaldler.EmailValidation(txtEmal.Text))
@@ -121,6 +116,13 @@ namespace Project19
                 errorProvider.SetError(txtPhone, "");
             }
         }
+
+        private void UsrCtrlEditPerson_Load(object sender, EventArgs e)
+        {
+            txtNationalnumb.Focus();
+        }
+
+
     }
     
 }

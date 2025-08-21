@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace Project19.Handlers
@@ -45,16 +46,22 @@ namespace Project19.Handlers
             return true;
         }
 
-        
-
-
         public static bool EmailValidation(string email)
         {
             if (string.IsNullOrEmpty(email)) { return false; }
+            try
+            {
+                var emailAddress = new MailAddress(email);
+                return (emailAddress.Address == email);
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Non Valid Email", "Input Validation");
+                return false;
+            
+            }
 
-            var emailAddress = new MailAddress(email);
-
-            return (emailAddress.Address == email);
+            
         }
 
         public static bool PhoneValidation(string Phone)

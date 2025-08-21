@@ -52,7 +52,7 @@ namespace Project19
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(753, 509);
+            this.btnSave.Location = new System.Drawing.Point(761, 512);
             this.btnSave.Name = "btnSave";
             this.btnSave.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.btnSave.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
@@ -139,7 +139,7 @@ namespace Project19
             this.usrCtrlEditPerson1.Margin = new System.Windows.Forms.Padding(2);
             this.usrCtrlEditPerson1.Name = "usrCtrlEditPerson1";
             this.usrCtrlEditPerson1.Size = new System.Drawing.Size(850, 450);
-            this.usrCtrlEditPerson1.TabIndex = 7;
+            this.usrCtrlEditPerson1.TabIndex = 1;
             // 
             // Frm_Person_Add_Edit
             // 

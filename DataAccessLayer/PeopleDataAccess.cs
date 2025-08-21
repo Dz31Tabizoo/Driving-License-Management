@@ -144,5 +144,21 @@ namespace DataAccessLayer
 
             return dt;
         }
+
+        public static bool isNationalNoExist(int nationalNumb)
+        {
+            string Query = "SELECT 1 FROM People WHERE NationalNo = @Nt;";
+
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(Query, cnx))
+                {
+                    cnx.Open();
+
+                    cmd.Parameters.AddWithValue("@Nt", nationalNumb);
+
+                }
+            }
+        }
     }
 }

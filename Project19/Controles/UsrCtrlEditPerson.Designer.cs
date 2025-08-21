@@ -645,6 +645,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UsrCtrlEditPerson";
             this.Size = new System.Drawing.Size(850, 450);
+            this.Load += new System.EventHandler(this.UsrCtrlEditPerson_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
             this.kryptonGroupBox1.Panel.ResumeLayout(false);
             this.kryptonGroupBox1.Panel.PerformLayout();
