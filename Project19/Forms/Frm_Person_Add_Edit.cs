@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
 using ComponentFactory.Krypton.Toolkit;
 
 
@@ -30,5 +31,15 @@ namespace Project19
             this.Close();
         }
 
+        private void SavePersonInfo()
+        {
+            clsPeopleBusinessLayer Person = new clsPeopleBusinessLayer();
+            Person.FirstName = usrCtrlEditPerson1.FIRSTNAME;
+          
+        
+        
+        
+        }
+         
     }
 }

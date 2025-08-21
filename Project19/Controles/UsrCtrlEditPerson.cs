@@ -15,6 +15,21 @@ namespace Project19
 {
     public partial class UsrCtrlEditPerson : UserControl
     {
+       
+        public string FIRSTNAME { get { return txtFirstName.Text; } }
+        public string NaTIONALNO { get {return txtNationalnumb.Text; } }
+        public string SECONDNAME { get { return txtSencondNAme.Text; } }    
+        public string THIRDNAME { get { return txtThirdName.Text; } }
+        public string LASTNAME { get{ return txtLastName.Text; } }
+        public string EMAIL { get { return txtEmal.Text; } }
+        public string PHONE { get{ return txtPhone.Text; } }
+
+        private string _imagePath = null;
+        public string IMAGEPATH { get { return _imagePath; } set { _imagePath = value; } }
+
+        public bool _Gendor = true;
+        public bool GENDOR { get { return _Gendor; } set { _Gendor = value; } }
+
         public UsrCtrlEditPerson()
         {
             InitializeComponent();
@@ -44,15 +59,26 @@ namespace Project19
 
         private void lblEditPicture_LinkClicked(object sender, EventArgs e)
         {
-            ImageHandler imageHandler = new ImageHandler();
-
-            string imagePath = imageHandler.SelectAndSaveImage();
-            pictureBox1.Image = Image.FromFile(imagePath);
-            pictureBox1.BackColor = Color.Transparent;
-            if (string.IsNullOrEmpty(imagePath))
+            try
             {
-                return ;
+                ImageHandler imageHandler = new ImageHandler();
+                string imagePath = imageHandler.SelectAndSaveImage();
+
+                if (string.IsNullOrEmpty(imagePath))
+                {
+                    return;
+                }
+
+                pictureBox1.Image = Image.FromFile(imagePath);
+                pictureBox1.BackColor = Color.Transparent;
+                IMAGEPATH = imagePath;
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Error Loading Image:{ex.Message}");
+                IMAGEPATH = null;
+            }
+           
         }
 
         private void txtFirstName_Validating(object sender, CancelEventArgs e)
@@ -125,7 +151,6 @@ namespace Project19
         {
             txtNationalnumb.Focus();
         }
-
         private async void txtNationalnumb_TextChanged(object sender, EventArgs e)
         {
             if (txtNationalnumb.Text.Length >= 2 )
@@ -148,6 +173,16 @@ namespace Project19
                     errorProvider.SetError(txtNationalnumb, "Check error");
                 }
             }
+        }
+
+        private void rdbGendorMale_CheckedChanged(object sender, EventArgs e)
+        {
+            _Gendor = true;
+        }
+
+        private void rdbFemale_CheckedChanged(object sender, EventArgs e)
+        {
+            _Gendor = true;
         }
     }
     

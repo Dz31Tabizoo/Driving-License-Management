@@ -36,7 +36,7 @@
             this.txtEmal = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.rdbFemale = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.rdbGendorMale = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtLastName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.lblLAstName = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.txtThirdName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -105,7 +105,7 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtEmal);
             this.kryptonGroupBox1.Panel.Controls.Add(this.rdbFemale);
             this.kryptonGroupBox1.Panel.Controls.Add(this.rdbGendorMale);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonTextBox1);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtLastName);
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox13);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblLAstName);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtThirdName);
@@ -184,6 +184,7 @@
             // 
             // dtpDateOfBirth
             // 
+            this.dtpDateOfBirth.CalendarHeaderStyle = ComponentFactory.Krypton.Toolkit.HeaderStyle.Primary;
             this.dtpDateOfBirth.CalendarShowToday = false;
             this.dtpDateOfBirth.CalendarShowTodayCircle = false;
             this.dtpDateOfBirth.CalendarTodayDate = new System.DateTime(2025, 8, 17, 14, 3, 8, 0);
@@ -192,6 +193,7 @@
             this.dtpDateOfBirth.MinDate = new System.DateTime(2007, 12, 31, 0, 0, 0, 0);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
             this.dtpDateOfBirth.Size = new System.Drawing.Size(203, 20);
+            this.dtpDateOfBirth.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.dtpDateOfBirth.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.dtpDateOfBirth.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.dtpDateOfBirth.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -201,6 +203,8 @@
             this.dtpDateOfBirth.StateCommon.Border.Rounding = 3;
             this.dtpDateOfBirth.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.dtpDateOfBirth.StateCommon.Content.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateOfBirth.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.dtpDateOfBirth.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.dtpDateOfBirth.TabIndex = 11;
             this.dtpDateOfBirth.UpDownButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Alternate;
             // 
@@ -248,6 +252,7 @@
             this.rdbFemale.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbFemale.TabIndex = 7;
             this.rdbFemale.Values.Text = "Female";
+            this.rdbFemale.CheckedChanged += new System.EventHandler(this.rdbFemale_CheckedChanged);
             // 
             // rdbGendorMale
             // 
@@ -259,22 +264,23 @@
             this.rdbGendorMale.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbGendorMale.TabIndex = 6;
             this.rdbGendorMale.Values.Text = "Male";
+            this.rdbGendorMale.CheckedChanged += new System.EventHandler(this.rdbGendorMale_CheckedChanged);
             // 
-            // kryptonTextBox1
+            // txtLastName
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(433, 91);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(125, 29);
-            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtLastName.Location = new System.Drawing.Point(433, 91);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(125, 29);
+            this.txtLastName.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.txtLastName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtLastName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtLastName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 5;
-            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox1.TabIndex = 5;
+            this.txtLastName.StateCommon.Border.Rounding = 5;
+            this.txtLastName.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.txtLastName.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.TabIndex = 5;
             // 
             // pictureBox13
             // 
@@ -707,7 +713,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtFirstName;
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdbFemale;
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdbGendorMale;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtLastName;
         private System.Windows.Forms.PictureBox pictureBox13;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblLAstName;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
