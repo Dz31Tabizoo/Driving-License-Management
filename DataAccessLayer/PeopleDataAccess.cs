@@ -10,7 +10,146 @@ namespace DataAccessLayer
 {
     public class clsPeopleDataAccess
     {
-       
+        /*// In your Common/Shared project
+ public class OperationResult<T>
+ {
+     public bool IsSuccess { get; set; }
+     public T Data { get; set; }
+     public string ErrorMessage { get; set; }
+     public Exception Exception { get; set; }
+
+     public static OperationResult<T> Success(T data) => new OperationResult<T> 
+     { 
+         IsSuccess = true, 
+         Data = data 
+     };
+
+     public static OperationResult<T> Failure(string error, Exception ex = null) => new OperationResult<T> 
+     { 
+         IsSuccess = false, 
+         ErrorMessage = error,
+         Exception = ex
+     };
+ }
+        ----------------------------------------
+        Data Access Layer Implementation
+csharp
+public static OperationResult<bool> IsNationalNoExist(int nationalNo)
+{
+    const string query = @"
+        SELECT CAST(
+            CASE WHEN EXISTS (
+                SELECT 1 FROM People WHERE NationalNo = @NationalNo
+            ) THEN 1 ELSE 0 
+        END AS BIT);";
+
+    try
+    {
+        using (var connection = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+        using (var command = new SqlCommand(query, connection))
+        {
+            command.Parameters.Add("@NationalNo", SqlDbType.Int).Value = nationalNo;
+            
+            connection.Open();
+            var result = (bool)command.ExecuteScalar();
+            
+            return OperationResult<bool>.Success(result);
+        }
+    }
+    catch (SqlException ex)
+    {
+        // Log the technical details (for developers)
+        Logger.LogError(ex, "Database error checking NationalNo");
+        
+        // Return user-friendly message
+        return OperationResult<bool>.Failure(
+            "Unable to verify national number. Please try again later.", 
+            ex
+        );
+    }
+    catch (Exception ex)
+    {
+        Logger.LogError(ex, "Unexpected error in IsNationalNoExist");
+        return OperationResult<bool>.Failure(
+            "An unexpected error occurred. Please contact support.", 
+            ex
+        );
+    }
+}
+         -----------------------------------------------
+         Business Layer Implementation
+csharp
+public class PeopleBusinessLogic
+{
+    public OperationResult<bool> CheckNationalNoExists(int nationalNo)
+    {
+        // Business validation first
+        if (nationalNo <= 0)
+            return OperationResult<bool>.Failure("National number must be positive.");
+        
+        // Call DAL
+        var dalResult = DataAccessLayer.IsNationalNoExist(nationalNo);
+        
+        if (!dalResult.IsSuccess)
+        {
+            // You can transform DAL errors here if needed
+            return OperationResult<bool>.Failure(
+                $"Validation error: {dalResult.ErrorMessage}",
+                dalResult.Exception
+            );
+        }
+        
+        return OperationResult<bool>.Success(dalResult.Data);
+    }
+}
+         --------------------------------------------
+         Presentation Layer (WinForms) Implementation
+csharp
+// In your form code
+private void btnCheckNationalNo_Click(object sender, EventArgs e)
+{
+    try
+    {
+        if (int.TryParse(txtNationalNo.Text, out int nationalNo))
+        {
+            var businessLogic = new PeopleBusinessLogic();
+            var result = businessLogic.CheckNationalNoExists(nationalNo);
+            
+            if (result.IsSuccess)
+            {
+                if (result.Data)
+                    MessageBox.Show("National number already exists!", "Validation", 
+                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                    MessageBox.Show("National number is available.", "Validation", 
+                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Show user-friendly error message
+                MessageBox.Show(result.ErrorMessage, "Error", 
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                // Log technical details for debugging
+                Logger.LogError(result.Exception, "Error in national number check");
+            }
+        }
+        else
+        {
+            MessageBox.Show("Please enter a valid national number.", "Input Error", 
+                          MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+    }
+    catch (Exception ex)
+    {
+        // Catch any unexpected errors in the UI layer
+        MessageBox.Show("An unexpected error occurred. Please contact support.", "Error", 
+                      MessageBoxButtons.OK, MessageBoxIcon.Error);
+        Logger.LogError(ex, "Unexpected error in btnCheckNationalNo_Click");
+    }
+}       
+         
+         */
         public static bool  FindPersonByID(int Personid,ref string firstname,ref string secondname,ref string thirdname,ref string lastname,
             ref string nationalNo,ref DateTime dateofbirth,ref byte gender,ref string address,ref string phone,ref string email,
             ref int nationalcountryid,ref string imagepath)
@@ -145,10 +284,13 @@ namespace DataAccessLayer
             return dt;
         }
 
-        public static bool isNationalNoExist(int nationalNumb)
+        public static bool isNationalNoExist(string nationalNumb)
         {
-            string Query = "SELECT 1 FROM People WHERE NationalNo = @Nt;";
-
+            bool Result = false;
+            string Query = @"SELECT CAST ( CASE WHEN EXISTS 
+                              (SELECT 1 FROM People WHERE NationalNo = @Nt) 
+                                   THEN 1 ELSE 0 END AS BIT) AS Value_exists ;";
+            
             using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
             {
                 using (SqlCommand cmd = new SqlCommand(Query, cnx))
@@ -156,9 +298,13 @@ namespace DataAccessLayer
                     cnx.Open();
 
                     cmd.Parameters.AddWithValue("@Nt", nationalNumb);
+                    
+                    Result = (bool)cmd.ExecuteScalar();
 
                 }
             }
+            
+            return Result;
         }
     }
 }

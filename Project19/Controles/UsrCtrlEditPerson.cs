@@ -21,7 +21,8 @@ namespace Project19
             SetUpUserControls();
         }
 
-        //Error desginTime
+        // My
+        // Error desginTime
         //public UsrCtrlEditPerson(DataTable countrydt) : this()
         //{
         //    InitializeComponent();
@@ -56,6 +57,7 @@ namespace Project19
 
         private void txtFirstName_Validating(object sender, CancelEventArgs e)
         {
+
             if (!ValidationHaldler.NameValidation(txtFirstName.Text))
             {
                 e.Cancel = true;
@@ -72,17 +74,19 @@ namespace Project19
 
         private void txtNationalnumb_Validating(object sender, CancelEventArgs e)
         {
+            // Clear Previous Error
+            errorProvider.SetError(txtNationalnumb, "");
+
+            //input Validation
             if (!ValidationHaldler.NationalNumbValidation(txtNationalnumb.Text))
             {
                 e.Cancel = true;
-                txtNationalnumb.Focus();
                 errorProvider.SetError(txtNationalnumb, "Wrong National Number Input");
+                return;
             }
-            else
-            {
-                e.Cancel = false;
-                errorProvider.SetError(txtNationalnumb, "");
-            }
+            e.Cancel = false;
+
+
         }
 
         private void txtEmal_Validating(object sender, CancelEventArgs e)
@@ -103,7 +107,7 @@ namespace Project19
 
         private void txtPhone_Validating(object sender, CancelEventArgs e)
         {
-            if (ValidationHaldler.PhoneValidation(txtPhone.Text))
+            if (!ValidationHaldler.PhoneValidation(txtPhone.Text))
             {
 
                 e.Cancel = true;
@@ -122,7 +126,29 @@ namespace Project19
             txtNationalnumb.Focus();
         }
 
+        private async void txtNationalnumb_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNationalnumb.Text.Length >= 2 )
+            {
+                if (string.IsNullOrEmpty(txtNationalnumb.Text) || !ValidationHaldler.NationalNumbValidation(txtNationalnumb.Text))
+                {
+                    return;
+                }
 
+                try
+                {
+                    errorProvider.SetError(txtNationalnumb, "Checking...");
+
+                    bool exists = await Task.Run(() => clsPeopleBusinessLayer.isNationaNoExists(txtNationalnumb.Text));
+                    errorProvider.SetError(txtNationalnumb, exists ? "Already Exists" : "");
+
+                }
+                catch
+                {
+                    errorProvider.SetError(txtNationalnumb, "Check error");
+                }
+            }
+        }
     }
     
 }

@@ -406,7 +406,7 @@
             // 
             this.txtNationalnumb.Location = new System.Drawing.Point(420, 13);
             this.txtNationalnumb.Name = "txtNationalnumb";
-            this.txtNationalnumb.Size = new System.Drawing.Size(125, 29);
+            this.txtNationalnumb.Size = new System.Drawing.Size(125, 22);
             this.txtNationalnumb.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.txtNationalnumb.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.txtNationalnumb.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -416,7 +416,9 @@
             this.txtNationalnumb.StateCommon.Border.Rounding = 5;
             this.txtNationalnumb.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.txtNationalnumb.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNationalnumb.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, -1, -1, -1);
             this.txtNationalnumb.TabIndex = 1;
+            this.txtNationalnumb.TextChanged += new System.EventHandler(this.txtNationalnumb_TextChanged);
             this.txtNationalnumb.Validating += new System.ComponentModel.CancelEventHandler(this.txtNationalnumb_Validating);
             // 
             // kryptonWrapLabel1

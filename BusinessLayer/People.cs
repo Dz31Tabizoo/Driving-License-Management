@@ -136,5 +136,10 @@ namespace BusinessLayer
             return clsPeopleDataAccess.GetCountries();
         }
 
+        public static bool isNationaNoExists(string Nat_num)
+        {
+            return clsPeopleDataAccess.isNationalNoExist(Nat_num);
+        }
+
     }
 }
