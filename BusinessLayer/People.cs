@@ -141,5 +141,27 @@ namespace BusinessLayer
             return clsPeopleDataAccess.isNationalNoExist(Nat_num);
         }
 
+        public bool Save()
+        {
+            switch(CurrentMode)
+            {
+                case enMode.AddNew:
+                    if (_AddNewPerson())
+                    {
+                        CurrentMode = enMode.Update;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                //case enMode.Update:
+
+                //    return (_Update());
+            }
+            return false;
+        }
+
+
     }
 }

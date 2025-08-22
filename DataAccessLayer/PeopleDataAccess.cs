@@ -231,7 +231,7 @@ private void btnCheckNationalNo_Click(object sender, EventArgs e)
             {
                 cmd.Parameters.AddWithValue("@nationalNo", nationalNo);
                 cmd.Parameters.AddWithValue("@firstname", firstname);
-                cmd.Parameters.AddWithValue("@secondtname", secondname);
+                cmd.Parameters.AddWithValue("@secondname", secondname);
                 cmd.Parameters.AddWithValue("@thirdname", thirdname);
                 cmd.Parameters.AddWithValue("@lastname", lastname);
                 cmd.Parameters.AddWithValue("@dateofbirth", dateofbirth);
@@ -256,7 +256,7 @@ private void btnCheckNationalNo_Click(object sender, EventArgs e)
                         return -1;
                     }
                 }
-                catch (Exception ex)
+                catch 
                 {
                     return -1;
                 }

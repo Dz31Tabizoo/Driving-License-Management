@@ -119,6 +119,7 @@ namespace Project19
             this.btnSave.TabIndex = 6;
             this.btnSave.Values.Image = global::Project19.Properties.Resources.diskette;
             this.btnSave.Values.Text = "  Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // pictureBox2
             // 

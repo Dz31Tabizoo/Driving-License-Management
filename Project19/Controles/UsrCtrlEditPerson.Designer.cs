@@ -32,7 +32,7 @@
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.cmbCountry = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.dtpDateOfBirth = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtAddress = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtEmal = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.rdbFemale = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.rdbGendorMale = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
@@ -101,7 +101,7 @@
             // 
             this.kryptonGroupBox1.Panel.Controls.Add(this.cmbCountry);
             this.kryptonGroupBox1.Panel.Controls.Add(this.dtpDateOfBirth);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonTextBox2);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtAddress);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtEmal);
             this.kryptonGroupBox1.Panel.Controls.Add(this.rdbFemale);
             this.kryptonGroupBox1.Panel.Controls.Add(this.rdbGendorMale);
@@ -208,22 +208,22 @@
             this.dtpDateOfBirth.TabIndex = 11;
             this.dtpDateOfBirth.UpDownButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Alternate;
             // 
-            // kryptonTextBox2
+            // txtAddress
             // 
-            this.kryptonTextBox2.Location = new System.Drawing.Point(123, 257);
-            this.kryptonTextBox2.Multiline = true;
-            this.kryptonTextBox2.Name = "kryptonTextBox2";
-            this.kryptonTextBox2.Size = new System.Drawing.Size(240, 59);
-            this.kryptonTextBox2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.kryptonTextBox2.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonTextBox2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonTextBox2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtAddress.Location = new System.Drawing.Point(123, 257);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(240, 59);
+            this.txtAddress.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.txtAddress.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtAddress.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtAddress.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox2.StateCommon.Border.Rounding = 5;
-            this.kryptonTextBox2.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox2.TabIndex = 9;
+            this.txtAddress.StateCommon.Border.Rounding = 5;
+            this.txtAddress.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.txtAddress.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.TabIndex = 9;
             // 
             // txtEmal
             // 
@@ -716,7 +716,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtLastName;
         private System.Windows.Forms.PictureBox pictureBox13;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblLAstName;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtAddress;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtEmal;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtpDateOfBirth;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbCountry;

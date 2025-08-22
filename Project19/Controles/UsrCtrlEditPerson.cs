@@ -1,5 +1,6 @@
 ﻿using BusinessLayer;
 using Project19.Handlers;
+using Syncfusion.Windows.Forms.Tools;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,8 +28,14 @@ namespace Project19
         private string _imagePath = null;
         public string IMAGEPATH { get { return _imagePath; } set { _imagePath = value; } }
 
-        public bool _Gendor = true;
-        public bool GENDOR { get { return _Gendor; } set { _Gendor = value; } }
+        public Byte _Gendor = 0;
+        public Byte GENDOR { get { return _Gendor; } set { _Gendor = value; } }
+
+        public DateTime DATEOFBIRTH { get { return dtpDateOfBirth.Value; } }
+
+        public string ADDRESS { get { return txtAddress.Text; } }
+
+        public int NATIONALCOUNTRYID { get { return cmbCountry.SelectedIndex; } }
 
         public UsrCtrlEditPerson()
         {
@@ -71,12 +78,12 @@ namespace Project19
 
                 pictureBox1.Image = Image.FromFile(imagePath);
                 pictureBox1.BackColor = Color.Transparent;
-                IMAGEPATH = imagePath;
+                _imagePath = imagePath;
             }
             catch(Exception ex)
             {
                 MessageBox.Show($"Error Loading Image:{ex.Message}");
-                IMAGEPATH = null;
+                _imagePath = null;
             }
            
         }
@@ -117,12 +124,11 @@ namespace Project19
 
         private void txtEmal_Validating(object sender, CancelEventArgs e)
         {
-            if(ValidationHaldler.EmailValidation(txtEmal.Text))
-            {
-
+            if(string.IsNullOrEmpty(txtEmal.Text) )
+            {                
                 e.Cancel = true;
                 txtEmal.Focus();
-                errorProvider.SetError(txtEmal, "Wrong Input");
+                errorProvider.SetError(txtEmal, "Email Requeiered");
             }
             else
             {
@@ -151,6 +157,7 @@ namespace Project19
         {
             txtNationalnumb.Focus();
         }
+
         private async void txtNationalnumb_TextChanged(object sender, EventArgs e)
         {
             if (txtNationalnumb.Text.Length >= 2 )
@@ -177,12 +184,12 @@ namespace Project19
 
         private void rdbGendorMale_CheckedChanged(object sender, EventArgs e)
         {
-            _Gendor = true;
+            _Gendor = 1;
         }
 
         private void rdbFemale_CheckedChanged(object sender, EventArgs e)
         {
-            _Gendor = true;
+            _Gendor = 0;
         }
     }
     

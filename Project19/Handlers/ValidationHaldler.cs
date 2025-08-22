@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.Text.RegularExpressions;
 
 namespace Project19.Handlers
 {
@@ -46,23 +47,15 @@ namespace Project19.Handlers
             return true;
         }
 
-        public static bool EmailValidation(string email)
-        {
-            if (string.IsNullOrEmpty(email)) { return false; }
-            try
-            {
-                var emailAddress = new MailAddress(email);
-                return (emailAddress.Address == email);
-            }
-            catch (Exception ex) 
-            {
-                MessageBox.Show("Non Valid Email", "Input Validation");
-                return false;
-            
-            }
+        //public static bool EmailValidation(string email)
+        //{
+        //    private static readonly string EmailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+         
+        //    Regex.is
+             
 
             
-        }
+        //}
 
         public static bool PhoneValidation(string Phone)
         {
