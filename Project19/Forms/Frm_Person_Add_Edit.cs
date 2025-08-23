@@ -19,13 +19,18 @@ namespace Project19
         public Frm_Person_Add_Edit()
         {
             InitializeComponent();
+            btnSaveEdit.Enabled = false;
+            btnSaveEdit.Visible = false;
         }
 
-        // public Frm_Person_Add_Edit(DataTable DtCountry) : this()
-        //{
-        //    InitializeComponent(DtCountry);
-        //}
-
+        public Frm_Person_Add_Edit(DataGridViewRow EdRow)
+        {
+            InitializeComponent();
+            usrCtrlEditPerson1.LoadPersonDetailsToEdit(EdRow);
+            btnSave.Enabled = false;
+            btnSave.Visible = false;
+            lblTitle.Text = "Edit Person Information";
+        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -45,21 +50,65 @@ namespace Project19
             Person.Address = usrCtrlEditPerson1.ADDRESS;
             Person.Email = usrCtrlEditPerson1.EMAIL;
             Person.Phone = usrCtrlEditPerson1.PHONE;
-            Person.NationalityCountryID = usrCtrlEditPerson1.NATIONALCOUNTRYID;
+            Person.NationalityCountryID = usrCtrlEditPerson1.NATIONALCOUNTRYID+1;
             Person.ImagePath = usrCtrlEditPerson1.IMAGEPATH;
 
-            return Person.Save() ? true : false;
+            return Person.Save() ? true : false;            
+        }
 
+        private bool SaveUpdatedPerson()
+        {
+            int PersonId = usrCtrlEditPerson1.PERSONID;
+            string FirstName = usrCtrlEditPerson1.FIRSTNAME;
+            string SecondName = usrCtrlEditPerson1.SECONDNAME;
+            string ThirdName = usrCtrlEditPerson1.THIRDNAME;
+            string LastName = usrCtrlEditPerson1.LASTNAME;
+            string NationalNo = usrCtrlEditPerson1.NaTIONALNO;
+            DateTime DateOfBirth = usrCtrlEditPerson1.DATEOFBIRTH;
+            Byte Gender = usrCtrlEditPerson1.GENDOR;
+            string Address = usrCtrlEditPerson1.ADDRESS;
+            string Email = usrCtrlEditPerson1.EMAIL;
+            string Phone = usrCtrlEditPerson1.PHONE;
+            int NationalityCountryID = usrCtrlEditPerson1.NATIONALCOUNTRYID+1;
+            string ImagePath = usrCtrlEditPerson1.IMAGEPATH;
 
-            
+            clsPeopleBusinessLayer EditedPerson = new clsPeopleBusinessLayer(PersonId, FirstName, SecondName, ThirdName, LastName, NationalNo, DateOfBirth, Gender, Address, Phone, Email, NationalityCountryID, ImagePath);
+
+            return (EditedPerson.Save()); 
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (SavePersonInfo()) {MessageBox.Show("Person Save Successfuly","Save",MessageBoxButtons.OK,MessageBoxIcon.Information);}
+            if (SavePersonInfo()) 
+            {
+                MessageBox.Show("Person Save Successfuly","Save",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                if (DialogResult == DialogResult.OK)
+                {
+                    this.Close();
+                }
+
+            }
             else 
             {
                 MessageBox.Show("Person Save Failed", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+
+        private void btnSaveEdit_Click(object sender, EventArgs e)
+        {
+            if (SaveUpdatedPerson())
+            {
+                DialogResult Result = MessageBox.Show("Person's Info Details Edited & Save Successfuly", "Edit_Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (Result == DialogResult.OK)
+                {
+                    this.Close();
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Person's New Info Details Save Failed", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

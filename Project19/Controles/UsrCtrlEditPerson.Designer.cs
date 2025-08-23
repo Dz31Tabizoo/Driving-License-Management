@@ -34,7 +34,7 @@
             this.dtpDateOfBirth = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.txtAddress = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtEmal = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.rdbFemale = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
+            this.rdbGenderFemale = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.rdbGendorMale = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.txtLastName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
@@ -47,8 +47,8 @@
             this.lblSencond = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.txtFirstName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtPhone = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtNationalnumb = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonWrapLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.txtNationalnumbOutput = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.lblPersonIdOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -103,7 +103,7 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.dtpDateOfBirth);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtAddress);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtEmal);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.rdbFemale);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.rdbGenderFemale);
             this.kryptonGroupBox1.Panel.Controls.Add(this.rdbGendorMale);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtLastName);
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox13);
@@ -116,8 +116,8 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblSencond);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtFirstName);
             this.kryptonGroupBox1.Panel.Controls.Add(this.txtPhone);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.txtNationalnumb);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonWrapLabel1);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtNationalnumbOutput);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.lblPersonIdOutput);
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox10);
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox9);
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox8);
@@ -242,17 +242,17 @@
             this.txtEmal.TabIndex = 8;
             this.txtEmal.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmal_Validating);
             // 
-            // rdbFemale
+            // rdbGenderFemale
             // 
-            this.rdbFemale.Location = new System.Drawing.Point(133, 177);
-            this.rdbFemale.Name = "rdbFemale";
-            this.rdbFemale.Size = new System.Drawing.Size(72, 24);
-            this.rdbFemale.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.rdbFemale.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.rdbFemale.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbFemale.TabIndex = 7;
-            this.rdbFemale.Values.Text = "Female";
-            this.rdbFemale.CheckedChanged += new System.EventHandler(this.rdbFemale_CheckedChanged);
+            this.rdbGenderFemale.Location = new System.Drawing.Point(133, 177);
+            this.rdbGenderFemale.Name = "rdbGenderFemale";
+            this.rdbGenderFemale.Size = new System.Drawing.Size(72, 24);
+            this.rdbGenderFemale.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.rdbGenderFemale.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.rdbGenderFemale.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbGenderFemale.TabIndex = 7;
+            this.rdbGenderFemale.Values.Text = "Female";
+            this.rdbGenderFemale.CheckedChanged += new System.EventHandler(this.rdbFemale_CheckedChanged);
             // 
             // rdbGendorMale
             // 
@@ -353,6 +353,7 @@
             this.txtSencondNAme.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.txtSencondNAme.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSencondNAme.TabIndex = 3;
+            this.txtSencondNAme.Validating += new System.ComponentModel.CancelEventHandler(this.txtSencondNAme_Validating);
             // 
             // pictureBox11
             // 
@@ -408,35 +409,35 @@
             this.txtPhone.TabIndex = 10;
             this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhone_Validating);
             // 
-            // txtNationalnumb
+            // txtNationalnumbOutput
             // 
-            this.txtNationalnumb.Location = new System.Drawing.Point(420, 13);
-            this.txtNationalnumb.Name = "txtNationalnumb";
-            this.txtNationalnumb.Size = new System.Drawing.Size(125, 22);
-            this.txtNationalnumb.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.txtNationalnumb.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtNationalnumb.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtNationalnumb.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtNationalnumbOutput.Location = new System.Drawing.Point(420, 13);
+            this.txtNationalnumbOutput.Name = "txtNationalnumbOutput";
+            this.txtNationalnumbOutput.Size = new System.Drawing.Size(125, 22);
+            this.txtNationalnumbOutput.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.txtNationalnumbOutput.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtNationalnumbOutput.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtNationalnumbOutput.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtNationalnumb.StateCommon.Border.Rounding = 5;
-            this.txtNationalnumb.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.txtNationalnumb.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNationalnumb.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, -1, -1, -1);
-            this.txtNationalnumb.TabIndex = 1;
-            this.txtNationalnumb.TextChanged += new System.EventHandler(this.txtNationalnumb_TextChanged);
-            this.txtNationalnumb.Validating += new System.ComponentModel.CancelEventHandler(this.txtNationalnumb_Validating);
+            this.txtNationalnumbOutput.StateCommon.Border.Rounding = 5;
+            this.txtNationalnumbOutput.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.txtNationalnumbOutput.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNationalnumbOutput.StateCommon.Content.Padding = new System.Windows.Forms.Padding(3, -1, -1, -1);
+            this.txtNationalnumbOutput.TabIndex = 1;
+            this.txtNationalnumbOutput.TextChanged += new System.EventHandler(this.txtNationalnumb_TextChanged);
+            this.txtNationalnumbOutput.Validating += new System.ComponentModel.CancelEventHandler(this.txtNationalnumb_Validating);
             // 
-            // kryptonWrapLabel1
+            // lblPersonIdOutput
             // 
-            this.kryptonWrapLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonWrapLabel1.Location = new System.Drawing.Point(193, 13);
-            this.kryptonWrapLabel1.Name = "kryptonWrapLabel1";
-            this.kryptonWrapLabel1.Size = new System.Drawing.Size(37, 20);
-            this.kryptonWrapLabel1.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel1.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonWrapLabel1.Text = "N/A";
+            this.lblPersonIdOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonIdOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblPersonIdOutput.Location = new System.Drawing.Point(193, 13);
+            this.lblPersonIdOutput.Name = "lblPersonIdOutput";
+            this.lblPersonIdOutput.Size = new System.Drawing.Size(37, 20);
+            this.lblPersonIdOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonIdOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblPersonIdOutput.Text = "N/A";
             // 
             // pictureBox10
             // 
@@ -701,8 +702,8 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtNationalnumb;
-        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtNationalnumbOutput;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblPersonIdOutput;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPhone;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtThirdName;
         private System.Windows.Forms.PictureBox pictureBox12;
@@ -711,7 +712,7 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblSencond;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtFirstName;
-        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdbFemale;
+        private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdbGenderFemale;
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton rdbGendorMale;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtLastName;
         private System.Windows.Forms.PictureBox pictureBox13;

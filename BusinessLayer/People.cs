@@ -131,6 +131,11 @@ namespace BusinessLayer
             return (this.PersonID != -1);
         }
 
+        private bool _Update()
+        {
+            return (clsPeopleDataAccess.UpdatePerson(this.PersonID, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.NationalNo, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath));
+        }
+
         public static DataTable GetCountries()
         {
             return clsPeopleDataAccess.GetCountries();
@@ -155,11 +160,17 @@ namespace BusinessLayer
                     {
                         return false;
                     }
-                //case enMode.Update:
+                case enMode.Update:
 
-                //    return (_Update());
+                    return (_Update());
             }
             return false;
+        }
+
+
+       public static string GetCountryNameByID(int ID)
+        {
+            return clsPeopleDataAccess.GetCounryNameByID(ID);
         }
 
 

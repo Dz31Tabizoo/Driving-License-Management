@@ -38,7 +38,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblEditPicture = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
+            this.lblEditPerson = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this.lblDateOfBirthOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblCountryOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblPhoneOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
@@ -91,7 +91,7 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox4);
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox3);
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox2);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.lblEditPicture);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.lblEditPerson);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblDateOfBirthOutput);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblCountryOutput);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblPhoneOutput);
@@ -208,14 +208,17 @@
             this.pictureBox2.TabIndex = 38;
             this.pictureBox2.TabStop = false;
             // 
-            // lblEditPicture
+            // lblEditPerson
             // 
-            this.lblEditPicture.Location = new System.Drawing.Point(646, 192);
-            this.lblEditPicture.Name = "lblEditPicture";
-            this.lblEditPicture.Size = new System.Drawing.Size(97, 26);
-            this.lblEditPicture.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditPicture.TabIndex = 36;
-            this.lblEditPicture.Values.Text = "Edit picture";
+            this.lblEditPerson.Location = new System.Drawing.Point(645, 213);
+            this.lblEditPerson.Name = "lblEditPerson";
+            this.lblEditPerson.Size = new System.Drawing.Size(96, 26);
+            this.lblEditPerson.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.lblEditPerson.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.lblEditPerson.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditPerson.TabIndex = 36;
+            this.lblEditPerson.Values.Text = "Edit Person";
+            this.lblEditPerson.LinkClicked += new System.EventHandler(this.lblEditPerson_LinkClicked);
             // 
             // lblDateOfBirthOutput
             // 
@@ -467,7 +470,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblNameOutput;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblDateOfBirthOutput;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblCountryOutput;
-        private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel lblEditPicture;
+        private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel lblEditPerson;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;

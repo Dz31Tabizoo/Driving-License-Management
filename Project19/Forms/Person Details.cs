@@ -17,7 +17,7 @@ namespace Project19
         {
             InitializeComponent();
             usCrtlPersonCard1.LoadPersonData(roo);
-
+            
         }  
 
         private void pictureBox2_Click(object sender, EventArgs e)

@@ -263,7 +263,37 @@ private void btnCheckNationalNo_Click(object sender, EventArgs e)
             }            
         }
 
+        public static string GetCounryNameByID(int ID)
+        {
+            string Query = "SELECT CountryName from Countries WHERE CountryID = @id;";
 
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            using (SqlCommand cmd = new SqlCommand(Query, cnx))
+            {
+
+                cmd.Parameters.AddWithValue("@id", ID);
+                try
+                {
+                    cnx.Open();
+                    object Result = cmd.ExecuteScalar();
+                    if (Result != null)
+                    {
+                        return Result.ToString();
+                    }
+                    else
+                    {
+                        return null;
+                    }
+
+
+                }
+                catch
+                {
+                    return null;
+                }
+
+            }
+        }
 
         public static DataTable GetCountries()
         {
@@ -306,5 +336,72 @@ private void btnCheckNationalNo_Click(object sender, EventArgs e)
             
             return Result;
         }
+
+
+        public static bool UpdatePerson(int PersonID ,string firstname, string secondname, string thirdname, string lastname,
+             string nationalNo, DateTime dateofbirth, byte gender, string address, string phone, string email,
+             int nationalcountryid, string imagepath)
+        {
+
+            int RowAffected = 0;
+
+            string Query = @"UPDATE People SET
+                              NationalNo = @Nt,
+                              FirstName = @Fn,  
+                              SecondName = @Sn,
+                              ThirdName = @Thn,
+                              LastName = @Ln,
+                              DateOfBirth = @DtBth,
+                              Gendor = @Gn,
+                              Address = @Adr,
+                              Phone = @Ph,
+                              Email = @Em,
+                              NationalityCountryID = @IdCtr,
+                              ImagePath = @ImgPth 
+                           WHERE PersonID = @Personid;";
+
+            using (SqlConnection con = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(Query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Personid", PersonID);
+                    cmd.Parameters.AddWithValue("@Nt", nationalNo);
+                    cmd.Parameters.AddWithValue("@Fn", firstname);
+                    cmd.Parameters.AddWithValue("@Sn", secondname);
+                    cmd.Parameters.AddWithValue("@Thn", thirdname ?? (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@Ln", lastname);
+                    cmd.Parameters.AddWithValue("@DtBth", dateofbirth);
+                    cmd.Parameters.AddWithValue("@Gn", gender);
+                    cmd.Parameters.AddWithValue("@Adr", address);
+                    cmd.Parameters.AddWithValue("@Ph", phone);
+                    cmd.Parameters.AddWithValue("@Em", email ?? (object)DBNull.Value);
+                    cmd.Parameters.AddWithValue("@IdCtr", nationalcountryid);
+                    cmd.Parameters.AddWithValue("@ImgPth", imagepath ?? (object)DBNull.Value);
+
+                    try
+                    {
+                        con.Open();
+
+                        RowAffected = cmd.ExecuteNonQuery();
+
+                        return (! (RowAffected == 0));
+
+                    }
+                    catch 
+                    {
+                        return false;
+                    }
+
+
+                }
+            }
+
+
+
+
+        }
+
+
+
     }
 }

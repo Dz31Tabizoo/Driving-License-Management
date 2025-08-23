@@ -16,9 +16,9 @@ namespace Project19
 {
     public partial class UsrCtrlEditPerson : UserControl
     {
-       
+       public int PERSONID { get { return Convert.ToInt32( lblPersonIdOutput.Text); } }
         public string FIRSTNAME { get { return txtFirstName.Text; } }
-        public string NaTIONALNO { get {return txtNationalnumb.Text; } }
+        public string NaTIONALNO { get {return txtNationalnumbOutput.Text; } }
         public string SECONDNAME { get { return txtSencondNAme.Text; } }    
         public string THIRDNAME { get { return txtThirdName.Text; } }
         public string LASTNAME { get{ return txtLastName.Text; } }
@@ -42,6 +42,9 @@ namespace Project19
             InitializeComponent();
             SetUpUserControls();
         }
+
+        
+
 
         // My
         // Error desginTime
@@ -108,13 +111,13 @@ namespace Project19
         private void txtNationalnumb_Validating(object sender, CancelEventArgs e)
         {
             // Clear Previous Error
-            errorProvider.SetError(txtNationalnumb, "");
+            errorProvider.SetError(txtNationalnumbOutput, "");
 
             //input Validation
-            if (!ValidationHaldler.NationalNumbValidation(txtNationalnumb.Text))
+            if (!ValidationHaldler.NationalNumbValidation(txtNationalnumbOutput.Text))
             {
                 e.Cancel = true;
-                errorProvider.SetError(txtNationalnumb, "Wrong National Number Input");
+                errorProvider.SetError(txtNationalnumbOutput, "Wrong National Number Input");
                 return;
             }
             e.Cancel = false;
@@ -155,42 +158,131 @@ namespace Project19
 
         private void UsrCtrlEditPerson_Load(object sender, EventArgs e)
         {
-            txtNationalnumb.Focus();
+            txtNationalnumbOutput.Focus();
         }
 
         private async void txtNationalnumb_TextChanged(object sender, EventArgs e)
         {
-            if (txtNationalnumb.Text.Length >= 2 )
+            if (txtNationalnumbOutput.Text.Length >= 2 )
             {
-                if (string.IsNullOrEmpty(txtNationalnumb.Text) || !ValidationHaldler.NationalNumbValidation(txtNationalnumb.Text))
+                if (string.IsNullOrEmpty(txtNationalnumbOutput.Text) || !ValidationHaldler.NationalNumbValidation(txtNationalnumbOutput.Text))
                 {
                     return;
                 }
 
                 try
                 {
-                    errorProvider.SetError(txtNationalnumb, "Checking...");
+                    errorProvider.SetError(txtNationalnumbOutput, "Checking...");
 
-                    bool exists = await Task.Run(() => clsPeopleBusinessLayer.isNationaNoExists(txtNationalnumb.Text));
-                    errorProvider.SetError(txtNationalnumb, exists ? "Already Exists" : "");
+                    bool exists = await Task.Run(() => clsPeopleBusinessLayer.isNationaNoExists(txtNationalnumbOutput.Text));
+                    errorProvider.SetError(txtNationalnumbOutput, exists ? "Already Exists" : "");
 
                 }
                 catch
                 {
-                    errorProvider.SetError(txtNationalnumb, "Check error");
+                    errorProvider.SetError(txtNationalnumbOutput, "Check error");
                 }
             }
         }
 
         private void rdbGendorMale_CheckedChanged(object sender, EventArgs e)
         {
-            _Gendor = 1;
+            _Gendor = 0;
         }
 
         private void rdbFemale_CheckedChanged(object sender, EventArgs e)
         {
-            _Gendor = 0;
+            _Gendor = 1;
         }
+
+        private void txtSencondNAme_Validating(object sender, CancelEventArgs e)
+        {
+            if (!ValidationHaldler.NameValidation(txtSencondNAme.Text))
+            {
+                e.Cancel = true;
+                txtFirstName.Focus();
+                errorProvider.SetError(txtSencondNAme, "Wrong Input");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(txtSencondNAme, "");
+            }
+        }
+
+
+
+        public void LoadPersonDetailsToEdit(DataGridViewRow row)
+        {
+
+            try
+            {
+                lblEditPicture.Text = "Edit Picture";
+                lblPersonIdOutput.Text = row.Cells["PersonID"].Value?.ToString() ?? "N/A";
+                txtNationalnumbOutput.Text = row.Cells["NationalNo"].Value.ToString();
+                txtFirstName.Text = row.Cells["FirstName"].Value?.ToString();
+                txtSencondNAme.Text = row.Cells["SecondName"].Value?.ToString();
+                txtThirdName.Text = row.Cells["ThirdName"].Value?.ToString();
+                txtLastName.Text = row.Cells["LastName"].Value?.ToString();
+
+                if (row.Cells["DateOfBirth"].Value is DateTime dateTimeValue)
+                {
+                    dtpDateOfBirth.Value = dateTimeValue;
+                }
+                else
+                {
+                    dtpDateOfBirth.Value = new DateTime(2010, 01, 01);
+                }
+
+
+                GENDOR = Convert.ToByte( row.Cells["Gendor"].Value);
+
+
+                if (GENDOR == 0)
+                {
+                    rdbGendorMale.Checked = true;
+                    
+                }
+                else
+                {
+                    rdbGenderFemale.Checked = true;
+                  
+                }
+
+                txtAddress.Text = row.Cells["Address"].Value.ToString();
+                txtPhone.Text = row.Cells["Phone"].Value.ToString();
+                txtEmal.Text = row.Cells["Email"].Value.ToString();
+
+                int UserCountryID = (int)row.Cells["NationalityCountryID"].Value;
+
+                cmbCountry.SelectedIndex = UserCountryID - 1;
+
+                ImageHandler imgH = new ImageHandler();
+                string ImagePath = row.Cells["ImagePath"].Value?.ToString();
+                if ((ImagePath == null || ImagePath == "") && GENDOR == 0)
+                {
+                    pictureBox1.Image = Properties.Resources.male;
+                }
+                else if ((ImagePath == null || ImagePath == "") && GENDOR == 1)
+                {
+                    pictureBox1.Image = Properties.Resources.muslimah;
+                }
+                else
+                {
+                    pictureBox1.Image = Image.FromFile(ImagePath);
+                }
+
+                
+
+            }
+            catch (Exception ex) { MessageBox.Show("Error Loading Details: " + ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+
+
+        }
+
+
+
     }
     
 }

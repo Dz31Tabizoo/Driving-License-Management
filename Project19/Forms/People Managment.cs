@@ -154,6 +154,15 @@ namespace Project19
         
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (dgvAllPeople.SelectedRows.Count <= 0)
+            {
+                return;
+            }
+            DataGridViewRow SelectedRow = dgvAllPeople.SelectedRows[0];
+
+            Form EdditFrom = new Frm_Person_Add_Edit(SelectedRow);
+            EdditFrom.ShowDialog();
+
 
         }
 
