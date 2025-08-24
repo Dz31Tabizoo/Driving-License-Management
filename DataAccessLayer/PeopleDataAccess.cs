@@ -240,7 +240,7 @@ private void btnCheckNationalNo_Click(object sender, EventArgs e)
                 cmd.Parameters.AddWithValue("@phone", phone);
                 cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@nationalitycountryid", nationalcountryid);
-                cmd.Parameters.AddWithValue("@imagepath", imagepath);
+                cmd.Parameters.AddWithValue("@imagepath", imagepath ?? (object)DBNull.Value);
 
                 try
                 {
@@ -399,6 +399,32 @@ private void btnCheckNationalNo_Click(object sender, EventArgs e)
 
 
 
+        }
+
+
+        public static bool DeletePerson (int ID)
+        {
+            string Query = "DELETE People WHERE PersonID = @pID;";
+            int RowAffected = 0;
+
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(Query,cnx))
+                {
+                    cmd.Parameters.AddWithValue("@pID", ID);
+                    try
+                    {
+                        cnx.Open();
+
+                        RowAffected = cmd.ExecuteNonQuery() ;
+                        return (! (RowAffected == 0));
+                    }
+                    catch
+                    {
+                        return false;
+                    }
+                }
+            }            
         }
 
 

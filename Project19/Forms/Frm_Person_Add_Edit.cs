@@ -81,8 +81,8 @@ namespace Project19
         {
             if (SavePersonInfo()) 
             {
-                MessageBox.Show("Person Save Successfuly","Save",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                if (DialogResult == DialogResult.OK)
+                DialogResult Result = MessageBox.Show("Person Save Successfuly","Save",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                if (Result == DialogResult.OK)
                 {
                     this.Close();
                 }

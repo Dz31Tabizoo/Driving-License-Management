@@ -167,10 +167,15 @@ namespace BusinessLayer
             return false;
         }
 
-
-       public static string GetCountryNameByID(int ID)
+        public static string GetCountryNameByID(int ID)
         {
             return clsPeopleDataAccess.GetCounryNameByID(ID);
+        }
+
+
+        public static bool DeletePerson(int ID)
+        {
+            return clsPeopleDataAccess.DeletePerson(ID);
         }
 
 
