@@ -16,7 +16,7 @@ namespace Project19
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new People_Managment());
+            Application.Run(new Frm_Login());
         }
     }
 }

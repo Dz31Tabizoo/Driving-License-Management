@@ -31,5 +31,14 @@ namespace Project19
             Form FRM = new Frm_Main_Menu();
             FRM.Show();
         }
+
+       
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+       
     }
 }

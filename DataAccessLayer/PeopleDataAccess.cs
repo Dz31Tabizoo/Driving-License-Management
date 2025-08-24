@@ -150,6 +150,9 @@ private void btnCheckNationalNo_Click(object sender, EventArgs e)
 }       
          
          */
+
+
+
         public static bool  FindPersonByID(int Personid,ref string firstname,ref string secondname,ref string thirdname,ref string lastname,
             ref string nationalNo,ref DateTime dateofbirth,ref byte gender,ref string address,ref string phone,ref string email,
             ref int nationalcountryid,ref string imagepath)

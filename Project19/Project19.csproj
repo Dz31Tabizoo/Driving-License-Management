@@ -323,10 +323,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\diskette.png" />
+    <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />
+    <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent1.png" />
+    <None Include="Resources\driving--vehicle-license-department-high-resolution-logo.png" />
     <Content Include="Resources\male.png" />
     <None Include="Resources\male2.png" />
     <Content Include="Resources\muslimah.png" />
     <None Include="Resources\muslimah2.png" />
+    <None Include="Resources\pin.png" />
+    <None Include="Resources\team-meeting %281%29.png" />
     <Content Include="Resources\user %281%29.png" />
     <None Include="Resources\user %281%291.png" />
   </ItemGroup>
