@@ -39,7 +39,7 @@ namespace Project19
 
         private bool SavePersonInfo()
         {
-            clsPeopleBusinessLayer Person = new clsPeopleBusinessLayer();
+            clsPeople Person = new clsPeople();
             Person.FirstName = usrCtrlEditPerson1.FIRSTNAME;
             Person.SecondName = usrCtrlEditPerson1.SECONDNAME;
             Person.ThirdName = usrCtrlEditPerson1.THIRDNAME;
@@ -72,7 +72,7 @@ namespace Project19
             int NationalityCountryID = usrCtrlEditPerson1.NATIONALCOUNTRYID+1;
             string ImagePath = usrCtrlEditPerson1.IMAGEPATH;
 
-            clsPeopleBusinessLayer EditedPerson = new clsPeopleBusinessLayer(PersonId, FirstName, SecondName, ThirdName, LastName, NationalNo, DateOfBirth, Gender, Address, Phone, Email, NationalityCountryID, ImagePath);
+            clsPeople EditedPerson = new clsPeople(PersonId, FirstName, SecondName, ThirdName, LastName, NationalNo, DateOfBirth, Gender, Address, Phone, Email, NationalityCountryID, ImagePath);
 
             return (EditedPerson.Save()); 
         }

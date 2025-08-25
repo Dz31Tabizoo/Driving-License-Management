@@ -57,7 +57,7 @@ namespace Project19
         public void SetUpUserControls()
         {
             DataTable countries = new DataTable();
-            countries= clsPeopleBusinessLayer.GetCountries();
+            countries= clsPeople.GetCountries();
             //DateTime MinAdultDate = DateTime.Today.AddYears(-18);
 
             //dtpDateOfBirth.MaxDate = MinAdultDate;
@@ -174,7 +174,7 @@ namespace Project19
                 {
                     errorProvider.SetError(txtNationalnumbOutput, "Checking...");
 
-                    bool exists = await Task.Run(() => clsPeopleBusinessLayer.isNationaNoExists(txtNationalnumbOutput.Text));
+                    bool exists = await Task.Run(() => clsPeople.isNationaNoExists(txtNationalnumbOutput.Text));
                     errorProvider.SetError(txtNationalnumbOutput, exists ? "Already Exists" : "");
 
                 }

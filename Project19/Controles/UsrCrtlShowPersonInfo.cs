@@ -61,7 +61,7 @@ namespace Project19
                 lblEmailOut.Text = row.Cells["Email"].Value.ToString();
                 int UserCountryID = (int)row.Cells["NationalityCountryID"].Value;
 
-                lblCountryOutput.Text = clsPeopleBusinessLayer.GetCountryNameByID(UserCountryID);
+                lblCountryOutput.Text = clsPeople.GetCountryNameByID(UserCountryID);
 
                 string imgPath = row.Cells["Address"].Value.ToString();
                 if ( string.IsNullOrEmpty(imgPath))

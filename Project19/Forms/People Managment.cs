@@ -26,7 +26,7 @@ namespace Project19
         {
             //Fill Data Grid View
             DataTable Dt = new DataTable();
-            Dt = clsPeopleBusinessLayer.GetAllPeople();
+            Dt = clsPeople.GetAllPeople();
             dgvAllPeople.DataSource = Dt;
             //Count Data
             var Count = Dt.Rows.Count;
@@ -131,7 +131,7 @@ namespace Project19
         private void btnClear_Click_1(object sender, EventArgs e)
         {
             TxtSearchTerm.Text = "";
-            DataTable Dt = clsPeopleBusinessLayer.GetAllPeople();
+            DataTable Dt = clsPeople.GetAllPeople();
             dgvAllPeople.DataSource = Dt;
         }
 
@@ -226,7 +226,7 @@ namespace Project19
             DialogResult result = MessageBox.Show($"Do you confirm Delete ID {PersID} ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
-                if (clsPeopleBusinessLayer.DeletePerson(PersID))
+                if (clsPeople.DeletePerson(PersID))
                 {
                     MessageBox.Show($"Person with ID {PersID} Deleted ", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     

@@ -16,11 +16,10 @@ namespace BusinessLayer
             : base(message, inner) { }
     }
 
-    public class clsPeopleBusinessLayer
+    public class clsPeople
     {
         public enum enMode { AddNew=0, Update=1}
         public enMode CurrentMode { get; private set; } = enMode.AddNew;
-
         public int PersonID { get; set; }
         public string FirstName {  get; set; }
         public string SecondName { get; set; }
@@ -38,7 +37,7 @@ namespace BusinessLayer
 
         // constractors
 
-        public clsPeopleBusinessLayer()
+        public clsPeople()
         {
             this.PersonID = -1;
             this.FirstName = string.Empty;
@@ -57,7 +56,7 @@ namespace BusinessLayer
 
         }
 
-        public clsPeopleBusinessLayer(int Personid, string firstname, string secondname, string thirdname, string lastname,
+        public clsPeople(int Personid, string firstname, string secondname, string thirdname, string lastname,
             string nationalNo, DateTime dateofbirth, byte gender, string address, string phone, string email,
             int nationalcountryid, string imagepath)
         {
@@ -79,7 +78,7 @@ namespace BusinessLayer
         }
 
         // OBV
-        public static clsPeopleBusinessLayer FindPersonByID(int ID)
+        public static clsPeople FindPersonByID(int ID)
         {
             try
             {
@@ -92,7 +91,7 @@ namespace BusinessLayer
 
                 if (clsPeopleDataAccess.FindPersonByID(ID, ref firstname, ref secondname, ref thirdname, ref lastname, ref nationalNo, ref dateofbirth, ref gender, ref address, ref phone, ref email, ref nationalcountryid, ref imagepath))
                 {
-                    return new clsPeopleBusinessLayer(ID, firstname, secondname, thirdname, lastname, nationalNo, dateofbirth, gender, address, phone, email, nationalcountryid, imagepath);
+                    return new clsPeople(ID, firstname, secondname, thirdname, lastname, nationalNo, dateofbirth, gender, address, phone, email, nationalcountryid, imagepath);
                 }
                 else return null;
             }
@@ -172,12 +171,10 @@ namespace BusinessLayer
             return clsPeopleDataAccess.GetCounryNameByID(ID);
         }
 
-
         public static bool DeletePerson(int ID)
         {
             return clsPeopleDataAccess.DeletePerson(ID);
         }
-
 
     }
 }
