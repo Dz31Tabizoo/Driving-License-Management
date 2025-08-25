@@ -1,12 +1,14 @@
-﻿using System;
+﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BusinessLayer
 {
-    internal class clsUser
+    public class clsUser
     {
 
         public enum enMode { AddNew = 0, Update = 1 }
@@ -46,11 +48,34 @@ namespace BusinessLayer
         }
 
 
+        public static clsUser FindUserByUserName(string Username)
+        {
+            int PersonID = -1;
+            string PassWord = string.Empty;
+            bool isAvtive = false;
+            int UserID = -1;
 
+            if (Username == null) { return null; }
+            try
+            {
+                if (clsUserDAL.FindUserByName(Username, ref PassWord, ref isAvtive, ref PersonID, ref UserID))
+                {
+                    clsPeople person = clsPeople.FindPersonByID(PersonID);
 
+                    return new clsUser(UserID, person, Username, PassWord, isAvtive);
 
-
-
-
+                }
+                return null;
+            }
+            catch (SqlException Sqlex)
+            {
+                throw new BusinessLayerException("Error retriving person data", Sqlex);
+            }
+            catch (Exception ex)
+            {
+                throw new BusinessLayerException("Unexpected error occurred", ex);
+            }
+            
+        }
     }
 }

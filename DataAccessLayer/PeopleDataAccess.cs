@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class clsPeopleDataAccess
+    public class clsPeopleDAL
     {
         /*// In your Common/Shared project
  public class OperationResult<T>
@@ -179,7 +179,7 @@ private void btnCheckNationalNo_Click(object sender, EventArgs e)
                             lastname = reader["LastName"] as string ?? string.Empty;
                             nationalNo = reader["NationalNo"] as string ?? string.Empty;
                             dateofbirth = reader["DateOfBirth"] as DateTime? ?? DateTime.MinValue;
-                            gender = reader["Gender"] as byte? ?? byte.MinValue;
+                            gender = reader["Gendor"] as byte? ?? 0;
                             address = reader["Address"] as string ?? string.Empty;
                             phone = reader["Phone"] as string ?? string.Empty;
                             email = reader["Email"] as string ?? string.Empty;

@@ -89,7 +89,7 @@ namespace BusinessLayer
                 int nationalcountryid = -1; string imagepath = string.Empty;
 
 
-                if (clsPeopleDataAccess.FindPersonByID(ID, ref firstname, ref secondname, ref thirdname, ref lastname, ref nationalNo, ref dateofbirth, ref gender, ref address, ref phone, ref email, ref nationalcountryid, ref imagepath))
+                if (clsPeopleDAL.FindPersonByID(ID, ref firstname, ref secondname, ref thirdname, ref lastname, ref nationalNo, ref dateofbirth, ref gender, ref address, ref phone, ref email, ref nationalcountryid, ref imagepath))
                 {
                     return new clsPeople(ID, firstname, secondname, thirdname, lastname, nationalNo, dateofbirth, gender, address, phone, email, nationalcountryid, imagepath);
                 }
@@ -110,7 +110,7 @@ namespace BusinessLayer
             
             try
             {
-                return clsPeopleDataAccess.GetAllPeople()?? new DataTable();
+                return clsPeopleDAL.GetAllPeople()?? new DataTable();
             }
             catch (SqlException Sqlex)
             {
@@ -125,24 +125,24 @@ namespace BusinessLayer
 
         private bool _AddNewPerson()
         {
-            this.PersonID = clsPeopleDataAccess.AddNewPerson(this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.NationalNo, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
+            this.PersonID = clsPeopleDAL.AddNewPerson(this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.NationalNo, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
 
             return (this.PersonID != -1);
         }
 
         private bool _Update()
         {
-            return (clsPeopleDataAccess.UpdatePerson(this.PersonID, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.NationalNo, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath));
+            return (clsPeopleDAL.UpdatePerson(this.PersonID, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.NationalNo, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath));
         }
 
         public static DataTable GetCountries()
         {
-            return clsPeopleDataAccess.GetCountries();
+            return clsPeopleDAL.GetCountries();
         }
 
         public static bool isNationaNoExists(string Nat_num)
         {
-            return clsPeopleDataAccess.isNationalNoExist(Nat_num);
+            return clsPeopleDAL.isNationalNoExist(Nat_num);
         }
 
         public bool Save()
@@ -168,12 +168,12 @@ namespace BusinessLayer
 
         public static string GetCountryNameByID(int ID)
         {
-            return clsPeopleDataAccess.GetCounryNameByID(ID);
+            return clsPeopleDAL.GetCounryNameByID(ID);
         }
 
         public static bool DeletePerson(int ID)
         {
-            return clsPeopleDataAccess.DeletePerson(ID);
+            return clsPeopleDAL.DeletePerson(ID);
         }
 
     }
