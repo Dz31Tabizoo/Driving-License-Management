@@ -130,6 +130,12 @@
       <DependentUpon>Person Details.cs</DependentUpon>
     </Compile>
     <Compile Include="Handlers\ValidationHaldler.cs" />
+    <Compile Include="Forms\Frm_User_Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_User_Management.Designer.cs">
+      <DependentUpon>Frm_User_Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\test_Form.cs">
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Person Details.resx">
       <DependentUpon>Person Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_User_Management.resx">
+      <DependentUpon>Frm_User_Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

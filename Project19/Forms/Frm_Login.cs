@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 using BusinessLayer;
 using ComponentFactory.Krypton.Toolkit;
@@ -21,28 +22,48 @@ namespace Project19
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            txtUsername.Focus();
+            try
+            {
+                if (File.Exists("Rememberlog.txt"))
+                {
+                    string content = File.ReadAllText("Rememberlog.txt");
+                    string[] parts = content.Split('#');
+                    if (parts.Length >= 2)
+                    {
+                        txtUsername.Text = parts[0];
+                        txtPassword.Text = parts[1];
+                    }
+                    else
+                    {
+                        txtUsername.Focus();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading saved login: {ex.Message}");
+                
+                File.Delete("RememberLog.txt");
+            }
+            
             
         }
 
-        
-
-        private void btnLogin_Click_1(object sender, EventArgs e)
+        private bool ManageLoging()
         {
-
-            if(string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
+            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
             {
                 MessageBox.Show("User Name and PAssword are requiered", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtUsername.Focus();
-                return;
+                return false;
             }
-          clsUser CurrentUSer = clsUser.FindUserByUserName(txtUsername.Text);
+            clsUser CurrentUSer = clsUser.FindUserByUserName(txtUsername.Text);
 
             if (CurrentUSer == null)
             {
                 MessageBox.Show("Wrong UserName Try Again", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtUsername.Focus();
-                return;
+                return false;
             }
             else
             {
@@ -50,7 +71,7 @@ namespace Project19
                 {
                     MessageBox.Show("Wrong PassWord Try Again", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtPassword.Focus();
-                    return;
+                    return false;
                 }
                 else
                 {
@@ -58,17 +79,40 @@ namespace Project19
                     {
                         Form FRM = new Frm_Main_Menu();
                         FRM.Show();
+                        this.Close();
+                        return true;
                     }
-                    else 
+                    else
                     {
                         MessageBox.Show("This User is Not Active, Please Contact Your Admin", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtUsername.Clear();
                         txtUsername.Focus();
 
-                        return;
+                        return false;
                     }
                 }
             }
+        }
+
+        
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            if(ManageLoging() || ChkbxRemaindMe.Checked)
+            {
+                try
+                {
+                    string Content = txtUsername.Text + '#' + txtPassword.Text;
+
+                    File.WriteAllText("RememberLog.txt", Content); // ie should encrypt this data later
+                    MessageBox.Show("Remembering is Done");
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show($"Error Saving Login into File : {ex.Message}");
+                    return;
+                }
+            }            
                
         }
 

@@ -43,6 +43,7 @@ namespace Project19
             this.btnApplications = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.MenuPanel)).BeginInit();
             this.MenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
@@ -59,15 +60,16 @@ namespace Project19
             // MenuPanel
             // 
             this.MenuPanel.AutoScroll = true;
+            this.MenuPanel.Controls.Add(this.kryptonButton1);
             this.MenuPanel.Controls.Add(this.btnPeopleMng);
             this.MenuPanel.Controls.Add(this.kryptonPanel2);
             this.MenuPanel.Controls.Add(this.btnApplications);
             this.MenuPanel.Controls.Add(this.kryptonPanel1);
-            this.MenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MenuPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MenuPanel.Location = new System.Drawing.Point(0, 0);
             this.MenuPanel.Name = "MenuPanel";
             this.MenuPanel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.TabCustom1;
-            this.MenuPanel.Size = new System.Drawing.Size(311, 743);
+            this.MenuPanel.Size = new System.Drawing.Size(350, 800);
             this.MenuPanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.MenuPanel.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(96)))), ((int)(((byte)(115)))));
             this.MenuPanel.StateCommon.ColorAngle = 45F;
@@ -82,7 +84,7 @@ namespace Project19
             this.btnPeopleMng.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnPeopleMng.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnPeopleMng.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnPeopleMng.Size = new System.Drawing.Size(311, 45);
+            this.btnPeopleMng.Size = new System.Drawing.Size(350, 45);
             this.btnPeopleMng.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnPeopleMng.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnPeopleMng.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -103,7 +105,6 @@ namespace Project19
             this.btnPeopleMng.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnPeopleMng.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPeopleMng.TabIndex = 3;
-            this.btnPeopleMng.Values.Image = global::Project19.Properties.Resources.administrator;
             this.btnPeopleMng.Values.Text = "People Managment";
             this.btnPeopleMng.Click += new System.EventHandler(this.kryptonButton7_Click);
             // 
@@ -117,7 +118,7 @@ namespace Project19
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 181);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(311, 175);
+            this.kryptonPanel2.Size = new System.Drawing.Size(350, 175);
             this.kryptonPanel2.TabIndex = 2;
             // 
             // kryptonButton6
@@ -125,7 +126,7 @@ namespace Project19
             this.kryptonButton6.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonButton6.Location = new System.Drawing.Point(0, 140);
             this.kryptonButton6.Name = "kryptonButton6";
-            this.kryptonButton6.Size = new System.Drawing.Size(311, 35);
+            this.kryptonButton6.Size = new System.Drawing.Size(350, 35);
             this.kryptonButton6.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton6.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton6.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,7 +151,7 @@ namespace Project19
             this.kryptonButton5.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonButton5.Location = new System.Drawing.Point(0, 105);
             this.kryptonButton5.Name = "kryptonButton5";
-            this.kryptonButton5.Size = new System.Drawing.Size(311, 35);
+            this.kryptonButton5.Size = new System.Drawing.Size(350, 35);
             this.kryptonButton5.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton5.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton5.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -175,7 +176,7 @@ namespace Project19
             this.kryptonButton4.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonButton4.Location = new System.Drawing.Point(0, 70);
             this.kryptonButton4.Name = "kryptonButton4";
-            this.kryptonButton4.Size = new System.Drawing.Size(311, 35);
+            this.kryptonButton4.Size = new System.Drawing.Size(350, 35);
             this.kryptonButton4.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton4.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton4.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -200,7 +201,7 @@ namespace Project19
             this.kryptonButton3.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonButton3.Location = new System.Drawing.Point(0, 35);
             this.kryptonButton3.Name = "kryptonButton3";
-            this.kryptonButton3.Size = new System.Drawing.Size(311, 35);
+            this.kryptonButton3.Size = new System.Drawing.Size(350, 35);
             this.kryptonButton3.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton3.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -225,7 +226,7 @@ namespace Project19
             this.kryptonButton2.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonButton2.Location = new System.Drawing.Point(0, 0);
             this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(311, 35);
+            this.kryptonButton2.Size = new System.Drawing.Size(350, 35);
             this.kryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton2.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -254,7 +255,7 @@ namespace Project19
             this.btnApplications.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnApplications.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnApplications.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnApplications.Size = new System.Drawing.Size(311, 45);
+            this.btnApplications.Size = new System.Drawing.Size(350, 45);
             this.btnApplications.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnApplications.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnApplications.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -275,7 +276,6 @@ namespace Project19
             this.btnApplications.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnApplications.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApplications.TabIndex = 1;
-            this.btnApplications.Values.Image = global::Project19.Properties.Resources.data;
             this.btnApplications.Values.Text = "Applications";
             this.btnApplications.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
@@ -285,7 +285,7 @@ namespace Project19
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(311, 136);
+            this.kryptonPanel1.Size = new System.Drawing.Size(350, 136);
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.kryptonPanel1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.kryptonPanel1.TabIndex = 0;
@@ -293,20 +293,56 @@ namespace Project19
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Project19.Properties.Resources.driving__vehicle_license_department_high_resolution_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(75, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(101, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(147, 121);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorMini;
+            this.kryptonButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonButton1.Location = new System.Drawing.Point(0, 401);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.kryptonButton1.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.kryptonButton1.Size = new System.Drawing.Size(350, 45);
+            this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.kryptonButton1.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(96)))), ((int)(((byte)(115)))));
+            this.kryptonButton1.StateNormal.Back.ColorAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.kryptonButton1.StateNormal.Back.ColorAngle = 45F;
+            this.kryptonButton1.StateNormal.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.GlassCheckedTrackingFull;
+            this.kryptonButton1.StateNormal.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton1.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.kryptonButton1.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.kryptonButton1.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateNormal.Border.Width = 0;
+            this.kryptonButton1.StateNormal.Content.LongText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Content.LongText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.TabIndex = 4;
+            this.kryptonButton1.Values.Image = global::Project19.Properties.Resources.team_meeting__1_;
+            this.kryptonButton1.Values.Text = "User Managment";
+            // 
             // Frm_Main_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(1319, 743);
+            this.ClientSize = new System.Drawing.Size(350, 800);
             this.Controls.Add(this.MenuPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonNavigatorStack;
+            this.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ButtonStandalone;
             this.Name = "Frm_Main_Menu";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -335,5 +371,6 @@ namespace Project19
         private KryptonButton kryptonButton2;
         private KryptonButton btnPeopleMng;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private KryptonButton kryptonButton1;
     }
 }

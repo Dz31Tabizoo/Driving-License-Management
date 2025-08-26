@@ -1,0 +1,7 @@
+ - CHECK Existance of UserName (Match), Password (Match) , isActive (true/false)
+         by FindUserByUserName(string usrname);
+
+         REMEMBER ME CHECK BOX SAVED IN FILE.TXT
+
+SING OUT BUTTON IF REMEMBER ME CHECKED => LOGIN SCREEN TEXTBOXES DEFAULT TEXT = USER INFO 
+
