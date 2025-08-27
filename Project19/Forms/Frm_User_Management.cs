@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace Project19
 {
-    public partial class User_Managment : KryptonForm
+    public partial class Frm_User_Managment : KryptonForm
     {
 
 
-        public User_Managment()
+        public Frm_User_Managment()
         {
             InitializeComponent();
         }
@@ -26,8 +26,8 @@ namespace Project19
         {
             //Fill Data Grid View
             DataTable Dt = new DataTable();
-            Dt = clsPeople.GetAllPeople(); //users
-            dgvAllPeople.DataSource = Dt;
+            Dt = clsUser.GetAllUsers();
+            dgvAllUsers.DataSource = Dt;
             //Count Data
             var Count = Dt.Rows.Count;
             lblTotalPeople.Text = lblTotalPeople.Text + ": [" + Count.ToString() + "]";
@@ -36,12 +36,8 @@ namespace Project19
             foreach (DataColumn Col in Dt.Columns)
             {
                 cmbSearchCriteria.Items.Add(Col.ColumnName);
-            }
-            //select first item by defaul
-            if (cmbSearchCriteria.Items.Count > 0)
-            {
-                cmbSearchCriteria.SelectedIndex = 0;
-            }
+            }          
+
 
         }
 
@@ -58,7 +54,7 @@ namespace Project19
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            DataTable Dt = (DataTable)dgvAllPeople.DataSource;
+            DataTable Dt = (DataTable)dgvAllUsers.DataSource;
             if (Dt == null) return;
 
             string SearchTerm = TxtSearchTerm.Text.Trim();
@@ -133,16 +129,16 @@ namespace Project19
         {
             TxtSearchTerm.Text = "";
             DataTable Dt = clsPeople.GetAllPeople();
-            dgvAllPeople.DataSource = Dt;
+            dgvAllUsers.DataSource = Dt;
         }
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvAllPeople.SelectedRows.Count == 0)
+            if (dgvAllUsers.SelectedRows.Count == 0)
                 return;
 
 
-            DataGridViewRow selectedRow = dgvAllPeople.SelectedRows[0];
+            DataGridViewRow selectedRow = dgvAllUsers.SelectedRows[0];
 
             Form frm = new frmPerson_Details(selectedRow);
             frm.ShowDialog();
@@ -152,11 +148,11 @@ namespace Project19
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvAllPeople.SelectedRows.Count <= 0)
+            if (dgvAllUsers.SelectedRows.Count <= 0)
             {
                 return;
             }
-            DataGridViewRow SelectedRow = dgvAllPeople.SelectedRows[0];
+            DataGridViewRow SelectedRow = dgvAllUsers.SelectedRows[0];
 
             Form EdditFrom = new Frm_Person_Add_Edit(SelectedRow);
             EdditFrom.ShowDialog();
@@ -164,19 +160,14 @@ namespace Project19
 
         }
 
-        private void lblAddPerson_Click(object sender, EventArgs e)
-        {
-            KryptonForm form = new Frm_Person_Add_Edit();
-
-            form.ShowDialog();
-
-        }
+        
 
         private void TxtSearchTerm_MouseEnter(object sender, EventArgs e)
         {
             if (TxtSearchTerm.Text == "Search ...")
             {
-                TxtSearchTerm.Text = string.Empty; TxtSearchTerm.Focus();
+                TxtSearchTerm.Text = string.Empty; 
+                TxtSearchTerm.Focus();
             }
 
         }
@@ -218,11 +209,11 @@ namespace Project19
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvAllPeople.SelectedRows.Count <= 0)
+            if (dgvAllUsers.SelectedRows.Count <= 0)
             {
                 return;
             }
-            DataGridViewRow SelectedRow = dgvAllPeople.SelectedRows[0];
+            DataGridViewRow SelectedRow = dgvAllUsers.SelectedRows[0];
             int PersID = Convert.ToInt32(SelectedRow.Cells["PersonID"].Value);
             DialogResult result = MessageBox.Show($"Do you confirm Delete ID {PersID} ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
@@ -246,6 +237,19 @@ namespace Project19
 
         }
 
-       
+        private void cmbSearchCriteria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable Dt = (DataTable)dgvAllUsers.DataSource;
+            if (Dt == null) return;
+
+            string SearchTerm = TxtSearchTerm.Text.Trim();
+            string searchColumns = cmbSearchCriteria.SelectedItem.ToString();
+
+
+            if (IsNumericCulumn(Dt,searchColumns))
+            {
+                
+            }
+        }
     } 
 }

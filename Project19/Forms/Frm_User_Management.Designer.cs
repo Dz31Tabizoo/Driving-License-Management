@@ -1,6 +1,8 @@
-﻿namespace Project19
+﻿using ComponentFactory.Krypton.Toolkit;
+
+namespace Project19
 {
-    partial class User_Managment
+    public partial class Frm_User_Managment 
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +31,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,8 +46,10 @@
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.lblTotalPeople = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnClosePeopleMng = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.dgvAllPeople = new System.Windows.Forms.DataGridView();
+            this.dgvAllUsers = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblAddPerson = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnClear = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnSearch = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -53,30 +57,27 @@
             this.TxtSearchTerm = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            contextMenuStrip1.SuspendLayout();
+            this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllUsers)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSearchCriteria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
             // 
-            contextMenuStrip1.AllowDrop = true;
-            contextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            contextMenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contextMenuStrip1.AllowDrop = true;
+            this.contextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.contextMenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showDetailsToolStripMenuItem,
             this.toolStripSeparator1,
             this.editToolStripMenuItem,
@@ -84,10 +85,10 @@
             this.toolStripSeparator2,
             this.phoneCallToolStripMenuItem,
             this.emailToolStripMenuItem});
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            contextMenuStrip1.Size = new System.Drawing.Size(187, 206);
-            contextMenuStrip1.Text = "Person Options";
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.contextMenuStrip1.Size = new System.Drawing.Size(187, 206);
+            this.contextMenuStrip1.Text = "Person Options";
             // 
             // showDetailsToolStripMenuItem
             // 
@@ -154,19 +155,19 @@
             // 
             this.kryptonPanel1.Controls.Add(this.lblTotalPeople);
             this.kryptonPanel1.Controls.Add(this.btnClosePeopleMng);
-            this.kryptonPanel1.Controls.Add(this.dgvAllPeople);
+            this.kryptonPanel1.Controls.Add(this.dgvAllUsers);
             this.kryptonPanel1.Controls.Add(this.panel1);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(1313, 671);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1024, 751);
             this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonPanel1.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonPanel1.TabIndex = 0;
             // 
             // lblTotalPeople
             // 
-            this.lblTotalPeople.Location = new System.Drawing.Point(48, 626);
+            this.lblTotalPeople.Location = new System.Drawing.Point(22, 700);
             this.lblTotalPeople.Name = "lblTotalPeople";
             this.lblTotalPeople.Size = new System.Drawing.Size(127, 29);
             this.lblTotalPeople.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
@@ -179,7 +180,7 @@
             // 
             // btnClosePeopleMng
             // 
-            this.btnClosePeopleMng.Location = new System.Drawing.Point(1174, 626);
+            this.btnClosePeopleMng.Location = new System.Drawing.Point(888, 696);
             this.btnClosePeopleMng.Name = "btnClosePeopleMng";
             this.btnClosePeopleMng.Size = new System.Drawing.Size(106, 33);
             this.btnClosePeopleMng.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -223,56 +224,57 @@
             this.btnClosePeopleMng.Values.Text = "Close";
             this.btnClosePeopleMng.Click += new System.EventHandler(this.btnClosePeopleMng_Click);
             // 
-            // dgvAllPeople
+            // dgvAllUsers
             // 
-            this.dgvAllPeople.AllowUserToAddRows = false;
-            this.dgvAllPeople.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.dgvAllPeople.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvAllPeople.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAllPeople.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.dgvAllPeople.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvAllPeople.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvAllPeople.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAllPeople.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvAllPeople.ColumnHeadersHeight = 28;
-            this.dgvAllPeople.ContextMenuStrip = contextMenuStrip1;
-            this.dgvAllPeople.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvAllPeople.EnableHeadersVisualStyles = false;
-            this.dgvAllPeople.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.dgvAllPeople.Location = new System.Drawing.Point(0, 249);
-            this.dgvAllPeople.Name = "dgvAllPeople";
-            this.dgvAllPeople.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAllPeople.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.dgvAllPeople.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvAllPeople.Size = new System.Drawing.Size(1313, 371);
-            this.dgvAllPeople.TabIndex = 1;
+            this.dgvAllUsers.AllowUserToAddRows = false;
+            this.dgvAllUsers.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.dgvAllUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAllUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAllUsers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.dgvAllUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAllUsers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvAllUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAllUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAllUsers.ColumnHeadersHeight = 28;
+            this.dgvAllUsers.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvAllUsers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvAllUsers.EnableHeadersVisualStyles = false;
+            this.dgvAllUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.dgvAllUsers.Location = new System.Drawing.Point(0, 281);
+            this.dgvAllUsers.Name = "dgvAllUsers";
+            this.dgvAllUsers.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAllUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.dgvAllUsers.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvAllUsers.Size = new System.Drawing.Size(1024, 402);
+            this.dgvAllUsers.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.panel1.Controls.Add(this.kryptonLabel1);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.lblAddPerson);
             this.panel1.Controls.Add(this.btnClear);
@@ -281,38 +283,59 @@
             this.panel1.Controls.Add(this.TxtSearchTerm);
             this.panel1.Controls.Add(this.kryptonLabel2);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.kryptonLabel1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Sitka Small", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1313, 249);
+            this.panel1.Size = new System.Drawing.Size(1024, 281);
             this.panel1.TabIndex = 0;
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(45, 8);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(219, 29);
+            this.kryptonLabel1.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.kryptonLabel1.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.kryptonLabel1.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.kryptonLabel1.StateNormal.ShortText.Font = new System.Drawing.Font("Georgia", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel1.StateNormal.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.kryptonLabel1.TabIndex = 9;
+            this.kryptonLabel1.Values.Text = "Users Managment";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Project19.Properties.Resources.driving__vehicle_license_department_high_resolution_logo;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 60);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(149, 132);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
             // 
             // lblAddPerson
             // 
             this.lblAddPerson.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
-            this.lblAddPerson.Location = new System.Drawing.Point(1120, 207);
+            this.lblAddPerson.Location = new System.Drawing.Point(864, 229);
             this.lblAddPerson.Name = "lblAddPerson";
-            this.lblAddPerson.Size = new System.Drawing.Size(138, 36);
+            this.lblAddPerson.Size = new System.Drawing.Size(115, 36);
             this.lblAddPerson.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.lblAddPerson.StateNormal.Image.ImageColorMap = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.lblAddPerson.StateNormal.Image.ImageColorTo = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.lblAddPerson.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.lblAddPerson.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.lblAddPerson.StateNormal.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.ExpertPressed;
-            this.lblAddPerson.StateNormal.ShortText.Font = new System.Drawing.Font("Yu Gothic Medium", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddPerson.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddPerson.StateNormal.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.lblAddPerson.TabIndex = 7;
             this.lblAddPerson.Values.Image = global::Project19.Properties.Resources.add_user;
-            this.lblAddPerson.Values.Text = "Add Person";
-            this.lblAddPerson.Click += new System.EventHandler(this.lblAddPerson_Click);
+            this.lblAddPerson.Values.Text = "Add User";
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(802, 206);
+            this.btnClear.Location = new System.Drawing.Point(700, 230);
             this.btnClear.Name = "btnClear";
             this.btnClear.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.btnClear.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
@@ -329,7 +352,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnClear.OverrideFocus.Border.Rounding = 5;
-            this.btnClear.Size = new System.Drawing.Size(106, 33);
+            this.btnClear.Size = new System.Drawing.Size(124, 34);
             this.btnClear.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.btnClear.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.btnClear.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
@@ -382,7 +405,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(940, 206);
+            this.btnSearch.Location = new System.Drawing.Point(554, 230);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.btnSearch.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
@@ -399,7 +422,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnSearch.OverrideFocus.Border.Rounding = 5;
-            this.btnSearch.Size = new System.Drawing.Size(106, 33);
+            this.btnSearch.Size = new System.Drawing.Size(124, 34);
             this.btnSearch.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.btnSearch.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.btnSearch.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
@@ -448,15 +471,14 @@
             this.btnSearch.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Values.Text = "Search";
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cmbSearchCriteria
             // 
             this.cmbSearchCriteria.DropDownWidth = 183;
             this.cmbSearchCriteria.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
-            this.cmbSearchCriteria.Location = new System.Drawing.Point(179, 213);
+            this.cmbSearchCriteria.Location = new System.Drawing.Point(166, 233);
             this.cmbSearchCriteria.Name = "cmbSearchCriteria";
-            this.cmbSearchCriteria.Size = new System.Drawing.Size(183, 27);
+            this.cmbSearchCriteria.Size = new System.Drawing.Size(168, 27);
             this.cmbSearchCriteria.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.cmbSearchCriteria.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.cmbSearchCriteria.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
@@ -481,12 +503,13 @@
             this.cmbSearchCriteria.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSearchCriteria.TabIndex = 5;
             this.cmbSearchCriteria.Text = "Columns";
+            this.cmbSearchCriteria.SelectedIndexChanged += new System.EventHandler(this.cmbSearchCriteria_SelectedIndexChanged);
             // 
             // TxtSearchTerm
             // 
-            this.TxtSearchTerm.Location = new System.Drawing.Point(387, 212);
+            this.TxtSearchTerm.Location = new System.Drawing.Point(347, 231);
             this.TxtSearchTerm.Name = "TxtSearchTerm";
-            this.TxtSearchTerm.Size = new System.Drawing.Size(215, 30);
+            this.TxtSearchTerm.Size = new System.Drawing.Size(190, 30);
             this.TxtSearchTerm.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.TxtSearchTerm.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.TxtSearchTerm.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
@@ -504,16 +527,16 @@
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(36, 211);
+            this.kryptonLabel2.Location = new System.Drawing.Point(34, 230);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(124, 34);
+            this.kryptonLabel2.Size = new System.Drawing.Size(115, 34);
             this.kryptonLabel2.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.kryptonLabel2.StateNormal.Image.ImageColorMap = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonLabel2.StateNormal.Image.ImageColorTo = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonLabel2.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonLabel2.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonLabel2.StateNormal.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.ExpertPressed;
-            this.kryptonLabel2.StateNormal.ShortText.Font = new System.Drawing.Font("Yu Gothic Medium", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel2.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.StateNormal.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.kryptonLabel2.TabIndex = 4;
             this.kryptonLabel2.Values.Image = global::Project19.Properties.Resources.search__2_;
@@ -522,7 +545,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Project19.Properties.Resources.close;
-            this.pictureBox2.Location = new System.Drawing.Point(1285, 1);
+            this.pictureBox2.Location = new System.Drawing.Point(995, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -530,55 +553,32 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // kryptonLabel1
+            // pictureBox1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(432, 12);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(427, 53);
-            this.kryptonLabel1.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.kryptonLabel1.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.kryptonLabel1.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.kryptonLabel1.StateNormal.ShortText.Font = new System.Drawing.Font("Georgia", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.StateNormal.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.kryptonLabel1.TabIndex = 1;
-            this.kryptonLabel1.Values.Text = "People Managment";
+            this.pictureBox1.Image = global::Project19.Properties.Resources.team;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // kryptonContextMenuItem1
             // 
             this.kryptonContextMenuItem1.Text = "Menu Item";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Project19.Properties.Resources.team;
-            this.pictureBox1.Location = new System.Drawing.Point(368, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(58, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Project19.Properties.Resources.driving__vehicle_license_department_high_resolution_logo;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(194, 180);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
-            // People_Managment
+            // Frm_User_Managment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1313, 671);
+            this.ClientSize = new System.Drawing.Size(1024, 751);
             this.ControlBox = false;
             this.Controls.Add(this.kryptonPanel1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "People_Managment";
+            this.Name = "Frm_User_Managment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -596,17 +596,17 @@
             this.StateInactive.Border.Width = 0;
             this.Text = "People Managment";
             this.Load += new System.EventHandler(this.People_Managment_Load);
-            contextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllUsers)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSearchCriteria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -615,8 +615,7 @@
 
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgvAllPeople;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private System.Windows.Forms.DataGridView dgvAllUsers;
         private System.Windows.Forms.PictureBox pictureBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnClosePeopleMng;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblTotalPeople;
@@ -636,5 +635,7 @@
         private System.Windows.Forms.ToolStripMenuItem emailToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

@@ -39,10 +39,16 @@ namespace Project19
 
         }
 
-        private void kryptonButton7_Click(object sender, EventArgs e)
+        private void btnPeopleMng_Click(object sender, EventArgs e)
         {
-            Form formy = new People_Managment();
-            formy.ShowDialog();
+            KryptonForm frm = new People_Managment();
+            frm.ShowDialog();
+        }
+
+        private void kryptonButton1_Click_1(object sender, EventArgs e)
+        {
+            KryptonForm frm = new Frm_User_Managment();
+            frm.ShowDialog();
         }
     }
 }

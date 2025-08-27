@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Linq;
@@ -46,5 +47,23 @@ namespace DataAccessLayer
             return false;
         }
 
+        public static DataTable GetAllUsers()
+        {
+            string Query = @"SELECT * FROM Users ORDER BY UserID;";
+            DataTable dtUsers = new DataTable();
+
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(Query, cnx))
+                {
+                    cnx.Open();
+                    using (SqlDataReader rdr = cmd.ExecuteReader())
+                    {
+                        dtUsers.Load(rdr);
+                    }
+                }
+            }
+            return dtUsers;
+        }
     }
 }

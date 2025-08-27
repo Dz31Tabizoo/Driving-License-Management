@@ -403,6 +403,16 @@ namespace Project19.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap maximize__1_ {
+            get {
+                object obj = ResourceManager.GetObject("maximize (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minimize {
             get {
                 object obj = ResourceManager.GetObject("minimize", resourceCulture);
@@ -486,6 +496,26 @@ namespace Project19.Properties {
         internal static System.Drawing.Bitmap search__2_ {
             get {
                 object obj = ResourceManager.GetObject("search (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sortie {
+            get {
+                object obj = ResourceManager.GetObject("sortie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sortie1 {
+            get {
+                object obj = ResourceManager.GetObject("sortie1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

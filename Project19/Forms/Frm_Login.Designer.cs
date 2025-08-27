@@ -117,6 +117,7 @@
             this.txtUsername.StateNormal.Content.Padding = new System.Windows.Forms.Padding(5, -1, -1, -1);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.Text = "Enter Your User Name";
+            this.txtUsername.MouseEnter += new System.EventHandler(this.txtUsername_MouseEnter);
             // 
             // txtPassword
             // 

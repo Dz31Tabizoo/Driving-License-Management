@@ -77,9 +77,7 @@ namespace Project19
                 {
                     if (CurrentUSer.IsActive == true)
                     {
-                        Form FRM = new Frm_Main_Menu();
-                        FRM.Show();
-                        this.Close();
+                                              
                         return true;
                     }
                     else
@@ -90,6 +88,7 @@ namespace Project19
 
                         return false;
                     }
+                    
                 }
             }
         }
@@ -98,22 +97,28 @@ namespace Project19
 
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
-            if(ManageLoging() || ChkbxRemaindMe.Checked)
+            if(ManageLoging()) 
             {
-                try
+                if (ChkbxRemaindMe.Checked)
                 {
-                    string Content = txtUsername.Text + '#' + txtPassword.Text;
+                    try
+                    {
+                        string Content = txtUsername.Text + '#' + txtPassword.Text;
 
-                    File.WriteAllText("RememberLog.txt", Content); // ie should encrypt this data later
-                    MessageBox.Show("Remembering is Done");
+                        File.WriteAllText("RememberLog.txt", Content); // ie should encrypt this data later
+
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error Saving Login into File : {ex.Message}");
+                        return;
+                    }
                 }
-                catch(Exception ex)
-                {
-                    MessageBox.Show($"Error Saving Login into File : {ex.Message}");
-                    return;
-                }
-            }            
-               
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            
         }
 
        
@@ -123,6 +128,16 @@ namespace Project19
             this.Close();
         }
 
-       
+        
+        private void txtUsername_MouseEnter(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "Enter Your User Name")
+            {
+                txtUsername.Text = string.Empty;
+                txtUsername.Focus();
+            }
+        }
+
     }
+   
 }

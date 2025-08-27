@@ -16,7 +16,14 @@ namespace Project19
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Login());
+             using (Frm_Login loginForm = new Frm_Login())
+    {
+        if (loginForm.ShowDialog() == DialogResult.OK)
+        {
+            // If login successful, run application with main menu
+            Application.Run(new Frm_Main_Menu());
+        }
+    }
         }
     }
 }

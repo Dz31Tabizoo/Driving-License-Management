@@ -245,6 +245,14 @@ namespace Project19
 
         }
 
-       
+        private void pictureBox4_MouseEnter(object sender, EventArgs e)
+        {
+            picMaximize.Image = Properties.Resources.maximize__1_;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
     } 
 }
