@@ -229,7 +229,7 @@ namespace Project19
                 if (clsPeople.DeletePerson(PersID))
                 {
                     MessageBox.Show($"Person with ID {PersID} Deleted ", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+
                 }
                 else
                 {
@@ -247,12 +247,37 @@ namespace Project19
 
         private void pictureBox4_MouseEnter(object sender, EventArgs e)
         {
-            picMaximize.Image = Properties.Resources.maximize__1_;
+            picMaximize.Image = Properties.Resources.maximize_Blue;
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
         }
-    } 
+
+        private void pictureBox2_MouseEnter(object sender, EventArgs e)
+        {
+            picClose.Image = Properties.Resources.close_RED;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            picClose.Image = Properties.Resources.close1;
+        }
+
+        private void picMaximize_MouseLeave(object sender, EventArgs e)
+        {
+            picMaximize.Image = Properties.Resources.maximize__1_;
+        }
+
+        private void PicMinimize_MouseEnter(object sender, EventArgs e)
+        {     
+            PicMinimize.Image = Properties.Resources.minimize__1_;
+        }
+
+        private void PicMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            PicMinimize.Image = Properties.Resources.minimize1;
+        }
+    }
 }
