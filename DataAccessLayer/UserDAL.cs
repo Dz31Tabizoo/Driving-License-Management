@@ -49,7 +49,11 @@ namespace DataAccessLayer
 
         public static DataTable GetAllUsers()
         {
-            string Query = @"SELECT * FROM Users ORDER BY UserID;";
+            string Query = @"SELECT u.UserID,u.PersonID,
+                                     CONCAT_WS(' ',p.FirstName,p.SecondName,p.ThirdName,p.LastName) AS FullName,
+                                     u.UserName, u.Password , u.isActive 
+                                     FROM Users AS u 
+                                     INNER JOIN People AS p ON u.PersonID = p.PersonID ";
             DataTable dtUsers = new DataTable();
 
             using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))

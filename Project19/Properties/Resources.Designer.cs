@@ -233,6 +233,16 @@ namespace Project19.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap driver_license1 {
+            get {
+                object obj = ResourceManager.GetObject("driver-license1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap driving__vehicle_license_department_high_resolution_logo {
             get {
                 object obj = ResourceManager.GetObject("driving--vehicle-license-department-high-resolution-logo", resourceCulture);

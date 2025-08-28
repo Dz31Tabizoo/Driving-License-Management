@@ -214,6 +214,9 @@
     <None Include="Resources\close24.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\MarkaziText-VariableFont_wght.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\switch.png" />
   </ItemGroup>
   <ItemGroup>
@@ -341,6 +344,7 @@
     <None Include="Resources\maximize_Blue.png" />
     <None Include="Resources\minimize1.png" />
     <None Include="Resources\minimize %281%29.png" />
+    <None Include="Resources\driver-license1.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />

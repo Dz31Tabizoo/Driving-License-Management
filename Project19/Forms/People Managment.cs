@@ -33,6 +33,7 @@ namespace Project19
             lblTotalPeople.Text = lblTotalPeople.Text + ": [" + Count.ToString() + "]";
             //Search
             //Add Columns
+            cmbSearchCriteria.Items.Insert(0, "Select an option...");
             foreach (DataColumn Col in Dt.Columns)
             {
                 cmbSearchCriteria.Items.Add(Col.ColumnName);

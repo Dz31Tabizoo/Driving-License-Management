@@ -15,31 +15,17 @@ namespace Project19
     public partial class Frm_User_Managment : KryptonForm
     {
 
-
+        
         public Frm_User_Managment()
         {
             InitializeComponent();
         }
 
-
-        private void People_Managment_Load(object sender, EventArgs e)
-        {
-            //Fill Data Grid View
-            DataTable Dt = new DataTable();
-            Dt = clsUser.GetAllUsers();
-            dgvAllUsers.DataSource = Dt;
-            //Count Data
-            var Count = Dt.Rows.Count;
-            lblTotalPeople.Text = lblTotalPeople.Text + ": [" + Count.ToString() + "]";
-            //Search
-            //Add Columns
-            foreach (DataColumn Col in Dt.Columns)
-            {
-                cmbSearchCriteria.Items.Add(Col.ColumnName);
-            }          
+        // UI 
 
 
-        }
+
+       
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -50,6 +36,129 @@ namespace Project19
         {
             this.Close();
             
+        }
+
+        private void TxtSearchTerm_TextChanged(object sender, EventArgs e)
+        {
+            string col = cmbSearchCriteria.SelectedItem.ToString();
+            if (col == "UserID" || col == "PersonID" )
+            {
+                foreach (char c in TxtSearchTerm.Text)
+                {
+                    if (!char.IsDigit(c))
+                    {
+                        TxtSearchTerm.Clear();
+                        errorProvider1.SetError(TxtSearchTerm, "Please, Only digits are accepted ");
+                    }
+                    else
+                    {
+                        errorProvider1.SetError(TxtSearchTerm, "");
+                    }
+                }
+            }
+            else if (col == "UserName")
+            {
+                foreach (char c in TxtSearchTerm.Text)
+                {
+                    if (!char.IsLetter(c))
+                    {
+                        TxtSearchTerm.Clear();
+                        errorProvider1.SetError(TxtSearchTerm, "Please, Only letters are accepted ");
+                    }
+                    else
+                    {
+                        errorProvider1.SetError(TxtSearchTerm, "");
+                    }
+                }
+            }
+
+
+
+
+
+                //Real Time Search
+                btnSearch.PerformClick(); // trigger search 
+        }
+               
+        private void TxtSearchTerm_MouseEnter(object sender, EventArgs e)
+        {
+            if (TxtSearchTerm.Text == "Search ...")
+            {
+                TxtSearchTerm.Text = string.Empty; 
+                TxtSearchTerm.Focus();
+            }
+
+        }
+
+
+
+        // check Columns
+        private bool IsNumericCulumn(DataTable DDT, string ColumnName)
+        {
+            if (DDT.Columns.Contains(ColumnName))
+            {
+                Type ColumnType = DDT.Columns[ColumnName].DataType;
+                return (ColumnType == typeof(int) || ColumnType == typeof(double) || ColumnType == typeof(float) || ColumnType == typeof(long) || ColumnType == typeof(short) || ColumnType == typeof(decimal));
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private bool isDateTimeColumn(DataTable DDT, string ColumnName)
+        {
+            if (!DDT.Columns.Contains(ColumnName))
+            {
+                return false;
+            }
+
+            Type ColType = DDT.Columns[ColumnName].GetType();
+            return (ColType == typeof(DateTime));
+        }
+
+        private bool isByteColumn(DataTable DDT, string ColumnName)
+        {
+            if (!DDT.Columns.Contains(ColumnName))
+            {
+                return false;
+            }
+
+            Type type = DDT.Columns[ColumnName].GetType();
+            return (type == typeof(Byte));
+        }             
+
+
+
+
+        //Logic on Event
+
+        private void btnClear_Click_1(object sender, EventArgs e)
+        {
+            TxtSearchTerm.Text = "";
+            DataTable Dt = clsUser.GetAllUsers();
+            dgvAllUsers.DataSource = Dt;
+        }
+
+        private void Frm_User_Load(object sender, EventArgs e)
+        {
+            //Fill Data Grid View
+            DataTable Dt = new DataTable();
+            Dt = clsUser.GetAllUsers();
+            dgvAllUsers.DataSource = Dt;
+            //Count Data
+            var Count = Dt.Rows.Count;
+            lblTotalPeople.Text = lblTotalPeople.Text + ": [" + Count.ToString() + "]";
+            //Search
+            //Add Columns
+            cmbSearchCriteria.Items.Insert(0, "Select an option...");
+            
+            foreach (DataColumn Col in Dt.Columns)
+            {
+                cmbSearchCriteria.Items.Add(Col.ColumnName);
+            }
+            cmbSearchCriteria.SelectedIndex = 0;
+            cmbActiveStat.SelectedIndex = 0;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -97,9 +206,13 @@ namespace Project19
                     }
                     else if (isByteColumn(Dt, searchColumns))
                     {
-                        if (Byte.TryParse(SearchTerm, out Byte byteValue))
+                        if (cmbActiveStat.SelectedIndex == 0)
                         {
-                            Dt.DefaultView.RowFilter = $"[{searchColumns}] = {byteValue}";
+                            Dt.DefaultView.RowFilter = $"[isActive] = {1}";
+                        }
+                        else
+                        {
+                            Dt.DefaultView.RowFilter = $"[isActive] = {0}";
                         }
                     }
                     else
@@ -118,125 +231,6 @@ namespace Project19
 
         }
 
-        private void TxtSearchTerm_TextChanged(object sender, EventArgs e)
-        {
-            //Real Time Search
-            btnSearch.PerformClick(); // trigger search 
-        }
-        // Empty text filed
-
-        private void btnClear_Click_1(object sender, EventArgs e)
-        {
-            TxtSearchTerm.Text = "";
-            DataTable Dt = clsPeople.GetAllPeople();
-            dgvAllUsers.DataSource = Dt;
-        }
-
-        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (dgvAllUsers.SelectedRows.Count == 0)
-                return;
-
-
-            DataGridViewRow selectedRow = dgvAllUsers.SelectedRows[0];
-
-            Form frm = new frmPerson_Details(selectedRow);
-            frm.ShowDialog();
-
-
-        }
-
-        private void editToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (dgvAllUsers.SelectedRows.Count <= 0)
-            {
-                return;
-            }
-            DataGridViewRow SelectedRow = dgvAllUsers.SelectedRows[0];
-
-            Form EdditFrom = new Frm_Person_Add_Edit(SelectedRow);
-            EdditFrom.ShowDialog();
-
-
-        }
-
-        
-
-        private void TxtSearchTerm_MouseEnter(object sender, EventArgs e)
-        {
-            if (TxtSearchTerm.Text == "Search ...")
-            {
-                TxtSearchTerm.Text = string.Empty; 
-                TxtSearchTerm.Focus();
-            }
-
-        }
-
-        private bool IsNumericCulumn(DataTable DDT, string ColumnName)
-        {
-            if (DDT.Columns.Contains(ColumnName))
-            {
-                Type ColumnType = DDT.Columns[ColumnName].DataType;
-                return (ColumnType == typeof(int) || ColumnType == typeof(double) || ColumnType == typeof(float) || ColumnType == typeof(long) || ColumnType == typeof(short) || ColumnType == typeof(decimal));
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        private bool isDateTimeColumn(DataTable DDT, string ColumnName)
-        {
-            if (!DDT.Columns.Contains(ColumnName))
-            {
-                return false;
-            }
-
-            Type ColType = DDT.Columns[ColumnName].GetType();
-            return (ColType == typeof(DateTime));
-        }
-
-        private bool isByteColumn(DataTable DDT, string ColumnName)
-        {
-            if (!DDT.Columns.Contains(ColumnName))
-            {
-                return false;
-            }
-
-            Type type = DDT.Columns[ColumnName].GetType();
-            return (type == typeof(Byte));
-        }
-
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (dgvAllUsers.SelectedRows.Count <= 0)
-            {
-                return;
-            }
-            DataGridViewRow SelectedRow = dgvAllUsers.SelectedRows[0];
-            int PersID = Convert.ToInt32(SelectedRow.Cells["PersonID"].Value);
-            DialogResult result = MessageBox.Show($"Do you confirm Delete ID {PersID} ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-            if (result == DialogResult.Yes)
-            {
-                if (clsPeople.DeletePerson(PersID))
-                {
-                    MessageBox.Show($"Person with ID {PersID} Deleted ", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                }
-                else
-                {
-                    MessageBox.Show($"Person with ID {PersID} is Not Deleted try again", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                return;
-            }
-
-
-
-        }
-
         private void cmbSearchCriteria_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable Dt = (DataTable)dgvAllUsers.DataSource;
@@ -246,10 +240,40 @@ namespace Project19
             string searchColumns = cmbSearchCriteria.SelectedItem.ToString();
 
 
-            if (IsNumericCulumn(Dt,searchColumns))
+            if (searchColumns == "IsActive")
             {
-                
+                TxtSearchTerm.Visible = false;
+                cmbActiveStat.Visible = true;
             }
+            else
+            {
+                TxtSearchTerm.Visible = true;
+                cmbActiveStat.Visible = false;
+                TxtSearchTerm.Text = string.Empty;
+            }
+
+            TxtSearchTerm.Text = string.Empty;
+        }
+
+        private void cmbActiveStat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable DtUser = (DataTable)dgvAllUsers.DataSource;
+            if (DtUser == null)
+            {
+                return;
+            }
+
+            if (cmbActiveStat.SelectedIndex == 0 )
+            {
+                DtUser.DefaultView.RowFilter = $"[isActive] = {1}";
+            }
+            else
+            {
+                DtUser.DefaultView.RowFilter = $"[isActive] = {0}";
+            }
+
+
+
         }
     } 
 }
