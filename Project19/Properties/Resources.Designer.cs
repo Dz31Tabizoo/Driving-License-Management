@@ -533,6 +533,16 @@ namespace Project19.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap se_deconnecter {
+            get {
+                object obj = ResourceManager.GetObject("se-deconnecter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
@@ -576,6 +586,16 @@ namespace Project19.Properties {
         internal static System.Drawing.Bitmap sortie1 {
             get {
                 object obj = ResourceManager.GetObject("sortie1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap suivant {
+            get {
+                object obj = ResourceManager.GetObject("suivant", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -62,6 +62,8 @@ namespace Project19
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.PicMinimize = new System.Windows.Forms.PictureBox();
+            this.picMaximize = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -73,6 +75,8 @@ namespace Project19
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -277,6 +281,8 @@ namespace Project19
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.panel1.Controls.Add(this.PicMinimize);
+            this.panel1.Controls.Add(this.picMaximize);
             this.panel1.Controls.Add(this.cmbActiveStat);
             this.panel1.Controls.Add(this.kryptonLabel1);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -616,6 +622,28 @@ namespace Project19
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
+            // PicMinimize
+            // 
+            this.PicMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PicMinimize.Image = global::Project19.Properties.Resources.minimize1;
+            this.PicMinimize.Location = new System.Drawing.Point(944, 7);
+            this.PicMinimize.Name = "PicMinimize";
+            this.PicMinimize.Size = new System.Drawing.Size(22, 22);
+            this.PicMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicMinimize.TabIndex = 14;
+            this.PicMinimize.TabStop = false;
+            // 
+            // picMaximize
+            // 
+            this.picMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMaximize.Image = global::Project19.Properties.Resources.maximize__1_;
+            this.picMaximize.Location = new System.Drawing.Point(969, 7);
+            this.picMaximize.Name = "picMaximize";
+            this.picMaximize.Size = new System.Drawing.Size(22, 22);
+            this.picMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMaximize.TabIndex = 13;
+            this.picMaximize.TabStop = false;
+            // 
             // Frm_User_Managment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -658,6 +686,8 @@ namespace Project19
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -690,5 +720,7 @@ namespace Project19
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private KryptonComboBox cmbActiveStat;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.PictureBox PicMinimize;
+        private System.Windows.Forms.PictureBox picMaximize;
     }
 }

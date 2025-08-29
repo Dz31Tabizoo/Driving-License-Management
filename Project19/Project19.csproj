@@ -81,6 +81,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -115,6 +116,12 @@
     </Compile>
     <Compile Include="Forms\Frm_Person_Add_Edit.Designer.cs">
       <DependentUpon>Frm_Person_Add_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Add_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Add_User.Designer.cs">
+      <DependentUpon>Frm_Add_User.cs</DependentUpon>
     </Compile>
     <Compile Include="Handlers\ImageHandler.cs" />
     <Compile Include="Forms\People Managment.cs">
@@ -156,6 +163,12 @@
     <Compile Include="Controles\UsrCtrlEditPerson.Designer.cs">
       <DependentUpon>UsrCtrlEditPerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controles\UsrCrtlShowPersonInfoFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controles\UsrCrtlShowPersonInfoFilter.Designer.cs">
+      <DependentUpon>UsrCrtlShowPersonInfoFilter.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\UselessEdit.resx">
       <DependentUpon>UselessEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +190,9 @@
     <EmbeddedResource Include="Forms\Frm_User_Management.resx">
       <DependentUpon>Frm_User_Management.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Add_User.resx">
+      <DependentUpon>Frm_Add_User.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -195,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\UsrCtrlEditPerson.resx">
       <DependentUpon>UsrCtrlEditPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\UsrCrtlShowPersonInfoFilter.resx">
+      <DependentUpon>UsrCrtlShowPersonInfoFilter.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -345,6 +364,8 @@
     <None Include="Resources\minimize1.png" />
     <None Include="Resources\minimize %281%29.png" />
     <None Include="Resources\driver-license1.png" />
+    <None Include="Resources\suivant.png" />
+    <None Include="Resources\se-deconnecter.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />
