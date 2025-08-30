@@ -117,10 +117,10 @@
     <Compile Include="Forms\Frm_Person_Add_Edit.Designer.cs">
       <DependentUpon>Frm_Person_Add_Edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Add_User.cs">
+    <Compile Include="Forms\Frm_Add_User.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Add_User.Designer.cs">
+    <Compile Include="Forms\Frm_Add_User.Designer.cs">
       <DependentUpon>Frm_Add_User.cs</DependentUpon>
     </Compile>
     <Compile Include="Handlers\ImageHandler.cs" />
@@ -190,7 +190,7 @@
     <EmbeddedResource Include="Forms\Frm_User_Management.resx">
       <DependentUpon>Frm_User_Management.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Add_User.resx">
+    <EmbeddedResource Include="Forms\Frm_Add_User.resx">
       <DependentUpon>Frm_Add_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -357,6 +357,7 @@
     <None Include="Resources\sortie1.png" />
     <None Include="Resources\maximize %281%29.png" />
     <None Include="Resources\close1.png" />
+    <None Include="Resources\active-user.png" />
     <Content Include="Resources\close_RED.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -366,6 +367,10 @@
     <None Include="Resources\driver-license1.png" />
     <None Include="Resources\suivant.png" />
     <None Include="Resources\se-deconnecter.png" />
+    <None Include="Resources\id-card %282%29.png" />
+    <None Include="Resources\employee.png" />
+    <None Include="Resources\locked.png" />
+    <None Include="Resources\locked1.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />

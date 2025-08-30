@@ -124,14 +124,11 @@
   <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="management" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\management.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bank-acount (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bank-acount (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="phone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\phone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="suivant" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\suivant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="administrator" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\administrator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,14 +139,11 @@
   <data name="driving--vehicle-license-department-high-resolution-logo-transparent1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\driving--vehicle-license-department-high-resolution-logo-transparent1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="record" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\record.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="phone-call" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\phone-call.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="team-meeting (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\team-meeting (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\locked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -159,9 +153,6 @@
   </data>
   <data name="calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="driver-license1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\driver-license1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,6 +181,12 @@
   <data name="full-screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\full-screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="suivant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\suivant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="driver-license" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\driver-license.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,20 +199,26 @@
   <data name="pin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="locked1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\locked1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="delete (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="email" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\email.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="globe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\globe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minimize1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimize1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="driving--vehicle-license-department-high-resolution-logo-transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="driving--vehicle-license-department-high-resolution-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\driving--vehicle-license-department-high-resolution-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,20 +241,29 @@
   <data name="sortie1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sortie1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="diskette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\diskette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="team" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\team.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="full-screen (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\full-screen (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="muslimah" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\muslimah2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="driver-license" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\driver-license.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="team-meeting (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\team-meeting (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="management" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\management.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="employee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\employee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="close1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,37 +271,40 @@
   <data name="data" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\data.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="diskette" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\diskette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minimize (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimize (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="id-card (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\id-card (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="search (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="full-screen (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\full-screen (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minimize1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sortie" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sortie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="driving--vehicle-license-department-high-resolution-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\driving--vehicle-license-department-high-resolution-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="se-deconnecter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\se-deconnecter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="information (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\information (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bank-acount (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bank-acount (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="record" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\record.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="driving--vehicle-license-department-high-resolution-logo-transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="information" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="se-deconnecter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\se-deconnecter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="active-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\active-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

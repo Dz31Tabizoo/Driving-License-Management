@@ -30,14 +30,32 @@
         {
             this.tabAddUser = new System.Windows.Forms.TabControl();
             this.tabPgFindPerson = new System.Windows.Forms.TabPage();
-            this.tabPgAddUserinfo = new System.Windows.Forms.TabPage();
-            this.usrCrtlShowPersonInfoFilter1 = new Project19.UsrCrtlShowPersonInfoFilter();
             this.btnClosePeopleMng = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.usrCrtlShowPersonInfoFilter1 = new Project19.UsrCrtlShowPersonInfoFilter();
+            this.tabPgAddUserinfo = new System.Windows.Forms.TabPage();
+            this.lblPersonIdOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblUSerID = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonWrapLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.txtThirdName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.lblThirdName = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.txtFirstName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.lblUsername = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.btnSaveEdit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnClear = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.chkActive = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabAddUser.SuspendLayout();
             this.tabPgFindPerson.SuspendLayout();
+            this.tabPgAddUserinfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,27 +84,6 @@
             this.tabPgFindPerson.Size = new System.Drawing.Size(857, 552);
             this.tabPgFindPerson.TabIndex = 0;
             this.tabPgFindPerson.Text = "Find Person";
-            // 
-            // tabPgAddUserinfo
-            // 
-            this.tabPgAddUserinfo.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabPgAddUserinfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.tabPgAddUserinfo.Location = new System.Drawing.Point(4, 34);
-            this.tabPgAddUserinfo.Name = "tabPgAddUserinfo";
-            this.tabPgAddUserinfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPgAddUserinfo.Size = new System.Drawing.Size(857, 552);
-            this.tabPgAddUserinfo.TabIndex = 1;
-            this.tabPgAddUserinfo.Text = "Create User";
-            // 
-            // usrCrtlShowPersonInfoFilter1
-            // 
-            this.usrCrtlShowPersonInfoFilter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.usrCrtlShowPersonInfoFilter1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.usrCrtlShowPersonInfoFilter1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.usrCrtlShowPersonInfoFilter1.Location = new System.Drawing.Point(23, 15);
-            this.usrCrtlShowPersonInfoFilter1.Name = "usrCrtlShowPersonInfoFilter1";
-            this.usrCrtlShowPersonInfoFilter1.Size = new System.Drawing.Size(800, 487);
-            this.usrCrtlShowPersonInfoFilter1.TabIndex = 0;
             // 
             // btnClosePeopleMng
             // 
@@ -133,6 +130,143 @@
             this.btnClosePeopleMng.TabIndex = 3;
             this.btnClosePeopleMng.Values.Image = global::Project19.Properties.Resources.suivant;
             this.btnClosePeopleMng.Values.Text = "Next";
+            // 
+            // usrCrtlShowPersonInfoFilter1
+            // 
+            this.usrCrtlShowPersonInfoFilter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.usrCrtlShowPersonInfoFilter1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.usrCrtlShowPersonInfoFilter1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.usrCrtlShowPersonInfoFilter1.Location = new System.Drawing.Point(23, 15);
+            this.usrCrtlShowPersonInfoFilter1.Name = "usrCrtlShowPersonInfoFilter1";
+            this.usrCrtlShowPersonInfoFilter1.Size = new System.Drawing.Size(800, 487);
+            this.usrCrtlShowPersonInfoFilter1.TabIndex = 0;
+            // 
+            // tabPgAddUserinfo
+            // 
+            this.tabPgAddUserinfo.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPgAddUserinfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPgAddUserinfo.Controls.Add(this.chkActive);
+            this.tabPgAddUserinfo.Controls.Add(this.lblPersonIdOutput);
+            this.tabPgAddUserinfo.Controls.Add(this.pictureBox3);
+            this.tabPgAddUserinfo.Controls.Add(this.lblUSerID);
+            this.tabPgAddUserinfo.Controls.Add(this.kryptonTextBox1);
+            this.tabPgAddUserinfo.Controls.Add(this.pictureBox1);
+            this.tabPgAddUserinfo.Controls.Add(this.kryptonWrapLabel1);
+            this.tabPgAddUserinfo.Controls.Add(this.txtThirdName);
+            this.tabPgAddUserinfo.Controls.Add(this.pictureBox12);
+            this.tabPgAddUserinfo.Controls.Add(this.lblThirdName);
+            this.tabPgAddUserinfo.Controls.Add(this.txtFirstName);
+            this.tabPgAddUserinfo.Controls.Add(this.pictureBox6);
+            this.tabPgAddUserinfo.Controls.Add(this.lblUsername);
+            this.tabPgAddUserinfo.Location = new System.Drawing.Point(4, 34);
+            this.tabPgAddUserinfo.Name = "tabPgAddUserinfo";
+            this.tabPgAddUserinfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPgAddUserinfo.Size = new System.Drawing.Size(857, 552);
+            this.tabPgAddUserinfo.TabIndex = 1;
+            this.tabPgAddUserinfo.Text = "Create User";
+            // 
+            // lblPersonIdOutput
+            // 
+            this.lblPersonIdOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonIdOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblPersonIdOutput.Location = new System.Drawing.Point(230, 36);
+            this.lblPersonIdOutput.Name = "lblPersonIdOutput";
+            this.lblPersonIdOutput.Size = new System.Drawing.Size(37, 20);
+            this.lblPersonIdOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonIdOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblPersonIdOutput.Text = "N/A";
+            // 
+            // lblUSerID
+            // 
+            this.lblUSerID.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUSerID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblUSerID.Location = new System.Drawing.Point(118, 36);
+            this.lblUSerID.Name = "lblUSerID";
+            this.lblUSerID.Size = new System.Drawing.Size(67, 20);
+            this.lblUSerID.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUSerID.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblUSerID.Text = "User ID :";
+            // 
+            // kryptonTextBox1
+            // 
+            this.kryptonTextBox1.Location = new System.Drawing.Point(218, 144);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.Size = new System.Drawing.Size(125, 29);
+            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox1.StateCommon.Border.Rounding = 5;
+            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonTextBox1.TabIndex = 85;
+            // 
+            // kryptonWrapLabel1
+            // 
+            this.kryptonWrapLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.kryptonWrapLabel1.Location = new System.Drawing.Point(30, 144);
+            this.kryptonWrapLabel1.Name = "kryptonWrapLabel1";
+            this.kryptonWrapLabel1.Size = new System.Drawing.Size(147, 20);
+            this.kryptonWrapLabel1.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonWrapLabel1.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.kryptonWrapLabel1.Text = "Confirm Pass Word :";
+            // 
+            // txtThirdName
+            // 
+            this.txtThirdName.Location = new System.Drawing.Point(218, 109);
+            this.txtThirdName.Name = "txtThirdName";
+            this.txtThirdName.Size = new System.Drawing.Size(125, 29);
+            this.txtThirdName.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.txtThirdName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtThirdName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtThirdName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtThirdName.StateCommon.Border.Rounding = 5;
+            this.txtThirdName.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.txtThirdName.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThirdName.TabIndex = 79;
+            // 
+            // lblThirdName
+            // 
+            this.lblThirdName.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThirdName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblThirdName.Location = new System.Drawing.Point(89, 110);
+            this.lblThirdName.Name = "lblThirdName";
+            this.lblThirdName.Size = new System.Drawing.Size(88, 20);
+            this.lblThirdName.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThirdName.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblThirdName.Text = "Pass Word :";
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.Location = new System.Drawing.Point(218, 74);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(125, 29);
+            this.txtFirstName.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.txtFirstName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtFirstName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtFirstName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtFirstName.StateCommon.Border.Rounding = 5;
+            this.txtFirstName.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.txtFirstName.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.TabIndex = 78;
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblUsername.Location = new System.Drawing.Point(96, 75);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(93, 20);
+            this.lblUsername.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblUsername.Text = "User Name :";
             // 
             // btnSaveEdit
             // 
@@ -274,6 +408,55 @@
             this.btnClear.Values.Image = global::Project19.Properties.Resources.se_deconnecter;
             this.btnClear.Values.Text = "Exit";
             // 
+            // chkActive
+            // 
+            this.chkActive.Location = new System.Drawing.Point(218, 192);
+            this.chkActive.Name = "chkActive";
+            this.chkActive.Size = new System.Drawing.Size(113, 26);
+            this.chkActive.StateNormal.Padding = new System.Windows.Forms.Padding(3, -1, -1, -1);
+            this.chkActive.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.chkActive.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.chkActive.TabIndex = 96;
+            this.chkActive.Values.Image = global::Project19.Properties.Resources.active_user;
+            this.chkActive.Values.Text = " Active User";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Project19.Properties.Resources.id_card__2_;
+            this.pictureBox3.Location = new System.Drawing.Point(191, 34);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 90;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Project19.Properties.Resources.locked;
+            this.pictureBox1.Location = new System.Drawing.Point(188, 144);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.TabIndex = 86;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::Project19.Properties.Resources.locked;
+            this.pictureBox12.Location = new System.Drawing.Point(188, 109);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox12.TabIndex = 81;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Project19.Properties.Resources.employee;
+            this.pictureBox6.Location = new System.Drawing.Point(188, 74);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.TabIndex = 80;
+            this.pictureBox6.TabStop = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Project19.Properties.Resources.close;
@@ -299,6 +482,12 @@
             this.Text = "Frm_Add_User";
             this.tabAddUser.ResumeLayout(false);
             this.tabPgFindPerson.ResumeLayout(false);
+            this.tabPgAddUserinfo.ResumeLayout(false);
+            this.tabPgAddUserinfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -313,5 +502,18 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnClosePeopleMng;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSaveEdit;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnClear;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtThirdName;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblThirdName;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtFirstName;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblUsername;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblPersonIdOutput;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblUSerID;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox chkActive;
     }
 }

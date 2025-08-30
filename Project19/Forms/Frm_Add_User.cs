@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Project19
 {
-    public partial class Frm_Add_User : Form
+    public partial class Frm_Add_User : KryptonForm
     {
         public Frm_Add_User()
         {
