@@ -33,6 +33,7 @@
             this.btnClosePeopleMng = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.usrCrtlShowPersonInfoFilter1 = new Project19.UsrCrtlShowPersonInfoFilter();
             this.tabPgAddUserinfo = new System.Windows.Forms.TabPage();
+            this.chkActive = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.lblPersonIdOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblUSerID = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -43,20 +44,25 @@
             this.lblUsername = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.btnSaveEdit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnClear = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.chkActive = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.picEyePassWrdConfirm = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picPassWrd = new System.Windows.Forms.PictureBox();
             this.tabAddUser.SuspendLayout();
             this.tabPgFindPerson.SuspendLayout();
             this.tabPgAddUserinfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEyePassWrdConfirm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPassWrd)).BeginInit();
             this.SuspendLayout();
             // 
             // tabAddUser
@@ -65,7 +71,7 @@
             this.tabAddUser.Controls.Add(this.tabPgAddUserinfo);
             this.tabAddUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabAddUser.ItemSize = new System.Drawing.Size(60, 30);
-            this.tabAddUser.Location = new System.Drawing.Point(12, 60);
+            this.tabAddUser.Location = new System.Drawing.Point(12, 83);
             this.tabAddUser.Name = "tabAddUser";
             this.tabAddUser.SelectedIndex = 0;
             this.tabAddUser.Size = new System.Drawing.Size(865, 590);
@@ -73,7 +79,7 @@
             // 
             // tabPgFindPerson
             // 
-            this.tabPgFindPerson.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPgFindPerson.BackColor = System.Drawing.Color.Ivory;
             this.tabPgFindPerson.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPgFindPerson.Controls.Add(this.btnClosePeopleMng);
             this.tabPgFindPerson.Controls.Add(this.usrCrtlShowPersonInfoFilter1);
@@ -87,7 +93,7 @@
             // 
             // btnClosePeopleMng
             // 
-            this.btnClosePeopleMng.Location = new System.Drawing.Point(684, 509);
+            this.btnClosePeopleMng.Location = new System.Drawing.Point(701, 509);
             this.btnClosePeopleMng.Name = "btnClosePeopleMng";
             this.btnClosePeopleMng.Size = new System.Drawing.Size(106, 33);
             this.btnClosePeopleMng.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -127,24 +133,26 @@
             this.btnClosePeopleMng.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.btnClosePeopleMng.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.btnClosePeopleMng.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClosePeopleMng.TabIndex = 3;
+            this.btnClosePeopleMng.TabIndex = 5;
             this.btnClosePeopleMng.Values.Image = global::Project19.Properties.Resources.suivant;
-            this.btnClosePeopleMng.Values.Text = "Next";
+            this.btnClosePeopleMng.Values.Text = "Close";
             // 
             // usrCrtlShowPersonInfoFilter1
             // 
-            this.usrCrtlShowPersonInfoFilter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.usrCrtlShowPersonInfoFilter1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.usrCrtlShowPersonInfoFilter1.BackColor = System.Drawing.Color.Ivory;
             this.usrCrtlShowPersonInfoFilter1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.usrCrtlShowPersonInfoFilter1.Location = new System.Drawing.Point(23, 15);
+            this.usrCrtlShowPersonInfoFilter1.Location = new System.Drawing.Point(22, 16);
             this.usrCrtlShowPersonInfoFilter1.Name = "usrCrtlShowPersonInfoFilter1";
-            this.usrCrtlShowPersonInfoFilter1.Size = new System.Drawing.Size(800, 487);
-            this.usrCrtlShowPersonInfoFilter1.TabIndex = 0;
+            this.usrCrtlShowPersonInfoFilter1.Size = new System.Drawing.Size(815, 497);
+            this.usrCrtlShowPersonInfoFilter1.TabIndex = 4;
             // 
             // tabPgAddUserinfo
             // 
-            this.tabPgAddUserinfo.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPgAddUserinfo.BackColor = System.Drawing.Color.Ivory;
             this.tabPgAddUserinfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPgAddUserinfo.Controls.Add(this.picPassWrd);
+            this.tabPgAddUserinfo.Controls.Add(this.picEyePassWrdConfirm);
+            this.tabPgAddUserinfo.Controls.Add(this.pictureBox4);
             this.tabPgAddUserinfo.Controls.Add(this.chkActive);
             this.tabPgAddUserinfo.Controls.Add(this.lblPersonIdOutput);
             this.tabPgAddUserinfo.Controls.Add(this.pictureBox3);
@@ -165,11 +173,23 @@
             this.tabPgAddUserinfo.TabIndex = 1;
             this.tabPgAddUserinfo.Text = "Create User";
             // 
+            // chkActive
+            // 
+            this.chkActive.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
+            this.chkActive.Location = new System.Drawing.Point(285, 284);
+            this.chkActive.Name = "chkActive";
+            this.chkActive.Size = new System.Drawing.Size(93, 20);
+            this.chkActive.StateNormal.Padding = new System.Windows.Forms.Padding(3, -1, -1, -1);
+            this.chkActive.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.chkActive.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.chkActive.TabIndex = 96;
+            this.chkActive.Values.Text = " Active User";
+            // 
             // lblPersonIdOutput
             // 
             this.lblPersonIdOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPersonIdOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.lblPersonIdOutput.Location = new System.Drawing.Point(230, 36);
+            this.lblPersonIdOutput.Location = new System.Drawing.Point(307, 96);
             this.lblPersonIdOutput.Name = "lblPersonIdOutput";
             this.lblPersonIdOutput.Size = new System.Drawing.Size(37, 20);
             this.lblPersonIdOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,7 +200,7 @@
             // 
             this.lblUSerID.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUSerID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.lblUSerID.Location = new System.Drawing.Point(118, 36);
+            this.lblUSerID.Location = new System.Drawing.Point(157, 96);
             this.lblUSerID.Name = "lblUSerID";
             this.lblUSerID.Size = new System.Drawing.Size(67, 20);
             this.lblUSerID.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -189,8 +209,9 @@
             // 
             // kryptonTextBox1
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(218, 144);
+            this.kryptonTextBox1.Location = new System.Drawing.Point(269, 234);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.PasswordChar = '●';
             this.kryptonTextBox1.Size = new System.Drawing.Size(125, 29);
             this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -207,7 +228,7 @@
             // 
             this.kryptonWrapLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonWrapLabel1.Location = new System.Drawing.Point(30, 144);
+            this.kryptonWrapLabel1.Location = new System.Drawing.Point(77, 239);
             this.kryptonWrapLabel1.Name = "kryptonWrapLabel1";
             this.kryptonWrapLabel1.Size = new System.Drawing.Size(147, 20);
             this.kryptonWrapLabel1.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -216,8 +237,9 @@
             // 
             // txtThirdName
             // 
-            this.txtThirdName.Location = new System.Drawing.Point(218, 109);
+            this.txtThirdName.Location = new System.Drawing.Point(269, 184);
             this.txtThirdName.Name = "txtThirdName";
+            this.txtThirdName.PasswordChar = '●';
             this.txtThirdName.Size = new System.Drawing.Size(125, 29);
             this.txtThirdName.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.txtThirdName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -234,7 +256,7 @@
             // 
             this.lblThirdName.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThirdName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.lblThirdName.Location = new System.Drawing.Point(89, 110);
+            this.lblThirdName.Location = new System.Drawing.Point(136, 189);
             this.lblThirdName.Name = "lblThirdName";
             this.lblThirdName.Size = new System.Drawing.Size(88, 20);
             this.lblThirdName.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -243,7 +265,7 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(218, 74);
+            this.txtFirstName.Location = new System.Drawing.Point(269, 134);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(125, 29);
             this.txtFirstName.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
@@ -261,7 +283,7 @@
             // 
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.lblUsername.Location = new System.Drawing.Point(96, 75);
+            this.lblUsername.Location = new System.Drawing.Point(131, 143);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(93, 20);
             this.lblUsername.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -270,7 +292,7 @@
             // 
             // btnSaveEdit
             // 
-            this.btnSaveEdit.Location = new System.Drawing.Point(530, 669);
+            this.btnSaveEdit.Location = new System.Drawing.Point(530, 692);
             this.btnSaveEdit.Name = "btnSaveEdit";
             this.btnSaveEdit.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.btnSaveEdit.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
@@ -340,7 +362,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(702, 669);
+            this.btnClear.Location = new System.Drawing.Point(702, 692);
             this.btnClear.Name = "btnClear";
             this.btnClear.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.btnClear.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
@@ -408,22 +430,29 @@
             this.btnClear.Values.Image = global::Project19.Properties.Resources.se_deconnecter;
             this.btnClear.Values.Text = "Exit";
             // 
-            // chkActive
+            // picEyePassWrdConfirm
             // 
-            this.chkActive.Location = new System.Drawing.Point(218, 192);
-            this.chkActive.Name = "chkActive";
-            this.chkActive.Size = new System.Drawing.Size(113, 26);
-            this.chkActive.StateNormal.Padding = new System.Windows.Forms.Padding(3, -1, -1, -1);
-            this.chkActive.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.chkActive.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.chkActive.TabIndex = 96;
-            this.chkActive.Values.Image = global::Project19.Properties.Resources.active_user;
-            this.chkActive.Values.Text = " Active User";
+            this.picEyePassWrdConfirm.Image = global::Project19.Properties.Resources.hide;
+            this.picEyePassWrdConfirm.Location = new System.Drawing.Point(413, 239);
+            this.picEyePassWrdConfirm.Name = "picEyePassWrdConfirm";
+            this.picEyePassWrdConfirm.Size = new System.Drawing.Size(20, 20);
+            this.picEyePassWrdConfirm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picEyePassWrdConfirm.TabIndex = 108;
+            this.picEyePassWrdConfirm.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Project19.Properties.Resources.active_user;
+            this.pictureBox4.Location = new System.Drawing.Point(236, 279);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox4.TabIndex = 102;
+            this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Project19.Properties.Resources.id_card__2_;
-            this.pictureBox3.Location = new System.Drawing.Point(191, 34);
+            this.pictureBox3.Location = new System.Drawing.Point(235, 95);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -433,7 +462,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Project19.Properties.Resources.locked;
-            this.pictureBox1.Location = new System.Drawing.Point(188, 144);
+            this.pictureBox1.Location = new System.Drawing.Point(235, 236);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.TabIndex = 86;
@@ -442,7 +471,7 @@
             // pictureBox12
             // 
             this.pictureBox12.Image = global::Project19.Properties.Resources.locked;
-            this.pictureBox12.Location = new System.Drawing.Point(188, 109);
+            this.pictureBox12.Location = new System.Drawing.Point(235, 189);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(24, 24);
             this.pictureBox12.TabIndex = 81;
@@ -451,7 +480,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Project19.Properties.Resources.employee;
-            this.pictureBox6.Location = new System.Drawing.Point(188, 74);
+            this.pictureBox6.Location = new System.Drawing.Point(235, 142);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(24, 24);
             this.pictureBox6.TabIndex = 80;
@@ -467,12 +496,22 @@
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
             // 
+            // picPassWrd
+            // 
+            this.picPassWrd.Image = global::Project19.Properties.Resources.hide;
+            this.picPassWrd.Location = new System.Drawing.Point(413, 189);
+            this.picPassWrd.Name = "picPassWrd";
+            this.picPassWrd.Size = new System.Drawing.Size(20, 20);
+            this.picPassWrd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPassWrd.TabIndex = 109;
+            this.picPassWrd.TabStop = false;
+            // 
             // Frm_Add_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(889, 718);
+            this.ClientSize = new System.Drawing.Size(889, 739);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSaveEdit);
             this.Controls.Add(this.tabAddUser);
@@ -484,11 +523,14 @@
             this.tabPgFindPerson.ResumeLayout(false);
             this.tabPgAddUserinfo.ResumeLayout(false);
             this.tabPgAddUserinfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picEyePassWrdConfirm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPassWrd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -498,8 +540,6 @@
         private System.Windows.Forms.TabControl tabAddUser;
         private System.Windows.Forms.TabPage tabPgFindPerson;
         private System.Windows.Forms.TabPage tabPgAddUserinfo;
-        private UsrCrtlShowPersonInfoFilter usrCrtlShowPersonInfoFilter1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnClosePeopleMng;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSaveEdit;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnClear;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
@@ -515,5 +555,10 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblUSerID;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox chkActive;
+        private UsrCrtlShowPersonInfoFilter usrCrtlShowPersonInfoFilter1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnClosePeopleMng;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox picEyePassWrdConfirm;
+        private System.Windows.Forms.PictureBox picPassWrd;
     }
 }

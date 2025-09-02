@@ -49,6 +49,8 @@ namespace Project19
             this.btnClosePeopleMng = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dgvAllUsers = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.PicMinimize = new System.Windows.Forms.PictureBox();
+            this.picMaximize = new System.Windows.Forms.PictureBox();
             this.cmbActiveStat = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -62,21 +64,19 @@ namespace Project19
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.PicMinimize = new System.Windows.Forms.PictureBox();
-            this.picMaximize = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllUsers)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbActiveStat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSearchCriteria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -302,6 +302,28 @@ namespace Project19
             this.panel1.Size = new System.Drawing.Size(1024, 281);
             this.panel1.TabIndex = 0;
             // 
+            // PicMinimize
+            // 
+            this.PicMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PicMinimize.Image = global::Project19.Properties.Resources.minimize1;
+            this.PicMinimize.Location = new System.Drawing.Point(944, 7);
+            this.PicMinimize.Name = "PicMinimize";
+            this.PicMinimize.Size = new System.Drawing.Size(22, 22);
+            this.PicMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicMinimize.TabIndex = 14;
+            this.PicMinimize.TabStop = false;
+            // 
+            // picMaximize
+            // 
+            this.picMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMaximize.Image = global::Project19.Properties.Resources.maximize__1_;
+            this.picMaximize.Location = new System.Drawing.Point(969, 7);
+            this.picMaximize.Name = "picMaximize";
+            this.picMaximize.Size = new System.Drawing.Size(22, 22);
+            this.picMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMaximize.TabIndex = 13;
+            this.picMaximize.TabStop = false;
+            // 
             // cmbActiveStat
             // 
             this.cmbActiveStat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -364,6 +386,7 @@ namespace Project19
             // 
             // lblAddPerson
             // 
+            this.lblAddPerson.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblAddPerson.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.lblAddPerson.Location = new System.Drawing.Point(864, 229);
             this.lblAddPerson.Name = "lblAddPerson";
@@ -379,6 +402,7 @@ namespace Project19
             this.lblAddPerson.TabIndex = 7;
             this.lblAddPerson.Values.Image = global::Project19.Properties.Resources.add_user;
             this.lblAddPerson.Values.Text = "Add User";
+            this.lblAddPerson.Click += new System.EventHandler(this.lblAddPerson_Click);
             // 
             // btnClear
             // 
@@ -622,28 +646,6 @@ namespace Project19
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
-            // PicMinimize
-            // 
-            this.PicMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PicMinimize.Image = global::Project19.Properties.Resources.minimize1;
-            this.PicMinimize.Location = new System.Drawing.Point(944, 7);
-            this.PicMinimize.Name = "PicMinimize";
-            this.PicMinimize.Size = new System.Drawing.Size(22, 22);
-            this.PicMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicMinimize.TabIndex = 14;
-            this.PicMinimize.TabStop = false;
-            // 
-            // picMaximize
-            // 
-            this.picMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMaximize.Image = global::Project19.Properties.Resources.maximize__1_;
-            this.picMaximize.Location = new System.Drawing.Point(969, 7);
-            this.picMaximize.Name = "picMaximize";
-            this.picMaximize.Size = new System.Drawing.Size(22, 22);
-            this.picMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMaximize.TabIndex = 13;
-            this.picMaximize.TabStop = false;
-            // 
             // Frm_User_Managment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -680,14 +682,14 @@ namespace Project19
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllUsers)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbActiveStat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSearchCriteria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).EndInit();
             this.ResumeLayout(false);
 
         }

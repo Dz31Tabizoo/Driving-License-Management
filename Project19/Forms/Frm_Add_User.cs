@@ -18,9 +18,6 @@ namespace Project19
             InitializeComponent();
         }
 
-        private void usrCrtlShowPersonInfoFilter1_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

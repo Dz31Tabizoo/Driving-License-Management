@@ -371,6 +371,8 @@
     <None Include="Resources\employee.png" />
     <None Include="Resources\locked.png" />
     <None Include="Resources\locked1.png" />
+    <None Include="Resources\search %283%29.png" />
+    <None Include="Resources\hide.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />

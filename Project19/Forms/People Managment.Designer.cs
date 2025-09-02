@@ -368,6 +368,7 @@
             this.lblAddPerson.Values.Image = global::Project19.Properties.Resources.add_user;
             this.lblAddPerson.Values.Text = "Add Person";
             this.lblAddPerson.Click += new System.EventHandler(this.lblAddPerson_Click);
+            this.lblAddPerson.Paint += new System.Windows.Forms.PaintEventHandler(this.lblAddPerson_Paint);
             // 
             // btnClear
             // 

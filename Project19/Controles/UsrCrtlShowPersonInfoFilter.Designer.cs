@@ -32,7 +32,7 @@
             this.btnSearch = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.TxtSearchTerm = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.cmbSearchCriteria = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.cmbPersonSearch = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -64,7 +64,7 @@
             this.lblName = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblPersonID = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.gbFilterGroupe.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSearchCriteria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPersonSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
             this.kryptonGroupBox1.Panel.SuspendLayout();
@@ -87,7 +87,7 @@
             this.gbFilterGroupe.Controls.Add(this.btnSearch);
             this.gbFilterGroupe.Controls.Add(this.kryptonLabel2);
             this.gbFilterGroupe.Controls.Add(this.TxtSearchTerm);
-            this.gbFilterGroupe.Controls.Add(this.cmbSearchCriteria);
+            this.gbFilterGroupe.Controls.Add(this.cmbPersonSearch);
             this.gbFilterGroupe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbFilterGroupe.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbFilterGroupe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
@@ -168,6 +168,7 @@
             this.btnSearch.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Values.Text = "Search";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // kryptonLabel2
             // 
@@ -205,37 +206,37 @@
             this.TxtSearchTerm.TabIndex = 7;
             this.TxtSearchTerm.Text = "Search ...";
             // 
-            // cmbSearchCriteria
+            // cmbPersonSearch
             // 
-            this.cmbSearchCriteria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSearchCriteria.DropDownWidth = 183;
-            this.cmbSearchCriteria.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
-            this.cmbSearchCriteria.Location = new System.Drawing.Point(136, 32);
-            this.cmbSearchCriteria.Name = "cmbSearchCriteria";
-            this.cmbSearchCriteria.Size = new System.Drawing.Size(239, 27);
-            this.cmbSearchCriteria.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.cmbSearchCriteria.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.cmbSearchCriteria.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.cmbSearchCriteria.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.cmbPersonSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPersonSearch.DropDownWidth = 183;
+            this.cmbPersonSearch.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
+            this.cmbPersonSearch.Location = new System.Drawing.Point(136, 32);
+            this.cmbPersonSearch.Name = "cmbPersonSearch";
+            this.cmbPersonSearch.Size = new System.Drawing.Size(239, 27);
+            this.cmbPersonSearch.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.cmbPersonSearch.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.cmbPersonSearch.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.cmbPersonSearch.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cmbSearchCriteria.StateCommon.ComboBox.Border.Rounding = 5;
-            this.cmbSearchCriteria.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.cmbSearchCriteria.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSearchCriteria.StateCommon.DropBack.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.cmbSearchCriteria.StateCommon.DropBack.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.cmbSearchCriteria.StateCommon.Item.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.cmbSearchCriteria.StateCommon.Item.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.cmbSearchCriteria.StateCommon.Item.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.cmbSearchCriteria.StateCommon.Item.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.cmbSearchCriteria.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.cmbPersonSearch.StateCommon.ComboBox.Border.Rounding = 5;
+            this.cmbPersonSearch.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.cmbPersonSearch.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPersonSearch.StateCommon.DropBack.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.cmbPersonSearch.StateCommon.DropBack.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.cmbPersonSearch.StateCommon.Item.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.cmbPersonSearch.StateCommon.Item.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.cmbPersonSearch.StateCommon.Item.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.cmbPersonSearch.StateCommon.Item.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.cmbPersonSearch.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cmbSearchCriteria.StateCommon.Item.Content.Padding = new System.Windows.Forms.Padding(5, -1, -1, -1);
-            this.cmbSearchCriteria.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.cmbSearchCriteria.StateCommon.Item.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.cmbSearchCriteria.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSearchCriteria.TabIndex = 8;
+            this.cmbPersonSearch.StateCommon.Item.Content.Padding = new System.Windows.Forms.Padding(5, -1, -1, -1);
+            this.cmbPersonSearch.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.cmbPersonSearch.StateCommon.Item.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.cmbPersonSearch.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPersonSearch.TabIndex = 8;
             // 
             // kryptonGroupBox1
             // 
@@ -291,6 +292,7 @@
             // 
             // pictureBox10
             // 
+            this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.pictureBox10.Image = global::Project19.Properties.Resources.phone;
             this.pictureBox10.Location = new System.Drawing.Point(420, 292);
             this.pictureBox10.Name = "pictureBox10";
@@ -300,6 +302,7 @@
             // 
             // pictureBox9
             // 
+            this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.pictureBox9.Image = global::Project19.Properties.Resources.globe;
             this.pictureBox9.Location = new System.Drawing.Point(420, 240);
             this.pictureBox9.Name = "pictureBox9";
@@ -309,6 +312,7 @@
             // 
             // pictureBox8
             // 
+            this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.pictureBox8.Image = global::Project19.Properties.Resources.calendar;
             this.pictureBox8.Location = new System.Drawing.Point(420, 188);
             this.pictureBox8.Name = "pictureBox8";
@@ -318,6 +322,7 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.pictureBox7.Image = global::Project19.Properties.Resources.email__2_;
             this.pictureBox7.Location = new System.Drawing.Point(113, 292);
             this.pictureBox7.Name = "pictureBox7";
@@ -327,6 +332,7 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.pictureBox6.Image = global::Project19.Properties.Resources.id_card__1_;
             this.pictureBox6.Location = new System.Drawing.Point(113, 133);
             this.pictureBox6.Name = "pictureBox6";
@@ -336,6 +342,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.pictureBox5.Image = global::Project19.Properties.Resources.bank_acount__1_;
             this.pictureBox5.Location = new System.Drawing.Point(113, 76);
             this.pictureBox5.Name = "pictureBox5";
@@ -345,6 +352,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.pictureBox4.Image = global::Project19.Properties.Resources.user;
             this.pictureBox4.Location = new System.Drawing.Point(113, 186);
             this.pictureBox4.Name = "pictureBox4";
@@ -354,6 +362,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.pictureBox3.Image = global::Project19.Properties.Resources.id_card;
             this.pictureBox3.Location = new System.Drawing.Point(113, 27);
             this.pictureBox3.Name = "pictureBox3";
@@ -364,6 +373,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.pictureBox2.Image = global::Project19.Properties.Resources.home;
             this.pictureBox2.Location = new System.Drawing.Point(113, 240);
             this.pictureBox2.Name = "pictureBox2";
@@ -476,6 +486,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.pictureBox1.Image = global::Project19.Properties.Resources.user__1_;
             this.pictureBox1.Location = new System.Drawing.Point(607, 15);
             this.pictureBox1.Name = "pictureBox1";
@@ -587,7 +598,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.Ivory;
             this.Controls.Add(this.kryptonGroupBox1);
             this.Controls.Add(this.gbFilterGroupe);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -595,7 +606,7 @@
             this.Size = new System.Drawing.Size(800, 487);
             this.gbFilterGroupe.ResumeLayout(false);
             this.gbFilterGroupe.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSearchCriteria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbPersonSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
             this.kryptonGroupBox1.Panel.ResumeLayout(false);
             this.kryptonGroupBox1.Panel.PerformLayout();
@@ -620,7 +631,7 @@
         private System.Windows.Forms.GroupBox gbFilterGroupe;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSearch;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbSearchCriteria;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbPersonSearch;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox TxtSearchTerm;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
         private System.Windows.Forms.PictureBox pictureBox10;

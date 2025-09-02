@@ -27,6 +27,7 @@ namespace Project19
             //Fill Data Grid View
             DataTable Dt = new DataTable();
             Dt = clsPeople.GetAllPeople();
+
             dgvAllPeople.DataSource = Dt;
             //Count Data
             var Count = Dt.Rows.Count;
@@ -279,6 +280,11 @@ namespace Project19
         private void PicMinimize_MouseLeave(object sender, EventArgs e)
         {
             PicMinimize.Image = Properties.Resources.minimize1;
+        }
+
+        private void lblAddPerson_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

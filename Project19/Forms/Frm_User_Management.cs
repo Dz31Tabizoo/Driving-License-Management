@@ -275,5 +275,13 @@ namespace Project19
 
 
         }
+
+        
+
+        private void lblAddPerson_Click(object sender, EventArgs e)
+        {
+            Form addUserForm = new Frm_Add_User();
+            addUserForm.ShowDialog();
+        }
     } 
 }

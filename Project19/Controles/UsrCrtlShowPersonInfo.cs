@@ -56,9 +56,12 @@ namespace Project19
                     pictureBox1.Image = Properties.Resources.muslimah;
 
                 }
+
                 lblAddressOutput.Text = row.Cells["Address"].Value.ToString();
                 lblPhoneOutput.Text = row.Cells["Phone"].Value.ToString();
                 lblEmailOut.Text = row.Cells["Email"].Value.ToString();
+
+
                 int UserCountryID = (int)row.Cells["NationalityCountryID"].Value;
 
                 lblCountryOutput.Text = clsPeople.GetCountryNameByID(UserCountryID);
@@ -67,8 +70,7 @@ namespace Project19
                 if ( string.IsNullOrEmpty(imgPath))
                 {
                     pictureBox1.Image = Image.FromFile(imgPath);
-                }
-                
+                }       
                     
 
             }
