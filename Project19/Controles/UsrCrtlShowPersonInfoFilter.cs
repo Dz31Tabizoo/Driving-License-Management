@@ -31,7 +31,11 @@ namespace Project19
 
             foreach (DataColumn dtC in DtPerson.Columns)
             {
-                cmbPersonSearch.Items.Add(dtC);
+                if (!dtC.ColumnName.EndsWith("Path") && dtC.DataType != typeof(byte)  )
+                {
+                    cmbPersonSearch.Items.Add(dtC);
+                }
+                
             }
             if (cmbPersonSearch.Items.Count > 0)
             {
@@ -41,33 +45,59 @@ namespace Project19
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string TextSearch = TxtSearchTerm.Text;
+            string TextSearch = TxtSearchTerm.Text.Trim();
+
             string ColToSearchIn = cmbPersonSearch.SelectedItem.ToString();
 
-            if (string.IsNullOrEmpty(TextSearch) || string.IsNullOrEmpty(ColToSearchIn))
+            if (cmbPersonSearch.SelectedItem == null || cmbPersonSearch.SelectedIndex == 0 || string.IsNullOrWhiteSpace(TextSearch))
             {
-                MessageBox.Show("Chose a Filter and Searsh Please", "Empty Search", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Choosing a filter and filling the search bar are required Please", "Empty Search", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
-            }
+            }           
             else
             {
-                string filter = $"{ColToSearchIn} = {TextSearch}";
+                string filter;
+
                 try
                 {
-                    DataRow[] DtPersonRow = DtPerson.Select(filter);
-                    if (DtPersonRow.Length != 0)
+                    if (DtPerson.Columns[ColToSearchIn].DataType == typeof(DateTime))
                     {
-                        MessageBox.Show($"There is {DtPersonRow.Length} matching record(s) found.", "Search Results",
-                               MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DataRow PersonInfos = DtPersonRow[0];
-                        FillLabelsPersonInfo(PersonInfos);
+                        if (DateTime.TryParse(TextSearch, out DateTime dateSearch))
+                        {
+                            filter = $"{ColToSearchIn} = #{dateSearch:yyyyy,MM,dd#}#";
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Please Enter a Valide format {yyyy,MM,dd}.", "Search Results",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+
+                        }
                     }
                     else
                     {
+                        filter = $"{ColToSearchIn} = {TextSearch}";
 
-                        MessageBox.Show("No matching records found.", "Search Results",
+                        DataRow[] dtPersonRow = DtPerson.Select(filter);
+
+                        if (dtPersonRow != null || dtPersonRow.Length > 0)
+                        {
+                            MessageBox.Show($"Found {dtPersonRow.Length} matching records.", "Search Results",
                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            FillLabelsPersonInfo(dtPersonRow[0]);
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("No matching records found.", "Search Results",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
                     }
+                               
+                    
                 }
                 catch (Exception ex)
                 {
@@ -158,6 +188,17 @@ namespace Project19
 
         }
 
+        private void TxtSearchTerm_MouseEnter(object sender, EventArgs e)
+        {
+            if (TxtSearchTerm.Text == "Search ...")
+            {
+                TxtSearchTerm.Text = string.Empty;
+            }
+        }
 
+        private void lblEditPerson_LinkClicked(object sender, EventArgs e)
+        {
+            //To add later with Delegate use
+        }
     }
 }

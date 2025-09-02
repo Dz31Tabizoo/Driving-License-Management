@@ -205,6 +205,7 @@
             this.TxtSearchTerm.StateNormal.Content.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtSearchTerm.TabIndex = 7;
             this.TxtSearchTerm.Text = "Search ...";
+            this.TxtSearchTerm.MouseEnter += new System.EventHandler(this.TxtSearchTerm_MouseEnter);
             // 
             // cmbPersonSearch
             // 
@@ -392,6 +393,7 @@
             this.lblEditPerson.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditPerson.TabIndex = 36;
             this.lblEditPerson.Values.Text = "Edit Person";
+            this.lblEditPerson.LinkClicked += new System.EventHandler(this.lblEditPerson_LinkClicked);
             // 
             // lblDateOfBirthOutput
             // 
