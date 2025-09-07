@@ -1,4 +1,5 @@
-﻿using ComponentFactory.Krypton.Toolkit;
+﻿using BusinessLayer;
+using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,30 @@ namespace Project19
             InitializeComponent();
         }
 
+        public DataRow PersonFoundinfo {  get; set; }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+           btnClear.PerformClick();
+        }
+
+        private void btnClosePeopleMng_Click(object sender, EventArgs e)
+        {
+            Frm_Find_Person frm = new Frm_Find_Person();
+            frm.EvGetPerson += GetPerson;
+            frm.ShowDialog();
+        }
         
+        
+        private void GetPerson(object sender,int PersID)
+        {
+            usCrtlPersonCard1.LoadLabels(PersID);
+        }
+
     }
 }

@@ -13,12 +13,18 @@ namespace Project19
 {
     public partial class UsrCrtlShowPersonInfoFilter : UserControl
     {
+
+        public DataRow PersonRow { get; set; }
+
+        public int PersID { get { return Convert.ToInt32(lblPersonIdOutput.Text ?? ""); } }
+
+
         public UsrCrtlShowPersonInfoFilter()
         {
             InitializeComponent();
             LoadPersonsToSearch();
         }
-
+        
 
         private DataTable DtPerson = clsPeople.GetAllPeople();
 
@@ -86,7 +92,9 @@ namespace Project19
                             MessageBox.Show($"Found {dtPersonRow.Length} matching records.", "Search Results",
                                MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                            PersonRow = dtPersonRow[0];
                             FillLabelsPersonInfo(dtPersonRow[0]);
+
                         }
                         else
                         {

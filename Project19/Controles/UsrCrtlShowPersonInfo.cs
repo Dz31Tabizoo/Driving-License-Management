@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using Syncfusion.Windows.Forms.Tools.XPMenus;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,9 +17,47 @@ namespace Project19
     {
         public DataGridViewRow RR {  get; set; }
 
+       
+
         public UsCrtlPersonCard()
         {
             InitializeComponent();           
+        }
+
+        public void LoadLabels(int personID)
+        {
+            clsPeople Person = clsPeople.FindPersonByID(personID);
+
+            lblPersonIdOutput.Text = personID.ToString();
+            lblNationalNoOutput.Text = Person.NationalNo;
+            lblAddressOutput.Text = Person.Address;
+            lblNameOutput.Text = (Person.FirstName ?? "" + " " +
+                                      Person.SecondName ?? "" + " " +
+                                      Person.ThirdName ?? "" + " " +
+                                      Person.LastName?? "").Trim();
+            if (Person.Gender == 1)
+            {
+                lblGenderOutput.Text = "Female";
+                pictureBox1.Image = Properties.Resources.muslimah;
+            }
+            else 
+            { 
+                lblGenderOutput.Text = "Male";
+                pictureBox1.Image = Properties.Resources.male;
+            }
+
+            lblEmailOut.Text = Person.Email;
+            lblDateOfBirthOutput.Text = Person.DateOfBirth.ToString("dd-MM-yyyy");
+            lblCountryOutput.Text = clsPeople.GetCountryNameByID(Person.NationalityCountryID);
+            lblPhoneOutput.Text = Person.Phone;
+
+            if (!string.IsNullOrEmpty(Person.ImagePath))
+            {
+                pictureBox1.Image = Image.FromFile(Person.ImagePath);
+            }
+            
+
+
         }
 
         public void LoadPersonData(DataGridViewRow row)

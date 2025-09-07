@@ -123,6 +123,12 @@
     <Compile Include="Forms\Frm_Add_User.Designer.cs">
       <DependentUpon>Frm_Add_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Frm_Find_Person.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_Find_Person.Designer.cs">
+      <DependentUpon>Frm_Find_Person.cs</DependentUpon>
+    </Compile>
     <Compile Include="Handlers\ImageHandler.cs" />
     <Compile Include="Forms\People Managment.cs">
       <SubType>Form</SubType>
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Add_User.resx">
       <DependentUpon>Frm_Add_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_Find_Person.resx">
+      <DependentUpon>Frm_Find_Person.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
