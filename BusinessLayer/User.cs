@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -48,6 +49,7 @@ namespace BusinessLayer
             this.CurrentMode = enMode.Update;
         }
 
+        
 
         public static clsUser FindUserByUserName(string Username)
         {
@@ -82,6 +84,34 @@ namespace BusinessLayer
         public static DataTable GetAllUsers()
         {           
              return clsUserDAL.GetAllUsers();          
+        }
+
+        private bool _AddNewUser()
+        {
+
+            this.UserID = clsUserDAL.AddNewUserToDB(this.UserName, this.Password, this.IsActive, this.Person.PersonID);
+
+            return (this.UserID != -1);
+        }
+
+        public bool Save()
+        {
+            switch (CurrentMode)
+            {
+                case enMode.AddNew:
+                    return _AddNewUser();
+
+                case enMode.Update:
+                    break;
+
+                default:
+                    break;
+
+            }
+                
+
+
+            return true;
         }
 
     }

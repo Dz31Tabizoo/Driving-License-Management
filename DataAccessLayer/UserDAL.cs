@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Linq;
+using System.Runtime.Hosting;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -68,6 +69,44 @@ namespace DataAccessLayer
                 }
             }
             return dtUsers;
+        }
+
+        public static int AddNewUserToDB(string username , string password, bool isactive,int personid)
+        {
+            string Query = "Insert into Users (UserName , Password , IsActive , PersonID) VALUES (@username,@password,@isactive,@personid);" +
+                "SELECT SCOPE_IDENTITY();";
+
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(Query, cnx))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
+                    cmd.Parameters.AddWithValue("@isactive", isactive);
+                    cmd.Parameters.AddWithValue("@personid", personid);
+
+                    try
+                    {
+                        cnx.Open();
+                        object result = cmd.ExecuteScalar();
+                        if (result != null && int.TryParse(result.ToString(), out int newUserID))
+                        {
+                            return newUserID;
+                        }
+                        else
+                        {
+                            return -1;
+                        }
+
+                    }
+                    catch 
+                    {
+                        return -1;
+
+                    }
+                }
+            }
+            
         }
     }
 }

@@ -37,22 +37,22 @@
             this.chkActive = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.lblPersonIdOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblUSerID = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtPassWordConfirm = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonWrapLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.txtThirdName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtPassWord = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblThirdName = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.txtFirstName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.txtUserName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblUsername = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tabPgFindPerson = new System.Windows.Forms.TabPage();
-            this.usCrtlPersonCard1 = new Project19.UsCrtlPersonCard();
             this.btnSelectPerson = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tabAddUser = new System.Windows.Forms.TabControl();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.usCrtlPersonCard1 = new Project19.UsCrtlPersonCard();
             this.tabPgAddUserinfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPassWrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEyePassWrdConfirm)).BeginInit();
@@ -135,6 +135,7 @@
             this.btnSaveEdit.TabIndex = 19;
             this.btnSaveEdit.Values.Image = global::Project19.Properties.Resources.diskette;
             this.btnSaveEdit.Values.Text = "  Save";
+            this.btnSaveEdit.Click += new System.EventHandler(this.btnSaveEdit_Click);
             // 
             // btnClear
             // 
@@ -217,11 +218,11 @@
             this.tabPgAddUserinfo.Controls.Add(this.chkActive);
             this.tabPgAddUserinfo.Controls.Add(this.lblPersonIdOutput);
             this.tabPgAddUserinfo.Controls.Add(this.lblUSerID);
-            this.tabPgAddUserinfo.Controls.Add(this.kryptonTextBox1);
+            this.tabPgAddUserinfo.Controls.Add(this.txtPassWordConfirm);
             this.tabPgAddUserinfo.Controls.Add(this.kryptonWrapLabel1);
-            this.tabPgAddUserinfo.Controls.Add(this.txtThirdName);
+            this.tabPgAddUserinfo.Controls.Add(this.txtPassWord);
             this.tabPgAddUserinfo.Controls.Add(this.lblThirdName);
-            this.tabPgAddUserinfo.Controls.Add(this.txtFirstName);
+            this.tabPgAddUserinfo.Controls.Add(this.txtUserName);
             this.tabPgAddUserinfo.Controls.Add(this.lblUsername);
             this.tabPgAddUserinfo.Controls.Add(this.pictureBox3);
             this.tabPgAddUserinfo.Controls.Add(this.pictureBox1);
@@ -236,23 +237,31 @@
             // 
             // picPassWrd
             // 
+            this.picPassWrd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picPassWrd.Image = global::Project19.Properties.Resources.hide;
-            this.picPassWrd.Location = new System.Drawing.Point(413, 189);
+            this.picPassWrd.Location = new System.Drawing.Point(454, 189);
             this.picPassWrd.Name = "picPassWrd";
             this.picPassWrd.Size = new System.Drawing.Size(20, 20);
             this.picPassWrd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picPassWrd.TabIndex = 109;
             this.picPassWrd.TabStop = false;
+            this.picPassWrd.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picPassWrd_MouseDown);
+            this.picPassWrd.MouseLeave += new System.EventHandler(this.picPassWrd_MouseLeave);
+            this.picPassWrd.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picPassWrd_MouseUp);
             // 
             // picEyePassWrdConfirm
             // 
+            this.picEyePassWrdConfirm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picEyePassWrdConfirm.Image = global::Project19.Properties.Resources.hide;
-            this.picEyePassWrdConfirm.Location = new System.Drawing.Point(413, 239);
+            this.picEyePassWrdConfirm.Location = new System.Drawing.Point(454, 239);
             this.picEyePassWrdConfirm.Name = "picEyePassWrdConfirm";
             this.picEyePassWrdConfirm.Size = new System.Drawing.Size(20, 20);
             this.picEyePassWrdConfirm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picEyePassWrdConfirm.TabIndex = 108;
             this.picEyePassWrdConfirm.TabStop = false;
+            this.picEyePassWrdConfirm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picEyePassWrdConfirm_MouseDown);
+            this.picEyePassWrdConfirm.MouseLeave += new System.EventHandler(this.picEyePassWrdConfirm_MouseLeave);
+            this.picEyePassWrdConfirm.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picEyePassWrdConfirm_MouseUp);
             // 
             // pictureBox4
             // 
@@ -297,22 +306,24 @@
             this.lblUSerID.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.lblUSerID.Text = "User ID :";
             // 
-            // kryptonTextBox1
+            // txtPassWordConfirm
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(269, 234);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.PasswordChar = '●';
-            this.kryptonTextBox1.Size = new System.Drawing.Size(125, 29);
-            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtPassWordConfirm.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassWordConfirm.Location = new System.Drawing.Point(269, 234);
+            this.txtPassWordConfirm.Name = "txtPassWordConfirm";
+            this.txtPassWordConfirm.PasswordChar = '▬';
+            this.txtPassWordConfirm.Size = new System.Drawing.Size(164, 29);
+            this.txtPassWordConfirm.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.txtPassWordConfirm.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtPassWordConfirm.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtPassWordConfirm.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 5;
-            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox1.TabIndex = 85;
+            this.txtPassWordConfirm.StateCommon.Border.Rounding = 5;
+            this.txtPassWordConfirm.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.txtPassWordConfirm.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassWordConfirm.StateNormal.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassWordConfirm.TabIndex = 85;
             // 
             // kryptonWrapLabel1
             // 
@@ -325,22 +336,24 @@
             this.kryptonWrapLabel1.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.kryptonWrapLabel1.Text = "Confirm Pass Word :";
             // 
-            // txtThirdName
+            // txtPassWord
             // 
-            this.txtThirdName.Location = new System.Drawing.Point(269, 184);
-            this.txtThirdName.Name = "txtThirdName";
-            this.txtThirdName.PasswordChar = '●';
-            this.txtThirdName.Size = new System.Drawing.Size(125, 29);
-            this.txtThirdName.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.txtThirdName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtThirdName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtThirdName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtPassWord.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassWord.Location = new System.Drawing.Point(269, 184);
+            this.txtPassWord.Name = "txtPassWord";
+            this.txtPassWord.PasswordChar = '▬';
+            this.txtPassWord.Size = new System.Drawing.Size(164, 29);
+            this.txtPassWord.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.txtPassWord.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtPassWord.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtPassWord.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtThirdName.StateCommon.Border.Rounding = 5;
-            this.txtThirdName.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.txtThirdName.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThirdName.TabIndex = 79;
+            this.txtPassWord.StateCommon.Border.Rounding = 5;
+            this.txtPassWord.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.txtPassWord.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassWord.StateNormal.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassWord.TabIndex = 79;
             // 
             // lblThirdName
             // 
@@ -353,21 +366,22 @@
             this.lblThirdName.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.lblThirdName.Text = "Pass Word :";
             // 
-            // txtFirstName
+            // txtUserName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(269, 134);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(125, 29);
-            this.txtFirstName.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.txtFirstName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtFirstName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.txtFirstName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtUserName.Location = new System.Drawing.Point(269, 134);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(164, 29);
+            this.txtUserName.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.txtUserName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtUserName.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.txtUserName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtFirstName.StateCommon.Border.Rounding = 5;
-            this.txtFirstName.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.txtFirstName.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.TabIndex = 78;
+            this.txtUserName.StateCommon.Border.Rounding = 5;
+            this.txtUserName.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.txtUserName.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.StateNormal.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.TabIndex = 78;
             // 
             // lblUsername
             // 
@@ -430,17 +444,6 @@
             this.tabPgFindPerson.Size = new System.Drawing.Size(877, 552);
             this.tabPgFindPerson.TabIndex = 0;
             this.tabPgFindPerson.Text = "Find Person";
-            // 
-            // usCrtlPersonCard1
-            // 
-            this.usCrtlPersonCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.usCrtlPersonCard1.Enabled = false;
-            this.usCrtlPersonCard1.Location = new System.Drawing.Point(10, 78);
-            this.usCrtlPersonCard1.Margin = new System.Windows.Forms.Padding(2);
-            this.usCrtlPersonCard1.Name = "usCrtlPersonCard1";
-            this.usCrtlPersonCard1.RR = null;
-            this.usCrtlPersonCard1.Size = new System.Drawing.Size(850, 450);
-            this.usCrtlPersonCard1.TabIndex = 6;
             // 
             // btnSelectPerson
             // 
@@ -526,6 +529,17 @@
             this.kryptonLabel1.TabIndex = 23;
             this.kryptonLabel1.Values.Text = "Add User";
             // 
+            // usCrtlPersonCard1
+            // 
+            this.usCrtlPersonCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.usCrtlPersonCard1.Enabled = false;
+            this.usCrtlPersonCard1.Location = new System.Drawing.Point(10, 78);
+            this.usCrtlPersonCard1.Margin = new System.Windows.Forms.Padding(2);
+            this.usCrtlPersonCard1.Name = "usCrtlPersonCard1";
+            this.usCrtlPersonCard1.RR = null;
+            this.usCrtlPersonCard1.Size = new System.Drawing.Size(850, 450);
+            this.usCrtlPersonCard1.TabIndex = 6;
+            // 
             // Frm_Add_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -569,13 +583,13 @@
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblPersonIdOutput;
         private System.Windows.Forms.PictureBox pictureBox3;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblUSerID;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPassWordConfirm;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtThirdName;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPassWord;
         private System.Windows.Forms.PictureBox pictureBox12;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblThirdName;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtFirstName;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtUserName;
         private System.Windows.Forms.PictureBox pictureBox6;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblUsername;
         private System.Windows.Forms.TabPage tabPgFindPerson;

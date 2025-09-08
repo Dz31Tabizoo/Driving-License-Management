@@ -17,7 +17,7 @@ namespace Project19
     {
         public DataGridViewRow RR {  get; set; }
 
-       
+       public int PERSONID { get { return Convert.ToInt32(lblPersonIdOutput.Text); }  }
 
         public UsCrtlPersonCard()
         {
