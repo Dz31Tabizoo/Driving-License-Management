@@ -1,5 +1,8 @@
+﻿User managment: 
 
 
-
+▬ add Error provider on adding user. 
+▬ add Context menu strip.
+▬ logic : * double user on one Person
 
 
