@@ -210,8 +210,6 @@ namespace Project19
             }
         }
 
-
-
         public void LoadPersonDetailsToEdit(DataGridViewRow row)
         {
 

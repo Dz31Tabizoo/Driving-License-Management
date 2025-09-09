@@ -14,9 +14,35 @@ namespace Project19
     public partial class UsrCrtlShowPersonInfoFilter : UserControl
     {
 
+        public event Action<int> OnPersonSelected;
+
+        protected virtual void PersonSelected(int PersonID)
+        {
+            Action<int> handler = OnPersonSelected;
+            if (handler != null)
+            {
+                handler(PersonID);
+            }
+
+        }
+
+
+
+
+
+
         public DataRow PersonRow { get; set; }
 
-        public int PersID { get { return Convert.ToInt32(lblPersonIdOutput.Text ?? ""); } }
+        public int PersID
+        {
+            get
+            {
+                if (int.TryParse(lblPersonIdOutput.Text, out int result))
+                    return result;
+
+                return -1;
+            }
+        }
 
 
         public UsrCrtlShowPersonInfoFilter()

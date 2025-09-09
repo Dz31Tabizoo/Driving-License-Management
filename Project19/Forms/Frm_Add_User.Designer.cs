@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Add_User));
             this.btnSaveEdit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnClear = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tabPgAddUserinfo = new System.Windows.Forms.TabPage();
@@ -48,11 +50,12 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tabPgFindPerson = new System.Windows.Forms.TabPage();
+            this.usCrtlPersonCard1 = new Project19.UsCrtlPersonCard();
             this.btnSelectPerson = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tabAddUser = new System.Windows.Forms.TabControl();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.usCrtlPersonCard1 = new Project19.UsCrtlPersonCard();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabPgAddUserinfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPassWrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEyePassWrdConfirm)).BeginInit();
@@ -64,6 +67,7 @@
             this.tabPgFindPerson.SuspendLayout();
             this.tabAddUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSaveEdit
@@ -274,9 +278,10 @@
             // 
             // chkActive
             // 
-            this.chkActive.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
-            this.chkActive.Location = new System.Drawing.Point(285, 284);
+            this.chkActive.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldPanel;
+            this.chkActive.Location = new System.Drawing.Point(294, 281);
             this.chkActive.Name = "chkActive";
+            this.chkActive.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue;
             this.chkActive.Size = new System.Drawing.Size(93, 20);
             this.chkActive.StateNormal.Padding = new System.Windows.Forms.Padding(3, -1, -1, -1);
             this.chkActive.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -324,6 +329,7 @@
             this.txtPassWordConfirm.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassWordConfirm.StateNormal.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassWordConfirm.TabIndex = 85;
+            this.txtPassWordConfirm.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassWordConfirm_Validating);
             // 
             // kryptonWrapLabel1
             // 
@@ -382,6 +388,7 @@
             this.txtUserName.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.StateNormal.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.TabIndex = 78;
+            this.txtUserName.Validating += new System.ComponentModel.CancelEventHandler(this.txtUserName_Validating);
             // 
             // lblUsername
             // 
@@ -444,6 +451,17 @@
             this.tabPgFindPerson.Size = new System.Drawing.Size(877, 552);
             this.tabPgFindPerson.TabIndex = 0;
             this.tabPgFindPerson.Text = "Find Person";
+            // 
+            // usCrtlPersonCard1
+            // 
+            this.usCrtlPersonCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.usCrtlPersonCard1.Enabled = false;
+            this.usCrtlPersonCard1.Location = new System.Drawing.Point(10, 78);
+            this.usCrtlPersonCard1.Margin = new System.Windows.Forms.Padding(2);
+            this.usCrtlPersonCard1.Name = "usCrtlPersonCard1";
+            this.usCrtlPersonCard1.RR = null;
+            this.usCrtlPersonCard1.Size = new System.Drawing.Size(850, 450);
+            this.usCrtlPersonCard1.TabIndex = 6;
             // 
             // btnSelectPerson
             // 
@@ -529,16 +547,10 @@
             this.kryptonLabel1.TabIndex = 23;
             this.kryptonLabel1.Values.Text = "Add User";
             // 
-            // usCrtlPersonCard1
+            // errorProvider
             // 
-            this.usCrtlPersonCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.usCrtlPersonCard1.Enabled = false;
-            this.usCrtlPersonCard1.Location = new System.Drawing.Point(10, 78);
-            this.usCrtlPersonCard1.Margin = new System.Windows.Forms.Padding(2);
-            this.usCrtlPersonCard1.Name = "usCrtlPersonCard1";
-            this.usCrtlPersonCard1.RR = null;
-            this.usCrtlPersonCard1.Size = new System.Drawing.Size(850, 450);
-            this.usCrtlPersonCard1.TabIndex = 6;
+            this.errorProvider.ContainerControl = this;
+            this.errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider.Icon")));
             // 
             // Frm_Add_User
             // 
@@ -566,6 +578,7 @@
             this.tabPgFindPerson.ResumeLayout(false);
             this.tabAddUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -597,5 +610,6 @@
         private System.Windows.Forms.TabControl tabAddUser;
         private UsCrtlPersonCard usCrtlPersonCard1;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

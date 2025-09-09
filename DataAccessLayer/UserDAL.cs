@@ -108,5 +108,60 @@ namespace DataAccessLayer
             }
             
         }
+
+        public static bool isUsernameExist(string UserName)
+        {
+            bool result = false;
+            string Query = "SELECT 1 as found FROM Users WHERE UserName = @username;";
+
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(Query, cnx))
+                {
+                    cmd.Parameters.AddWithValue("username", UserName);
+                    try
+                    {
+                        cnx.Open();
+
+                        result = (bool)cmd.ExecuteScalar();
+
+                        return result;
+                          
+                        
+                    }
+                    catch { return false; }
+                }
+            }
+
+            
+        }
+
+        public static bool isThePersonIsaUser(int PersonID)
+        {
+            bool found = false;
+            string Query = "SELECT 1 as found FROM Users WHERE PersonID = @pID;";
+
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(Query, cnx))
+                {
+                    cmd.Parameters.AddWithValue("@pID", PersonID);
+                    try
+                    {
+                        cnx.Open();
+
+                        found = (bool)cmd.ExecuteScalar();
+
+                        return found;
+
+
+                    }
+                    catch { return false; }
+                }
+            }
+
+
+        }
+
     }
 }

@@ -146,6 +146,7 @@ namespace Project19
             DataTable Dt = new DataTable();
             Dt = clsUser.GetAllUsers();
             dgvAllUsers.DataSource = Dt;
+
             //Count Data
             var Count = Dt.Rows.Count;
             lblTotalPeople.Text = lblTotalPeople.Text + ": [" + Count.ToString() + "]";
@@ -274,9 +275,7 @@ namespace Project19
 
 
 
-        }
-
-        
+        }        
 
         private void lblAddPerson_Click(object sender, EventArgs e)
         {

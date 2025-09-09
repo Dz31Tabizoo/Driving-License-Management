@@ -41,7 +41,20 @@ namespace Project19
         
         private void GetPerson(object sender,int PersID)
         {
-            usCrtlPersonCard1.LoadLabels(PersID);
+            if (clsUser.isThePersonIsAUser(PersID))
+            {
+                usCrtlPersonCard1.LoadLabels(PersID);
+                txtPassWord.Enabled = true;
+                txtUserName.Enabled = true;
+                txtPassWordConfirm.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("This Person Is Already a User, Please Choser another one", "Alerte", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                txtPassWord.Enabled = false;
+                txtUserName.Enabled = false;
+                txtPassWordConfirm.Enabled = false;
+            }
         }
 
         private void btnSaveEdit_Click(object sender, EventArgs e)
@@ -76,7 +89,6 @@ namespace Project19
            
 
             return NewUser.Save();
-
         }
 
         private void picPassWrd_MouseDown(object sender, MouseEventArgs e)
@@ -107,6 +119,36 @@ namespace Project19
         private void picEyePassWrdConfirm_MouseLeave(object sender, EventArgs e)
         {
             txtPassWordConfirm.PasswordChar = '▬';
+        }
+
+        private void txtUserName_Validating(object sender, CancelEventArgs e)
+        {
+            if (clsUser.IsUsernameExiste(txtUserName.Text))
+            {
+                e.Cancel = true;
+                txtUserName.Focus();
+                errorProvider.SetError(txtUserName, "Already Exist");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(txtUserName, "");
+            }
+        }
+
+        private void txtPassWordConfirm_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtPassWordConfirm.Text != txtPassWord.Text)
+            {
+                e.Cancel = false;
+                txtPassWordConfirm.Focus();
+                errorProvider.SetError(txtPassWordConfirm, "Confirmation not Match Password");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(txtPassWordConfirm, "");
+            }
         }
     }
 }

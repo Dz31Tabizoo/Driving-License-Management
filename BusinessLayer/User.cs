@@ -49,7 +49,10 @@ namespace BusinessLayer
             this.CurrentMode = enMode.Update;
         }
 
-        
+        public static bool IsUsernameExiste(string usnm)
+        {
+            return clsUserDAL.isUsernameExist(usnm);
+        }
 
         public static clsUser FindUserByUserName(string Username)
         {
@@ -112,6 +115,11 @@ namespace BusinessLayer
 
 
             return true;
+        }
+
+        public static bool isThePersonIsAUser(int PersonID)
+        {
+            return clsUserDAL.isThePersonIsaUser(PersonID);
         }
 
     }
