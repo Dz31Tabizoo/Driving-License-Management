@@ -13,20 +13,13 @@ using System.Windows.Forms;
 namespace Project19
 {
     public partial class Frm_User_Managment : KryptonForm
-    {
-
-        
+    {        
         public Frm_User_Managment()
         {
             InitializeComponent();
         }
-
         // UI 
-
-
-
-       
-
+        
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -287,5 +280,6 @@ namespace Project19
         {
 
         }
+
     } 
 }
