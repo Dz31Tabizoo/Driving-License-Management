@@ -282,5 +282,10 @@ namespace Project19
             Form addUserForm = new Frm_Add_User();
             addUserForm.ShowDialog();
         }
+
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     } 
 }
