@@ -17,6 +17,9 @@ namespace Project19
         public Frm_User_Managment()
         {
             InitializeComponent();
+            cmbSearchCriteria.Items.Insert(0, "Select an option...");
+            cmbSearchCriteria.SelectedIndex = 0;
+            cmbActiveStat.SelectedIndex = 0;
         }
         // UI 
         
@@ -129,29 +132,46 @@ namespace Project19
         private void btnClear_Click_1(object sender, EventArgs e)
         {
             TxtSearchTerm.Text = "";
-            DataTable Dt = clsUser.GetAllUsers();
-            dgvAllUsers.DataSource = Dt;
+            LoadUSerData();
+        }
+
+        private void LoadUSerData()
+        {
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+
+                DataTable Dt = clsUser.GetAllUsers();
+
+                dgvAllUsers.DataSource = null;
+                dgvAllUsers.Refresh();
+
+                dgvAllUsers.DataSource = Dt;
+
+                var Count = Dt.Rows.Count;
+                lblTotalUserNum.Text = ":  [" + Count.ToString() + "]";
+
+                foreach (DataColumn Col in Dt.Columns)
+                {
+                    cmbSearchCriteria.Items.Add(Col.ColumnName);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading user data: " + ex.Message, "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }
         }
 
         private void Frm_User_Load(object sender, EventArgs e)
         {
-            //Fill Data Grid View
-            DataTable Dt = clsUser.GetAllUsers();
-            dgvAllUsers.DataSource = Dt;
-
-            //Count Data
-            var Count = Dt.Rows.Count;
-            lblTotalPeople.Text = lblTotalPeople.Text + ": [" + Count.ToString() + "]";
-            //Search
-            //Add Columns
-            cmbSearchCriteria.Items.Insert(0, "Select an option...");
-            
-            foreach (DataColumn Col in Dt.Columns)
-            {
-                cmbSearchCriteria.Items.Add(Col.ColumnName);
-            }
-            cmbSearchCriteria.SelectedIndex = 0;
-            cmbActiveStat.SelectedIndex = 0;
+            BeginInvoke(new Action(() => { LoadUSerData(); }));
+           
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

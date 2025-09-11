@@ -19,33 +19,50 @@ namespace Project19
         public People_Managment()
         {
             InitializeComponent();
+            cmbSearchCriteria.Items.Insert(0, "Select an option...");
+            cmbSearchCriteria.SelectedIndex = 0;
+        }
+
+        private void LoadPeopleData()
+        {
+            try
+            {
+                this.Cursor = Cursors.WaitCursor;
+                //Fill Data Grid View
+                DataTable Dt = clsPeople.GetAllPeople();
+                dgvAllPeople.DataSource = null;
+                dgvAllPeople.Refresh();
+                dgvAllPeople.DataSource = Dt;
+
+                //Count Data
+                var Count = Dt.Rows.Count;
+                lblTotalPeopleNumber.Text = ": [" +  Count.ToString() + "]";
+
+                //Search
+                //Add Columns
+
+                foreach (DataColumn Col in Dt.Columns)
+                {
+                    cmbSearchCriteria.Items.Add(Col.ColumnName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Loading Perople Data :" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            { this.Cursor = Cursors.Default;}
+
+
         }
 
 
         private void People_Managment_Load(object sender, EventArgs e)
         {
-            //Fill Data Grid View
-            DataTable Dt = new DataTable();
-            Dt = clsPeople.GetAllPeople();
-
-            dgvAllPeople.DataSource = Dt;
-            //Count Data
-            var Count = Dt.Rows.Count;
-            lblTotalPeople.Text = lblTotalPeople.Text + ": [" + Count.ToString() + "]";
-            //Search
-            //Add Columns
-            cmbSearchCriteria.Items.Insert(0, "Select an option...");
-            foreach (DataColumn Col in Dt.Columns)
-            {
-                cmbSearchCriteria.Items.Add(Col.ColumnName);
-            }
-            //select first item by defaul
-            if (cmbSearchCriteria.Items.Count > 0)
-            {
-                cmbSearchCriteria.SelectedIndex = 0;
-            }
+            BeginInvoke(new Action(() => { LoadPeopleData(); }));    
 
         }
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -133,8 +150,7 @@ namespace Project19
         private void btnClear_Click_1(object sender, EventArgs e)
         {
             TxtSearchTerm.Text = "";
-            DataTable Dt = clsPeople.GetAllPeople();
-            dgvAllPeople.DataSource = Dt;
+            LoadPeopleData();
         }
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -231,7 +247,7 @@ namespace Project19
                 if (clsPeople.DeletePerson(PersID))
                 {
                     MessageBox.Show($"Person with ID {PersID} Deleted ", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    LoadPeopleData();
                 }
                 else
                 {
@@ -282,9 +298,6 @@ namespace Project19
             PicMinimize.Image = Properties.Resources.minimize1;
         }
 
-        private void lblAddPerson_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }
