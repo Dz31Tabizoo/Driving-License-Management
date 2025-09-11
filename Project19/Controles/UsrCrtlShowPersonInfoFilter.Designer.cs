@@ -34,16 +34,6 @@
             this.TxtSearchTerm = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.cmbPersonSearch = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblEditPerson = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
             this.lblDateOfBirthOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblCountryOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblPhoneOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
@@ -53,7 +43,6 @@
             this.lblNationalNoOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblNameOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblPersonIdOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblPhone = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblCountry = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblDateOfBirth = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
@@ -63,6 +52,17 @@
             this.lblNationalNum = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblName = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblPersonID = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.btnAddNewPerson = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbFilterGroupe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbPersonSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
@@ -247,6 +247,7 @@
             // 
             // kryptonGroupBox1.Panel
             // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnAddNewPerson);
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox10);
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox9);
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox8);
@@ -256,7 +257,6 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox4);
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox3);
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox2);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.lblEditPerson);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblDateOfBirthOutput);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblCountryOutput);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblPhoneOutput);
@@ -290,110 +290,6 @@
             this.kryptonGroupBox1.Values.Description = "\r\nBy Rafik";
             this.kryptonGroupBox1.Values.Heading = "Person Information";
             this.kryptonGroupBox1.Values.Image = global::Project19.Properties.Resources.information__1_;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.pictureBox10.Image = global::Project19.Properties.Resources.phone;
-            this.pictureBox10.Location = new System.Drawing.Point(420, 292);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox10.TabIndex = 46;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.pictureBox9.Image = global::Project19.Properties.Resources.globe;
-            this.pictureBox9.Location = new System.Drawing.Point(420, 240);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox9.TabIndex = 45;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.pictureBox8.Image = global::Project19.Properties.Resources.calendar;
-            this.pictureBox8.Location = new System.Drawing.Point(420, 188);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox8.TabIndex = 44;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.pictureBox7.Image = global::Project19.Properties.Resources.email__2_;
-            this.pictureBox7.Location = new System.Drawing.Point(113, 292);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox7.TabIndex = 43;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.pictureBox6.Image = global::Project19.Properties.Resources.id_card__1_;
-            this.pictureBox6.Location = new System.Drawing.Point(113, 133);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox6.TabIndex = 42;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.pictureBox5.Image = global::Project19.Properties.Resources.bank_acount__1_;
-            this.pictureBox5.Location = new System.Drawing.Point(113, 76);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox5.TabIndex = 41;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.pictureBox4.Image = global::Project19.Properties.Resources.user;
-            this.pictureBox4.Location = new System.Drawing.Point(113, 186);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.TabIndex = 40;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.pictureBox3.Image = global::Project19.Properties.Resources.id_card;
-            this.pictureBox3.Location = new System.Drawing.Point(113, 27);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 39;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.pictureBox2.Image = global::Project19.Properties.Resources.home;
-            this.pictureBox2.Location = new System.Drawing.Point(113, 240);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.TabIndex = 38;
-            this.pictureBox2.TabStop = false;
-            // 
-            // lblEditPerson
-            // 
-            this.lblEditPerson.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblEditPerson.Location = new System.Drawing.Point(631, 163);
-            this.lblEditPerson.Name = "lblEditPerson";
-            this.lblEditPerson.Size = new System.Drawing.Size(96, 26);
-            this.lblEditPerson.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
-            this.lblEditPerson.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
-            this.lblEditPerson.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditPerson.TabIndex = 36;
-            this.lblEditPerson.Values.Text = "Edit Person";
-            this.lblEditPerson.LinkClicked += new System.EventHandler(this.lblEditPerson_LinkClicked);
             // 
             // lblDateOfBirthOutput
             // 
@@ -485,17 +381,6 @@
             this.lblPersonIdOutput.Size = new System.Drawing.Size(0, 20);
             this.lblPersonIdOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPersonIdOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.pictureBox1.Image = global::Project19.Properties.Resources.user__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(607, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 142);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
             // 
             // lblPhone
             // 
@@ -596,6 +481,155 @@
             this.lblPersonID.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.lblPersonID.Text = "Person ID :";
             // 
+            // btnAddNewPerson
+            // 
+            this.btnAddNewPerson.Location = new System.Drawing.Point(558, 6);
+            this.btnAddNewPerson.Name = "btnAddNewPerson";
+            this.btnAddNewPerson.Size = new System.Drawing.Size(210, 45);
+            this.btnAddNewPerson.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.btnAddNewPerson.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.btnAddNewPerson.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAddNewPerson.StateCommon.Border.Rounding = 5;
+            this.btnAddNewPerson.StateCommon.Border.Width = 0;
+            this.btnAddNewPerson.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.btnAddNewPerson.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.btnAddNewPerson.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.btnAddNewPerson.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.btnAddNewPerson.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAddNewPerson.StateNormal.Border.Rounding = 5;
+            this.btnAddNewPerson.StateNormal.Border.Width = 0;
+            this.btnAddNewPerson.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.btnAddNewPerson.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.btnAddNewPerson.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewPerson.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(163)))), ((int)(((byte)(163)))));
+            this.btnAddNewPerson.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.btnAddNewPerson.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAddNewPerson.StatePressed.Border.Rounding = 5;
+            this.btnAddNewPerson.StatePressed.Border.Width = 0;
+            this.btnAddNewPerson.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.btnAddNewPerson.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.btnAddNewPerson.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.btnAddNewPerson.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.btnAddNewPerson.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAddNewPerson.StateTracking.Border.Rounding = 5;
+            this.btnAddNewPerson.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.btnAddNewPerson.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.btnAddNewPerson.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewPerson.TabIndex = 65;
+            this.btnAddNewPerson.Values.Image = global::Project19.Properties.Resources.add_user;
+            this.btnAddNewPerson.Values.Text = "Add New Person";
+            this.btnAddNewPerson.Click += new System.EventHandler(this.btnAddNewPerson_Click);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.pictureBox10.Image = global::Project19.Properties.Resources.phone;
+            this.pictureBox10.Location = new System.Drawing.Point(420, 292);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox10.TabIndex = 46;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.pictureBox9.Image = global::Project19.Properties.Resources.globe;
+            this.pictureBox9.Location = new System.Drawing.Point(420, 240);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox9.TabIndex = 45;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.pictureBox8.Image = global::Project19.Properties.Resources.calendar;
+            this.pictureBox8.Location = new System.Drawing.Point(420, 188);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox8.TabIndex = 44;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.pictureBox7.Image = global::Project19.Properties.Resources.email__2_;
+            this.pictureBox7.Location = new System.Drawing.Point(113, 292);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox7.TabIndex = 43;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.pictureBox6.Image = global::Project19.Properties.Resources.id_card__1_;
+            this.pictureBox6.Location = new System.Drawing.Point(113, 133);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.TabIndex = 42;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.pictureBox5.Image = global::Project19.Properties.Resources.bank_acount__1_;
+            this.pictureBox5.Location = new System.Drawing.Point(113, 76);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox5.TabIndex = 41;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.pictureBox4.Image = global::Project19.Properties.Resources.user;
+            this.pictureBox4.Location = new System.Drawing.Point(113, 186);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox4.TabIndex = 40;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.pictureBox3.Image = global::Project19.Properties.Resources.id_card;
+            this.pictureBox3.Location = new System.Drawing.Point(113, 27);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 39;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.pictureBox2.Image = global::Project19.Properties.Resources.home;
+            this.pictureBox2.Location = new System.Drawing.Point(113, 240);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.TabIndex = 38;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.pictureBox1.Image = global::Project19.Properties.Resources.user__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(599, 67);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(151, 145);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
             // UsrCrtlShowPersonInfoFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -645,7 +679,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private ComponentFactory.Krypton.Toolkit.KryptonLinkLabel lblEditPerson;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblDateOfBirthOutput;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblCountryOutput;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblPhoneOutput;
@@ -665,5 +698,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblNationalNum;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblName;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblPersonID;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAddNewPerson;
     }
 }

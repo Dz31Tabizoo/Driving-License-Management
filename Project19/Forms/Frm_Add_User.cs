@@ -38,10 +38,9 @@ namespace Project19
             frm.ShowDialog();
         }
         
-        
         private void GetPerson(object sender,int PersID)
         {
-            if (clsUser.isThePersonIsAUser(PersID))
+            if (!clsUser.isThePersonIsAUser(PersID))
             {
                 usCrtlPersonCard1.LoadLabels(PersID);
                 txtPassWord.Enabled = true;

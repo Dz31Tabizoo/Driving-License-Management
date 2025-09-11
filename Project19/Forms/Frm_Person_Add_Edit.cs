@@ -16,6 +16,14 @@ namespace Project19
 {
     public partial class Frm_Person_Add_Edit : KryptonForm
     {
+
+        public delegate void GetNewPersonBackHandler(object sender, clsPeople Person);
+
+        public event GetNewPersonBackHandler PersonBack;
+           
+
+
+
         public Frm_Person_Add_Edit()
         {
             InitializeComponent();
@@ -53,7 +61,16 @@ namespace Project19
             Person.NationalityCountryID = usrCtrlEditPerson1.NATIONALCOUNTRYID+1;
             Person.ImagePath = usrCtrlEditPerson1.IMAGEPATH;
 
-            return Person.Save() ? true : false;            
+            if(Person.Save())
+            {
+                PersonBack?.Invoke(this, Person);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
         private bool SaveUpdatedPerson()
@@ -84,6 +101,7 @@ namespace Project19
                 DialogResult Result = MessageBox.Show("Person Save Successfuly","Save",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 if (Result == DialogResult.OK)
                 {
+                    
                     this.Close();
                 }
 

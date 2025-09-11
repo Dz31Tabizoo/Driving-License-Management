@@ -128,6 +128,7 @@
             this.usrCrtlShowPersonInfoFilter1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.usrCrtlShowPersonInfoFilter1.Location = new System.Drawing.Point(43, 86);
             this.usrCrtlShowPersonInfoFilter1.Name = "usrCrtlShowPersonInfoFilter1";
+            this.usrCrtlShowPersonInfoFilter1.PersonRow = null;
             this.usrCrtlShowPersonInfoFilter1.Size = new System.Drawing.Size(804, 489);
             this.usrCrtlShowPersonInfoFilter1.TabIndex = 4;
             // 

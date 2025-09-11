@@ -1,8 +1,16 @@
 ﻿User managment: 
 
 
-▬ add Error provider on adding user. 
-▬ add Context menu strip.
-▬ logic : * double user on one Person
 
+Add User           on context menu strip 
+Change password      //   //      // 
+
+add new person on   Add User Form 
+
+--------------------------------------
+Account Setting : 
+
+Current User Info : logedin user info show : global class 
+change pass word same as user managment 
+sing out btn
 

@@ -13,26 +13,9 @@ namespace Project19
 {
     public partial class UsrCrtlShowPersonInfoFilter : UserControl
     {
-
-        public event Action<int> OnPersonSelected;
-
-        protected virtual void PersonSelected(int PersonID)
-        {
-            Action<int> handler = OnPersonSelected;
-            if (handler != null)
-            {
-                handler(PersonID);
-            }
-
-        }
-
-
-
-
-
-
         public DataRow PersonRow { get; set; }
 
+        private int _PersonID = -1;
         public int PersID
         {
             get
@@ -42,6 +25,7 @@ namespace Project19
 
                 return -1;
             }
+            set { _PersonID = value; }
         }
 
 
@@ -230,9 +214,63 @@ namespace Project19
             }
         }
 
-        private void lblEditPerson_LinkClicked(object sender, EventArgs e)
+        private void btnAddNewPerson_Click(object sender, EventArgs e)
         {
-            //To add later with Delegate use
+            Frm_Person_Add_Edit frm = new Frm_Person_Add_Edit();
+            frm.PersonBack += GetThePerson;
+            frm.ShowDialog();
+
         }
+
+        private void GetThePerson(object sender, clsPeople NewPerson)
+        {
+                 _PersonID = NewPerson.PersonID;
+
+                lblPersonIdOutput.Text = NewPerson.PersonID.ToString();          
+
+            
+                lblNameOutput.Text = NewPerson.FirstName.ToString() + " " + NewPerson.SecondName.ToString() + " " + NewPerson.ThirdName.ToString() + " " + NewPerson.LastName.ToString().Trim();
+            
+
+
+
+            
+                lblNationalNoOutput.Text = NewPerson.NationalNo.ToString();
+           
+
+                lblDateOfBirthOutput.Text = NewPerson.DateOfBirth.ToString("yyyy MMM dd");
+
+                if (NewPerson.Gender.ToString() == "0")
+                {
+                    lblGenderOutput.Text = "Male";
+                    pictureBox1.Image = Properties.Resources.male;
+                }
+                else
+                {
+                    lblGenderOutput.Text = "Female";
+                    pictureBox1.Image = Properties.Resources.muslimah;
+                }
+
+
+                lblAddressOutput.Text = NewPerson.Address.ToString();
+                lblPhoneOutput.Text = NewPerson.Phone.ToString();
+                lblEmailOut.Text = NewPerson.Email.ToString();
+
+                 
+
+                lblCountryOutput.Text = clsPeople.GetCountryNameByID(NewPerson.NationalityCountryID);
+
+
+                //if (!string.IsNullOrEmpty(NewPerson.ImagePath.ToString()))
+                //{
+                //    pictureBox1.Image = Image.FromFile(NewPerson.ImagePath.ToString());
+                //}
+
+
+        }
+
+
+
+
     }
 }
