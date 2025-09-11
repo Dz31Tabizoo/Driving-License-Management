@@ -175,6 +175,12 @@
     <Compile Include="Controles\UsrCrtlShowPersonInfoFilter.Designer.cs">
       <DependentUpon>UsrCrtlShowPersonInfoFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsrCrtlLogingInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsrCrtlLogingInfo.Designer.cs">
+      <DependentUpon>UsrCrtlLogingInfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\UselessEdit.resx">
       <DependentUpon>UselessEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controles\UsrCrtlShowPersonInfoFilter.resx">
       <DependentUpon>UsrCrtlShowPersonInfoFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsrCrtlLogingInfo.resx">
+      <DependentUpon>UsrCrtlLogingInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -367,6 +376,7 @@
     <None Include="Resources\maximize %281%29.png" />
     <None Include="Resources\close1.png" />
     <None Include="Resources\active-user.png" />
+    <None Include="Resources\add-friend.png" />
     <Content Include="Resources\close_RED.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -383,6 +393,8 @@
     <None Include="Resources\search %283%29.png" />
     <None Include="Resources\hide.png" />
     <None Include="Resources\user1.png" />
+    <None Include="Resources\locked %281%29.png" />
+    <None Include="Resources\user %283%29.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />

@@ -281,5 +281,9 @@ namespace Project19
 
         }
 
+        private void AddNewtoolstrip_Click(object sender, EventArgs e)
+        {
+            lblAddPerson_Click(sender, e);
+        }
     } 
 }
