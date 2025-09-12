@@ -117,6 +117,33 @@ namespace BusinessLayer
             return true;
         }
 
+        public static clsUser FindUserByID(int UserId)
+        {
+            string Username = string.Empty;
+            string PassWord = string.Empty;
+            bool IsActive = false;
+            int personID = -1;
+
+            try
+            {
+                if (clsUserDAL.FindUserByID(UserId,ref Username,ref PassWord,ref IsActive,ref personID))
+                {
+                    clsPeople P = clsPeople.FindPersonByID(personID);
+                    return new clsUser(UserId,P,Username,PassWord,IsActive);
+                }
+                else
+                {
+                    return null;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                //logger later
+                return null;
+            }
+
+        }
         public static bool isThePersonIsAUser(int PersonID)
         {
             return clsUserDAL.isThePersonIsaUser(PersonID);

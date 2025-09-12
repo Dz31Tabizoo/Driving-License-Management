@@ -14,3 +14,4 @@ Current User Info : logedin user info show : global class
 change pass word same as user managment 
 sing out btn
 
+debug row selected to show details of USer

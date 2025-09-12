@@ -7,14 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
+using ComponentFactory.Krypton.Toolkit;
+
 
 namespace Project19
 {
-    public partial class UsrCrtlLogingInfo : UserControl
+    public partial class Frm_User_Info : KryptonForm
     {
-        public UsrCrtlLogingInfo()
+        public Frm_User_Info(clsUser User)
         {
             InitializeComponent();
+            usrCrtlLogingInfo1.LoadUserInfo(User);
+            usCrtlPersonCard1.LoadLabels(User.Person.PersonID);
+
         }
+
+        
+       
+
+
+
+
+
+
     }
 }

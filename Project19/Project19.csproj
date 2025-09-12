@@ -93,12 +93,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\UselessEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\UselessEdit.Designer.cs">
-      <DependentUpon>UselessEdit.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +122,12 @@
     </Compile>
     <Compile Include="Forms\Frm_Find_Person.Designer.cs">
       <DependentUpon>Frm_Find_Person.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_User_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_User_Info.Designer.cs">
+      <DependentUpon>Frm_User_Info.cs</DependentUpon>
     </Compile>
     <Compile Include="Handlers\ImageHandler.cs" />
     <Compile Include="Forms\People Managment.cs">
@@ -175,15 +175,12 @@
     <Compile Include="Controles\UsrCrtlShowPersonInfoFilter.Designer.cs">
       <DependentUpon>UsrCrtlShowPersonInfoFilter.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsrCrtlLogingInfo.cs">
+    <Compile Include="Controles\UsrCrtlLogingInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UsrCrtlLogingInfo.Designer.cs">
+    <Compile Include="Controles\UsrCrtlLogingInfo.Designer.cs">
       <DependentUpon>UsrCrtlLogingInfo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\UselessEdit.resx">
-      <DependentUpon>UselessEdit.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +205,9 @@
     <EmbeddedResource Include="Forms\Frm_Find_Person.resx">
       <DependentUpon>Frm_Find_Person.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_User_Info.resx">
+      <DependentUpon>Frm_User_Info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -230,7 +230,7 @@
     <EmbeddedResource Include="Controles\UsrCrtlShowPersonInfoFilter.resx">
       <DependentUpon>UsrCrtlShowPersonInfoFilter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UsrCrtlLogingInfo.resx">
+    <EmbeddedResource Include="Controles\UsrCrtlLogingInfo.resx">
       <DependentUpon>UsrCrtlLogingInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -395,6 +395,7 @@
     <None Include="Resources\user1.png" />
     <None Include="Resources\locked %281%29.png" />
     <None Include="Resources\user %283%29.png" />
+    <None Include="Resources\security.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />

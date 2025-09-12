@@ -163,5 +163,53 @@ namespace DataAccessLayer
 
         }
 
+
+        public static bool FindUserByID(int UserID,ref string username,ref string password,ref bool isactive,ref int personid)
+        {
+            string query = "Select * From Users WHERE UserID = @USID;";
+            bool isfound = false;
+
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(query,cnx))
+                {
+                    cnx.Open();
+
+                    try
+                    {
+                        cmd.Parameters.AddWithValue("@USID",UserID);
+
+                        using (SqlDataReader rdr = cmd.ExecuteReader())
+                        {
+                            if (rdr.Read())
+                            {
+                                isfound = true;
+
+                                username = rdr["UserName"] as string ?? string.Empty;
+                                password = rdr["Password"] as string ?? string.Empty;
+                                isactive = Convert.ToBoolean( rdr["IsActive"]);
+                                personid = rdr["PersonID"] as int? ?? int.MinValue;
+
+
+                            }
+                        }
+
+
+                        return isfound;
+
+                    }
+                    catch
+                    {
+                        return false;
+                    }
+
+                }
+            }
+
+
+
+
+        }
+
     }
 }

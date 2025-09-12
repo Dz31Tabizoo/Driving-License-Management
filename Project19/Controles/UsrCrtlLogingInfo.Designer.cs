@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lblUserNameOut = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblUSerIDOut = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblActiveStatus = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblUSerID = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblUsername = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.PicActive = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.kryptonWrapLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblUSerIDOut = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblUserNameOut = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
             this.kryptonGroupBox1.Panel.SuspendLayout();
             this.kryptonGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicActive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
@@ -56,8 +56,8 @@
             // 
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblUserNameOut);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblUSerIDOut);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonWrapLabel1);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox4);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.lblActiveStatus);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.PicActive);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblUSerID);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblUsername);
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox3);
@@ -77,14 +77,38 @@
             this.kryptonGroupBox1.Values.Heading = "Logining Information";
             this.kryptonGroupBox1.Values.Image = global::Project19.Properties.Resources.user__3_;
             // 
-            // pictureBox4
+            // lblUserNameOut
             // 
-            this.pictureBox4.Image = global::Project19.Properties.Resources.active_user;
-            this.pictureBox4.Location = new System.Drawing.Point(719, 30);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.TabIndex = 107;
-            this.pictureBox4.TabStop = false;
+            this.lblUserNameOut.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserNameOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblUserNameOut.Location = new System.Drawing.Point(186, 34);
+            this.lblUserNameOut.Name = "lblUserNameOut";
+            this.lblUserNameOut.Size = new System.Drawing.Size(57, 20);
+            this.lblUserNameOut.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserNameOut.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblUserNameOut.Text = "--------";
+            // 
+            // lblUSerIDOut
+            // 
+            this.lblUSerIDOut.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUSerIDOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblUSerIDOut.Location = new System.Drawing.Point(429, 34);
+            this.lblUSerIDOut.Name = "lblUSerIDOut";
+            this.lblUSerIDOut.Size = new System.Drawing.Size(45, 20);
+            this.lblUSerIDOut.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUSerIDOut.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblUSerIDOut.Text = "------";
+            // 
+            // lblActiveStatus
+            // 
+            this.lblActiveStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblActiveStatus.Location = new System.Drawing.Point(611, 30);
+            this.lblActiveStatus.Name = "lblActiveStatus";
+            this.lblActiveStatus.Size = new System.Drawing.Size(86, 20);
+            this.lblActiveStatus.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActiveStatus.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.lblActiveStatus.Text = "Active User";
             // 
             // lblUSerID
             // 
@@ -108,6 +132,16 @@
             this.lblUsername.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.lblUsername.Text = "User Name :";
             // 
+            // PicActive
+            // 
+            this.PicActive.Image = global::Project19.Properties.Resources.active_user;
+            this.PicActive.Location = new System.Drawing.Point(719, 30);
+            this.PicActive.Name = "PicActive";
+            this.PicActive.Size = new System.Drawing.Size(24, 24);
+            this.PicActive.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicActive.TabIndex = 107;
+            this.PicActive.TabStop = false;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Project19.Properties.Resources.id_card__2_;
@@ -127,39 +161,6 @@
             this.pictureBox6.TabIndex = 105;
             this.pictureBox6.TabStop = false;
             // 
-            // kryptonWrapLabel1
-            // 
-            this.kryptonWrapLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonWrapLabel1.Location = new System.Drawing.Point(611, 30);
-            this.kryptonWrapLabel1.Name = "kryptonWrapLabel1";
-            this.kryptonWrapLabel1.Size = new System.Drawing.Size(86, 20);
-            this.kryptonWrapLabel1.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonWrapLabel1.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonWrapLabel1.Text = "Active User";
-            // 
-            // lblUSerIDOut
-            // 
-            this.lblUSerIDOut.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUSerIDOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.lblUSerIDOut.Location = new System.Drawing.Point(429, 34);
-            this.lblUSerIDOut.Name = "lblUSerIDOut";
-            this.lblUSerIDOut.Size = new System.Drawing.Size(45, 20);
-            this.lblUSerIDOut.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUSerIDOut.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.lblUSerIDOut.Text = "------";
-            // 
-            // lblUserNameOut
-            // 
-            this.lblUserNameOut.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserNameOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.lblUserNameOut.Location = new System.Drawing.Point(186, 34);
-            this.lblUserNameOut.Name = "lblUserNameOut";
-            this.lblUserNameOut.Size = new System.Drawing.Size(57, 20);
-            this.lblUserNameOut.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserNameOut.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.lblUserNameOut.Text = "--------";
-            // 
             // UsrCrtlLogingInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,7 +174,7 @@
             this.kryptonGroupBox1.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
             this.kryptonGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PicActive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
@@ -183,13 +184,13 @@
         #endregion
 
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox PicActive;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblUSerID;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblUsername;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox6;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblUserNameOut;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblUSerIDOut;
-        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblActiveStatus;
     }
 }

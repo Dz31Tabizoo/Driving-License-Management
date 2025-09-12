@@ -278,7 +278,16 @@ namespace Project19
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (dgvAllUsers.SelectedRows.Count <= 0 )
+            {
+                return;
+            }
 
+            DataGridViewRow Row = dgvAllUsers.SelectedRows[0];
+
+            clsUser User = clsUser.FindUserByID((int)Row.Cells["UserID"].Value);
+            Frm_User_Info frm = new Frm_User_Info(User);
+            frm.ShowDialog();
         }
 
         private void AddNewtoolstrip_Click(object sender, EventArgs e)
