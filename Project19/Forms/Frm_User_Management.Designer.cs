@@ -83,7 +83,7 @@ namespace Project19
             // 
             // contextMenuStrip1
             // 
-            this.contextMenuStrip1.AllowDrop = true;
+            this.contextMenuStrip1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.contextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.contextMenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -99,9 +99,9 @@ namespace Project19
             this.phoneCallToolStripMenuItem,
             this.emailToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(197, 282);
-            this.contextMenuStrip1.Text = "Person Options";
+            this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.contextMenuStrip1.Size = new System.Drawing.Size(197, 304);
+            this.contextMenuStrip1.Text = "User Options";
             // 
             // showDetailsToolStripMenuItem
             // 
@@ -122,7 +122,7 @@ namespace Project19
             this.AddNewtoolstrip.Name = "AddNewtoolstrip";
             this.AddNewtoolstrip.Size = new System.Drawing.Size(196, 38);
             this.AddNewtoolstrip.Text = "Add New User";
-            this.AddNewtoolstrip.Click += new System.EventHandler(this.AddNewtoolstrip_Click);
+            this.AddNewtoolstrip.Click += new System.EventHandler(this.lblAddPerson_Click);
             // 
             // toolStripSeparator1
             // 
@@ -136,7 +136,6 @@ namespace Project19
             this.ChangePAsswordtoolStrip.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChangePAsswordtoolStrip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.ChangePAsswordtoolStrip.Image = global::Project19.Properties.Resources.locked__1_;
-            this.ChangePAsswordtoolStrip.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ChangePAsswordtoolStrip.Name = "ChangePAsswordtoolStrip";
             this.ChangePAsswordtoolStrip.Size = new System.Drawing.Size(196, 38);
             this.ChangePAsswordtoolStrip.Text = "Edit Password";
@@ -260,7 +259,6 @@ namespace Project19
             // 
             this.dgvAllUsers.AllowUserToAddRows = false;
             this.dgvAllUsers.AllowUserToDeleteRows = false;
-            this.dgvAllUsers.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -286,6 +284,7 @@ namespace Project19
             this.dgvAllUsers.EnableHeadersVisualStyles = false;
             this.dgvAllUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.dgvAllUsers.Location = new System.Drawing.Point(0, 281);
+            this.dgvAllUsers.MultiSelect = false;
             this.dgvAllUsers.Name = "dgvAllUsers";
             this.dgvAllUsers.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -301,6 +300,8 @@ namespace Project19
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.dgvAllUsers.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvAllUsers.RowTemplate.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvAllUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAllUsers.Size = new System.Drawing.Size(1024, 409);
             this.dgvAllUsers.TabIndex = 1;
             // 

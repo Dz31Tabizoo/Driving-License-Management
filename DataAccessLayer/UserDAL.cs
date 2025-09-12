@@ -111,7 +111,7 @@ namespace DataAccessLayer
 
         public static bool isUsernameExist(string UserName)
         {
-            bool result = false;
+            bool found = false;
             string Query = "SELECT 1 as found FROM Users WHERE UserName = @username;";
 
             using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
@@ -123,9 +123,9 @@ namespace DataAccessLayer
                     {
                         cnx.Open();
 
-                        result = (bool)cmd.ExecuteScalar();
+                        object result = cmd.ExecuteScalar();
 
-                        return result;
+                        return result != null ? bool.Parse(result.ToString()) : false;
                           
                         
                     }
@@ -149,8 +149,9 @@ namespace DataAccessLayer
                     try
                     {
                         cnx.Open();
+                        Object result = cmd.ExecuteScalar();
 
-                        found = (bool)cmd.ExecuteScalar();
+                        found =  result != null ? (bool)result : false;
 
                         return found;
 

@@ -51,10 +51,10 @@ namespace Project19
             lblCountryOutput.Text = clsPeople.GetCountryNameByID(Person.NationalityCountryID);
             lblPhoneOutput.Text = Person.Phone;
 
-            if (!string.IsNullOrEmpty(Person.ImagePath))
-            {
-                pictureBox1.Image = Image.FromFile(Person.ImagePath);
-            }
+            //if (!string.IsNullOrEmpty(Person.ImagePath))
+            //{
+            //    pictureBox1.Image = Image.FromFile(Person.ImagePath);
+            //}
             
 
 

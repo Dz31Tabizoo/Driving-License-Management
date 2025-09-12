@@ -123,10 +123,10 @@
     <Compile Include="Forms\Frm_Find_Person.Designer.cs">
       <DependentUpon>Frm_Find_Person.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_User_Info.cs">
+    <Compile Include="Forms\Frm_User_Info.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_User_Info.Designer.cs">
+    <Compile Include="Forms\Frm_User_Info.Designer.cs">
       <DependentUpon>Frm_User_Info.cs</DependentUpon>
     </Compile>
     <Compile Include="Handlers\ImageHandler.cs" />
@@ -205,7 +205,7 @@
     <EmbeddedResource Include="Forms\Frm_Find_Person.resx">
       <DependentUpon>Frm_Find_Person.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_User_Info.resx">
+    <EmbeddedResource Include="Forms\Frm_User_Info.resx">
       <DependentUpon>Frm_User_Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

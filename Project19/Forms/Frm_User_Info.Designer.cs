@@ -52,6 +52,7 @@
             // usCrtlPersonCard1
             // 
             this.usCrtlPersonCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.usCrtlPersonCard1.Enabled = false;
             this.usCrtlPersonCard1.Location = new System.Drawing.Point(18, 70);
             this.usCrtlPersonCard1.Margin = new System.Windows.Forms.Padding(2);
             this.usCrtlPersonCard1.Name = "usCrtlPersonCard1";
@@ -68,6 +69,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // usrCrtlLogingInfo1
             // 
@@ -146,6 +148,7 @@
             this.btnClear.TabIndex = 21;
             this.btnClear.Values.Image = global::Project19.Properties.Resources.se_deconnecter;
             this.btnClear.Values.Text = "Exit";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // Frm_User_Info
             // 

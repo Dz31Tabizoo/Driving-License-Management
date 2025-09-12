@@ -136,8 +136,7 @@ namespace Project19
         private void Frm_User_Load(object sender, EventArgs e)
         {
             //Fill Data Grid View
-            DataTable Dt = new DataTable();
-            Dt = clsUser.GetAllUsers();
+            DataTable Dt = clsUser.GetAllUsers();
             dgvAllUsers.DataSource = Dt;
 
             //Count Data
