@@ -2,7 +2,7 @@
 
 
 
-Add User           on context menu strip 
+
 Change password      //   //      // 
 
 add new person on   Add User Form 
