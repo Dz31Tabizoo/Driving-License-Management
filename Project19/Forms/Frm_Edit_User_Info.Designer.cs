@@ -35,7 +35,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.gbUserStatus = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.chkActive = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.lblUserIDOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
@@ -44,7 +44,7 @@
             this.kryptonWrapLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.gboxPasswordEdit = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.picPass1 = new System.Windows.Forms.PictureBox();
             this.txtPriviousPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -59,17 +59,17 @@
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
-            this.kryptonGroupBox1.Panel.SuspendLayout();
-            this.kryptonGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbUserStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbUserStatus.Panel)).BeginInit();
+            this.gbUserStatus.Panel.SuspendLayout();
+            this.gbUserStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
-            this.kryptonGroupBox2.Panel.SuspendLayout();
-            this.kryptonGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gboxPasswordEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gboxPasswordEdit.Panel)).BeginInit();
+            this.gboxPasswordEdit.Panel.SuspendLayout();
+            this.gboxPasswordEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPass1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPass2)).BeginInit();
@@ -248,29 +248,29 @@
             this.errorProvider.ContainerControl = this;
             this.errorProvider.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider.Icon")));
             // 
-            // kryptonGroupBox1
+            // gbUserStatus
             // 
-            this.kryptonGroupBox1.CaptionOverlap = 0D;
-            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
-            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.FormMain;
-            this.kryptonGroupBox1.Location = new System.Drawing.Point(12, 84);
-            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
+            this.gbUserStatus.CaptionOverlap = 0D;
+            this.gbUserStatus.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
+            this.gbUserStatus.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.FormMain;
+            this.gbUserStatus.Location = new System.Drawing.Point(12, 84);
+            this.gbUserStatus.Name = "gbUserStatus";
             // 
-            // kryptonGroupBox1.Panel
+            // gbUserStatus.Panel
             // 
-            this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox4);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.chkActive);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.lblUserIDOutput);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.lblUSerID);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.txtUserName);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonWrapLabel2);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox3);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox5);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(826, 103);
-            this.kryptonGroupBox1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.kryptonGroupBox1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.kryptonGroupBox1.TabIndex = 24;
-            this.kryptonGroupBox1.Values.Heading = "Edit User Info";
+            this.gbUserStatus.Panel.Controls.Add(this.pictureBox4);
+            this.gbUserStatus.Panel.Controls.Add(this.chkActive);
+            this.gbUserStatus.Panel.Controls.Add(this.lblUserIDOutput);
+            this.gbUserStatus.Panel.Controls.Add(this.lblUSerID);
+            this.gbUserStatus.Panel.Controls.Add(this.txtUserName);
+            this.gbUserStatus.Panel.Controls.Add(this.kryptonWrapLabel2);
+            this.gbUserStatus.Panel.Controls.Add(this.pictureBox3);
+            this.gbUserStatus.Panel.Controls.Add(this.pictureBox5);
+            this.gbUserStatus.Size = new System.Drawing.Size(826, 103);
+            this.gbUserStatus.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.gbUserStatus.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.gbUserStatus.TabIndex = 24;
+            this.gbUserStatus.Values.Heading = "Edit User Info";
             // 
             // pictureBox4
             // 
@@ -367,35 +367,35 @@
             this.pictureBox5.TabIndex = 120;
             this.pictureBox5.TabStop = false;
             // 
-            // kryptonGroupBox2
+            // gboxPasswordEdit
             // 
-            this.kryptonGroupBox2.CaptionOverlap = 0D;
-            this.kryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
-            this.kryptonGroupBox2.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.FormMain;
-            this.kryptonGroupBox2.Location = new System.Drawing.Point(12, 198);
-            this.kryptonGroupBox2.Name = "kryptonGroupBox2";
+            this.gboxPasswordEdit.CaptionOverlap = 0D;
+            this.gboxPasswordEdit.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
+            this.gboxPasswordEdit.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.FormMain;
+            this.gboxPasswordEdit.Location = new System.Drawing.Point(12, 198);
+            this.gboxPasswordEdit.Name = "gboxPasswordEdit";
             // 
-            // kryptonGroupBox2.Panel
+            // gboxPasswordEdit.Panel
             // 
-            this.kryptonGroupBox2.Panel.AllowDrop = true;
-            this.kryptonGroupBox2.Panel.AutoScroll = true;
-            this.kryptonGroupBox2.Panel.Controls.Add(this.picPass1);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.txtPriviousPassword);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.pictureBox1);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.picPass2);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.picPass3);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.txtConfirmNewpass);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonWrapLabel5);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.txtNewPassword);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonWrapLabel6);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonWrapLabel7);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.pictureBox10);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.pictureBox13);
-            this.kryptonGroupBox2.Size = new System.Drawing.Size(826, 214);
-            this.kryptonGroupBox2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.kryptonGroupBox2.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
-            this.kryptonGroupBox2.TabIndex = 25;
-            this.kryptonGroupBox2.Values.Heading = "Edit User Info";
+            this.gboxPasswordEdit.Panel.AllowDrop = true;
+            this.gboxPasswordEdit.Panel.AutoScroll = true;
+            this.gboxPasswordEdit.Panel.Controls.Add(this.picPass1);
+            this.gboxPasswordEdit.Panel.Controls.Add(this.txtPriviousPassword);
+            this.gboxPasswordEdit.Panel.Controls.Add(this.pictureBox1);
+            this.gboxPasswordEdit.Panel.Controls.Add(this.picPass2);
+            this.gboxPasswordEdit.Panel.Controls.Add(this.picPass3);
+            this.gboxPasswordEdit.Panel.Controls.Add(this.txtConfirmNewpass);
+            this.gboxPasswordEdit.Panel.Controls.Add(this.kryptonWrapLabel5);
+            this.gboxPasswordEdit.Panel.Controls.Add(this.txtNewPassword);
+            this.gboxPasswordEdit.Panel.Controls.Add(this.kryptonWrapLabel6);
+            this.gboxPasswordEdit.Panel.Controls.Add(this.kryptonWrapLabel7);
+            this.gboxPasswordEdit.Panel.Controls.Add(this.pictureBox10);
+            this.gboxPasswordEdit.Panel.Controls.Add(this.pictureBox13);
+            this.gboxPasswordEdit.Size = new System.Drawing.Size(826, 214);
+            this.gboxPasswordEdit.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.gboxPasswordEdit.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
+            this.gboxPasswordEdit.TabIndex = 25;
+            this.gboxPasswordEdit.Values.Heading = "Edit User Info";
             // 
             // picPass1
             // 
@@ -570,8 +570,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(850, 467);
-            this.Controls.Add(this.kryptonGroupBox2);
-            this.Controls.Add(this.kryptonGroupBox1);
+            this.Controls.Add(this.gboxPasswordEdit);
+            this.Controls.Add(this.gbUserStatus);
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSaveEdit);
@@ -581,19 +581,19 @@
             this.Text = "Frm_Add_User";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
-            this.kryptonGroupBox1.Panel.ResumeLayout(false);
-            this.kryptonGroupBox1.Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
-            this.kryptonGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gbUserStatus.Panel)).EndInit();
+            this.gbUserStatus.Panel.ResumeLayout(false);
+            this.gbUserStatus.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gbUserStatus)).EndInit();
+            this.gbUserStatus.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
-            this.kryptonGroupBox2.Panel.ResumeLayout(false);
-            this.kryptonGroupBox2.Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
-            this.kryptonGroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gboxPasswordEdit.Panel)).EndInit();
+            this.gboxPasswordEdit.Panel.ResumeLayout(false);
+            this.gboxPasswordEdit.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gboxPasswordEdit)).EndInit();
+            this.gboxPasswordEdit.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picPass1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPass2)).EndInit();
@@ -611,7 +611,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnExit;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private System.Windows.Forms.ErrorProvider errorProvider;
-        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox gbUserStatus;
         private System.Windows.Forms.PictureBox pictureBox4;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox chkActive;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblUserIDOutput;
@@ -620,7 +620,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox2;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox gboxPasswordEdit;
         private System.Windows.Forms.PictureBox picPass2;
         private System.Windows.Forms.PictureBox picPass3;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtConfirmNewpass;

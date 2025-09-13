@@ -140,6 +140,7 @@ namespace Project19
             this.ChangePAsswordtoolStrip.Name = "ChangePAsswordtoolStrip";
             this.ChangePAsswordtoolStrip.Size = new System.Drawing.Size(196, 38);
             this.ChangePAsswordtoolStrip.Text = "Edit Password";
+            this.ChangePAsswordtoolStrip.Click += new System.EventHandler(this.ChangePAsswordtoolStrip_Click);
             // 
             // editToolStripMenuItem
             // 

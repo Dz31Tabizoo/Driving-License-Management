@@ -329,7 +329,7 @@ namespace Project19
 
             if (int.TryParse(CellValue.ToString(),out int userID))
             {
-                using (var EditForm = new Frm_Edit_User_Info(userID))
+                using (var EditForm = new Frm_Edit_User_Info(userID,'U'))
                 {
                     EditForm.ShowDialog();
                 }
@@ -340,6 +340,30 @@ namespace Project19
             }
 
 
+        }
+
+        private void ChangePAsswordtoolStrip_Click(object sender, EventArgs e)
+        {
+            if (dgvAllUsers.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Please select a user first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            var CellValue = dgvAllUsers.SelectedRows[0].Cells["UserID"].Value;
+
+
+            if (int.TryParse(CellValue.ToString(), out int userID))
+            {
+                using (var EditForm = new Frm_Edit_User_Info(userID, 'X'))
+                {
+                    EditForm.ShowDialog();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalide User Selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     } 
 }

@@ -1,9 +1,9 @@
 ﻿User managment: 
 
 
+delete user 
 
-
-
+Save User Edit 
 
 
 --------------------------------------

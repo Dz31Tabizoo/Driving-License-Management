@@ -16,14 +16,26 @@ namespace Project19
     public partial class Frm_Edit_User_Info : KryptonForm
     {
         
-        public Frm_Edit_User_Info(int UserID)
+        public Frm_Edit_User_Info(int UserID ,char P)
         {
             InitializeComponent();
             LoadUserDataToEdit(UserID);
             Loader();
             DragHelper.MakeFormDraggable(this);
+            LoadsectionPasswordEdit(P);
+        }
 
-            
+        private void LoadsectionPasswordEdit(char p)
+        {
+            if (p != 'U')
+            {
+                gbUserStatus.Enabled = false;
+            }
+            else
+            {
+                gbUserStatus.Enabled = true;
+            }
+
         }
         private void Loader()
         {
