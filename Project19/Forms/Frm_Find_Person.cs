@@ -16,6 +16,7 @@ namespace Project19
         public Frm_Find_Person()
         {
             InitializeComponent();
+            DragHelper.MakeFormDraggable(this);
         }
 
         

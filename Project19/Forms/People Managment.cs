@@ -21,6 +21,7 @@ namespace Project19
             InitializeComponent();
             cmbSearchCriteria.Items.Insert(0, "Select an option...");
             cmbSearchCriteria.SelectedIndex = 0;
+            DragHelper.MakeFormDraggable(this);
         }
 
         private void LoadPeopleData()

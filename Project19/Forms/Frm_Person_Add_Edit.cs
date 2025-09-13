@@ -29,6 +29,7 @@ namespace Project19
             InitializeComponent();
             btnSaveEdit.Enabled = false;
             btnSaveEdit.Visible = false;
+            DragHelper.MakeFormDraggable(this);
         }
 
         public Frm_Person_Add_Edit(DataGridViewRow EdRow)
@@ -38,6 +39,7 @@ namespace Project19
             btnSave.Enabled = false;
             btnSave.Visible = false;
             lblTitle.Text = "Edit Person Information";
+            DragHelper.MakeFormDraggable(this);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

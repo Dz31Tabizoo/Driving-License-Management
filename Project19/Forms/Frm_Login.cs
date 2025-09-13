@@ -18,6 +18,7 @@ namespace Project19
         public Frm_Login()
         {
             InitializeComponent();
+            DragHelper.MakeFormDraggable(this);
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -53,9 +53,9 @@
             this.usCrtlPersonCard1.Location = new System.Drawing.Point(18, 73);
             this.usCrtlPersonCard1.Margin = new System.Windows.Forms.Padding(2);
             this.usCrtlPersonCard1.Name = "usCrtlPersonCard1";
+            this.usCrtlPersonCard1.RR = null;
             this.usCrtlPersonCard1.Size = new System.Drawing.Size(850, 450);
             this.usCrtlPersonCard1.TabIndex = 3;
-            this.usCrtlPersonCard1.Enabled = true;
             // 
             // pictureBox2
             // 

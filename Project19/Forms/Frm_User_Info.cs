@@ -20,7 +20,7 @@ namespace Project19
             InitializeComponent();
             usrCrtlLogingInfo1.LoadUserInfo(User);
             usCrtlPersonCard1.LoadLabels(User.Person.PersonID);
-
+            DragHelper.MakeFormDraggable(this);
         }
 
         private void btnClear_Click(object sender, EventArgs e)

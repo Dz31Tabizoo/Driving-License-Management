@@ -17,6 +17,7 @@ namespace Project19
         public Frm_Add_User()
         {
             InitializeComponent();
+            DragHelper.MakeFormDraggable(this);
         }
 
         public DataRow PersonFoundinfo {  get; set; }
@@ -90,20 +91,21 @@ namespace Project19
             return NewUser.Save();
         }
 
+        private void HideText()
+        {
+            txtPassWord.PasswordChar = '●';
+        }
         private void picPassWrd_MouseDown(object sender, MouseEventArgs e)
         {
          txtPassWord.PasswordChar = '\0';
         }
 
-        private void picPassWrd_MouseUp(object sender, MouseEventArgs e)
-        {
-            txtPassWord.PasswordChar = '▬';
-        }
+        private void picPassWrd_MouseUp(object sender, MouseEventArgs e) => HideText();
 
-        private void picPassWrd_MouseLeave(object sender, EventArgs e)
-        {
-            txtPassWord.PasswordChar = '▬';
-        }
+        
+
+        private void picPassWrd_MouseLeave(object sender, EventArgs e) => HideText();
+        
 
         private void picEyePassWrdConfirm_MouseDown(object sender, MouseEventArgs e)
         {
@@ -149,5 +151,6 @@ namespace Project19
                 errorProvider.SetError(txtPassWordConfirm, "");
             }
         }
+
     }
 }

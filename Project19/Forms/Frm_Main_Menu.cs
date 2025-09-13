@@ -17,20 +17,7 @@ namespace Project19
     {
         private PrivateFontCollection privateFonts = new PrivateFontCollection();
 
-        private void LoadFont()
-        {
-            try
-            {
-
-                privateFonts.AddFontFile("C:\\Users\\DELL\\Source\\Repos\\Driving-License-Management\\Project19\\Resources\\MarkaziText-VariableFont_wght.ttf");
-
-                ApplyFontToControls(this);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Failed to load Poppins font: " + ex.Message);
-            }
-        }
+        
 
         private void ApplyFontToControls(Control control)
         {
@@ -54,8 +41,9 @@ namespace Project19
         public Frm_Main_Menu()
         {
             InitializeComponent();
-            LoadFont();
+            
             CostumTools();
+            DragHelper.MakeFormDraggable(this);
         }
         
 

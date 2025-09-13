@@ -3,9 +3,8 @@
 
 
 
-Change password      //   //      // 
 
-add new person on   Add User Form 
+
 
 --------------------------------------
 Account Setting : 
