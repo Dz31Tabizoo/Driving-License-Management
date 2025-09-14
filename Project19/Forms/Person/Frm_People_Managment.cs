@@ -24,27 +24,26 @@ namespace Project19
             DragHelper.MakeFormDraggable(this);
         }
 
-        private void LoadPeopleData()
+        private async Task LoadPeopleDataAsync()
         {
             try
             {
                 this.Cursor = Cursors.WaitCursor;
                 //Fill Data Grid View
-                DataTable Dt = clsPeople.GetAllPeople();
-                dgvAllPeople.DataSource = null;
-                dgvAllPeople.Refresh();
+                DataTable Dt =  await Task.Run( () => clsPeople.GetAllPeople());
+               
                 dgvAllPeople.DataSource = Dt;
 
                 //Count Data
-                var Count = Dt.Rows.Count;
-                lblTotalPeopleNumber.Text = ": [" +  Count.ToString() + "]";
+                
+                lblTotalPeopleNumber.Text = $": [ {Dt.Rows.Count } ]";
 
                 //Search
                 //Add Columns
-
-                foreach (DataColumn Col in Dt.Columns)
+                cmbSearchCriteria.Items.Clear();
+                foreach (DataColumn col in Dt.Columns)
                 {
-                    cmbSearchCriteria.Items.Add(Col.ColumnName);
+                    cmbSearchCriteria.Items.Add(col.ColumnName);
                 }
             }
             catch (Exception ex)
@@ -58,9 +57,9 @@ namespace Project19
         }
 
 
-        private void People_Managment_Load(object sender, EventArgs e)
+        private async void People_Managment_Load(object sender, EventArgs e)
         {
-            BeginInvoke(new Action(() => { LoadPeopleData(); }));    
+            await LoadPeopleDataAsync();    
 
         }
 
@@ -148,10 +147,10 @@ namespace Project19
         }
         // Empty text filed
 
-        private void btnClear_Click_1(object sender, EventArgs e)
+        private async void btnClear_Click_1(object sender, EventArgs e)
         {
             TxtSearchTerm.Text = "";
-            LoadPeopleData();
+           await LoadPeopleDataAsync();
         }
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -234,7 +233,7 @@ namespace Project19
             return (type == typeof(Byte));
         }
 
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvAllPeople.SelectedRows.Count <= 0)
             {
@@ -248,7 +247,7 @@ namespace Project19
                 if (clsPeople.DeletePerson(PersID))
                 {
                     MessageBox.Show($"Person with ID {PersID} Deleted ", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadPeopleData();
+                    await LoadPeopleDataAsync();
                 }
                 else
                 {

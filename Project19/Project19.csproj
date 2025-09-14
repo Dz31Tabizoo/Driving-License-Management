@@ -94,66 +94,66 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Handlers\DragFormHandler.cs" />
-    <Compile Include="Forms\Frm_Login.cs">
+    <Compile Include="Forms\Main\Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Login.Designer.cs">
+    <Compile Include="Forms\Main\Frm_Login.Designer.cs">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_Main_Menu.cs">
+    <Compile Include="Forms\Main\Frm_Main_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Main_Menu.Designer.cs">
+    <Compile Include="Forms\Main\Frm_Main_Menu.Designer.cs">
       <DependentUpon>Frm_Main_Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_Person_Add_Edit.cs">
+    <Compile Include="Forms\Person\Frm_Person_Add_Edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Person_Add_Edit.Designer.cs">
+    <Compile Include="Forms\Person\Frm_Person_Add_Edit.Designer.cs">
       <DependentUpon>Frm_Person_Add_Edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_Add_User.cs">
+    <Compile Include="Forms\User\Frm_Add_User.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Add_User.Designer.cs">
+    <Compile Include="Forms\User\Frm_Add_User.Designer.cs">
       <DependentUpon>Frm_Add_User.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_Find_Person.cs">
+    <Compile Include="Forms\Person\Frm_Find_Person.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Find_Person.Designer.cs">
+    <Compile Include="Forms\Person\Frm_Find_Person.Designer.cs">
       <DependentUpon>Frm_Find_Person.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_User_Info.cs">
+    <Compile Include="Forms\User\Frm_User_Info.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_User_Info.Designer.cs">
+    <Compile Include="Forms\User\Frm_User_Info.Designer.cs">
       <DependentUpon>Frm_User_Info.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frm_Edit_User_Info.cs">
+    <Compile Include="Forms\User\Frm_Edit_User_Info.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_Edit_User_Info.Designer.cs">
+    <Compile Include="Forms\User\Frm_Edit_User_Info.Designer.cs">
       <DependentUpon>Frm_Edit_User_Info.cs</DependentUpon>
     </Compile>
     <Compile Include="Handlers\ImageHandler.cs" />
-    <Compile Include="Forms\People Managment.cs">
+    <Compile Include="Forms\Person\Frm_People_Managment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\People Managment.Designer.cs">
-      <DependentUpon>People Managment.cs</DependentUpon>
+    <Compile Include="Forms\Person\Frm_People_Managment.Designer.cs">
+      <DependentUpon>Frm_People_Managment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Person Details.cs">
+    <Compile Include="Forms\Person\Frm_Person_Details.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Person Details.Designer.cs">
-      <DependentUpon>Person Details.cs</DependentUpon>
+    <Compile Include="Forms\Person\Frm_Person_Details.Designer.cs">
+      <DependentUpon>Frm_Person_Details.cs</DependentUpon>
     </Compile>
     <Compile Include="Handlers\ValidationHaldler.cs" />
-    <Compile Include="Forms\Frm_User_Management.cs">
+    <Compile Include="Forms\User\Frm_User_Management.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frm_User_Management.Designer.cs">
+    <Compile Include="Forms\User\Frm_User_Management.Designer.cs">
       <DependentUpon>Frm_User_Management.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -188,34 +188,34 @@
     <Compile Include="Controles\UsrCrtlLogingInfo.Designer.cs">
       <DependentUpon>UsrCrtlLogingInfo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Frm_Login.resx">
+    <EmbeddedResource Include="Forms\Main\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_Main_Menu.resx">
+    <EmbeddedResource Include="Forms\Main\Frm_Main_Menu.resx">
       <DependentUpon>Frm_Main_Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_Person_Add_Edit.resx">
+    <EmbeddedResource Include="Forms\Person\Frm_Person_Add_Edit.resx">
       <DependentUpon>Frm_Person_Add_Edit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\People Managment.resx">
-      <DependentUpon>People Managment.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Person\Frm_People_Managment.resx">
+      <DependentUpon>Frm_People_Managment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Person Details.resx">
-      <DependentUpon>Person Details.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Person\Frm_Person_Details.resx">
+      <DependentUpon>Frm_Person_Details.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_User_Management.resx">
+    <EmbeddedResource Include="Forms\User\Frm_User_Management.resx">
       <DependentUpon>Frm_User_Management.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_Add_User.resx">
+    <EmbeddedResource Include="Forms\User\Frm_Add_User.resx">
       <DependentUpon>Frm_Add_User.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_Find_Person.resx">
+    <EmbeddedResource Include="Forms\Person\Frm_Find_Person.resx">
       <DependentUpon>Frm_Find_Person.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_User_Info.resx">
+    <EmbeddedResource Include="Forms\User\Frm_User_Info.resx">
       <DependentUpon>Frm_User_Info.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frm_Edit_User_Info.resx">
+    <EmbeddedResource Include="Forms\User\Frm_Edit_User_Info.resx">
       <DependentUpon>Frm_Edit_User_Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

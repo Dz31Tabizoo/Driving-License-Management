@@ -130,32 +130,29 @@ namespace Project19
 
         //Logic on Event
 
-        private void btnClear_Click_1(object sender, EventArgs e)
+        private async void btnClear_Click_1(object sender, EventArgs e)
         {
             TxtSearchTerm.Text = "";
-            LoadUSerData();
+            await LoadUSerDataAsync(); 
         }
 
-        private void LoadUSerData()
+        private async Task LoadUSerDataAsync()
         {
             try
             {
                 this.Cursor = Cursors.WaitCursor;
 
-                DataTable Dt = clsUser.GetAllUsers();
+                DataTable Dt = await Task.Run(() => clsUser.GetAllUsers());
 
-                dgvAllUsers.DataSource = null;
-                dgvAllUsers.Refresh();
-
-                dgvAllUsers.DataSource = Dt;
-
-                var Count = Dt.Rows.Count;
-                lblTotalUserNum.Text = ":  [" + Count.ToString() + "]";
-
-                foreach (DataColumn Col in Dt.Columns)
+                if (this.InvokeRequired)  
                 {
-                    cmbSearchCriteria.Items.Add(Col.ColumnName);
+                    this.Invoke(new Action(() => UpdateUserUI(Dt)));
                 }
+                else
+                {
+                    UpdateUserUI(Dt);
+                }
+
 
             }
             catch (Exception ex)
@@ -168,10 +165,22 @@ namespace Project19
                 this.Cursor = Cursors.Default;
             }
         }
-
-        private void Frm_User_Load(object sender, EventArgs e)
+        private void UpdateUserUI(DataTable dataTable)
         {
-            BeginInvoke(new Action(() => { LoadUSerData(); }));
+            dgvAllUsers.DataSource = dataTable;
+            lblTotalUserNum.Text = $":  [{dataTable.Rows.Count}]";
+
+            cmbSearchCriteria.Items.Clear();
+            foreach (DataColumn col in dataTable.Columns)
+            {
+                cmbSearchCriteria.Items.Add(col.ColumnName);
+            }
+
+        }
+
+        private async void Frm_User_Load(object sender, EventArgs e)
+        {
+            await LoadUSerDataAsync();
            
         }
 
@@ -364,6 +373,11 @@ namespace Project19
             {
                 MessageBox.Show("Invalide User Selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     } 
 }
