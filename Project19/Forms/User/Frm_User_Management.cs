@@ -301,8 +301,7 @@ namespace Project19
 
         private void lblAddPerson_Click(object sender, EventArgs e)
         {
-            Form addUserForm = new Frm_Add_User();
-            addUserForm.ShowDialog();
+            AddUser();
         }
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -322,7 +321,7 @@ namespace Project19
 
         private void AddNewtoolstrip_Click(object sender, EventArgs e)
         {
-            lblAddPerson_Click(sender, e);
+            AddUser();
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
@@ -379,5 +378,15 @@ namespace Project19
         {
 
         }
+        private void AddUser()
+        {
+            Form addUserForm = new Frm_Add_User();
+            addUserForm.ShowDialog();
+        }
+
+
+
     } 
 }
+
+

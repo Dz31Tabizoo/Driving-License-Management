@@ -239,6 +239,7 @@ namespace Project19
             {
                 return;
             }
+
             DataGridViewRow SelectedRow = dgvAllPeople.SelectedRows[0];
             int PersID = Convert.ToInt32(SelectedRow.Cells["PersonID"].Value);
             DialogResult result = MessageBox.Show($"Do you confirm Delete ID {PersID} ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
