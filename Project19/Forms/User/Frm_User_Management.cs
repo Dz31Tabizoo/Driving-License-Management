@@ -331,10 +331,7 @@ namespace Project19
                 MessageBox.Show("Please select a user first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
             var CellValue = dgvAllUsers.SelectedRows[0].Cells["UserID"].Value;
-
-
             if (int.TryParse(CellValue.ToString(),out int userID))
             {
                 using (var EditForm = new Frm_Edit_User_Info(userID,'U'))
@@ -346,7 +343,6 @@ namespace Project19
             {
                 MessageBox.Show("Invalide User Selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
 
         }
 
