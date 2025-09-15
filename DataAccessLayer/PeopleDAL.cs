@@ -407,7 +407,7 @@ private void btnCheckNationalNo_Click(object sender, EventArgs e)
 
         public static bool DeletePerson (int ID)
         {
-            string Query = "DELETE People WHERE PersonID = @pID;";
+            string Query = "DELETE FROM People WHERE PersonID = @pID;";
             int RowAffected = 0;
 
             using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))

@@ -144,9 +144,15 @@ namespace BusinessLayer
             }
 
         }
+
         public static bool isThePersonIsAUser(int PersonID)
         {
             return clsUserDAL.isThePersonIsaUser(PersonID);
+        }
+
+        public static Task <bool> DeleteUser(int uerID)
+        {
+            return clsUserDAL.DeleteUserByID(uerID);
         }
 
     }

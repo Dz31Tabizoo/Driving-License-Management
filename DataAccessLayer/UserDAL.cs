@@ -118,7 +118,7 @@ namespace DataAccessLayer
             {
                 using (SqlCommand cmd = new SqlCommand(Query, cnx))
                 {
-                    cmd.Parameters.AddWithValue("username", UserName);
+                    cmd.Parameters.AddWithValue("@username", UserName);
                     try
                     {
                         cnx.Open();
@@ -212,5 +212,34 @@ namespace DataAccessLayer
 
         }
 
+
+        public static async Task <bool> DeleteUserByID(int userId)
+        {
+            
+            string query = "DELETE FROM Users WHERE UserID = @userid;";
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(query,cnx))
+                {
+                    cmd.Parameters.AddWithValue("@userid", userId);
+
+                    try
+                    {
+                        await cnx.OpenAsync();
+
+                        int RowAffected = await cmd.ExecuteNonQueryAsync();
+                        
+
+                        return RowAffected > 0;
+                    }
+                    catch 
+                    {
+                        //logger later
+                        return false;
+                    }
+                }
+            }
+
+        }
     }
 }

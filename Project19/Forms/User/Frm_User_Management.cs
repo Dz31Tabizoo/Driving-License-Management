@@ -374,18 +374,62 @@ namespace Project19
             }
         }
 
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+       
         private void AddUser()
         {
             Form addUserForm = new Frm_Add_User();
             addUserForm.ShowDialog();
         }
 
+        private async Task DeleteUserAsync()
+        {
+            if (dgvAllUsers.SelectedRows.Count <= 0)
+            {
+                return;
+            }
+            DataGridViewRow Row = dgvAllUsers.SelectedRows[0];
+            int userId = int.Parse(Row.Cells["UserID"].Value.ToString());
+
+            DialogResult res = MessageBox.Show($"Do you confirm Delete ID {userId} ? ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (res != DialogResult.Yes)
+            {
+
+                return;
+            }
+            try
+            {
+
+                bool deleteResult = await clsUser.DeleteUser(userId).ConfigureAwait(false);
 
 
+                if (deleteResult)
+                {
+                    MessageBox.Show($"User ID {userId} Deleted ", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    await LoadUSerDataAsync();
+                }
+                else
+                {
+                    MessageBox.Show($"USer with ID {userId} is Not Deleted try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(
+            $"Error deleting user: {ex.Message}",
+            "Error",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Error);
+        
+            }
+
+
+        }
+
+        private async void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            await DeleteUserAsync();
+        }
     } 
 }
 
