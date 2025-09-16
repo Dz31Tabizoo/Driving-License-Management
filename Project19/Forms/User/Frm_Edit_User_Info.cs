@@ -16,26 +16,19 @@ namespace Project19
     public partial class Frm_Edit_User_Info : KryptonForm
     {
         
+
         public Frm_Edit_User_Info(int UserID ,char P)
         {
             InitializeComponent();
             LoadUserDataToEdit(UserID);
             Loader();
             DragHelper.MakeFormDraggable(this);
-            LoadsectionPasswordEdit(P);
+            LoadSectionPasswordEdit(P);
         }
 
-        private void LoadsectionPasswordEdit(char p)
+        private void LoadSectionPasswordEdit(char p)
         {
-            if (p != 'U')
-            {
-                gbUserStatus.Enabled = false;
-            }
-            else
-            {
-                gbUserStatus.Enabled = true;
-            }
-
+            gbUserStatus.Enabled = (p == 'U');         
         }
         private void Loader()
         {
@@ -94,7 +87,7 @@ namespace Project19
             this.Close();
         }
 
-        private void txtPriviousPassword_Validating(object sender, CancelEventArgs e)
+        private void txtPerviousPassword_Validating(object sender, CancelEventArgs e)
         {
             if (txtPriviousPassword.Text != txtPriviousPassword.Tag.ToString())
             {
@@ -104,9 +97,19 @@ namespace Project19
             {
                 errorProvider.SetError(txtPriviousPassword, "");
             }
+
+            if (txtNewPassword.Text.Length > 0 && txtNewPassword.Text.Length < 4)
+            {
+                errorProvider.SetError(txtNewPassword, "Password must be at least 4 characters long.");
+            }
+            else
+            {
+                errorProvider.SetError(txtNewPassword, "");
+            }
         }
 
-        private void txtConfirmNewpass_Validating(object sender, CancelEventArgs e)
+        
+        private void txtConfirmNewPass_Validating(object sender, CancelEventArgs e)
         {
             if (txtConfirmNewpass.Text != txtNewPassword.Text)
             {
@@ -142,7 +145,30 @@ namespace Project19
             }
         }
 
+        private async void btnSaveEdit_Click(object sender, EventArgs e)
+        {
+            string Us_name = txtUserName.Text ?? string.Empty;
+
+            int.TryParse(lblUserIDOutput.Text, out int UsID);
+
+            clsPeople Person = clsPeople.FindPersonByID(UsID);
+            
+            bool Us_valid = chkActive.Checked;
+            
+            string Us_pass = txtNewPassword.Text ?? string.Empty;
 
 
+            clsUser UserToUpdate = new clsUser(UsID,Person,Us_name,Us_pass,Us_valid);
+
+            if(await UserToUpdate.Save())
+            {
+                MessageBox.Show("User info Updated successfully", "Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("User info Update failed", "failed Updating", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -89,32 +90,34 @@ namespace BusinessLayer
              return clsUserDAL.GetAllUsers();          
         }
 
-        private bool _AddNewUser()
+        private async Task <bool> _AddNewUser()
         {
 
-            this.UserID = clsUserDAL.AddNewUserToDB(this.UserName, this.Password, this.IsActive, this.Person.PersonID);
+            this.UserID = await clsUserDAL.AddNewUserToDB(this.UserName, this.Password, this.IsActive, this.Person.PersonID);
 
-            return (this.UserID != -1);
+            return this.UserID != -1;
         }
 
-        public bool Save()
+        public async Task <bool> Save()
         {
             switch (CurrentMode)
             {
                 case enMode.AddNew:
-                    return _AddNewUser();
+                    return await _AddNewUser();
 
                 case enMode.Update:
-                    break;
+                    return await _Update();
+                    
 
                 default:
+                    return false;
                     break;
 
             }
                 
 
 
-            return true;
+            
         }
 
         public static clsUser FindUserByID(int UserId)
@@ -153,6 +156,11 @@ namespace BusinessLayer
         public static Task <bool> DeleteUser(int uerID)
         {
             return clsUserDAL.DeleteUserByID(uerID);
+        }
+
+        private async Task <bool> _Update()
+        {
+            return await clsUserDAL.UpdateUser(this.UserID,this.UserName,this.Password,this.IsActive);
         }
 
     }

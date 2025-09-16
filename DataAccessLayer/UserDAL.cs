@@ -71,7 +71,7 @@ namespace DataAccessLayer
             return dtUsers;
         }
 
-        public static int AddNewUserToDB(string username , string password, bool isactive,int personid)
+        public static async Task <int> AddNewUserToDB(string username , string password, bool isactive,int personid)
         {
             string Query = "Insert into Users (UserName , Password , IsActive , PersonID) VALUES (@username,@password,@isactive,@personid);" +
                 "SELECT SCOPE_IDENTITY();";
@@ -87,8 +87,9 @@ namespace DataAccessLayer
 
                     try
                     {
-                        cnx.Open();
-                        object result = cmd.ExecuteScalar();
+                        await cnx.OpenAsync();
+                        object result = await cmd.ExecuteScalarAsync();
+
                         if (result != null && int.TryParse(result.ToString(), out int newUserID))
                         {
                             return newUserID;
@@ -212,7 +213,6 @@ namespace DataAccessLayer
 
         }
 
-
         public static async Task <bool> DeleteUserByID(int userId)
         {
             
@@ -240,6 +240,41 @@ namespace DataAccessLayer
                 }
             }
 
+        }
+
+        public static async Task <bool> UpdateUser(int userid,string username,string password,bool isactive)
+        {
+            string query = @"UPDATE Users
+                                  SET UserName = @userName, Password = @passWord , IsActive = @isActive
+                                  WHERE UserID = @userId;";
+
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(query,cnx))
+                {
+                    cmd.Parameters.AddWithValue("@userId", userid);
+                    cmd.Parameters.AddWithValue("@passWord", password);
+                    cmd.Parameters.AddWithValue("@isActive", isactive);
+                    cmd.Parameters.AddWithValue("@userName", username);
+
+                    try
+                    {
+                        await cnx.OpenAsync();
+
+                        int RowAffected = await cmd.ExecuteNonQueryAsync();
+
+                        return (RowAffected > 0);
+
+
+
+                    }
+                    catch
+                    {
+                        return false;
+                    }
+
+                }
+            }
         }
     }
 }

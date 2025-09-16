@@ -57,9 +57,9 @@ namespace Project19
             }
         }
 
-        private void btnSaveEdit_Click(object sender, EventArgs e)
+        private async void btnSaveEdit_Click(object sender, EventArgs e)
         {
-            if (SaveUserInfo())
+            if (await SaveUserInfo())
             {
                 DialogResult Result = MessageBox.Show("User info Saved Successfuly", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (Result == DialogResult.OK)
@@ -76,7 +76,7 @@ namespace Project19
 
         }
 
-        private bool SaveUserInfo()
+        private async Task <bool> SaveUserInfo()
         {
 
             clsUser NewUser = new clsUser();
@@ -88,7 +88,7 @@ namespace Project19
             NewUser.Person = ThePerson;
            
 
-            return NewUser.Save();
+            return await NewUser.Save();
         }
 
         private void HideText()

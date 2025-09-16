@@ -147,6 +147,7 @@
             this.btnSaveEdit.TabIndex = 19;
             this.btnSaveEdit.Values.Image = global::Project19.Properties.Resources.diskette;
             this.btnSaveEdit.Values.Text = "  Save";
+            this.btnSaveEdit.Click += new System.EventHandler(this.btnSaveEdit_Click);
             // 
             // btnExit
             // 
@@ -430,7 +431,7 @@
             this.txtPriviousPassword.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPriviousPassword.StateNormal.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPriviousPassword.TabIndex = 135;
-            this.txtPriviousPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPriviousPassword_Validating);
+            this.txtPriviousPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPerviousPassword_Validating);
             // 
             // pictureBox1
             // 
@@ -490,7 +491,7 @@
             this.txtConfirmNewpass.StateCommon.Content.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmNewpass.StateNormal.Content.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmNewpass.TabIndex = 122;
-            this.txtConfirmNewpass.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmNewpass_Validating);
+            this.txtConfirmNewpass.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmNewPass_Validating);
             // 
             // kryptonWrapLabel5
             // 
