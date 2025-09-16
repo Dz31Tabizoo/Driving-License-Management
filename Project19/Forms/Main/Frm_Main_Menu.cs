@@ -19,22 +19,7 @@ namespace Project19
 
         
 
-        private void ApplyFontToControls(Control control)
-        {
-            foreach (Control c in control.Controls)
-            {
-                if (c is Label || c is Button || c is TextBox || c is ComboBox)
-                {
-                    c.Font = new Font(privateFonts.Families[0], c.Font.Size, c.Font.Style);
-                }
-
-                // Recursively apply to child controls
-                if (c.HasChildren)
-                {
-                    ApplyFontToControls(c);
-                }
-            }
-        }
+       
 
         // Clean up
      
@@ -42,17 +27,13 @@ namespace Project19
         {
             InitializeComponent();
             
-            CostumTools();
+            
             DragHelper.MakeFormDraggable(this);
         }
         
 
 
-        public void CostumTools()
-        {
-            kryptonPanel2.Visible = false;
-
-        }
+        
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
@@ -84,6 +65,21 @@ namespace Project19
         private void kryptonButton7_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        
+
+        private void btnAccountSetting_Click(object sender, EventArgs e)
+        {
+            if (kryptonPanel3.Visible == false)
+            {
+                kryptonPanel3.Visible = true;
+                return;
+            }
+            else
+            {
+                kryptonPanel3.Visible = false;
+            }
         }
     }
 }
