@@ -3,7 +3,10 @@
 
 
 
-Save User Edit 
+fix somme  logic on user update 
+validation 
+if vars are null or empty ?... 
+
 
 
 --------------------------------------
