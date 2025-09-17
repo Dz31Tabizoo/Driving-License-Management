@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class clsPeopleDAL
+    public static class clsPeopleDAL
     {
         /*// In your Common/Shared project
  public class OperationResult<T>

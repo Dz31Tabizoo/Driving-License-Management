@@ -52,46 +52,19 @@ namespace Project19
 
         private bool ManageLoging()
         {
-            if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
+            if (GlobalSetting.Login(txtUsername.Text,txtPassword.Text))
             {
-                MessageBox.Show("User Name and PAssword are requiered", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtUsername.Focus();
-                return false;
-            }
-            clsUser CurrentUSer = clsUser.FindUserByUserName(txtUsername.Text);
+                
+                return true;
 
-            if (CurrentUSer == null)
-            {
-                MessageBox.Show("Wrong UserName Try Again", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtUsername.Focus();
-                return false;
             }
             else
             {
-                if (CurrentUSer.Password != txtPassword.Text)
-                {
-                    MessageBox.Show("Wrong PassWord Try Again", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtPassword.Focus();
-                    return false;
-                }
-                else
-                {
-                    if (CurrentUSer.IsActive == true)
-                    {
-                                              
-                        return true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("This User is Not Active, Please Contact Your Admin", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtUsername.Clear();
-                        txtUsername.Focus();
-
-                        return false;
-                    }
-                    
-                }
+                MessageBox.Show("Invalid credentials");
+                return false;
             }
+
+
         }
 
         
@@ -102,19 +75,7 @@ namespace Project19
             {
                 if (ChkbxRemaindMe.Checked)
                 {
-                    try
-                    {
-                        string Content = txtUsername.Text + '#' + txtPassword.Text;
-
-                        File.WriteAllText("RememberLog.txt", Content); // ie should encrypt this data later
-
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error Saving Login into File : {ex.Message}");
-                        return;
-                    }
+                 //later   
                 }
                 this.DialogResult = DialogResult.OK;
                 this.Close();

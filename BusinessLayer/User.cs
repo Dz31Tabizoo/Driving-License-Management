@@ -85,6 +85,37 @@ namespace BusinessLayer
             
         }
 
+        public static clsUser FindUserByUserNameAndPassword(string Username,string PassWord)
+        {
+            int PersonID = -1;
+            bool isActive = false;
+            int UserID = -1;
+
+            if (Username == null) { return null; }
+            try
+            {
+                if (clsUserDAL.FindUserByNameAndPassword(Username,PassWord,ref isActive,ref PersonID,ref UserID))
+                {
+                    clsPeople person = clsPeople.FindPersonByID(PersonID);
+
+                    return new clsUser(UserID, person, Username, PassWord, isActive);
+
+                }
+                return null;
+            }
+            catch (SqlException Sqlex)
+            {
+                //logger
+                return null;
+            }
+            catch (Exception ex)
+            {
+                //log
+                return null;
+            }
+
+        }
+
         public static DataTable GetAllUsers()
         {           
              return clsUserDAL.GetAllUsers();          

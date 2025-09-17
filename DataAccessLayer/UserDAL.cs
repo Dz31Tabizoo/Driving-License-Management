@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class clsUserDAL
+    public static class clsUserDAL
     {
         public static bool FindUserByName(string UserName, ref string PassWord, ref bool isActive,ref int PersonID,ref int UserID)
         {
@@ -275,6 +275,42 @@ namespace DataAccessLayer
 
                 }
             }
+        }
+
+        public  static bool FindUserByNameAndPassword(string UserName, string PassWord, ref bool isActive, ref int PersonID, ref int UserID)
+        {
+            bool isFound = false;
+            string Query = "SELECT * FROM Users WHERE UserName = @username AND Password= @password";
+
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(Query, cnx))
+                {
+                    cmd.Parameters.AddWithValue("@username", UserName);
+                    cmd.Parameters.AddWithValue("@password", PassWord);
+                    try
+                    {
+                        cnx.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+
+                                isFound = true;
+
+                                UserID = reader["UserID"] as int? ?? int.MinValue;
+                                PersonID = reader["PersonID"] as int? ?? int.MinValue;
+                                isActive = reader["IsActive"] as bool? ?? false;
+
+                                return isFound;
+                            }
+                        }
+                    }
+                    catch { return false; }
+                }
+            }
+
+            return false;
         }
     }
 }
