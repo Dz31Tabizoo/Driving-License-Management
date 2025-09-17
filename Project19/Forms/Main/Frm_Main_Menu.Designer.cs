@@ -81,7 +81,7 @@ namespace Project19
             this.MenuPanel.Location = new System.Drawing.Point(0, 0);
             this.MenuPanel.Name = "MenuPanel";
             this.MenuPanel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.TabCustom1;
-            this.MenuPanel.Size = new System.Drawing.Size(350, 800);
+            this.MenuPanel.Size = new System.Drawing.Size(350, 740);
             this.MenuPanel.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.MenuPanel.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(96)))), ((int)(((byte)(115)))));
             this.MenuPanel.StateCommon.ColorAngle = 45F;
@@ -205,6 +205,7 @@ namespace Project19
             this.kryptonButton9.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton9.TabIndex = 10;
             this.kryptonButton9.Values.Text = "Current User Info";
+            this.kryptonButton9.Click += new System.EventHandler(this.kryptonButton9_Click);
             // 
             // btnAccountSetting
             // 
@@ -250,7 +251,7 @@ namespace Project19
             // 
             this.kryptonButton7.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorMini;
             this.kryptonButton7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonButton7.Location = new System.Drawing.Point(0, 753);
+            this.kryptonButton7.Location = new System.Drawing.Point(0, 693);
             this.kryptonButton7.Name = "kryptonButton7";
             this.kryptonButton7.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.kryptonButton7.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -630,7 +631,7 @@ namespace Project19
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(350, 800);
+            this.ClientSize = new System.Drawing.Size(350, 740);
             this.Controls.Add(this.MenuPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonNavigatorStack;

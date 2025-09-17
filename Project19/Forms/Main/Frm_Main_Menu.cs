@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using System.Runtime.InteropServices;
+using BusinessLayer;
 
 namespace Project19
 {
@@ -80,6 +81,16 @@ namespace Project19
             {
                 kryptonPanel3.Visible = false;
             }
+        }
+
+        private void kryptonButton9_Click(object sender, EventArgs e)
+        {
+            clsUser User = GlobalSetting.CurrentUser;
+
+            Frm_User_Info frm = new Frm_User_Info(User);
+            frm.ShowDialog();
+
+
         }
     }
 }
