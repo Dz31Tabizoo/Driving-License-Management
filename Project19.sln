@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36221.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project19", "Project19\Project19.csproj", "{BB4E512A-AD59-4021-9149-54FBF402D284}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVLD", "Project19\DVLD.csproj", "{BB4E512A-AD59-4021-9149-54FBF402D284}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{3FC27F29-8DD8-4822-8AC2-1EA3AC529897}"
 EndProject

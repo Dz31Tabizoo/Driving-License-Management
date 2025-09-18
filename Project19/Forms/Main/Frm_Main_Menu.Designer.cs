@@ -38,7 +38,7 @@ namespace Project19
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnAccountSetting = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnSingOut = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnUSerMng = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnPeopleMng = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
@@ -71,7 +71,7 @@ namespace Project19
             this.MenuPanel.AutoScroll = true;
             this.MenuPanel.Controls.Add(this.kryptonPanel3);
             this.MenuPanel.Controls.Add(this.btnAccountSetting);
-            this.MenuPanel.Controls.Add(this.kryptonButton7);
+            this.MenuPanel.Controls.Add(this.btnSingOut);
             this.MenuPanel.Controls.Add(this.btnUSerMng);
             this.MenuPanel.Controls.Add(this.btnPeopleMng);
             this.MenuPanel.Controls.Add(this.kryptonPanel2);
@@ -93,18 +93,18 @@ namespace Project19
             this.kryptonPanel3.Controls.Add(this.kryptonButton1);
             this.kryptonPanel3.Controls.Add(this.kryptonButton9);
             this.kryptonPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonPanel3.Location = new System.Drawing.Point(0, 565);
+            this.kryptonPanel3.Location = new System.Drawing.Point(0, 377);
             this.kryptonPanel3.Name = "kryptonPanel3";
             this.kryptonPanel3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.kryptonPanel3.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridHeaderColumnList;
-            this.kryptonPanel3.Size = new System.Drawing.Size(350, 104);
+            this.kryptonPanel3.Size = new System.Drawing.Size(233, 104);
             this.kryptonPanel3.TabIndex = 13;
             this.kryptonPanel3.Visible = false;
             // 
             // kryptonButton8
             // 
             this.kryptonButton8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonButton8.Location = new System.Drawing.Point(0, 70);
+            this.kryptonButton8.Location = new System.Drawing.Point(0, 31);
             this.kryptonButton8.Name = "kryptonButton8";
             this.kryptonButton8.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton8.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(152)))), ((int)(((byte)(118)))));
@@ -116,7 +116,7 @@ namespace Project19
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonButton8.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.kryptonButton8.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonButton8.Size = new System.Drawing.Size(350, 35);
+            this.kryptonButton8.Size = new System.Drawing.Size(155, 23);
             this.kryptonButton8.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton8.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton8.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,11 +135,12 @@ namespace Project19
             this.kryptonButton8.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton8.TabIndex = 11;
             this.kryptonButton8.Values.Text = "Change Password";
+            this.kryptonButton8.Click += new System.EventHandler(this.kryptonButton8_Click);
             // 
             // kryptonButton1
             // 
             this.kryptonButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonButton1.Location = new System.Drawing.Point(0, 35);
+            this.kryptonButton1.Location = new System.Drawing.Point(0, 15);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton1.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(152)))), ((int)(((byte)(118)))));
@@ -151,7 +152,7 @@ namespace Project19
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonButton1.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.kryptonButton1.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonButton1.Size = new System.Drawing.Size(350, 35);
+            this.kryptonButton1.Size = new System.Drawing.Size(155, 23);
             this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -170,6 +171,7 @@ namespace Project19
             this.kryptonButton1.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton1.TabIndex = 12;
             this.kryptonButton1.Values.Text = "Sing Out";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click_2);
             // 
             // kryptonButton9
             // 
@@ -186,7 +188,7 @@ namespace Project19
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonButton9.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.kryptonButton9.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonButton9.Size = new System.Drawing.Size(350, 35);
+            this.kryptonButton9.Size = new System.Drawing.Size(155, 23);
             this.kryptonButton9.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton9.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton9.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -210,7 +212,7 @@ namespace Project19
             // btnAccountSetting
             // 
             this.btnAccountSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAccountSetting.Location = new System.Drawing.Point(0, 520);
+            this.btnAccountSetting.Location = new System.Drawing.Point(0, 347);
             this.btnAccountSetting.Name = "btnAccountSetting";
             this.btnAccountSetting.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.btnAccountSetting.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(152)))), ((int)(((byte)(118)))));
@@ -222,7 +224,7 @@ namespace Project19
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnAccountSetting.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.btnAccountSetting.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.btnAccountSetting.Size = new System.Drawing.Size(350, 45);
+            this.btnAccountSetting.Size = new System.Drawing.Size(233, 45);
             this.btnAccountSetting.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnAccountSetting.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnAccountSetting.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -247,44 +249,44 @@ namespace Project19
             this.btnAccountSetting.Values.Text = "Account Setting";
             this.btnAccountSetting.Click += new System.EventHandler(this.btnAccountSetting_Click);
             // 
-            // kryptonButton7
+            // btnSingOut
             // 
-            this.kryptonButton7.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorMini;
-            this.kryptonButton7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.kryptonButton7.Location = new System.Drawing.Point(0, 693);
-            this.kryptonButton7.Name = "kryptonButton7";
-            this.kryptonButton7.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.kryptonButton7.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.kryptonButton7.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonButton7.Size = new System.Drawing.Size(350, 47);
-            this.kryptonButton7.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton7.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton7.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonButton7.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(96)))), ((int)(((byte)(115)))));
-            this.kryptonButton7.StateNormal.Back.ColorAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
-            this.kryptonButton7.StateNormal.Back.ColorAngle = 45F;
-            this.kryptonButton7.StateNormal.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.GlassCheckedTrackingFull;
-            this.kryptonButton7.StateNormal.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonButton7.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.kryptonButton7.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.kryptonButton7.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnSingOut.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorMini;
+            this.btnSingOut.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnSingOut.Location = new System.Drawing.Point(0, 446);
+            this.btnSingOut.Name = "btnSingOut";
+            this.btnSingOut.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnSingOut.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnSingOut.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnSingOut.Size = new System.Drawing.Size(233, 47);
+            this.btnSingOut.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnSingOut.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnSingOut.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.btnSingOut.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(96)))), ((int)(((byte)(115)))));
+            this.btnSingOut.StateNormal.Back.ColorAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Control;
+            this.btnSingOut.StateNormal.Back.ColorAngle = 45F;
+            this.btnSingOut.StateNormal.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.GlassCheckedTrackingFull;
+            this.btnSingOut.StateNormal.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnSingOut.StateNormal.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSingOut.StateNormal.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSingOut.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton7.StateNormal.Border.Width = 0;
-            this.kryptonButton7.StateNormal.Content.LongText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton7.StateNormal.Content.LongText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton7.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton7.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonButton7.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton7.TabIndex = 5;
-            this.kryptonButton7.Values.Image = global::Project19.Properties.Resources.sortie1;
-            this.kryptonButton7.Values.Text = "   Sign Out";
-            this.kryptonButton7.Click += new System.EventHandler(this.kryptonButton7_Click);
+            this.btnSingOut.StateNormal.Border.Width = 0;
+            this.btnSingOut.StateNormal.Content.LongText.Color1 = System.Drawing.Color.White;
+            this.btnSingOut.StateNormal.Content.LongText.Color2 = System.Drawing.Color.White;
+            this.btnSingOut.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnSingOut.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnSingOut.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSingOut.TabIndex = 5;
+            this.btnSingOut.Values.Image = global::Project19.Properties.Resources.sortie1;
+            this.btnSingOut.Values.Text = "   Sign Out";
+            this.btnSingOut.Click += new System.EventHandler(this.kryptonButton7_Click);
             // 
             // btnUSerMng
             // 
             this.btnUSerMng.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUSerMng.Location = new System.Drawing.Point(0, 475);
+            this.btnUSerMng.Location = new System.Drawing.Point(0, 317);
             this.btnUSerMng.Name = "btnUSerMng";
             this.btnUSerMng.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.btnUSerMng.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(152)))), ((int)(((byte)(118)))));
@@ -296,7 +298,7 @@ namespace Project19
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnUSerMng.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.btnUSerMng.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.btnUSerMng.Size = new System.Drawing.Size(350, 45);
+            this.btnUSerMng.Size = new System.Drawing.Size(233, 45);
             this.btnUSerMng.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnUSerMng.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnUSerMng.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -324,7 +326,7 @@ namespace Project19
             // btnPeopleMng
             // 
             this.btnPeopleMng.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPeopleMng.Location = new System.Drawing.Point(0, 430);
+            this.btnPeopleMng.Location = new System.Drawing.Point(0, 287);
             this.btnPeopleMng.Name = "btnPeopleMng";
             this.btnPeopleMng.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnPeopleMng.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -338,7 +340,7 @@ namespace Project19
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnPeopleMng.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.btnPeopleMng.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.btnPeopleMng.Size = new System.Drawing.Size(350, 45);
+            this.btnPeopleMng.Size = new System.Drawing.Size(233, 45);
             this.btnPeopleMng.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnPeopleMng.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnPeopleMng.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -370,15 +372,15 @@ namespace Project19
             this.kryptonPanel2.Controls.Add(this.kryptonButton3);
             this.kryptonPanel2.Controls.Add(this.kryptonButton2);
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonPanel2.Location = new System.Drawing.Point(0, 255);
+            this.kryptonPanel2.Location = new System.Drawing.Point(0, 170);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(350, 175);
+            this.kryptonPanel2.Size = new System.Drawing.Size(233, 175);
             this.kryptonPanel2.TabIndex = 2;
             // 
             // kryptonButton6
             // 
             this.kryptonButton6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonButton6.Location = new System.Drawing.Point(0, 140);
+            this.kryptonButton6.Location = new System.Drawing.Point(0, 61);
             this.kryptonButton6.Name = "kryptonButton6";
             this.kryptonButton6.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton6.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(152)))), ((int)(((byte)(118)))));
@@ -390,7 +392,7 @@ namespace Project19
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonButton6.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.kryptonButton6.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonButton6.Size = new System.Drawing.Size(350, 35);
+            this.kryptonButton6.Size = new System.Drawing.Size(155, 23);
             this.kryptonButton6.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton6.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton6.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -413,7 +415,7 @@ namespace Project19
             // kryptonButton5
             // 
             this.kryptonButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonButton5.Location = new System.Drawing.Point(0, 105);
+            this.kryptonButton5.Location = new System.Drawing.Point(0, 46);
             this.kryptonButton5.Name = "kryptonButton5";
             this.kryptonButton5.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton5.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(152)))), ((int)(((byte)(118)))));
@@ -425,7 +427,7 @@ namespace Project19
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonButton5.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.kryptonButton5.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonButton5.Size = new System.Drawing.Size(350, 35);
+            this.kryptonButton5.Size = new System.Drawing.Size(155, 23);
             this.kryptonButton5.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton5.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton5.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -448,7 +450,7 @@ namespace Project19
             // kryptonButton4
             // 
             this.kryptonButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonButton4.Location = new System.Drawing.Point(0, 70);
+            this.kryptonButton4.Location = new System.Drawing.Point(0, 31);
             this.kryptonButton4.Name = "kryptonButton4";
             this.kryptonButton4.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton4.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(152)))), ((int)(((byte)(118)))));
@@ -460,7 +462,7 @@ namespace Project19
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonButton4.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.kryptonButton4.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonButton4.Size = new System.Drawing.Size(350, 35);
+            this.kryptonButton4.Size = new System.Drawing.Size(155, 23);
             this.kryptonButton4.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton4.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton4.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -483,7 +485,7 @@ namespace Project19
             // kryptonButton3
             // 
             this.kryptonButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonButton3.Location = new System.Drawing.Point(0, 35);
+            this.kryptonButton3.Location = new System.Drawing.Point(0, 15);
             this.kryptonButton3.Name = "kryptonButton3";
             this.kryptonButton3.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton3.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(152)))), ((int)(((byte)(118)))));
@@ -495,7 +497,7 @@ namespace Project19
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonButton3.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.kryptonButton3.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonButton3.Size = new System.Drawing.Size(350, 35);
+            this.kryptonButton3.Size = new System.Drawing.Size(155, 23);
             this.kryptonButton3.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton3.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -530,7 +532,7 @@ namespace Project19
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonButton2.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.kryptonButton2.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.kryptonButton2.Size = new System.Drawing.Size(350, 35);
+            this.kryptonButton2.Size = new System.Drawing.Size(155, 23);
             this.kryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton2.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -553,7 +555,7 @@ namespace Project19
             // btnApplications
             // 
             this.btnApplications.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnApplications.Location = new System.Drawing.Point(0, 210);
+            this.btnApplications.Location = new System.Drawing.Point(0, 140);
             this.btnApplications.Name = "btnApplications";
             this.btnApplications.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.btnApplications.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(152)))), ((int)(((byte)(118)))));
@@ -565,7 +567,7 @@ namespace Project19
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnApplications.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.btnApplications.OverrideFocus.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
-            this.btnApplications.Size = new System.Drawing.Size(350, 45);
+            this.btnApplications.Size = new System.Drawing.Size(233, 45);
             this.btnApplications.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnApplications.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnApplications.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
@@ -596,7 +598,7 @@ namespace Project19
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(350, 210);
+            this.kryptonPanel1.Size = new System.Drawing.Size(233, 210);
             this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.kryptonPanel1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.kryptonPanel1.TabIndex = 0;
@@ -668,7 +670,7 @@ namespace Project19
         private KryptonButton btnPeopleMng;
         private System.Windows.Forms.PictureBox pictureBox1;
         private KryptonButton btnUSerMng;
-        private KryptonButton kryptonButton7;
+        private KryptonButton btnSingOut;
         private KryptonLabel lblmainTitle;
         private KryptonButton btnAccountSetting;
         private KryptonButton kryptonButton1;

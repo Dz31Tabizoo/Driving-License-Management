@@ -89,8 +89,19 @@ namespace Project19
 
             Frm_User_Info frm = new Frm_User_Info(User);
             frm.ShowDialog();
+        }
 
+        private void kryptonButton8_Click(object sender, EventArgs e)
+        {
+            clsUser User = GlobalSetting.CurrentUser;
+            Form frm = new Frm_Edit_User_Info(User.UserID,'P');
+            frm.ShowDialog();
 
+        }
+
+        private void kryptonButton1_Click_2(object sender, EventArgs e)
+        {
+            btnSingOut.PerformClick();
         }
     }
 }

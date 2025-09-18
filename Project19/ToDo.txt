@@ -10,9 +10,3 @@ if vars are null or empty ?...
 
 
 --------------------------------------
-Account Setting : 
-
-Current User Info : logedin user info show : global class 
-change pass word same as user managment 
-sing out btn
-
