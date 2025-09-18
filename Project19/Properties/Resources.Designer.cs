@@ -383,9 +383,29 @@ namespace Project19.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home__1_ {
+            get {
+                object obj = ResourceManager.GetObject("home (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_address {
             get {
                 object obj = ResourceManager.GetObject("home-address", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap home1 {
+            get {
+                object obj = ResourceManager.GetObject("home1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -453,6 +473,26 @@ namespace Project19.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap list {
+            get {
+                object obj = ResourceManager.GetObject("list", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap list__1_ {
+            get {
+                object obj = ResourceManager.GetObject("list (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap locked {
             get {
                 object obj = ResourceManager.GetObject("locked", resourceCulture);
@@ -476,6 +516,16 @@ namespace Project19.Properties {
         internal static System.Drawing.Bitmap locked1 {
             get {
                 object obj = ResourceManager.GetObject("locked1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout {
+            get {
+                object obj = ResourceManager.GetObject("logout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -533,6 +583,16 @@ namespace Project19.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap menu {
+            get {
+                object obj = ResourceManager.GetObject("menu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minimize {
             get {
                 object obj = ResourceManager.GetObject("minimize", resourceCulture);
@@ -573,6 +633,16 @@ namespace Project19.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap options {
+            get {
+                object obj = ResourceManager.GetObject("options", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap phone {
             get {
                 object obj = ResourceManager.GetObject("phone", resourceCulture);
@@ -596,6 +666,26 @@ namespace Project19.Properties {
         internal static System.Drawing.Bitmap pin {
             get {
                 object obj = ResourceManager.GetObject("pin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap project_management {
+            get {
+                object obj = ResourceManager.GetObject("project-management", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap project_management1 {
+            get {
+                object obj = ResourceManager.GetObject("project-management1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -713,6 +803,16 @@ namespace Project19.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap team_management {
+            get {
+                object obj = ResourceManager.GetObject("team-management", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap team_meeting__1_ {
             get {
                 object obj = ResourceManager.GetObject("team-meeting (1)", resourceCulture);
@@ -736,6 +836,16 @@ namespace Project19.Properties {
         internal static System.Drawing.Bitmap user__1_ {
             get {
                 object obj = ResourceManager.GetObject("user (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("user (1)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

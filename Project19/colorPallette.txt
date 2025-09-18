@@ -1,0 +1,26 @@
+Color	Usage- Examples
+_______________________
+
+
+Background (#092327)	The BackColor of your main Form.
+
+Surface (#1E282A)	The BackColor of Panels, GroupBoxes, DataGridView, and TabPage.
+
+Surface Border (#37474F)	DataGridView.GridColor, Panel.BorderColor (if using a custom border).
+-------------------------------------------------------------------------------
+Text White (#FFFFFF)	ForeColor for most controls placed on Background or Surface.
+
+Text Secondary (#B0BEC5)	ForeColor for labels that are less important (e.g., "Hint:", watermarks).
+-------------------------------------------------------------------------------
+Primary (#00B8AD)	Primary buttons, active tabs, highlights, hyperlinks.
+
+Primary Dark (#0B5351)	Hover state for primary buttons, secondary elements.
+-------------------------------------------------------------------------------
+
+Accent (#FF6B6B)	Save, Submit, key metrics. The most important action on a screen.
+-------------------------------------------------------------------------------
+Success (#69F0AE)	Success messages, positive trends.
+
+Warning (#FFD740)	Warning messages, inactive states.
+
+Error (#FF5252)	Error messages, Delete buttons, negative trends.

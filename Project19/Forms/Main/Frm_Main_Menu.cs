@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using ComponentFactory.Krypton.Toolkit;
 using System.Runtime.InteropServices;
 using BusinessLayer;
+using System.Security;
 
 namespace Project19
 {
@@ -18,7 +19,7 @@ namespace Project19
     {
         private PrivateFontCollection privateFonts = new PrivateFontCollection();
 
-        
+        private bool sideBarreExpend;
 
        
 
@@ -102,6 +103,39 @@ namespace Project19
         private void kryptonButton1_Click_2(object sender, EventArgs e)
         {
             btnSingOut.PerformClick();
+        }
+
+      
+
+        private void SideBarreTimer_Tick(object sender, EventArgs e)
+        {
+            if (sideBarreExpend)
+            {
+                SideBarre.Width -= 10;
+                if (SideBarre.Width == SideBarre.MinimumSize.Width)
+                {
+                    sideBarreExpend = false;
+                    SideBarreTimer.Stop();
+                }
+            }
+            else
+            {
+                SideBarre.Width += 10;
+                if (SideBarre.Width == SideBarre.MaximumSize.Width)
+                {
+                    sideBarreExpend = true;
+                    SideBarreTimer.Stop();
+                }
+            }
+
+
+        }
+
+       
+
+        private void pbMainMenu_Click(object sender, EventArgs e)
+        {
+            SideBarreTimer.Start();
         }
     }
 }

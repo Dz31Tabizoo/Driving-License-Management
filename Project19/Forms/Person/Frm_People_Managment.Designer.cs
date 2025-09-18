@@ -42,6 +42,7 @@
             this.phoneCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.lblTotalPeopleNumber = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblTotalPeople = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnClosePeopleMng = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dgvAllPeople = new System.Windows.Forms.DataGridView();
@@ -59,7 +60,6 @@
             this.picClose = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
-            this.lblTotalPeopleNumber = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -169,6 +169,19 @@
             this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonPanel1.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.kryptonPanel1.TabIndex = 0;
+            // 
+            // lblTotalPeopleNumber
+            // 
+            this.lblTotalPeopleNumber.Location = new System.Drawing.Point(156, 727);
+            this.lblTotalPeopleNumber.Name = "lblTotalPeopleNumber";
+            this.lblTotalPeopleNumber.Size = new System.Drawing.Size(6, 2);
+            this.lblTotalPeopleNumber.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.lblTotalPeopleNumber.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(63)))), ((int)(((byte)(64)))));
+            this.lblTotalPeopleNumber.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(63)))), ((int)(((byte)(64)))));
+            this.lblTotalPeopleNumber.StateNormal.ShortText.Font = new System.Drawing.Font("Yu Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPeopleNumber.StateNormal.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.lblTotalPeopleNumber.TabIndex = 4;
+            this.lblTotalPeopleNumber.Values.Text = "";
             // 
             // lblTotalPeople
             // 
@@ -608,19 +621,6 @@
             // 
             this.kryptonContextMenuItem1.Text = "Menu Item";
             // 
-            // lblTotalPeopleNumber
-            // 
-            this.lblTotalPeopleNumber.Location = new System.Drawing.Point(156, 727);
-            this.lblTotalPeopleNumber.Name = "lblTotalPeopleNumber";
-            this.lblTotalPeopleNumber.Size = new System.Drawing.Size(6, 2);
-            this.lblTotalPeopleNumber.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.lblTotalPeopleNumber.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(63)))), ((int)(((byte)(64)))));
-            this.lblTotalPeopleNumber.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(63)))), ((int)(((byte)(64)))));
-            this.lblTotalPeopleNumber.StateNormal.ShortText.Font = new System.Drawing.Font("Yu Gothic Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPeopleNumber.StateNormal.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.lblTotalPeopleNumber.TabIndex = 4;
-            this.lblTotalPeopleNumber.Values.Text = "";
-            // 
             // People_Managment
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -633,7 +633,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "People_Managment";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
