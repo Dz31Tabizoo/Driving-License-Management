@@ -19,8 +19,8 @@ namespace Project19
     {
         private PrivateFontCollection privateFonts = new PrivateFontCollection();
 
-        private bool sideBarreExpend;
-
+        private bool sideBarreExpend = true;
+        private bool AppsCollapsed=true;
        
 
         // Clean up
@@ -136,6 +136,38 @@ namespace Project19
         private void pbMainMenu_Click(object sender, EventArgs e)
         {
             SideBarreTimer.Start();
+        }
+
+       
+
+        private void ApplicationTimer_Tick(object sender, EventArgs e)
+        {
+            if (AppsCollapsed)
+            {
+                pnlApplications.Height += 10;
+                if (pnlApplications.Height == pnlApplications.MaximumSize.Height)
+                {
+                    AppsCollapsed = false;
+                    ApplicationTimer.Stop();
+                }
+            }
+            else
+            {
+                pnlApplications.Height -= 10;
+                if (pnlApplications.Height == pnlApplications.MinimumSize.Height)
+                {
+                    AppsCollapsed = true;
+                    ApplicationTimer.Stop();
+                }
+            }
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ApplicationTimer.Start();
+
         }
     }
 }

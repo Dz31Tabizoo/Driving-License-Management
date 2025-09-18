@@ -384,6 +384,8 @@
     <None Include="Resources\active-user.png" />
     <None Include="Resources\add-friend.png" />
     <Content Include="colorPallette.txt" />
+    <None Include="Resources\atm.png" />
+    <None Include="Resources\app %281%29.png" />
     <Content Include="Resources\close_RED.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -414,6 +416,9 @@
     <None Include="Resources\user %281%292.png" />
     <None Include="Resources\logout.png" />
     <None Include="Resources\menu.png" />
+    <None Include="Resources\export-license.png" />
+    <None Include="Resources\webpage-list.png" />
+    <None Include="Resources\test %281%29.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />
