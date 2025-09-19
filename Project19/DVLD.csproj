@@ -419,6 +419,10 @@
     <None Include="Resources\export-license.png" />
     <None Include="Resources\webpage-list.png" />
     <None Include="Resources\test %281%29.png" />
+    <None Include="Resources\programmer.png" />
+    <None Include="Resources\profile.png" />
+    <None Include="Resources\logout1.png" />
+    <None Include="Resources\padlock.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />

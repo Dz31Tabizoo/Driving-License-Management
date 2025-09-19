@@ -20,8 +20,8 @@ namespace Project19
         private PrivateFontCollection privateFonts = new PrivateFontCollection();
 
         private bool sideBarreExpend = true;
-        private bool AppsCollapsed=true;
-       
+        private bool AppsCollapsed = true;
+        private bool AppsExpanded = true;
 
         // Clean up
      
@@ -51,18 +51,9 @@ namespace Project19
 
         }
 
-        private void btnPeopleMng_Click(object sender, EventArgs e)
-        {
-            KryptonForm frm = new People_Managment();
-            frm.Show();
+        
 
-        }
-
-        private void kryptonButton1_Click_1(object sender, EventArgs e)
-        {
-            KryptonForm frm = new Frm_User_Managment();
-            frm.Show();
-        }
+        
 
         private void kryptonButton7_Click(object sender, EventArgs e)
         {
@@ -82,27 +73,6 @@ namespace Project19
             {
                 kryptonPanel3.Visible = false;
             }
-        }
-
-        private void kryptonButton9_Click(object sender, EventArgs e)
-        {
-            clsUser User = GlobalSetting.CurrentUser;
-
-            Frm_User_Info frm = new Frm_User_Info(User);
-            frm.ShowDialog();
-        }
-
-        private void kryptonButton8_Click(object sender, EventArgs e)
-        {
-            clsUser User = GlobalSetting.CurrentUser;
-            Form frm = new Frm_Edit_User_Info(User.UserID,'P');
-            frm.ShowDialog();
-
-        }
-
-        private void kryptonButton1_Click_2(object sender, EventArgs e)
-        {
-            btnSingOut.PerformClick();
         }
 
       
@@ -168,6 +138,69 @@ namespace Project19
         {
             ApplicationTimer.Start();
 
+        }
+
+        private void AccSetTimer_Tick(object sender, EventArgs e)
+        {
+            if (AppsExpanded)
+            {
+                pnlAccountSetting.Height += 10;
+                if (pnlAccountSetting.Height == pnlAccountSetting.MaximumSize.Height)
+                {
+                    AppsExpanded = false;
+                    AccSetTimer.Stop();
+                }
+            }
+            else
+            {
+                pnlAccountSetting.Height -= 10;
+                if (pnlAccountSetting.Height == pnlAccountSetting.MinimumSize.Height)
+                {
+                    AppsExpanded = true;
+                    AccSetTimer.Stop();
+                }
+
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AccSetTimer.Start();
+        }
+
+        private void btnPeopleaMagement_Click(object sender, EventArgs e)
+        {
+            KryptonForm frm = new People_Managment();
+            frm.Show();
+        }
+
+        private void btnUserM_Click(object sender, EventArgs e)
+        {
+            KryptonForm frm = new Frm_User_Managment();
+            frm.Show();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            clsUser User = GlobalSetting.CurrentUser;
+
+            Frm_User_Info frm = new Frm_User_Info(User);
+            frm.ShowDialog();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            clsUser User = GlobalSetting.CurrentUser;
+            Form frm = new Frm_Edit_User_Info(User.UserID, 'P');
+            frm.ShowDialog();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            GlobalSetting.CurrentUser = null;
+            this.Close();
+            Form frm = new Frm_Login();
+            frm.ShowDialog();
         }
     }
 }
