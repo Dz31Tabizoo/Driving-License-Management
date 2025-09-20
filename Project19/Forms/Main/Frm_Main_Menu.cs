@@ -17,8 +17,8 @@ namespace Project19
 {
     public partial class Frm_Main_Menu : KryptonForm
     {
-        private PrivateFontCollection privateFonts = new PrivateFontCollection();
 
+        private KryptonForm currentFrm = null;
         private bool sideBarreExpend = true;
         private bool AppsCollapsed = true;
         private bool AppsExpanded = true;
@@ -27,15 +27,48 @@ namespace Project19
      
         public Frm_Main_Menu()
         {
-            InitializeComponent();
-            
-            
+            InitializeComponent();                    
             DragHelper.MakeFormDraggable(this);
         }
-        
 
+        public void loadForm(object Form)
+        {
+            if (this.pnlMainPanel.Controls.Count > 0)
+            {
+                this.pnlMainPanel.Controls.RemoveAt(0);
+            }
 
-        
+            KryptonForm f = Form as KryptonForm;
+            f.TopLevel = false;
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            currentFrm = f;
+            this.pnlMainPanel.Controls.Add(f);
+            this.pnlMainPanel.Tag = f;
+            f.Size = this.pnlMainPanel.ClientSize;
+            f.Location = new Point(0, 0);
+
+            f.FormClosed += OnFormClosed;
+            if (currentFrm != null && SideBarre.Width > SideBarre.MinimumSize.Width)
+            {
+                sideBarreExpend = true;
+                SideBarreTimer.Start();
+            }
+            f.Show();
+            pnlMainPanel.Refresh();
+        }
+
+        private void OnFormClosed(object sender, FormClosedEventArgs e)
+        {
+            currentFrm = null;
+
+            if (SideBarre.Width< SideBarre.MaximumSize.Width)
+            {
+                sideBarreExpend = false;
+                SideBarreTimer.Start();
+            }
+        }
+
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
@@ -86,6 +119,7 @@ namespace Project19
                 {
                     sideBarreExpend = false;
                     SideBarreTimer.Stop();
+                   
                 }
             }
             else
@@ -95,6 +129,8 @@ namespace Project19
                 {
                     sideBarreExpend = true;
                     SideBarreTimer.Stop();
+                    
+
                 }
             }
 
@@ -105,6 +141,7 @@ namespace Project19
 
         private void pbMainMenu_Click(object sender, EventArgs e)
         {
+            
             SideBarreTimer.Start();
         }
 
@@ -176,8 +213,8 @@ namespace Project19
 
         private void btnUserM_Click(object sender, EventArgs e)
         {
-            KryptonForm frm = new Frm_User_Managment();
-            frm.Show();
+            loadForm(new Frm_User_Managment());
+
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -201,6 +238,11 @@ namespace Project19
             this.Close();
             Form frm = new Frm_Login();
             frm.ShowDialog();
+        }
+
+        private void Frm_Main_Menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

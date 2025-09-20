@@ -52,7 +52,7 @@ namespace BusinessLayer
 
         public static bool IsUsernameExiste(string usnm)
         {
-            return clsUserDAL.isUsernameExist(usnm);
+            return clsUserDAL.isUsernameExist(usnm);     
         }
 
         public static clsUser FindUserByUserName(string Username)
@@ -123,9 +123,7 @@ namespace BusinessLayer
 
         private async Task <bool> _AddNewUser()
         {
-
             this.UserID = await clsUserDAL.AddNewUserToDB(this.UserName, this.Password, this.IsActive, this.Person.PersonID);
-
             return this.UserID != -1;
         }
 

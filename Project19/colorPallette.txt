@@ -1,26 +1,51 @@
-Color	Usage- Examples
-_______________________
+Detailed Usage Examples
+UI Element	Primary Color	Secondary Color	Usage Notes
+Main Background	#FFFFFF	#d9d9d9 (for sections)	Use white as primary background, light gray for alternating sections
+Primary Text	#353535	-	For most readable content
+Secondary Text	#3c6e71	#284b63	For less important labels and descriptions
+Headers/Titles	#284b63	-	Clear hierarchy with navy blue
+Primary Buttons	#3c6e71	#284b63 (hover)	Deep teal buttons with navy blue hover states
+Secondary Buttons	#d9d9d9	#FFFFFF (text)	Light gray background with white text
+Data Grid Header	#284b63	#FFFFFF (text)	Navy blue headers with white text
+Data Grid Rows	#FFFFFF (odd)	#d9d9d9 (even)	Zebra striping for better readability
+Borders/Dividers	#d9d9d9	-	Subtle light gray lines
+Icons	#3c6e71	#284b63 (active)	Deep teal for regular, navy for active states
+Focus Indicators	#284b63	-	Navy blue outline for focused elements
+Success States	#3c6e71	-	Use deep teal for positive actions
+Card/Container Backgrounds	#FFFFFF	#d9d9d9 (shadow)	White cards with light gray subtle shadows
 
 
-Background (#092327)	The BackColor of your main Form.
 
-Surface (#1E282A)	The BackColor of Panels, GroupBoxes, DataGridView, and TabPage.
+------------------------------------------------------------------------------------------
 
-Surface Border (#37474F)	DataGridView.GridColor, Panel.BorderColor (if using a custom border).
--------------------------------------------------------------------------------
-Text White (#FFFFFF)	ForeColor for most controls placed on Background or Surface.
 
-Text Secondary (#B0BEC5)	ForeColor for labels that are less important (e.g., "Hint:", watermarks).
--------------------------------------------------------------------------------
-Primary (#00B8AD)	Primary buttons, active tabs, highlights, hyperlinks.
 
-Primary Dark (#0B5351)	Hover state for primary buttons, secondary elements.
--------------------------------------------------------------------------------
+UI Element	Primary Color	Secondary Color	Usage Notes
+Main Background	#FFFFFF	#d9d9d9 (for sections)	Use white as primary background, light gray for alternating sections
+Primary Text	#353535	-	For most readable content
+Secondary Text	#3c6e71	#284b63	For less important labels and descriptions
+Headers/Titles	#284b63	-	Clear hierarchy with navy blue
+Primary Buttons	#3c6e71	#284b63 (hover)	Deep teal buttons with navy blue hover states
+Secondary Buttons	#d9d9d9	#FFFFFF (text)	Light gray background with white text
+Data Grid Header	#284b63	#FFFFFF (text)	Navy blue headers with white text
+Data Grid Rows	#FFFFFF (odd)	#d9d9d9 (even)	Zebra striping for better readability
+Borders/Dividers	#d9d9d9	-	Subtle light gray lines
+Icons	#3c6e71	#284b63 (active)	Deep teal for regular, navy for active states
+Focus Indicators	#284b63	-	Navy blue outline for focused elements
+Success States	#3c6e71	-	Use deep teal for positive actions
+Card/Container Backgrounds	#FFFFFF	#d9d9d9 (shadow)	White cards with light gray subtle shadows
+Implementation Tips
+Maintain contrast - Use white space generously to keep the interface light and professional
 
-Accent (#FF6B6B)	Save, Submit, key metrics. The most important action on a screen.
--------------------------------------------------------------------------------
-Success (#69F0AE)	Success messages, positive trends.
+Consistency - Apply colors consistently across all components
 
-Warning (#FFD740)	Warning messages, inactive states.
+Accessibility - Ensure text has sufficient contrast against backgrounds (white text on navy blue works well)
 
-Error (#FF5252)	Error messages, Delete buttons, negative trends.
+Hierarchy - Use the navy blue (#284b63) to draw attention to important elements
+
+Balance - Use the light gray (#d9d9d9) to create visual separation without heavy borders
+
+This color scheme will give your app a professional, clean appearance that isn't too dark, with the navy blue and light gray providing a modern, balanced look.
+
+/*
+

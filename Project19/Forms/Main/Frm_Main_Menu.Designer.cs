@@ -34,7 +34,8 @@ namespace Project19
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Main_Menu));
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
-            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.pnlMainPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonBorderEdge1 = new ComponentFactory.Krypton.Toolkit.KryptonBorderEdge();
             this.SideBarre = new System.Windows.Forms.FlowLayoutPanel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.pbMainMenu = new System.Windows.Forms.PictureBox();
@@ -65,14 +66,13 @@ namespace Project19
             this.button15 = new System.Windows.Forms.Button();
             this.kryptonPanel18 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.button4 = new System.Windows.Forms.Button();
-            this.kryptonBorderEdge1 = new ComponentFactory.Krypton.Toolkit.KryptonBorderEdge();
             this.kryptonPanel7 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.button5 = new System.Windows.Forms.Button();
             this.SideBarreTimer = new System.Windows.Forms.Timer(this.components);
             this.ApplicationTimer = new System.Windows.Forms.Timer(this.components);
             this.AccSetTimer = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
-            this.kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlMainPanel)).BeginInit();
+            this.pnlMainPanel.SuspendLayout();
             this.SideBarre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
@@ -111,23 +111,32 @@ namespace Project19
             // 
             this.kryptonContextMenuItem1.Text = "Applications";
             // 
-            // kryptonPanel1
+            // pnlMainPanel
             // 
-            this.kryptonPanel1.Controls.Add(this.SideBarre);
-            this.kryptonPanel1.Controls.Add(this.kryptonBorderEdge1);
-            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.HeaderPrimary;
-            this.kryptonPanel1.Size = new System.Drawing.Size(1500, 1000);
-            this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(35)))), ((int)(((byte)(39)))));
-            this.kryptonPanel1.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(35)))), ((int)(((byte)(39)))));
-            this.kryptonPanel1.TabIndex = 13;
+            this.pnlMainPanel.Controls.Add(this.kryptonBorderEdge1);
+            this.pnlMainPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlMainPanel.Location = new System.Drawing.Point(78, 0);
+            this.pnlMainPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlMainPanel.Name = "pnlMainPanel";
+            this.pnlMainPanel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.HeaderPrimary;
+            this.pnlMainPanel.Size = new System.Drawing.Size(1202, 720);
+            this.pnlMainPanel.StateNormal.Color1 = System.Drawing.Color.White;
+            this.pnlMainPanel.StateNormal.Color2 = System.Drawing.Color.White;
+            this.pnlMainPanel.StateNormal.ColorAngle = 0F;
+            this.pnlMainPanel.StateNormal.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.pnlMainPanel.TabIndex = 13;
+            // 
+            // kryptonBorderEdge1
+            // 
+            this.kryptonBorderEdge1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonBorderEdge1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.kryptonBorderEdge1.Name = "kryptonBorderEdge1";
+            this.kryptonBorderEdge1.Size = new System.Drawing.Size(75, 1);
+            this.kryptonBorderEdge1.Text = "kryptonBorderEdge1";
             // 
             // SideBarre
             // 
-            this.SideBarre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
+            this.SideBarre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.SideBarre.Controls.Add(this.kryptonPanel2);
             this.SideBarre.Controls.Add(this.pnlApplications);
             this.SideBarre.Controls.Add(this.kryptonPanel4);
@@ -137,10 +146,10 @@ namespace Project19
             this.SideBarre.Dock = System.Windows.Forms.DockStyle.Left;
             this.SideBarre.Location = new System.Drawing.Point(0, 0);
             this.SideBarre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.SideBarre.MaximumSize = new System.Drawing.Size(346, 1000);
-            this.SideBarre.MinimumSize = new System.Drawing.Size(100, 1000);
+            this.SideBarre.MaximumSize = new System.Drawing.Size(240, 720);
+            this.SideBarre.MinimumSize = new System.Drawing.Size(78, 720);
             this.SideBarre.Name = "SideBarre";
-            this.SideBarre.Size = new System.Drawing.Size(346, 1000);
+            this.SideBarre.Size = new System.Drawing.Size(240, 720);
             this.SideBarre.TabIndex = 9;
             // 
             // kryptonPanel2
@@ -150,16 +159,16 @@ namespace Project19
             this.kryptonPanel2.Location = new System.Drawing.Point(4, 5);
             this.kryptonPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(342, 195);
-            this.kryptonPanel2.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
-            this.kryptonPanel2.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
+            this.kryptonPanel2.Size = new System.Drawing.Size(236, 195);
+            this.kryptonPanel2.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.kryptonPanel2.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.kryptonPanel2.TabIndex = 10;
             // 
             // pbMainMenu
             // 
             this.pbMainMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMainMenu.Image = ((System.Drawing.Image)(resources.GetObject("pbMainMenu.Image")));
-            this.pbMainMenu.Location = new System.Drawing.Point(24, 98);
+            this.pbMainMenu.Location = new System.Drawing.Point(23, 130);
             this.pbMainMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbMainMenu.Name = "pbMainMenu";
             this.pbMainMenu.Size = new System.Drawing.Size(32, 32);
@@ -170,10 +179,10 @@ namespace Project19
             // 
             // lblFormTitle
             // 
-            this.lblFormTitle.Location = new System.Drawing.Point(134, 98);
+            this.lblFormTitle.Location = new System.Drawing.Point(99, 132);
             this.lblFormTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblFormTitle.Name = "lblFormTitle";
-            this.lblFormTitle.Size = new System.Drawing.Size(91, 43);
+            this.lblFormTitle.Size = new System.Drawing.Size(63, 30);
             this.lblFormTitle.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
             this.lblFormTitle.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
             this.lblFormTitle.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -182,7 +191,7 @@ namespace Project19
             // 
             // pnlApplications
             // 
-            this.pnlApplications.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
+            this.pnlApplications.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.pnlApplications.Controls.Add(this.kryptonPanel12);
             this.pnlApplications.Controls.Add(this.kryptonPanel11);
             this.pnlApplications.Controls.Add(this.kryptonPanel10);
@@ -344,7 +353,7 @@ namespace Project19
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -421,7 +430,7 @@ namespace Project19
             // 
             // pnlAccountSetting
             // 
-            this.pnlAccountSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
+            this.pnlAccountSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.pnlAccountSetting.Controls.Add(this.kryptonPanel15);
             this.pnlAccountSetting.Controls.Add(this.kryptonPanel16);
             this.pnlAccountSetting.Controls.Add(this.kryptonPanel17);
@@ -530,6 +539,7 @@ namespace Project19
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
@@ -543,16 +553,8 @@ namespace Project19
             this.button4.TabIndex = 12;
             this.button4.Text = "              Account Settings";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // kryptonBorderEdge1
-            // 
-            this.kryptonBorderEdge1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonBorderEdge1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.kryptonBorderEdge1.Name = "kryptonBorderEdge1";
-            this.kryptonBorderEdge1.Size = new System.Drawing.Size(75, 1);
-            this.kryptonBorderEdge1.Text = "kryptonBorderEdge1";
             // 
             // kryptonPanel7
             // 
@@ -598,23 +600,23 @@ namespace Project19
             // 
             // Frm_Main_Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(1500, 1000);
-            this.Controls.Add(this.kryptonPanel1);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.SideBarre);
+            this.Controls.Add(this.pnlMainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonNavigatorStack;
             this.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ButtonStandalone;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MinimumSize = new System.Drawing.Size(1200, 769);
             this.Name = "Frm_Main_Menu";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Main_Menu";
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
-            this.kryptonPanel1.ResumeLayout(false);
-            this.kryptonPanel1.PerformLayout();
+            this.Load += new System.EventHandler(this.Frm_Main_Menu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pnlMainPanel)).EndInit();
+            this.pnlMainPanel.ResumeLayout(false);
+            this.pnlMainPanel.PerformLayout();
             this.SideBarre.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
@@ -654,13 +656,10 @@ namespace Project19
 
         #endregion
         private KryptonContextMenuItem kryptonContextMenuItem1;
-        private KryptonPanel kryptonPanel1;
-        private System.Windows.Forms.PictureBox pbMainMenu;
-        private KryptonLabel lblFormTitle;
+        private KryptonPanel pnlMainPanel;
         private KryptonBorderEdge kryptonBorderEdge1;
         private System.Windows.Forms.FlowLayoutPanel SideBarre;
         private KryptonPanel kryptonPanel3;
-        private KryptonPanel kryptonPanel2;
         private System.Windows.Forms.Button button1;
         private KryptonPanel kryptonPanel4;
         private System.Windows.Forms.Button btnPeopleaMagement;
@@ -685,11 +684,14 @@ namespace Project19
         private System.Windows.Forms.Panel pnlAccountSetting;
         private KryptonPanel kryptonPanel15;
         private KryptonPanel kryptonPanel16;
-        private System.Windows.Forms.Button button14;
         private KryptonPanel kryptonPanel17;
         private System.Windows.Forms.Button button15;
         private KryptonPanel kryptonPanel18;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Timer AccSetTimer;
+        private System.Windows.Forms.Button button14;
+        private KryptonPanel kryptonPanel2;
+        private System.Windows.Forms.PictureBox pbMainMenu;
+        private KryptonLabel lblFormTitle;
     }
 }

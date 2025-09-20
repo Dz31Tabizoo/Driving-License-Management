@@ -17,9 +17,7 @@ namespace Project19
         public Frm_User_Managment()
         {
             InitializeComponent();
-            cmbSearchCriteria.Items.Insert(0, "Select an option...");
-            cmbSearchCriteria.SelectedIndex = 0;
-            cmbActiveStat.SelectedIndex = 0;
+                     
             DragHelper.MakeFormDraggable(this);
         }
         // UI 
@@ -37,7 +35,9 @@ namespace Project19
 
         private void TxtSearchTerm_TextChanged(object sender, EventArgs e)
         {
-            string col = cmbSearchCriteria.SelectedItem.ToString();
+            if (string.IsNullOrEmpty(TxtSearchTerm.Text))
+            { return; }
+            string col = cmbSearchCriteria.SelectedItem.ToString() ?? "";
             if (col == "UserID" || col == "PersonID" )
             {
                 foreach (char c in TxtSearchTerm.Text)
@@ -68,12 +68,7 @@ namespace Project19
                     }
                 }
             }
-
-
-
-
-
-                //Real Time Search
+            //Real Time Search
                 btnSearch.PerformClick(); // trigger search 
         }
                
