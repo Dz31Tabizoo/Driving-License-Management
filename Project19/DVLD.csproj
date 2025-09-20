@@ -386,6 +386,7 @@
     <Content Include="colorPallette.txt" />
     <None Include="Resources\atm.png" />
     <None Include="Resources\app %281%29.png" />
+    <None Include="Resources\add.png" />
     <Content Include="Resources\close_RED.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -423,6 +424,7 @@
     <None Include="Resources\profile.png" />
     <None Include="Resources\logout1.png" />
     <None Include="Resources\padlock.png" />
+    <None Include="Resources\search-user.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />

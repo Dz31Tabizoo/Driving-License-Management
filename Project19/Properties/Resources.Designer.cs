@@ -83,6 +83,16 @@ namespace Project19.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_friend {
             get {
                 object obj = ResourceManager.GetObject("add-friend", resourceCulture);
@@ -816,6 +826,16 @@ namespace Project19.Properties {
         internal static System.Drawing.Bitmap search__3_ {
             get {
                 object obj = ResourceManager.GetObject("search (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_user {
+            get {
+                object obj = ResourceManager.GetObject("search-user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

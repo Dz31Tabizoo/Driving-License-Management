@@ -299,6 +299,10 @@ namespace Project19
             PicMinimize.Image = Properties.Resources.minimize1;
         }
 
-        
+        private void dgvAllPeople_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+        }
     }
 }
