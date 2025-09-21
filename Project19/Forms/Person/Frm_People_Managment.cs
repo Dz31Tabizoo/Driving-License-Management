@@ -264,11 +264,6 @@ namespace Project19
 
         }
 
-        private void pictureBox4_MouseEnter(object sender, EventArgs e)
-        {
-            picMaximize.Image = Properties.Resources.maximize_Blue;
-        }
-
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
@@ -284,25 +279,6 @@ namespace Project19
             picClose.Image = Properties.Resources.close1;
         }
 
-        private void picMaximize_MouseLeave(object sender, EventArgs e)
-        {
-            picMaximize.Image = Properties.Resources.maximize__1_;
-        }
-
-        private void PicMinimize_MouseEnter(object sender, EventArgs e)
-        {     
-            PicMinimize.Image = Properties.Resources.minimize__1_;
-        }
-
-        private void PicMinimize_MouseLeave(object sender, EventArgs e)
-        {
-            PicMinimize.Image = Properties.Resources.minimize1;
-        }
-
-        private void dgvAllPeople_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-        }
+         
     }
 }

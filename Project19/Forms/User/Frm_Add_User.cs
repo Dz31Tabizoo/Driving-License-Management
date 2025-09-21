@@ -22,14 +22,11 @@ namespace Project19
 
         public DataRow PersonFoundinfo {  get; set; }
 
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+       
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-           btnClear.PerformClick();
+            this.Close();
         }
 
         private void btnClosePeopleMng_Click(object sender, EventArgs e)

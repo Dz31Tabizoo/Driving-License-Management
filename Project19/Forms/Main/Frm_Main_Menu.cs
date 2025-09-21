@@ -207,8 +207,7 @@ namespace Project19
 
         private void btnPeopleaMagement_Click(object sender, EventArgs e)
         {
-            KryptonForm frm = new People_Managment();
-            frm.Show();
+            loadForm(new People_Managment());
         }
 
         private void btnUserM_Click(object sender, EventArgs e)

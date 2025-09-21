@@ -36,8 +36,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.phoneCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.emailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.lblTotalPeopleNumber = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblTotalPeople = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -51,15 +56,8 @@
             this.cmbSearchCriteria = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.TxtSearchTerm = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
-            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phoneCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.emailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PicMinimize = new System.Windows.Forms.PictureBox();
-            this.picMaximize = new System.Windows.Forms.PictureBox();
             this.picClose = new System.Windows.Forms.PictureBox();
+            this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -67,8 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSearchCriteria)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,17 +88,66 @@
             contextMenuStrip1.Size = new System.Drawing.Size(187, 206);
             contextMenuStrip1.Text = "Person Options";
             // 
+            // showDetailsToolStripMenuItem
+            // 
+            this.showDetailsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.showDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showDetailsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.showDetailsToolStripMenuItem.Image = global::Project19.Properties.Resources.info;
+            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(186, 38);
+            this.showDetailsToolStripMenuItem.Text = "Show Details";
+            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(183, 6);
             // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.editToolStripMenuItem.Image = global::Project19.Properties.Resources.edit;
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(186, 38);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.deleteToolStripMenuItem.Image = global::Project19.Properties.Resources.delete__3_;
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(186, 38);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(183, 6);
+            // 
+            // phoneCallToolStripMenuItem
+            // 
+            this.phoneCallToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneCallToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.phoneCallToolStripMenuItem.Image = global::Project19.Properties.Resources.phone_call;
+            this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
+            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(186, 38);
+            this.phoneCallToolStripMenuItem.Text = "Phone Call";
+            // 
+            // emailToolStripMenuItem
+            // 
+            this.emailToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.emailToolStripMenuItem.Image = global::Project19.Properties.Resources.email;
+            this.emailToolStripMenuItem.Name = "emailToolStripMenuItem";
+            this.emailToolStripMenuItem.Size = new System.Drawing.Size(186, 38);
+            this.emailToolStripMenuItem.Text = "Email";
             // 
             // kryptonPanel1
             // 
@@ -114,7 +159,7 @@
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(1024, 772);
+            this.kryptonPanel1.Size = new System.Drawing.Size(1024, 730);
             this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.White;
             this.kryptonPanel1.StateNormal.Color2 = System.Drawing.Color.White;
             this.kryptonPanel1.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
@@ -122,7 +167,7 @@
             // 
             // lblTotalPeopleNumber
             // 
-            this.lblTotalPeopleNumber.Location = new System.Drawing.Point(156, 727);
+            this.lblTotalPeopleNumber.Location = new System.Drawing.Point(175, 687);
             this.lblTotalPeopleNumber.Name = "lblTotalPeopleNumber";
             this.lblTotalPeopleNumber.Size = new System.Drawing.Size(6, 2);
             this.lblTotalPeopleNumber.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
@@ -137,7 +182,7 @@
             // 
             // lblTotalPeople
             // 
-            this.lblTotalPeople.Location = new System.Drawing.Point(23, 727);
+            this.lblTotalPeople.Location = new System.Drawing.Point(42, 687);
             this.lblTotalPeople.Name = "lblTotalPeople";
             this.lblTotalPeople.Size = new System.Drawing.Size(127, 29);
             this.lblTotalPeople.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
@@ -152,7 +197,7 @@
             // 
             // btnClosePeopleMng
             // 
-            this.btnClosePeopleMng.Location = new System.Drawing.Point(887, 727);
+            this.btnClosePeopleMng.Location = new System.Drawing.Point(906, 687);
             this.btnClosePeopleMng.Name = "btnClosePeopleMng";
             this.btnClosePeopleMng.Size = new System.Drawing.Size(106, 33);
             this.btnClosePeopleMng.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
@@ -237,7 +282,7 @@
             this.dgvAllPeople.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvAllPeople.EnableHeadersVisualStyles = false;
             this.dgvAllPeople.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.dgvAllPeople.Location = new System.Drawing.Point(0, 244);
+            this.dgvAllPeople.Location = new System.Drawing.Point(0, 116);
             this.dgvAllPeople.Name = "dgvAllPeople";
             this.dgvAllPeople.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -257,17 +302,12 @@
             this.dgvAllPeople.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAllPeople.Size = new System.Drawing.Size(1024, 440);
             this.dgvAllPeople.TabIndex = 1;
-            this.dgvAllPeople.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllPeople_CellContentClick);
             // 
             // panel1
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.panel1.Controls.Add(this.PicMinimize);
             this.panel1.Controls.Add(this.kryptonLabel3);
-            this.panel1.Controls.Add(this.picMaximize);
             this.panel1.Controls.Add(this.lblAddPerson);
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.btnSearch);
@@ -280,7 +320,7 @@
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1024, 244);
+            this.panel1.Size = new System.Drawing.Size(1024, 116);
             this.panel1.TabIndex = 0;
             // 
             // kryptonLabel3
@@ -300,8 +340,9 @@
             // 
             // lblAddPerson
             // 
+            this.lblAddPerson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAddPerson.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
-            this.lblAddPerson.Location = new System.Drawing.Point(871, 206);
+            this.lblAddPerson.Location = new System.Drawing.Point(855, 52);
             this.lblAddPerson.Name = "lblAddPerson";
             this.lblAddPerson.Size = new System.Drawing.Size(125, 29);
             this.lblAddPerson.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
@@ -322,7 +363,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(615, 208);
+            this.btnClear.Location = new System.Drawing.Point(599, 54);
             this.btnClear.Name = "btnClear";
             this.btnClear.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnClear.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
@@ -415,7 +456,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(743, 208);
+            this.btnSearch.Location = new System.Drawing.Point(727, 54);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
             this.btnSearch.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
@@ -511,7 +552,7 @@
             this.cmbSearchCriteria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSearchCriteria.DropDownWidth = 183;
             this.cmbSearchCriteria.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Custom1;
-            this.cmbSearchCriteria.Location = new System.Drawing.Point(173, 211);
+            this.cmbSearchCriteria.Location = new System.Drawing.Point(157, 57);
             this.cmbSearchCriteria.Name = "cmbSearchCriteria";
             this.cmbSearchCriteria.Size = new System.Drawing.Size(183, 27);
             this.cmbSearchCriteria.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
@@ -546,7 +587,7 @@
             // 
             // TxtSearchTerm
             // 
-            this.TxtSearchTerm.Location = new System.Drawing.Point(378, 209);
+            this.TxtSearchTerm.Location = new System.Drawing.Point(362, 55);
             this.TxtSearchTerm.Name = "TxtSearchTerm";
             this.TxtSearchTerm.Size = new System.Drawing.Size(215, 30);
             this.TxtSearchTerm.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
@@ -574,7 +615,7 @@
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(36, 207);
+            this.kryptonLabel2.Location = new System.Drawing.Point(20, 53);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(99, 27);
             this.kryptonLabel2.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
@@ -592,88 +633,9 @@
             this.kryptonLabel2.Values.Image = global::Project19.Properties.Resources.search_user;
             this.kryptonLabel2.Values.Text = "Filter By";
             // 
-            // kryptonContextMenuItem1
-            // 
-            this.kryptonContextMenuItem1.Text = "Menu Item";
-            // 
-            // showDetailsToolStripMenuItem
-            // 
-            this.showDetailsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.showDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showDetailsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.showDetailsToolStripMenuItem.Image = global::Project19.Properties.Resources.info;
-            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(186, 38);
-            this.showDetailsToolStripMenuItem.Text = "Show Details";
-            this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.showDetailsToolStripMenuItem_Click);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.editToolStripMenuItem.Image = global::Project19.Properties.Resources.edit;
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(186, 38);
-            this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.deleteToolStripMenuItem.Image = global::Project19.Properties.Resources.delete__3_;
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(186, 38);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
-            // 
-            // phoneCallToolStripMenuItem
-            // 
-            this.phoneCallToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneCallToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.phoneCallToolStripMenuItem.Image = global::Project19.Properties.Resources.phone_call;
-            this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(186, 38);
-            this.phoneCallToolStripMenuItem.Text = "Phone Call";
-            // 
-            // emailToolStripMenuItem
-            // 
-            this.emailToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.emailToolStripMenuItem.Image = global::Project19.Properties.Resources.email;
-            this.emailToolStripMenuItem.Name = "emailToolStripMenuItem";
-            this.emailToolStripMenuItem.Size = new System.Drawing.Size(186, 38);
-            this.emailToolStripMenuItem.Text = "Email";
-            // 
-            // PicMinimize
-            // 
-            this.PicMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PicMinimize.Image = global::Project19.Properties.Resources.minimize1;
-            this.PicMinimize.Location = new System.Drawing.Point(946, 3);
-            this.PicMinimize.Name = "PicMinimize";
-            this.PicMinimize.Size = new System.Drawing.Size(22, 22);
-            this.PicMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicMinimize.TabIndex = 12;
-            this.PicMinimize.TabStop = false;
-            this.PicMinimize.MouseEnter += new System.EventHandler(this.PicMinimize_MouseEnter);
-            this.PicMinimize.MouseLeave += new System.EventHandler(this.PicMinimize_MouseLeave);
-            // 
-            // picMaximize
-            // 
-            this.picMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMaximize.Image = global::Project19.Properties.Resources.maximize__1_;
-            this.picMaximize.Location = new System.Drawing.Point(971, 3);
-            this.picMaximize.Name = "picMaximize";
-            this.picMaximize.Size = new System.Drawing.Size(22, 22);
-            this.picMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMaximize.TabIndex = 9;
-            this.picMaximize.TabStop = false;
-            this.picMaximize.Click += new System.EventHandler(this.pictureBox4_Click);
-            this.picMaximize.MouseEnter += new System.EventHandler(this.pictureBox4_MouseEnter);
-            this.picMaximize.MouseLeave += new System.EventHandler(this.picMaximize_MouseLeave);
-            // 
             // picClose
             // 
+            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picClose.Image = global::Project19.Properties.Resources.close1;
             this.picClose.Location = new System.Drawing.Point(996, 3);
@@ -686,12 +648,16 @@
             this.picClose.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
             this.picClose.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             // 
+            // kryptonContextMenuItem1
+            // 
+            this.kryptonContextMenuItem1.Text = "Menu Item";
+            // 
             // People_Managment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1024, 772);
+            this.ClientSize = new System.Drawing.Size(1024, 730);
             this.ControlBox = false;
             this.Controls.Add(this.kryptonPanel1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -723,8 +689,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSearchCriteria)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
 
@@ -752,9 +716,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem phoneCallToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem emailToolStripMenuItem;
-        private System.Windows.Forms.PictureBox picMaximize;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
-        private System.Windows.Forms.PictureBox PicMinimize;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblTotalPeopleNumber;
     }
 }
