@@ -35,7 +35,7 @@ namespace BusinessLayer
         public string ImagePath { get; set; }
 
 
-        // constractors
+        // constructor
 
         public clsPeople()
         {

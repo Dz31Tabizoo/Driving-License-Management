@@ -1,8 +1,9 @@
-﻿User managment: 
+﻿Create class Contries and use it on clsPerson
 
 
 
 
 
 
---------------------------------------
+-----------------
+just by github public dvld solution

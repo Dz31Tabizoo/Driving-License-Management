@@ -46,14 +46,7 @@ namespace Project19
         
 
 
-        // My
-        // Error desginTime
-        //public UsrCtrlEditPerson(DataTable countrydt) : this()
-        //{
-        //    InitializeComponent();
-        //    SetUpUserControls(countrydt);
-        //}
-
+       
         public void SetUpUserControls()
         {
             DataTable countries = new DataTable();
@@ -233,7 +226,7 @@ namespace Project19
                 }
 
 
-                GENDOR = Convert.ToByte( row.Cells["Gendor"].Value);
+                GENDOR = (Byte)( row.Cells["Gendor"].Value);
 
 
                 if (GENDOR == 0)

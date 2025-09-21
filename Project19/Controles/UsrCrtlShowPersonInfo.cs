@@ -83,18 +83,7 @@ namespace Project19
                 }
 
 
-                object GENDOR = row.Cells["Gendor"].Value;
-                if (GENDOR?.ToString() == "0")
-                {
-                    lblGenderOutput.Text = "Male";
-                    pictureBox1.Image = Properties.Resources.male;
-                }
-                else
-                {
-                    lblGenderOutput.Text = "Female";
-                    pictureBox1.Image = Properties.Resources.muslimah;
-
-                }
+                lblGenderOutput.Text = row.Cells["Gender Caption"].Value.ToString();
 
                 lblAddressOutput.Text = row.Cells["Address"].Value.ToString();
                 lblPhoneOutput.Text = row.Cells["Phone"].Value.ToString();

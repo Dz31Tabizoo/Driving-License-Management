@@ -153,10 +153,10 @@ namespace Project19
                 lblDateOfBirthOutput.Text = DateTimeValue.ToString("yyyy MMM dd");
             }
 
-            if (row.Table.Columns.Contains("Gendor"))
+            if (row.Table.Columns.Contains("Gender Caption"))
             {
 
-                if (row["Gendor"].ToString() == "0")
+                if (row["Gender Caption"].ToString() == "Male")
                 {
                     lblGenderOutput.Text = "Male";
                     pictureBox1.Image = Properties.Resources.male;
