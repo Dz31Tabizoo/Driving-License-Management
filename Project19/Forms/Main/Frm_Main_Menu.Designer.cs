@@ -159,7 +159,7 @@ namespace Project19
             this.kryptonPanel2.Location = new System.Drawing.Point(4, 5);
             this.kryptonPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kryptonPanel2.Name = "kryptonPanel2";
-            this.kryptonPanel2.Size = new System.Drawing.Size(236, 195);
+            this.kryptonPanel2.Size = new System.Drawing.Size(236, 147);
             this.kryptonPanel2.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.kryptonPanel2.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.kryptonPanel2.TabIndex = 10;
@@ -168,7 +168,7 @@ namespace Project19
             // 
             this.pbMainMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbMainMenu.Image = ((System.Drawing.Image)(resources.GetObject("pbMainMenu.Image")));
-            this.pbMainMenu.Location = new System.Drawing.Point(23, 130);
+            this.pbMainMenu.Location = new System.Drawing.Point(23, 103);
             this.pbMainMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbMainMenu.Name = "pbMainMenu";
             this.pbMainMenu.Size = new System.Drawing.Size(32, 32);
@@ -179,7 +179,7 @@ namespace Project19
             // 
             // lblFormTitle
             // 
-            this.lblFormTitle.Location = new System.Drawing.Point(99, 132);
+            this.lblFormTitle.Location = new System.Drawing.Point(117, 103);
             this.lblFormTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblFormTitle.Name = "lblFormTitle";
             this.lblFormTitle.Size = new System.Drawing.Size(63, 30);
@@ -199,9 +199,9 @@ namespace Project19
             this.pnlApplications.Controls.Add(this.kryptonPanel8);
             this.pnlApplications.Controls.Add(this.kryptonPanel3);
             this.pnlApplications.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlApplications.Location = new System.Drawing.Point(0, 205);
+            this.pnlApplications.Location = new System.Drawing.Point(0, 157);
             this.pnlApplications.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlApplications.MaximumSize = new System.Drawing.Size(342, 411);
+            this.pnlApplications.MaximumSize = new System.Drawing.Size(342, 421);
             this.pnlApplications.MinimumSize = new System.Drawing.Size(334, 74);
             this.pnlApplications.Name = "pnlApplications";
             this.pnlApplications.Size = new System.Drawing.Size(342, 74);
@@ -210,7 +210,7 @@ namespace Project19
             // kryptonPanel12
             // 
             this.kryptonPanel12.Controls.Add(this.button10);
-            this.kryptonPanel12.Location = new System.Drawing.Point(4, 340);
+            this.kryptonPanel12.Location = new System.Drawing.Point(4, 351);
             this.kryptonPanel12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kryptonPanel12.Name = "kryptonPanel12";
             this.kryptonPanel12.Size = new System.Drawing.Size(334, 65);
@@ -218,7 +218,9 @@ namespace Project19
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(35)))), ((int)(((byte)(39)))));
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.button10.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
@@ -245,7 +247,9 @@ namespace Project19
             // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(35)))), ((int)(((byte)(39)))));
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.button9.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
@@ -272,7 +276,9 @@ namespace Project19
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(35)))), ((int)(((byte)(39)))));
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.button8.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
@@ -299,7 +305,9 @@ namespace Project19
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(35)))), ((int)(((byte)(39)))));
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.button7.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
@@ -326,7 +334,9 @@ namespace Project19
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(35)))), ((int)(((byte)(39)))));
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.button6.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
@@ -367,7 +377,7 @@ namespace Project19
             this.button1.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(388, 103);
             this.button1.TabIndex = 12;
-            this.button1.Text = "                  Application";
+            this.button1.Text = "                     Application";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -376,7 +386,7 @@ namespace Project19
             // 
             this.kryptonPanel4.Controls.Add(this.btnPeopleaMagement);
             this.kryptonPanel4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonPanel4.Location = new System.Drawing.Point(4, 284);
+            this.kryptonPanel4.Location = new System.Drawing.Point(4, 236);
             this.kryptonPanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kryptonPanel4.Name = "kryptonPanel4";
             this.kryptonPanel4.Size = new System.Drawing.Size(334, 74);
@@ -395,7 +405,7 @@ namespace Project19
             this.btnPeopleaMagement.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.btnPeopleaMagement.Size = new System.Drawing.Size(388, 103);
             this.btnPeopleaMagement.TabIndex = 12;
-            this.btnPeopleaMagement.Text = "              People Managment";
+            this.btnPeopleaMagement.Text = "                People Managment";
             this.btnPeopleaMagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPeopleaMagement.UseVisualStyleBackColor = true;
             this.btnPeopleaMagement.Click += new System.EventHandler(this.btnPeopleaMagement_Click);
@@ -404,7 +414,7 @@ namespace Project19
             // 
             this.kryptonPanel5.Controls.Add(this.btnUserM);
             this.kryptonPanel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonPanel5.Location = new System.Drawing.Point(4, 368);
+            this.kryptonPanel5.Location = new System.Drawing.Point(4, 320);
             this.kryptonPanel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kryptonPanel5.Name = "kryptonPanel5";
             this.kryptonPanel5.Size = new System.Drawing.Size(334, 74);
@@ -423,7 +433,7 @@ namespace Project19
             this.btnUserM.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.btnUserM.Size = new System.Drawing.Size(388, 103);
             this.btnUserM.TabIndex = 12;
-            this.btnUserM.Text = "              Users Managment";
+            this.btnUserM.Text = "               Users Managment";
             this.btnUserM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUserM.UseVisualStyleBackColor = true;
             this.btnUserM.Click += new System.EventHandler(this.btnUserM_Click);
@@ -436,7 +446,7 @@ namespace Project19
             this.pnlAccountSetting.Controls.Add(this.kryptonPanel17);
             this.pnlAccountSetting.Controls.Add(this.kryptonPanel18);
             this.pnlAccountSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlAccountSetting.Location = new System.Drawing.Point(0, 447);
+            this.pnlAccountSetting.Location = new System.Drawing.Point(0, 399);
             this.pnlAccountSetting.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAccountSetting.MaximumSize = new System.Drawing.Size(342, 279);
             this.pnlAccountSetting.MinimumSize = new System.Drawing.Size(334, 74);
@@ -551,7 +561,7 @@ namespace Project19
             this.button4.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(388, 103);
             this.button4.TabIndex = 12;
-            this.button4.Text = "              Account Settings";
+            this.button4.Text = "                 Account Settings";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -560,7 +570,7 @@ namespace Project19
             // 
             this.kryptonPanel7.Controls.Add(this.button5);
             this.kryptonPanel7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonPanel7.Location = new System.Drawing.Point(4, 526);
+            this.kryptonPanel7.Location = new System.Drawing.Point(4, 478);
             this.kryptonPanel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kryptonPanel7.Name = "kryptonPanel7";
             this.kryptonPanel7.Size = new System.Drawing.Size(334, 74);
@@ -579,7 +589,7 @@ namespace Project19
             this.button5.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(388, 103);
             this.button5.TabIndex = 12;
-            this.button5.Text = "                   Sign Out";
+            this.button5.Text = "                      Sign Out";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
             // 
