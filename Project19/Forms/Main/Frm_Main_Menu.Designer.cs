@@ -120,7 +120,7 @@ namespace Project19
             this.pnlMainPanel.Name = "pnlMainPanel";
             this.pnlMainPanel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.HeaderPrimary;
             this.pnlMainPanel.Size = new System.Drawing.Size(1202, 720);
-            this.pnlMainPanel.StateNormal.Color1 = System.Drawing.Color.White;
+            this.pnlMainPanel.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(207)))), ((int)(((byte)(203)))));
             this.pnlMainPanel.StateNormal.Color2 = System.Drawing.Color.White;
             this.pnlMainPanel.StateNormal.ColorAngle = 0F;
             this.pnlMainPanel.StateNormal.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;

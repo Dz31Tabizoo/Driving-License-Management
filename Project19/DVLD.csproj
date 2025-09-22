@@ -387,6 +387,8 @@
     <None Include="Resources\atm.png" />
     <None Include="Resources\app %281%29.png" />
     <None Include="Resources\add.png" />
+    <None Include="Resources\2346679_310821-P8DC3I-291.png" />
+    <None Include="Resources\360526283_11452747.png" />
     <Content Include="Resources\close_RED.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -425,6 +427,8 @@
     <None Include="Resources\logout1.png" />
     <None Include="Resources\padlock.png" />
     <None Include="Resources\search-user.png" />
+    <None Include="Resources\INDENTIFCARD.png" />
+    <None Include="Resources\road_6696329.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />

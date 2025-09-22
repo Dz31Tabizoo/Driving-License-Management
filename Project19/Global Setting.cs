@@ -25,7 +25,7 @@ namespace Project19
 
         public static event EventHandler OnUserChange;
         
-        public static bool Login(string username, string password)
+        public static bool LoginAuthontification(string username, string password)
         {
             var user = clsUser.FindUserByUserNameAndPassword(username, password);
 

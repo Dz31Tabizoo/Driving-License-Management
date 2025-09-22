@@ -16,14 +16,14 @@ namespace Project19
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //using (var LoginForm = new Frm_Login())
-            //{
-            //    if (LoginForm.ShowDialog() == DialogResult.OK)
-            //    {
-            //        Application.Run(new Frm_Main_Menu());
-            //    }
-            //}
-            Application.Run(new Frm_Main_Menu());
+            using (var LoginForm = new Frm_Login())
+            {
+                if (LoginForm.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new Frm_Main_Menu());
+                }
+            }
+            // Application.Run(new Frm_Main_Menu());
         }
     }
         

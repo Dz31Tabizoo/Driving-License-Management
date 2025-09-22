@@ -63,6 +63,26 @@ namespace Project19.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2346679_310821_P8DC3I_291 {
+            get {
+                object obj = ResourceManager.GetObject("2346679_310821-P8DC3I-291", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _360526283_11452747 {
+            get {
+                object obj = ResourceManager.GetObject("360526283_11452747", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _switch {
             get {
                 object obj = ResourceManager.GetObject("switch", resourceCulture);
@@ -483,6 +503,16 @@ namespace Project19.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap INDENTIFCARD {
+            get {
+                object obj = ResourceManager.GetObject("INDENTIFCARD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap info {
             get {
                 object obj = ResourceManager.GetObject("info", resourceCulture);
@@ -776,6 +806,16 @@ namespace Project19.Properties {
         internal static System.Drawing.Bitmap record {
             get {
                 object obj = ResourceManager.GetObject("record", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap road_6696329 {
+            get {
+                object obj = ResourceManager.GetObject("road_6696329", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

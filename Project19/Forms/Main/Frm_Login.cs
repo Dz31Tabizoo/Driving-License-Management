@@ -21,38 +21,11 @@ namespace Project19
             DragHelper.MakeFormDraggable(this);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                if (File.Exists("Rememberlog.txt"))
-                {
-                    string content = File.ReadAllText("Rememberlog.txt");
-                    string[] parts = content.Split('#');
-                    if (parts.Length >= 2)
-                    {
-                        txtUsername.Text = parts[0];
-                        txtPassword.Text = parts[1];
-                    }
-                    else
-                    {
-                        txtUsername.Focus();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading saved login: {ex.Message}");
-                
-                File.Delete("RememberLog.txt");
-            }
-            
-            
-        }
+       
 
         private bool ManageLoging()
         {
-            if (GlobalSetting.Login(txtUsername.Text,txtPassword.Text))
+            if (GlobalSetting.LoginAuthontification(txtUsername.Text,txtPassword.Text))
             {
                 
                 return true;
@@ -63,6 +36,7 @@ namespace Project19
                 MessageBox.Show("Invalid credentials");
                 return false;
             }
+
 
 
         }
@@ -91,7 +65,7 @@ namespace Project19
         }
 
         
-        private void txtUsername_MouseEnter(object sender, EventArgs e)
+        private void txtUsername_MouseClick(object sender, EventArgs e)
         {
             if (txtUsername.Text == "Enter Your User Name")
             {

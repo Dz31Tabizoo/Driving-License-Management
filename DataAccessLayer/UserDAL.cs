@@ -12,6 +12,7 @@ namespace DataAccessLayer
 {
     public static class clsUserDAL
     {
+       
         public static bool FindUserByName(string UserName, ref string PassWord, ref bool isActive,ref int PersonID,ref int UserID)
         {
             bool isFouned = false;
@@ -313,4 +314,5 @@ namespace DataAccessLayer
             return false;
         }
     }
+
 }
