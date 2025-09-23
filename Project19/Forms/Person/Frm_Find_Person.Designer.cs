@@ -36,7 +36,7 @@
         {
             this.btnExit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.usrCrtlShowPersonInfoFilter1 = new Project19.UsrCrtlShowPersonInfoFilter();
+            this.usrCrtlShowPersonInfoFilter1 = new Project19.crtlPersonCardWithFilter();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -140,7 +140,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnExit;
-        private UsrCrtlShowPersonInfoFilter usrCrtlShowPersonInfoFilter1;
+        private crtlPersonCardWithFilter usrCrtlShowPersonInfoFilter1;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
     }
 

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Project19
 {
-    public partial class UsrCrtlShowPersonInfoFilter : UserControl
+    public partial class crtlPersonCardWithFilter : UserControl
     {
         public DataRow PersonRow { get; set; }
 
@@ -29,7 +29,7 @@ namespace Project19
         }
 
 
-        public UsrCrtlShowPersonInfoFilter()
+        public crtlPersonCardWithFilter()
         {
             InitializeComponent();
             LoadPersonsToSearch();

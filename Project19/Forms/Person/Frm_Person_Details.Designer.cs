@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.usCrtlPersonCard1 = new Project19.UsCrtlPersonCard();
+            this.usCrtlPersonCard1 = new Project19.UsCTRLPersonCard();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             this.usCrtlPersonCard1.Location = new System.Drawing.Point(8, 43);
             this.usCrtlPersonCard1.Margin = new System.Windows.Forms.Padding(2);
             this.usCrtlPersonCard1.Name = "usCrtlPersonCard1";
-            this.usCrtlPersonCard1.RR = null;
+            this.usCrtlPersonCard1.PersonDetailsRow = null;
             this.usCrtlPersonCard1.Size = new System.Drawing.Size(818, 382);
             this.usCrtlPersonCard1.TabIndex = 3;
             // 
@@ -104,7 +104,7 @@
 
         #endregion
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private UsCrtlPersonCard usCrtlPersonCard1;
+        private UsCTRLPersonCard usCrtlPersonCard1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

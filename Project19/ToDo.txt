@@ -1,7 +1,7 @@
 ﻿Create class Contries and use it on clsPerson
 
 
-
+set img handler 
 
 
 

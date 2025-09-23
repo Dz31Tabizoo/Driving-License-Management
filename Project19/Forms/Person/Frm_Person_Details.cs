@@ -14,10 +14,10 @@ namespace Project19
 {
     public partial class frmPerson_Details : KryptonForm
     {
-        public frmPerson_Details(DataGridViewRow roo)
+        public frmPerson_Details(int PersonID)
         {
             InitializeComponent();
-            usCrtlPersonCard1.LoadPersonData(roo);
+            usCrtlPersonCard1.LoadLabels(PersonID);
             DragHelper.MakeFormDraggable(this);
         }
 

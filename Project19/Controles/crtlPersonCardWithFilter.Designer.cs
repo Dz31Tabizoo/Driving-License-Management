@@ -1,6 +1,6 @@
 ﻿namespace Project19
 {
-    partial class UsrCrtlShowPersonInfoFilter
+    partial class crtlPersonCardWithFilter
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.

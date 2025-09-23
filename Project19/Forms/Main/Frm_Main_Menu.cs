@@ -207,7 +207,7 @@ namespace Project19
 
         private void btnPeopleaMagement_Click(object sender, EventArgs e)
         {
-            loadForm(new People_Managment());
+            loadForm(new People_Management());
         }
 
         private void btnUserM_Click(object sender, EventArgs e)

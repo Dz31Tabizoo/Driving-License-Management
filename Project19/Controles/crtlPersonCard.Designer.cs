@@ -1,6 +1,6 @@
 ﻿namespace Project19
 {
-    partial class UsCrtlPersonCard
+    partial class UsCTRLPersonCard
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -30,25 +30,6 @@
         private void InitializeComponent()
         {
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.lblEditPerson = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
-            this.lblDateOfBirthOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblCountryOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblPhoneOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblEmailOut = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblAddressOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblGenderOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblNationalNoOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblNameOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblPersonIdOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblPhone = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblCountry = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblDateOfBirth = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblEmail = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblAddress = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblGender = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblNationalNum = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblName = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblPersonID = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -63,7 +44,26 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblEditPerson = new ComponentFactory.Krypton.Toolkit.KryptonLinkLabel();
+            this.lblDateOfBirthOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblCountryOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblPhoneOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblEmailOut = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblAddressOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblGenderOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblNationalNoOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblNameOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblPersonIdOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.pbPersonImage = new System.Windows.Forms.PictureBox();
+            this.lblPhone = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblCountry = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblDateOfBirth = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblEmail = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblAddress = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblGender = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblNationalNum = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblName = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblPersonID = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
             this.kryptonGroupBox1.Panel.SuspendLayout();
@@ -82,15 +82,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonGroupBox1
             // 
             this.kryptonGroupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowOnly;
-            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
-            this.kryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(7, 5);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             // 
@@ -120,7 +117,7 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblNationalNoOutput);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblNameOutput);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblPersonIdOutput);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox1);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.pbPersonImage);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblPhone);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblCountry);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblDateOfBirth);
@@ -133,223 +130,17 @@
             this.kryptonGroupBox1.Size = new System.Drawing.Size(799, 367);
             this.kryptonGroupBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonGroupBox1.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonGroupBox1.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonGroupBox1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.kryptonGroupBox1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.kryptonGroupBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonGroupBox1.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonGroupBox1.StateCommon.Border.Rounding = 5;
             this.kryptonGroupBox1.StateCommon.Border.Width = 2;
             this.kryptonGroupBox1.TabIndex = 0;
             this.kryptonGroupBox1.Values.Description = "\r\nBy Rafik";
             this.kryptonGroupBox1.Values.Heading = "Person Information";
             this.kryptonGroupBox1.Values.Image = global::Project19.Properties.Resources.information__1_;
-            // 
-            // lblEditPerson
-            // 
-            this.lblEditPerson.Location = new System.Drawing.Point(645, 213);
-            this.lblEditPerson.Name = "lblEditPerson";
-            this.lblEditPerson.Size = new System.Drawing.Size(96, 26);
-            this.lblEditPerson.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.lblEditPerson.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.lblEditPerson.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditPerson.StateCommon.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.lblEditPerson.StateCommon.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
-            this.lblEditPerson.TabIndex = 36;
-            this.lblEditPerson.Values.Text = "Edit Person";
-            this.lblEditPerson.LinkClicked += new System.EventHandler(this.lblEditPerson_LinkClicked);
-            // 
-            // lblDateOfBirthOutput
-            // 
-            this.lblDateOfBirthOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateOfBirthOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.lblDateOfBirthOutput.Location = new System.Drawing.Point(453, 192);
-            this.lblDateOfBirthOutput.Name = "lblDateOfBirthOutput";
-            this.lblDateOfBirthOutput.Size = new System.Drawing.Size(0, 20);
-            this.lblDateOfBirthOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateOfBirthOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            // 
-            // lblCountryOutput
-            // 
-            this.lblCountryOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountryOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.lblCountryOutput.Location = new System.Drawing.Point(453, 244);
-            this.lblCountryOutput.Name = "lblCountryOutput";
-            this.lblCountryOutput.Size = new System.Drawing.Size(0, 20);
-            this.lblCountryOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountryOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            // 
-            // lblPhoneOutput
-            // 
-            this.lblPhoneOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.lblPhoneOutput.Location = new System.Drawing.Point(453, 296);
-            this.lblPhoneOutput.Name = "lblPhoneOutput";
-            this.lblPhoneOutput.Size = new System.Drawing.Size(0, 20);
-            this.lblPhoneOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            // 
-            // lblEmailOut
-            // 
-            this.lblEmailOut.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.lblEmailOut.Location = new System.Drawing.Point(147, 296);
-            this.lblEmailOut.Name = "lblEmailOut";
-            this.lblEmailOut.Size = new System.Drawing.Size(0, 20);
-            this.lblEmailOut.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailOut.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            // 
-            // lblAddressOutput
-            // 
-            this.lblAddressOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddressOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.lblAddressOutput.Location = new System.Drawing.Point(147, 244);
-            this.lblAddressOutput.Name = "lblAddressOutput";
-            this.lblAddressOutput.Size = new System.Drawing.Size(0, 20);
-            this.lblAddressOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddressOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            // 
-            // lblGenderOutput
-            // 
-            this.lblGenderOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenderOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.lblGenderOutput.Location = new System.Drawing.Point(147, 190);
-            this.lblGenderOutput.Name = "lblGenderOutput";
-            this.lblGenderOutput.Size = new System.Drawing.Size(0, 20);
-            this.lblGenderOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGenderOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            // 
-            // lblNationalNoOutput
-            // 
-            this.lblNationalNoOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNationalNoOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.lblNationalNoOutput.Location = new System.Drawing.Point(147, 81);
-            this.lblNationalNoOutput.Name = "lblNationalNoOutput";
-            this.lblNationalNoOutput.Size = new System.Drawing.Size(0, 20);
-            this.lblNationalNoOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNationalNoOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            // 
-            // lblNameOutput
-            // 
-            this.lblNameOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.lblNameOutput.Location = new System.Drawing.Point(147, 137);
-            this.lblNameOutput.Name = "lblNameOutput";
-            this.lblNameOutput.Size = new System.Drawing.Size(0, 20);
-            this.lblNameOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            // 
-            // lblPersonIdOutput
-            // 
-            this.lblPersonIdOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonIdOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.lblPersonIdOutput.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPersonIdOutput.Location = new System.Drawing.Point(147, 31);
-            this.lblPersonIdOutput.Name = "lblPersonIdOutput";
-            this.lblPersonIdOutput.Size = new System.Drawing.Size(0, 20);
-            this.lblPersonIdOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonIdOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            // 
-            // lblPhone
-            // 
-            this.lblPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblPhone.Location = new System.Drawing.Point(325, 296);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(61, 20);
-            this.lblPhone.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblPhone.Text = "Phone :";
-            // 
-            // lblCountry
-            // 
-            this.lblCountry.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblCountry.Location = new System.Drawing.Point(325, 244);
-            this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(73, 20);
-            this.lblCountry.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountry.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblCountry.Text = "Country :";
-            // 
-            // lblDateOfBirth
-            // 
-            this.lblDateOfBirth.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblDateOfBirth.Location = new System.Drawing.Point(318, 190);
-            this.lblDateOfBirth.Name = "lblDateOfBirth";
-            this.lblDateOfBirth.Size = new System.Drawing.Size(106, 20);
-            this.lblDateOfBirth.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateOfBirth.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblDateOfBirth.Text = "Date Of Birth :";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblEmail.Location = new System.Drawing.Point(24, 296);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(54, 20);
-            this.lblEmail.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblEmail.Text = "Email :";
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblAddress.Location = new System.Drawing.Point(24, 244);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(71, 20);
-            this.lblAddress.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblAddress.Text = "Address :";
-            // 
-            // lblGender
-            // 
-            this.lblGender.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblGender.Location = new System.Drawing.Point(24, 190);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(67, 20);
-            this.lblGender.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblGender.Text = "Gender :";
-            // 
-            // lblNationalNum
-            // 
-            this.lblNationalNum.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNationalNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblNationalNum.Location = new System.Drawing.Point(18, 80);
-            this.lblNationalNum.Name = "lblNationalNum";
-            this.lblNationalNum.Size = new System.Drawing.Size(101, 20);
-            this.lblNationalNum.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNationalNum.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblNationalNum.Text = "National No :";
-            // 
-            // lblName
-            // 
-            this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblName.Location = new System.Drawing.Point(24, 137);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(58, 20);
-            this.lblName.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblName.Text = "Name :";
-            // 
-            // lblPersonID
-            // 
-            this.lblPersonID.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblPersonID.Location = new System.Drawing.Point(24, 31);
-            this.lblPersonID.Name = "lblPersonID";
-            this.lblPersonID.Size = new System.Drawing.Size(82, 20);
-            this.lblPersonID.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonID.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblPersonID.Text = "Person ID :";
             // 
             // pictureBox10
             // 
@@ -478,23 +269,225 @@
             this.pictureBox2.TabIndex = 38;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // lblEditPerson
             // 
-            this.pictureBox1.Image = global::Project19.Properties.Resources.user__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(619, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 158);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.lblEditPerson.Location = new System.Drawing.Point(645, 213);
+            this.lblEditPerson.Name = "lblEditPerson";
+            this.lblEditPerson.Size = new System.Drawing.Size(96, 26);
+            this.lblEditPerson.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblEditPerson.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblEditPerson.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditPerson.TabIndex = 36;
+            this.lblEditPerson.Values.Text = "Edit Person";
+            this.lblEditPerson.LinkClicked += new System.EventHandler(this.lblEditPerson_LinkClicked);
             // 
-            // UsCrtlPersonCard
+            // lblDateOfBirthOutput
+            // 
+            this.lblDateOfBirthOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateOfBirthOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblDateOfBirthOutput.Location = new System.Drawing.Point(453, 192);
+            this.lblDateOfBirthOutput.Name = "lblDateOfBirthOutput";
+            this.lblDateOfBirthOutput.Size = new System.Drawing.Size(0, 20);
+            this.lblDateOfBirthOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateOfBirthOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            // 
+            // lblCountryOutput
+            // 
+            this.lblCountryOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountryOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblCountryOutput.Location = new System.Drawing.Point(453, 244);
+            this.lblCountryOutput.Name = "lblCountryOutput";
+            this.lblCountryOutput.Size = new System.Drawing.Size(0, 20);
+            this.lblCountryOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountryOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            // 
+            // lblPhoneOutput
+            // 
+            this.lblPhoneOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblPhoneOutput.Location = new System.Drawing.Point(453, 296);
+            this.lblPhoneOutput.Name = "lblPhoneOutput";
+            this.lblPhoneOutput.Size = new System.Drawing.Size(0, 20);
+            this.lblPhoneOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            // 
+            // lblEmailOut
+            // 
+            this.lblEmailOut.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblEmailOut.Location = new System.Drawing.Point(147, 296);
+            this.lblEmailOut.Name = "lblEmailOut";
+            this.lblEmailOut.Size = new System.Drawing.Size(0, 20);
+            this.lblEmailOut.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailOut.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            // 
+            // lblAddressOutput
+            // 
+            this.lblAddressOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblAddressOutput.Location = new System.Drawing.Point(147, 244);
+            this.lblAddressOutput.Name = "lblAddressOutput";
+            this.lblAddressOutput.Size = new System.Drawing.Size(0, 20);
+            this.lblAddressOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            // 
+            // lblGenderOutput
+            // 
+            this.lblGenderOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenderOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblGenderOutput.Location = new System.Drawing.Point(147, 190);
+            this.lblGenderOutput.Name = "lblGenderOutput";
+            this.lblGenderOutput.Size = new System.Drawing.Size(0, 20);
+            this.lblGenderOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenderOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            // 
+            // lblNationalNoOutput
+            // 
+            this.lblNationalNoOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNationalNoOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblNationalNoOutput.Location = new System.Drawing.Point(147, 81);
+            this.lblNationalNoOutput.Name = "lblNationalNoOutput";
+            this.lblNationalNoOutput.Size = new System.Drawing.Size(0, 20);
+            this.lblNationalNoOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNationalNoOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            // 
+            // lblNameOutput
+            // 
+            this.lblNameOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblNameOutput.Location = new System.Drawing.Point(147, 137);
+            this.lblNameOutput.Name = "lblNameOutput";
+            this.lblNameOutput.Size = new System.Drawing.Size(0, 20);
+            this.lblNameOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            // 
+            // lblPersonIdOutput
+            // 
+            this.lblPersonIdOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonIdOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblPersonIdOutput.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPersonIdOutput.Location = new System.Drawing.Point(147, 31);
+            this.lblPersonIdOutput.Name = "lblPersonIdOutput";
+            this.lblPersonIdOutput.Size = new System.Drawing.Size(0, 20);
+            this.lblPersonIdOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonIdOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            // 
+            // pbPersonImage
+            // 
+            this.pbPersonImage.Image = global::Project19.Properties.Resources.user__1_;
+            this.pbPersonImage.Location = new System.Drawing.Point(619, 17);
+            this.pbPersonImage.Name = "pbPersonImage";
+            this.pbPersonImage.Size = new System.Drawing.Size(158, 158);
+            this.pbPersonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPersonImage.TabIndex = 17;
+            this.pbPersonImage.TabStop = false;
+            // 
+            // lblPhone
+            // 
+            this.lblPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblPhone.Location = new System.Drawing.Point(325, 296);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(61, 20);
+            this.lblPhone.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhone.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblPhone.Text = "Phone :";
+            // 
+            // lblCountry
+            // 
+            this.lblCountry.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblCountry.Location = new System.Drawing.Point(325, 244);
+            this.lblCountry.Name = "lblCountry";
+            this.lblCountry.Size = new System.Drawing.Size(73, 20);
+            this.lblCountry.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountry.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblCountry.Text = "Country :";
+            // 
+            // lblDateOfBirth
+            // 
+            this.lblDateOfBirth.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblDateOfBirth.Location = new System.Drawing.Point(318, 190);
+            this.lblDateOfBirth.Name = "lblDateOfBirth";
+            this.lblDateOfBirth.Size = new System.Drawing.Size(106, 20);
+            this.lblDateOfBirth.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateOfBirth.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblDateOfBirth.Text = "Date Of Birth :";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblEmail.Location = new System.Drawing.Point(24, 296);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(54, 20);
+            this.lblEmail.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblEmail.Text = "Email :";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblAddress.Location = new System.Drawing.Point(24, 244);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(71, 20);
+            this.lblAddress.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblAddress.Text = "Address :";
+            // 
+            // lblGender
+            // 
+            this.lblGender.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblGender.Location = new System.Drawing.Point(24, 190);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(67, 20);
+            this.lblGender.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblGender.Text = "Gender :";
+            // 
+            // lblNationalNum
+            // 
+            this.lblNationalNum.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNationalNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblNationalNum.Location = new System.Drawing.Point(18, 80);
+            this.lblNationalNum.Name = "lblNationalNum";
+            this.lblNationalNum.Size = new System.Drawing.Size(101, 20);
+            this.lblNationalNum.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNationalNum.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblNationalNum.Text = "National No :";
+            // 
+            // lblName
+            // 
+            this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblName.Location = new System.Drawing.Point(24, 137);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(58, 20);
+            this.lblName.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblName.Text = "Name :";
+            // 
+            // lblPersonID
+            // 
+            this.lblPersonID.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblPersonID.Location = new System.Drawing.Point(24, 31);
+            this.lblPersonID.Name = "lblPersonID";
+            this.lblPersonID.Size = new System.Drawing.Size(82, 20);
+            this.lblPersonID.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonID.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblPersonID.Text = "Person ID :";
+            // 
+            // UsCTRLPersonCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.kryptonGroupBox1);
-            this.Name = "UsCrtlPersonCard";
+            this.Name = "UsCTRLPersonCard";
             this.Size = new System.Drawing.Size(814, 382);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
             this.kryptonGroupBox1.Panel.ResumeLayout(false);
@@ -515,7 +508,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -551,7 +544,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbPersonImage;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox13;

@@ -49,7 +49,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tabPgFindPerson = new System.Windows.Forms.TabPage();
             this.btnSelectPerson = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.usCrtlPersonCard1 = new Project19.UsCrtlPersonCard();
+            this.usCrtlPersonCard1 = new Project19.UsCTRLPersonCard();
             this.tabAddUser = new System.Windows.Forms.TabControl();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -383,7 +383,7 @@
             this.usCrtlPersonCard1.Location = new System.Drawing.Point(5, 5);
             this.usCrtlPersonCard1.Margin = new System.Windows.Forms.Padding(2);
             this.usCrtlPersonCard1.Name = "usCrtlPersonCard1";
-            this.usCrtlPersonCard1.RR = null;
+            this.usCrtlPersonCard1.PersonDetailsRow = null;
             this.usCrtlPersonCard1.Size = new System.Drawing.Size(815, 381);
             this.usCrtlPersonCard1.TabIndex = 6;
             // 
@@ -522,7 +522,7 @@
         private System.Windows.Forms.TabPage tabPgFindPerson;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSelectPerson;
         private System.Windows.Forms.TabControl tabAddUser;
-        private UsCrtlPersonCard usCrtlPersonCard1;
+        private UsCTRLPersonCard usCrtlPersonCard1;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSaveEdit;

@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace Project19
 {
-    public partial class People_Managment : KryptonForm
+    public partial class People_Management : KryptonForm
     {
 
 
-        public People_Managment()
+        public People_Management()
         {
             InitializeComponent();
             cmbSearchCriteria.Items.Insert(0, "Select an option...");
@@ -57,7 +57,7 @@ namespace Project19
         }
 
 
-        private async void People_Managment_Load(object sender, EventArgs e)
+        private async void People_Management_Load(object sender, EventArgs e)
         {
             await LoadPeopleDataAsync();    
 
@@ -92,7 +92,7 @@ namespace Project19
             {
                 try
                 {
-                    if (IsNumericCulumn(Dt, searchColumns))
+                    if (IsNumericColumn(Dt, searchColumns))
                     {
                         if (int.TryParse(SearchTerm, out int NumericValue))
                         {
@@ -158,11 +158,22 @@ namespace Project19
             if (dgvAllPeople.SelectedRows.Count == 0)
                 return;
 
+            
 
             DataGridViewRow selectedRow = dgvAllPeople.SelectedRows[0];
 
-            Form frm = new frmPerson_Details(selectedRow);
-            frm.ShowDialog();
+            if (int.TryParse(selectedRow.Cells["PersonID"].Value?.ToString(), out int PersonID))
+            {
+                Form frm = new frmPerson_Details(PersonID);
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Invalide PersonID");
+            }
+
+
+
 
 
         }
@@ -198,7 +209,7 @@ namespace Project19
 
         }
 
-        private bool IsNumericCulumn(DataTable DDT, string ColumnName)
+        private bool IsNumericColumn(DataTable DDT, string ColumnName)
         {
             if (DDT.Columns.Contains(ColumnName))
             {

@@ -1,6 +1,6 @@
 ﻿namespace Project19
 {
-    partial class People_Managment
+    partial class People_Management
     {
         /// <summary>
         /// Required designer variable.
@@ -680,7 +680,7 @@
             this.StateCommon.Border.Rounding = 5;
             this.StateCommon.Border.Width = 1;
             this.Text = "People_Managment";
-            this.Load += new System.EventHandler(this.People_Managment_Load);
+            this.Load += new System.EventHandler(this.People_Management_Load);
             contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
