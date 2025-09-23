@@ -23,6 +23,12 @@ namespace Project19
 
        
 
+
+
+
+
+
+
         private bool ManageLoging()
         {
             if (GlobalSetting.LoginAuthontification(txtUsername.Text,txtPassword.Text))
@@ -40,7 +46,6 @@ namespace Project19
 
 
         }
-
         
 
         private void btnLogin_Click_1(object sender, EventArgs e)
@@ -49,12 +54,15 @@ namespace Project19
             {
                 if (ChkbxRemaindMe.Checked)
                 {
-                 //later   
+                    GlobalSetting.RememberUserNameAndPassWord(txtUsername.Text, txtPassword.Text);
+                }
+                else
+                {
+                    GlobalSetting.RememberUserNameAndPassWord("", "");
                 }
                 this.DialogResult = DialogResult.OK;
                 this.Close();
-            }
-            
+            }            
         }
 
        
@@ -74,6 +82,21 @@ namespace Project19
             }
         }
 
+        private void Frm_Login_Load(object sender, EventArgs e)
+        {
+            string Username = "", Password = "";
+            if (GlobalSetting.GetStoredCredential(ref Username,ref Password))
+            {
+                txtUsername.Text = Username;
+                txtPassword.Text= Password;
+                ChkbxRemaindMe.Checked= true;
+                btnLogin.Focus();
+            }
+            else
+            {
+                ChkbxRemaindMe.Checked = false;
+            }
+        }
     }
    
 }

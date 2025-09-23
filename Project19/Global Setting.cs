@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
+using System.IO;
 
 namespace Project19
 {
@@ -41,6 +43,76 @@ namespace Project19
         {
             CurrentUser = null;
         }
+
+
+        public static bool RememberUserNameAndPassWord(string username, string password)
+        {
+            try
+            {
+                //get the current project directory folder
+                string currentDirectory = System.IO.Directory.GetCurrentDirectory();
+
+                string filePath = currentDirectory + "\\data.txt";
+
+                if (username=="" && File.Exists(filePath))
+                {
+                    File.Delete(filePath);
+                    return true;
+                }
+
+                string dataToSave = username + "#//#" + password;
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    writer.WriteLine(dataToSave);
+                    return true;
+                }
+
+            }
+            catch(Exception ex)
+            {
+                _ = MessageBox.Show($"Error Saving Credential Record: {ex.Message}", "Error");
+                return false;
+            }
+
+
+
+            
+        }
+
+        public static bool GetStoredCredential(ref string Username,ref string Password)
+        {
+            try
+            {
+                string currentDirectory = Directory.GetCurrentDirectory();
+
+                string filePath = currentDirectory + "\\data.txt";
+
+                if (!File.Exists(filePath))
+                {
+                    return false;
+                }
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        string[] result = line.Split(new string[] { "#//#" }, StringSplitOptions.None);
+
+                        Username = result[0];
+                        Password = result[1];
+                    }
+
+                    return true;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"An error occurred getting record: {ex.Message}");
+                return false;
+            }
+
+        }
+
 
     }
 }
