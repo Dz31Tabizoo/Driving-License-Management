@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsCountries.cs" />
+    <Compile Include="CountriesDAL.cs" />
     <Compile Include="PeopleDAL.cs" />
     <Compile Include="DataAccessSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

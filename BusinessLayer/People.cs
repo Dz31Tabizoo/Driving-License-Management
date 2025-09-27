@@ -135,10 +135,7 @@ namespace BusinessLayer
             return (clsPeopleDAL.UpdatePerson(this.PersonID, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.NationalNo, this.DateOfBirth, this.Gender, this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath));
         }
 
-        public static DataTable GetCountries()
-        {
-            return clsPeopleDAL.GetCountries();
-        }
+       
 
         public static bool isNationaNoExists(string Nat_num)
         {
@@ -166,10 +163,7 @@ namespace BusinessLayer
             return false;
         }
 
-        public static string GetCountryNameByID(int ID)
-        {
-            return clsPeopleDAL.GetCounryNameByID(ID);
-        }
+        
 
         public static bool DeletePerson(int ID)
         {

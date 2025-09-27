@@ -189,7 +189,7 @@ namespace Project19
             {
                 int PersonCountryId = (int)row["NationalityCountryID"];
 
-                lblCountryOutput.Text = clsPeople.GetCountryNameByID(PersonCountryId);
+                lblCountryOutput.Text = clsCountries.Find(PersonCountryId).CountryName.ToString();
             }
 
 
@@ -256,9 +256,9 @@ namespace Project19
                 lblPhoneOutput.Text = NewPerson.Phone.ToString();
                 lblEmailOut.Text = NewPerson.Email.ToString();
 
-                 
 
-                lblCountryOutput.Text = clsPeople.GetCountryNameByID(NewPerson.NationalityCountryID);
+
+            lblCountryOutput.Text = clsCountries.Find(NewPerson.NationalityCountryID).CountryName.ToString();
 
 
                 //if (!string.IsNullOrEmpty(NewPerson.ImagePath.ToString()))

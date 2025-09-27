@@ -50,7 +50,7 @@ namespace Project19
         public void SetUpUserControls()
         {
             DataTable countries = new DataTable();
-            countries= clsPeople.GetCountries();
+            countries = clsCountries.GetAllCountries();
             //DateTime MinAdultDate = DateTime.Today.AddYears(-18);
 
             //dtpDateOfBirth.MaxDate = MinAdultDate;

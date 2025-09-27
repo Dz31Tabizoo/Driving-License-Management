@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public static class clsPeopleDAL
+    public class clsPeopleDAL
     {
         /*// In your Common/Shared project
  public class OperationResult<T>
@@ -276,56 +276,9 @@ private void btnCheckNationalNo_Click(object sender, EventArgs e)
             }            
         }
 
-        public static string GetCounryNameByID(int ID)
-        {
-            string Query = "SELECT CountryName from Countries WHERE CountryID = @id;";
+        
 
-            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
-            using (SqlCommand cmd = new SqlCommand(Query, cnx))
-            {
-
-                cmd.Parameters.AddWithValue("@id", ID);
-                try
-                {
-                    cnx.Open();
-                    object Result = cmd.ExecuteScalar();
-                    if (Result != null)
-                    {
-                        return Result.ToString();
-                    }
-                    else
-                    {
-                        return null;
-                    }
-
-
-                }
-                catch
-                {
-                    return null;
-                }
-
-            }
-        }
-
-        public static DataTable GetCountries()
-        {
-            string Query = "Select * From Countries ORDER BY CountryName;";
-            DataTable dt = new DataTable();
-
-            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
-            using (SqlCommand cmd = new SqlCommand(Query, cnx))
-            {
-                cnx.Open();
-
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    dt.Load(reader);
-                }
-            }
-
-            return dt;
-        }
+        
 
         public static bool isNationalNoExist(string nationalNumb)
         {

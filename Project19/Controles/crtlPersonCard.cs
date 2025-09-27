@@ -43,7 +43,8 @@ namespace Project19
                                       _Person.LastName?? "").Trim();
             lblGenderOutput.Text = _Person.Gender == 0 ? "Male" : "Female";
             lblDateOfBirthOutput.Text = _Person.DateOfBirth.ToString("dd-MM-yyyy");
-            lblCountryOutput.Text = clsPeople.GetCountryNameByID(_Person.NationalityCountryID);
+            lblCountryOutput.Text = clsCountries.Find(_Person.NationalityCountryID).CountryName.ToString();
+                //clsPeople.GetCountryNameByID(_Person.NationalityCountryID);
             lblPhoneOutput.Text = _Person.Phone;
             _LoadPersonPicture();
         }
