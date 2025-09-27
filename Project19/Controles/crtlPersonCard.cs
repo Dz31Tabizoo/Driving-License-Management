@@ -54,10 +54,17 @@ namespace Project19
             if (_Person.Gender == 0)
             {
                 pbPersonImage.Image = Resources.male;
+
             }
-            else { pbPersonImage.Image = Resources.muslimah; }
+            else
+            {
+                pbPersonImage.Image = Resources.muslimah;
+            }
+
 
             string imagePath = _Person.ImagePath;
+
+
 
             if (!string.IsNullOrEmpty(imagePath))
             {

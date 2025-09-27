@@ -31,7 +31,7 @@ namespace Project19
                 this.Cursor = Cursors.WaitCursor;
                 //Fill Data Grid View
                 DataTable Dt =  await Task.Run( () => clsPeople.GetAllPeople());
-               
+
                 dgvAllPeople.DataSource = Dt;
 
                 //Count Data

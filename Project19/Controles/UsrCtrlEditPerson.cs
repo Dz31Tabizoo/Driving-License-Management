@@ -252,15 +252,15 @@ namespace Project19
                 string ImagePath = row.Cells["ImagePath"].Value?.ToString();
                 if ((ImagePath == null || ImagePath == "") && GENDOR == 0)
                 {
-                    pictureBox1.Image = Properties.Resources.male;
+                    pictureBox10.Image = Properties.Resources.male;
                 }
                 else if ((ImagePath == null || ImagePath == "") && GENDOR == 1)
                 {
-                    pictureBox1.Image = Properties.Resources.muslimah;
+                    pictureBox10.Image = Properties.Resources.muslimah;
                 }
                 else
-                {
-                    pictureBox1.Image = Image.FromFile(ImagePath);
+                {                    
+                    pictureBox10.Image = Image.FromFile(ImagePath);
                 }
 
                 
@@ -272,8 +272,7 @@ namespace Project19
 
         }
 
-
-
+        
     }
     
 }
