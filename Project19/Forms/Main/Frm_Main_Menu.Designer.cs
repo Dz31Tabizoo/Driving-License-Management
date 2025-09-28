@@ -42,17 +42,17 @@ namespace Project19
             this.lblFormTitle = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.pnlApplications = new System.Windows.Forms.Panel();
             this.kryptonPanel12 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnMngTestTypes = new System.Windows.Forms.Button();
             this.kryptonPanel11 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnAppTypes = new System.Windows.Forms.Button();
             this.kryptonPanel10 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnDetainLicense = new System.Windows.Forms.Button();
             this.kryptonPanel9 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnMngApplicatins = new System.Windows.Forms.Button();
             this.kryptonPanel8 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnDrivingLicenseService = new System.Windows.Forms.Button();
             this.kryptonPanel3 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnApplication = new System.Windows.Forms.Button();
             this.kryptonPanel4 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.btnPeopleaMagement = new System.Windows.Forms.Button();
             this.kryptonPanel5 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
@@ -140,8 +140,8 @@ namespace Project19
             this.SideBarre.Controls.Add(this.kryptonPanel2);
             this.SideBarre.Controls.Add(this.pnlApplications);
             this.SideBarre.Controls.Add(this.kryptonPanel4);
-            this.SideBarre.Controls.Add(this.kryptonPanel5);
             this.SideBarre.Controls.Add(this.pnlAccountSetting);
+            this.SideBarre.Controls.Add(this.kryptonPanel5);
             this.SideBarre.Controls.Add(this.kryptonPanel7);
             this.SideBarre.Dock = System.Windows.Forms.DockStyle.Left;
             this.SideBarre.Location = new System.Drawing.Point(0, 0);
@@ -182,7 +182,7 @@ namespace Project19
             this.lblFormTitle.Location = new System.Drawing.Point(117, 103);
             this.lblFormTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblFormTitle.Name = "lblFormTitle";
-            this.lblFormTitle.Size = new System.Drawing.Size(63, 30);
+            this.lblFormTitle.Size = new System.Drawing.Size(91, 43);
             this.lblFormTitle.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
             this.lblFormTitle.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
             this.lblFormTitle.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -209,178 +209,179 @@ namespace Project19
             // 
             // kryptonPanel12
             // 
-            this.kryptonPanel12.Controls.Add(this.button10);
+            this.kryptonPanel12.Controls.Add(this.btnMngTestTypes);
             this.kryptonPanel12.Location = new System.Drawing.Point(4, 351);
             this.kryptonPanel12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kryptonPanel12.Name = "kryptonPanel12";
             this.kryptonPanel12.Size = new System.Drawing.Size(334, 65);
             this.kryptonPanel12.TabIndex = 16;
             // 
-            // button10
+            // btnMngTestTypes
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.button10.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(-32, -12);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(388, 92);
-            this.button10.TabIndex = 12;
-            this.button10.Text = "                   Manage Test Types";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = false;
+            this.btnMngTestTypes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnMngTestTypes.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.btnMngTestTypes.FlatAppearance.BorderSize = 0;
+            this.btnMngTestTypes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMngTestTypes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMngTestTypes.ForeColor = System.Drawing.Color.White;
+            this.btnMngTestTypes.Image = ((System.Drawing.Image)(resources.GetObject("btnMngTestTypes.Image")));
+            this.btnMngTestTypes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMngTestTypes.Location = new System.Drawing.Point(-32, -12);
+            this.btnMngTestTypes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMngTestTypes.Name = "btnMngTestTypes";
+            this.btnMngTestTypes.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnMngTestTypes.Size = new System.Drawing.Size(388, 92);
+            this.btnMngTestTypes.TabIndex = 12;
+            this.btnMngTestTypes.Text = "                   Manage Test Types";
+            this.btnMngTestTypes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMngTestTypes.UseVisualStyleBackColor = false;
             // 
             // kryptonPanel11
             // 
-            this.kryptonPanel11.Controls.Add(this.button9);
+            this.kryptonPanel11.Controls.Add(this.btnAppTypes);
             this.kryptonPanel11.Location = new System.Drawing.Point(6, 282);
             this.kryptonPanel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kryptonPanel11.Name = "kryptonPanel11";
             this.kryptonPanel11.Size = new System.Drawing.Size(334, 65);
             this.kryptonPanel11.TabIndex = 15;
             // 
-            // button9
+            // btnAppTypes
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.button9.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(-28, -17);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button9.Name = "button9";
-            this.button9.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(388, 83);
-            this.button9.TabIndex = 12;
-            this.button9.Text = "               Manege Application Types";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnAppTypes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnAppTypes.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.btnAppTypes.FlatAppearance.BorderSize = 0;
+            this.btnAppTypes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAppTypes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAppTypes.ForeColor = System.Drawing.Color.White;
+            this.btnAppTypes.Image = ((System.Drawing.Image)(resources.GetObject("btnAppTypes.Image")));
+            this.btnAppTypes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAppTypes.Location = new System.Drawing.Point(-28, -17);
+            this.btnAppTypes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAppTypes.Name = "btnAppTypes";
+            this.btnAppTypes.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnAppTypes.Size = new System.Drawing.Size(388, 83);
+            this.btnAppTypes.TabIndex = 12;
+            this.btnAppTypes.Text = "               Manege Application Types";
+            this.btnAppTypes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAppTypes.UseVisualStyleBackColor = false;
+            this.btnAppTypes.Click += new System.EventHandler(this.btnAppTypes_Click);
             // 
             // kryptonPanel10
             // 
-            this.kryptonPanel10.Controls.Add(this.button8);
+            this.kryptonPanel10.Controls.Add(this.btnDetainLicense);
             this.kryptonPanel10.Location = new System.Drawing.Point(4, 212);
             this.kryptonPanel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kryptonPanel10.Name = "kryptonPanel10";
             this.kryptonPanel10.Size = new System.Drawing.Size(334, 65);
             this.kryptonPanel10.TabIndex = 14;
             // 
-            // button8
+            // btnDetainLicense
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.button8.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(-28, -20);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(388, 86);
-            this.button8.TabIndex = 12;
-            this.button8.Text = "                      Detain License";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnDetainLicense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnDetainLicense.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.btnDetainLicense.FlatAppearance.BorderSize = 0;
+            this.btnDetainLicense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetainLicense.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetainLicense.ForeColor = System.Drawing.Color.White;
+            this.btnDetainLicense.Image = ((System.Drawing.Image)(resources.GetObject("btnDetainLicense.Image")));
+            this.btnDetainLicense.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetainLicense.Location = new System.Drawing.Point(-28, -20);
+            this.btnDetainLicense.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDetainLicense.Name = "btnDetainLicense";
+            this.btnDetainLicense.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnDetainLicense.Size = new System.Drawing.Size(388, 86);
+            this.btnDetainLicense.TabIndex = 12;
+            this.btnDetainLicense.Text = "                      Detain License";
+            this.btnDetainLicense.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDetainLicense.UseVisualStyleBackColor = false;
             // 
             // kryptonPanel9
             // 
-            this.kryptonPanel9.Controls.Add(this.button7);
+            this.kryptonPanel9.Controls.Add(this.btnMngApplicatins);
             this.kryptonPanel9.Location = new System.Drawing.Point(4, 143);
             this.kryptonPanel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kryptonPanel9.Name = "kryptonPanel9";
             this.kryptonPanel9.Size = new System.Drawing.Size(334, 65);
             this.kryptonPanel9.TabIndex = 13;
             // 
-            // button7
+            // btnMngApplicatins
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.button7.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(-28, -25);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(388, 92);
-            this.button7.TabIndex = 12;
-            this.button7.Text = "                  Manage Applications";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnMngApplicatins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnMngApplicatins.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.btnMngApplicatins.FlatAppearance.BorderSize = 0;
+            this.btnMngApplicatins.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMngApplicatins.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMngApplicatins.ForeColor = System.Drawing.Color.White;
+            this.btnMngApplicatins.Image = ((System.Drawing.Image)(resources.GetObject("btnMngApplicatins.Image")));
+            this.btnMngApplicatins.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMngApplicatins.Location = new System.Drawing.Point(-28, -25);
+            this.btnMngApplicatins.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMngApplicatins.Name = "btnMngApplicatins";
+            this.btnMngApplicatins.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnMngApplicatins.Size = new System.Drawing.Size(388, 92);
+            this.btnMngApplicatins.TabIndex = 12;
+            this.btnMngApplicatins.Text = "                  Manage Applications";
+            this.btnMngApplicatins.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMngApplicatins.UseVisualStyleBackColor = false;
             // 
             // kryptonPanel8
             // 
-            this.kryptonPanel8.Controls.Add(this.button6);
+            this.kryptonPanel8.Controls.Add(this.btnDrivingLicenseService);
             this.kryptonPanel8.Location = new System.Drawing.Point(3, 74);
             this.kryptonPanel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kryptonPanel8.Name = "kryptonPanel8";
             this.kryptonPanel8.Size = new System.Drawing.Size(334, 65);
             this.kryptonPanel8.TabIndex = 12;
             // 
-            // button6
+            // btnDrivingLicenseService
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.button6.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(-28, -17);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(388, 95);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "                Driving License Services";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnDrivingLicenseService.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnDrivingLicenseService.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.btnDrivingLicenseService.FlatAppearance.BorderSize = 0;
+            this.btnDrivingLicenseService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDrivingLicenseService.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDrivingLicenseService.ForeColor = System.Drawing.Color.White;
+            this.btnDrivingLicenseService.Image = ((System.Drawing.Image)(resources.GetObject("btnDrivingLicenseService.Image")));
+            this.btnDrivingLicenseService.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDrivingLicenseService.Location = new System.Drawing.Point(-28, -17);
+            this.btnDrivingLicenseService.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDrivingLicenseService.Name = "btnDrivingLicenseService";
+            this.btnDrivingLicenseService.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnDrivingLicenseService.Size = new System.Drawing.Size(388, 95);
+            this.btnDrivingLicenseService.TabIndex = 12;
+            this.btnDrivingLicenseService.Text = "                Driving License Services";
+            this.btnDrivingLicenseService.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDrivingLicenseService.UseVisualStyleBackColor = false;
             // 
             // kryptonPanel3
             // 
-            this.kryptonPanel3.Controls.Add(this.button1);
+            this.kryptonPanel3.Controls.Add(this.btnApplication);
             this.kryptonPanel3.Location = new System.Drawing.Point(4, 5);
             this.kryptonPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kryptonPanel3.Name = "kryptonPanel3";
             this.kryptonPanel3.Size = new System.Drawing.Size(334, 65);
             this.kryptonPanel3.TabIndex = 11;
             // 
-            // button1
+            // btnApplication
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-28, -20);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(388, 103);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "                     Application";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnApplication.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnApplication.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(42)))));
+            this.btnApplication.FlatAppearance.BorderSize = 0;
+            this.btnApplication.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApplication.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApplication.ForeColor = System.Drawing.Color.White;
+            this.btnApplication.Image = ((System.Drawing.Image)(resources.GetObject("btnApplication.Image")));
+            this.btnApplication.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnApplication.Location = new System.Drawing.Point(-28, -20);
+            this.btnApplication.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnApplication.Name = "btnApplication";
+            this.btnApplication.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnApplication.Size = new System.Drawing.Size(388, 103);
+            this.btnApplication.TabIndex = 12;
+            this.btnApplication.Text = "                     Application";
+            this.btnApplication.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnApplication.UseVisualStyleBackColor = false;
+            this.btnApplication.Click += new System.EventHandler(this.button1_Click);
             // 
             // kryptonPanel4
             // 
@@ -414,7 +415,7 @@ namespace Project19
             // 
             this.kryptonPanel5.Controls.Add(this.btnUserM);
             this.kryptonPanel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonPanel5.Location = new System.Drawing.Point(4, 320);
+            this.kryptonPanel5.Location = new System.Drawing.Point(4, 394);
             this.kryptonPanel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kryptonPanel5.Name = "kryptonPanel5";
             this.kryptonPanel5.Size = new System.Drawing.Size(334, 74);
@@ -446,7 +447,7 @@ namespace Project19
             this.pnlAccountSetting.Controls.Add(this.kryptonPanel17);
             this.pnlAccountSetting.Controls.Add(this.kryptonPanel18);
             this.pnlAccountSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlAccountSetting.Location = new System.Drawing.Point(0, 399);
+            this.pnlAccountSetting.Location = new System.Drawing.Point(0, 315);
             this.pnlAccountSetting.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAccountSetting.MaximumSize = new System.Drawing.Size(342, 279);
             this.pnlAccountSetting.MinimumSize = new System.Drawing.Size(334, 74);
@@ -670,7 +671,7 @@ namespace Project19
         private KryptonBorderEdge kryptonBorderEdge1;
         private System.Windows.Forms.FlowLayoutPanel SideBarre;
         private KryptonPanel kryptonPanel3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnApplication;
         private KryptonPanel kryptonPanel4;
         private System.Windows.Forms.Button btnPeopleaMagement;
         private KryptonPanel kryptonPanel5;
@@ -682,14 +683,14 @@ namespace Project19
         private System.Windows.Forms.Panel pnlApplications;
         private KryptonPanel kryptonPanel10;
         private KryptonPanel kryptonPanel11;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnAppTypes;
+        private System.Windows.Forms.Button btnDetainLicense;
         private KryptonPanel kryptonPanel9;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnMngApplicatins;
         private KryptonPanel kryptonPanel8;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnDrivingLicenseService;
         private KryptonPanel kryptonPanel12;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnMngTestTypes;
         private System.Windows.Forms.Timer ApplicationTimer;
         private System.Windows.Forms.Panel pnlAccountSetting;
         private KryptonPanel kryptonPanel15;

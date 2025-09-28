@@ -243,5 +243,14 @@ namespace Project19
         {
 
         }
+
+        private void btnAppTypes_Click(object sender, EventArgs e)
+        {
+            Form frm = new Frm_Application_Types();
+            frm.ShowDialog();
+        }
+
+
+
     }
 }

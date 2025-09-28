@@ -139,14 +139,9 @@ namespace BusinessLayer
                     
 
                 default:
-                    return false;
-                    break;
+                    return false;                    
 
             }
-                
-
-
-            
         }
 
         public static clsUser FindUserByID(int UserId)

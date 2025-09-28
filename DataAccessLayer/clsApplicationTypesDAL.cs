@@ -41,6 +41,8 @@ namespace DataAccessLayer
 
 
         }
+
+
         public static bool UpdateAppType(int ID,short Fee)
         {
             string query = @"UPDATE ApplicationTypes 
