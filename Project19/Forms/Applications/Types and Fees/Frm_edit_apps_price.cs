@@ -7,24 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessLayer;
 using ComponentFactory.Krypton.Toolkit;
+
+
 namespace Project19
 {
-    public partial class Frm_Application_Types : KryptonForm
+    public partial class Frm_edit_apps_price : KryptonForm
     {
-        public Frm_Application_Types()
+        public Frm_edit_apps_price()
         {
             InitializeComponent();
-            LoadData();
         }
-
-        private async void LoadData()
-        {
-            DataTable dt = await clsApplicationTypes.GetAllAppTypes();
-            dgvAllUsers.DataSource = dt;
-        }
-
-
     }
 }

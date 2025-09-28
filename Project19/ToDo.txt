@@ -1,8 +1,4 @@
 ﻿
 
-set img handler 
+finish price app type price 
 
-
-
------------------
-just by github public dvld solution

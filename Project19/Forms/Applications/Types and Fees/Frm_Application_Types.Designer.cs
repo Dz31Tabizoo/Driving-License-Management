@@ -46,13 +46,7 @@ namespace Project19
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
-            this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddNewtoolstrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.ChangePAsswordtoolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phoneCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.emailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -68,31 +62,25 @@ namespace Project19
             this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showDetailsToolStripMenuItem,
-            this.AddNewtoolstrip,
             this.toolStripSeparator1,
-            this.ChangePAsswordtoolStrip,
             this.editToolStripMenuItem,
-            this.deleteToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.phoneCallToolStripMenuItem,
-            this.emailToolStripMenuItem});
+            this.toolStripSeparator2});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(258, 296);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(257, 89);
             this.contextMenuStrip1.Text = "User Options";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(254, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(253, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(254, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(253, 6);
             // 
             // kryptonPanel1
             // 
@@ -167,6 +155,7 @@ namespace Project19
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvAllUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAllUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAllUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAllUsers.BackgroundColor = System.Drawing.Color.White;
             this.dgvAllUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -191,7 +180,6 @@ namespace Project19
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAllUsers.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvAllUsers.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvAllUsers.EnableHeadersVisualStyles = false;
             this.dgvAllUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.dgvAllUsers.Location = new System.Drawing.Point(0, 130);
@@ -237,6 +225,7 @@ namespace Project19
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.Location = new System.Drawing.Point(334, 36);
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lblTitle.Name = "lblTitle";
@@ -253,70 +242,15 @@ namespace Project19
             // 
             this.kryptonContextMenuItem1.Text = "Menu Item";
             // 
-            // showDetailsToolStripMenuItem
-            // 
-            this.showDetailsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.showDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showDetailsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.showDetailsToolStripMenuItem.Image = global::Project19.Properties.Resources.info;
-            this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(257, 40);
-            this.showDetailsToolStripMenuItem.Text = "Show Details";
-            // 
-            // AddNewtoolstrip
-            // 
-            this.AddNewtoolstrip.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddNewtoolstrip.ForeColor = System.Drawing.Color.White;
-            this.AddNewtoolstrip.Image = global::Project19.Properties.Resources.add_friend;
-            this.AddNewtoolstrip.Name = "AddNewtoolstrip";
-            this.AddNewtoolstrip.Size = new System.Drawing.Size(257, 40);
-            this.AddNewtoolstrip.Text = "Add New User";
-            // 
-            // ChangePAsswordtoolStrip
-            // 
-            this.ChangePAsswordtoolStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ChangePAsswordtoolStrip.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangePAsswordtoolStrip.ForeColor = System.Drawing.Color.White;
-            this.ChangePAsswordtoolStrip.Image = global::Project19.Properties.Resources.locked__1_;
-            this.ChangePAsswordtoolStrip.Name = "ChangePAsswordtoolStrip";
-            this.ChangePAsswordtoolStrip.Size = new System.Drawing.Size(257, 40);
-            this.ChangePAsswordtoolStrip.Text = "Edit Password";
-            // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.editToolStripMenuItem.Image = global::Project19.Properties.Resources.edit;
+            this.editToolStripMenuItem.Image = global::Project19.Properties.Resources.price_tag__1_;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(257, 40);
-            this.editToolStripMenuItem.Text = "Edit Informations";
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.deleteToolStripMenuItem.Image = global::Project19.Properties.Resources.delete__3_;
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(257, 40);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            // 
-            // phoneCallToolStripMenuItem
-            // 
-            this.phoneCallToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneCallToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.phoneCallToolStripMenuItem.Image = global::Project19.Properties.Resources.phone_call;
-            this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(257, 40);
-            this.phoneCallToolStripMenuItem.Text = "Phone Call";
-            // 
-            // emailToolStripMenuItem
-            // 
-            this.emailToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.emailToolStripMenuItem.Image = global::Project19.Properties.Resources.email;
-            this.emailToolStripMenuItem.Name = "emailToolStripMenuItem";
-            this.emailToolStripMenuItem.Size = new System.Drawing.Size(257, 40);
-            this.emailToolStripMenuItem.Text = "Email";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(256, 40);
+            this.editToolStripMenuItem.Text = "Edit Price";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // Frm_Application_Types
             // 
@@ -345,16 +279,10 @@ namespace Project19
         private System.Windows.Forms.DataGridView dgvAllUsers;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnClosePeopleMng;
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem phoneCallToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem emailToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem AddNewtoolstrip;
-        private System.Windows.Forms.ToolStripMenuItem ChangePAsswordtoolStrip;
         private System.Windows.Forms.Panel panel1;
         private KryptonLabel lblTitle;
 

@@ -97,13 +97,19 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Frm_Application_Types.cs">
+    <Compile Include="Forms\Applications\Types and Fees\Frm_Application_Types.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Application_Types.Designer.cs">
+    <Compile Include="Forms\Applications\Types and Fees\Frm_Application_Types.Designer.cs">
       <DependentUpon>Frm_Application_Types.cs</DependentUpon>
     </Compile>
-    <Compile Include="Global Setting.cs" />
+    <Compile Include="Forms\Applications\Types and Fees\Frm_edit_apps_price.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Applications\Types and Fees\Frm_edit_apps_price.Designer.cs">
+      <DependentUpon>Frm_edit_apps_price.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\Global Setting.cs" />
     <Compile Include="Handlers\DragFormHandler.cs" />
     <Compile Include="Forms\Main\Frm_Login.cs">
       <SubType>Form</SubType>
@@ -223,8 +229,11 @@
     <EmbeddedResource Include="Forms\User\Frm_Edit_User_Info.resx">
       <DependentUpon>Frm_Edit_User_Info.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Application_Types.resx">
+    <EmbeddedResource Include="Forms\Applications\Types and Fees\Frm_Application_Types.resx">
       <DependentUpon>Frm_Application_Types.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Applications\Types and Fees\Frm_edit_apps_price.resx">
+      <DependentUpon>Frm_edit_apps_price.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -438,6 +447,7 @@
     <None Include="Resources\search-user.png" />
     <None Include="Resources\INDENTIFCARD.png" />
     <None Include="Resources\road_6696329.png" />
+    <None Include="Resources\price-tag %281%29.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />
