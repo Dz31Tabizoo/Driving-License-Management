@@ -28,7 +28,10 @@ namespace Project19
         private void LoadexPrice(clsApplicationTypes apType)
         {
             Type = apType;
+
             tbPrice.Text = apType.ApplicationFee.ToString();
+            tbTitle.Text = apType.ApplicationTypeTitle.ToString();
+            lblAppIDNumb.Text = apType.ApplicationTypeID.ToString();
             this.DialogResult = DialogResult.Abort;
 
         }
@@ -40,18 +43,27 @@ namespace Project19
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (!decimal.TryParse(tbPrice.Text,out decimal newFee))
-            {            
+            if (!decimal.TryParse(tbPrice.Text, out decimal newFee))
+            {
                 return;
             }
-
-            if (clsApplicationTypes.UpdateAppFee(Type.ApplicationTypeID,newFee))
+            else
             {
-                this.DialogResult = DialogResult.OK;
-                DialogResult res = MessageBox.Show("Edit Price", "Price Edited Seccssefully", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (res == DialogResult.OK)
+                Type.ApplicationFee = newFee;
+                Type.ApplicationTypeTitle = tbTitle.Text;
+                Type.ApplicationTypeID = int.Parse(lblAppIDNumb.Text);
+
+                if (Type.UpdateAppFee())
                 {
-                    this.Close();
+                    this.DialogResult = DialogResult.OK;
+
+                    DialogResult res = MessageBox.Show("Edited Successfully!", "Edit Fees", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    if (res == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
+
                 }
             }
         }

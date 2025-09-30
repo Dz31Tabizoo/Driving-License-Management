@@ -25,6 +25,8 @@ namespace Project19
         {
             DataTable dt = await clsApplicationTypes.GetAllAppTypes();
             dgvAllUsers.DataSource = dt;
+
+            lblTotalAppsNumb.Text = dt.Rows.Count.ToString(); 
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
@@ -37,10 +39,11 @@ namespace Project19
             }
             var rowID = dgvAllUsers.CurrentRow.Cells["ApplicationTypeID"].Value;
             var rowPrice = dgvAllUsers.CurrentRow.Cells["ApplicationFees"].Value;
+            string Title = dgvAllUsers.CurrentRow.Cells["ApplicationTypeTitle"].Value.ToString();
 
             if(int.TryParse(rowID.ToString(), out int id) && decimal.TryParse(rowPrice.ToString(), out decimal fee))
             {
-                clsApplicationTypes tp = new clsApplicationTypes(id, "", fee);
+                clsApplicationTypes tp = new clsApplicationTypes(id, Title, fee);
 
                 using (Form editPrice = new Frm_edit_apps_price(tp))
                 {

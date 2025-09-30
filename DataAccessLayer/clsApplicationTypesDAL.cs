@@ -43,10 +43,11 @@ namespace DataAccessLayer
         }
 
 
-        public static bool UpdateAppType(int ID,decimal Fee)
+        public static bool UpdateAppType(int ID,string Title,decimal Fee)
         {
             string query = @"UPDATE ApplicationTypes 
-                                        SET ApplicationFees = @newfee 
+                                        SET ApplicationFees = @newfee,
+                                            ApplicationTypeTitle = @title
                                         WHERE ApplicationTypeID = @id;";
             int RowAffected = 0;
 
@@ -55,6 +56,7 @@ namespace DataAccessLayer
                 using (SqlCommand cmd = new SqlCommand(query,cnx) )
                 {
                     cmd.Parameters.AddWithValue("@newfee", Fee);
+                    cmd.Parameters.AddWithValue("@title", Title);
                     cmd.Parameters.AddWithValue("@id", ID);
                     try
                     {

@@ -23,9 +23,9 @@ namespace BusinessLayer
             this.ApplicationFee = appFee;
         }
 
-        public static bool UpdateAppFee(int appId, decimal appFee)
+        public bool UpdateAppFee()
         {
-            return (clsApplicationTypesDAL.UpdateAppType(appId, appFee));
+            return (clsApplicationTypesDAL.UpdateAppType(this.ApplicationTypeID,this.ApplicationTypeTitle,this.ApplicationFee));
         }
 
 

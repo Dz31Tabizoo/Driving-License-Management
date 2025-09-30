@@ -28,30 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.kryptonWrapLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblNewPrice = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.tbTitle = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonWrapLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblAppID = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.btncancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnEdit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblAppIDNumb = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.tbPrice = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
+            this.kryptonPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // kryptonLabel1
-            // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(91, 5);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(136, 28);
-            this.kryptonLabel1.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.kryptonLabel1.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonLabel1.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonLabel1.StateNormal.ShortText.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel1.StateNormal.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.kryptonLabel1.TabIndex = 2;
-            this.kryptonLabel1.Values.Text = "Edit Price $";
             // 
             // pictureBox2
             // 
@@ -65,23 +59,104 @@
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.kryptonPanel2);
+            this.kryptonPanel1.Controls.Add(this.lblNewPrice);
+            this.kryptonPanel1.Controls.Add(this.tbTitle);
+            this.kryptonPanel1.Controls.Add(this.kryptonWrapLabel1);
+            this.kryptonPanel1.Controls.Add(this.lblAppID);
             this.kryptonPanel1.Controls.Add(this.btncancel);
             this.kryptonPanel1.Controls.Add(this.btnEdit);
-            this.kryptonPanel1.Controls.Add(this.kryptonLabel2);
+            this.kryptonPanel1.Controls.Add(this.lblAppIDNumb);
             this.kryptonPanel1.Controls.Add(this.tbPrice);
-            this.kryptonPanel1.Controls.Add(this.kryptonLabel1);
             this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(305, 210);
+            this.kryptonPanel1.Size = new System.Drawing.Size(469, 210);
             this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
             this.kryptonPanel1.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
             this.kryptonPanel1.TabIndex = 5;
             // 
+            // kryptonPanel2
+            // 
+            this.kryptonPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonPanel2.Controls.Add(this.kryptonWrapLabel2);
+            this.kryptonPanel2.Location = new System.Drawing.Point(-7, -64);
+            this.kryptonPanel2.Name = "kryptonPanel2";
+            this.kryptonPanel2.Size = new System.Drawing.Size(519, 100);
+            this.kryptonPanel2.StateCommon.Color1 = System.Drawing.Color.Teal;
+            this.kryptonPanel2.TabIndex = 14;
+            // 
+            // kryptonWrapLabel2
+            // 
+            this.kryptonWrapLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.White;
+            this.kryptonWrapLabel2.Location = new System.Drawing.Point(12, 68);
+            this.kryptonWrapLabel2.Name = "kryptonWrapLabel2";
+            this.kryptonWrapLabel2.Size = new System.Drawing.Size(108, 25);
+            this.kryptonWrapLabel2.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonWrapLabel2.StateCommon.TextColor = System.Drawing.Color.White;
+            this.kryptonWrapLabel2.Text = "Edit Price $";
+            // 
+            // lblNewPrice
+            // 
+            this.lblNewPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNewPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewPrice.ForeColor = System.Drawing.Color.White;
+            this.lblNewPrice.Location = new System.Drawing.Point(28, 121);
+            this.lblNewPrice.Name = "lblNewPrice";
+            this.lblNewPrice.Size = new System.Drawing.Size(81, 21);
+            this.lblNewPrice.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewPrice.StateCommon.TextColor = System.Drawing.Color.White;
+            this.lblNewPrice.Text = "New Fee :";
+            // 
+            // tbTitle
+            // 
+            this.tbTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbTitle.Location = new System.Drawing.Point(124, 83);
+            this.tbTitle.Name = "tbTitle";
+            this.tbTitle.Size = new System.Drawing.Size(264, 26);
+            this.tbTitle.StateCommon.Back.Color1 = System.Drawing.Color.Gainsboro;
+            this.tbTitle.StateCommon.Border.Color1 = System.Drawing.Color.Gainsboro;
+            this.tbTitle.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tbTitle.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.tbTitle.StateCommon.Border.Rounding = 5;
+            this.tbTitle.StateCommon.Border.Width = 2;
+            this.tbTitle.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.tbTitle.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTitle.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, -1, -1, -1);
+            this.tbTitle.TabIndex = 0;
+            this.tbTitle.Text = "↓ Title ↓";
+            // 
+            // kryptonWrapLabel1
+            // 
+            this.kryptonWrapLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.kryptonWrapLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonWrapLabel1.ForeColor = System.Drawing.Color.White;
+            this.kryptonWrapLabel1.Location = new System.Drawing.Point(59, 83);
+            this.kryptonWrapLabel1.Name = "kryptonWrapLabel1";
+            this.kryptonWrapLabel1.Size = new System.Drawing.Size(50, 21);
+            this.kryptonWrapLabel1.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonWrapLabel1.StateCommon.TextColor = System.Drawing.Color.White;
+            this.kryptonWrapLabel1.Text = "Title :";
+            // 
+            // lblAppID
+            // 
+            this.lblAppID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAppID.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppID.ForeColor = System.Drawing.Color.White;
+            this.lblAppID.Location = new System.Drawing.Point(75, 56);
+            this.lblAppID.Name = "lblAppID";
+            this.lblAppID.Size = new System.Drawing.Size(34, 21);
+            this.lblAppID.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppID.StateCommon.TextColor = System.Drawing.Color.White;
+            this.lblAppID.Text = "ID :";
+            // 
             // btncancel
             // 
             this.btncancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btncancel.Location = new System.Drawing.Point(168, 146);
+            this.btncancel.Location = new System.Drawing.Point(307, 170);
             this.btncancel.Name = "btncancel";
             this.btncancel.Size = new System.Drawing.Size(95, 28);
             this.btncancel.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -121,14 +196,14 @@
             this.btncancel.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btncancel.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btncancel.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancel.TabIndex = 6;
+            this.btncancel.TabIndex = 3;
             this.btncancel.Values.Text = "Cancel";
             this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Location = new System.Drawing.Point(42, 146);
+            this.btnEdit.Location = new System.Drawing.Point(170, 170);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(95, 28);
             this.btnEdit.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -168,26 +243,28 @@
             this.btnEdit.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.btnEdit.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.btnEdit.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.TabIndex = 5;
+            this.btnEdit.TabIndex = 2;
             this.btnEdit.Values.Text = "Edit";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // kryptonLabel2
+            // lblAppIDNumb
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(62, 53);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(185, 27);
-            this.kryptonLabel2.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonLabel2.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonLabel2.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12.5F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel2.TabIndex = 4;
-            this.kryptonLabel2.Values.Text = "↓ Type new price here ↓";
+            this.lblAppIDNumb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAppIDNumb.Location = new System.Drawing.Point(124, 53);
+            this.lblAppIDNumb.Name = "lblAppIDNumb";
+            this.lblAppIDNumb.Size = new System.Drawing.Size(22, 27);
+            this.lblAppIDNumb.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
+            this.lblAppIDNumb.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
+            this.lblAppIDNumb.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppIDNumb.TabIndex = 4;
+            this.lblAppIDNumb.Values.Text = "1";
             // 
             // tbPrice
             // 
-            this.tbPrice.Location = new System.Drawing.Point(33, 91);
+            this.tbPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbPrice.Location = new System.Drawing.Point(124, 121);
             this.tbPrice.Name = "tbPrice";
-            this.tbPrice.Size = new System.Drawing.Size(241, 26);
+            this.tbPrice.Size = new System.Drawing.Size(264, 26);
             this.tbPrice.StateCommon.Back.Color1 = System.Drawing.Color.Gainsboro;
             this.tbPrice.StateCommon.Border.Color1 = System.Drawing.Color.Gainsboro;
             this.tbPrice.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -199,20 +276,21 @@
             this.tbPrice.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.tbPrice.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPrice.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5, -1, -1, -1);
-            this.tbPrice.TabIndex = 3;
-            this.tbPrice.Text = "old price";
+            this.tbPrice.TabIndex = 1;
+            this.tbPrice.Text = "↓ Type new price here ↓";
             // 
             // Frm_edit_apps_price
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(305, 210);
+            this.ClientSize = new System.Drawing.Size(469, 210);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.kryptonPanel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_edit_apps_price";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -233,17 +311,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
+            this.kryptonPanel2.ResumeLayout(false);
+            this.kryptonPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblAppIDNumb;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox tbPrice;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btncancel;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnEdit;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblAppID;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tbTitle;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblNewPrice;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel2;
     }
 }
