@@ -39,6 +39,7 @@ namespace Project19
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.btnClosePeopleMng = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -46,7 +47,6 @@ namespace Project19
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -67,20 +67,30 @@ namespace Project19
             this.toolStripSeparator2});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(257, 89);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(148, 54);
             this.contextMenuStrip1.Text = "User Options";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(253, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(144, 6);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.editToolStripMenuItem.Image = global::Project19.Properties.Resources.price_tag__1_;
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(147, 38);
+            this.editToolStripMenuItem.Text = "Edit Price";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(253, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(144, 6);
             // 
             // kryptonPanel1
             // 
@@ -91,9 +101,8 @@ namespace Project19
             this.kryptonPanel1.Controls.Add(this.dgvAllUsers);
             this.kryptonPanel1.Controls.Add(this.panel1);
             this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(1000, 720);
+            this.kryptonPanel1.Size = new System.Drawing.Size(667, 468);
             this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.White;
             this.kryptonPanel1.StateNormal.Color2 = System.Drawing.Color.White;
             this.kryptonPanel1.TabIndex = 0;
@@ -101,10 +110,9 @@ namespace Project19
             // btnClosePeopleMng
             // 
             this.btnClosePeopleMng.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClosePeopleMng.Location = new System.Drawing.Point(813, 638);
-            this.btnClosePeopleMng.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClosePeopleMng.Location = new System.Drawing.Point(542, 415);
             this.btnClosePeopleMng.Name = "btnClosePeopleMng";
-            this.btnClosePeopleMng.Size = new System.Drawing.Size(159, 47);
+            this.btnClosePeopleMng.Size = new System.Drawing.Size(106, 31);
             this.btnClosePeopleMng.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnClosePeopleMng.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.btnClosePeopleMng.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -144,6 +152,7 @@ namespace Project19
             this.btnClosePeopleMng.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClosePeopleMng.TabIndex = 2;
             this.btnClosePeopleMng.Values.Text = "Close";
+            this.btnClosePeopleMng.Click += new System.EventHandler(this.btnClosePeopleMng_Click);
             // 
             // dgvAllUsers
             // 
@@ -155,7 +164,6 @@ namespace Project19
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvAllUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvAllUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAllUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAllUsers.BackgroundColor = System.Drawing.Color.White;
             this.dgvAllUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -163,7 +171,7 @@ namespace Project19
             this.dgvAllUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -180,10 +188,10 @@ namespace Project19
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAllUsers.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvAllUsers.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvAllUsers.EnableHeadersVisualStyles = false;
             this.dgvAllUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.dgvAllUsers.Location = new System.Drawing.Point(0, 130);
-            this.dgvAllUsers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvAllUsers.Location = new System.Drawing.Point(0, 53);
             this.dgvAllUsers.MultiSelect = false;
             this.dgvAllUsers.Name = "dgvAllUsers";
             this.dgvAllUsers.ReadOnly = true;
@@ -205,9 +213,11 @@ namespace Project19
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             this.dgvAllUsers.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAllUsers.RowTemplate.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvAllUsers.RowTemplate.Height = 30;
+            this.dgvAllUsers.RowTemplate.Height = 35;
+            this.dgvAllUsers.RowTemplate.ReadOnly = true;
+            this.dgvAllUsers.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAllUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAllUsers.Size = new System.Drawing.Size(1000, 460);
+            this.dgvAllUsers.Size = new System.Drawing.Size(667, 299);
             this.dgvAllUsers.TabIndex = 1;
             // 
             // panel1
@@ -218,18 +228,16 @@ namespace Project19
             this.panel1.Font = new System.Drawing.Font("Sitka Small", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 130);
+            this.panel1.Size = new System.Drawing.Size(667, 53);
             this.panel1.TabIndex = 0;
             // 
             // lblTitle
             // 
-            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitle.Location = new System.Drawing.Point(334, 36);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(321, 43);
+            this.lblTitle.Size = new System.Drawing.Size(667, 29);
             this.lblTitle.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.lblTitle.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
             this.lblTitle.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
@@ -242,25 +250,14 @@ namespace Project19
             // 
             this.kryptonContextMenuItem1.Text = "Menu Item";
             // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.editToolStripMenuItem.Image = global::Project19.Properties.Resources.price_tag__1_;
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(256, 40);
-            this.editToolStripMenuItem.Text = "Edit Price";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
-            // 
             // Frm_Application_Types
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 720);
+            this.ClientSize = new System.Drawing.Size(667, 468);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Frm_Application_Types";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_User_Managment";

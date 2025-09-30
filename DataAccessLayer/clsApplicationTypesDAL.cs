@@ -43,7 +43,7 @@ namespace DataAccessLayer
         }
 
 
-        public static bool UpdateAppType(int ID,short Fee)
+        public static bool UpdateAppType(int ID,decimal Fee)
         {
             string query = @"UPDATE ApplicationTypes 
                                         SET ApplicationFees = @newfee 
@@ -55,6 +55,7 @@ namespace DataAccessLayer
                 using (SqlCommand cmd = new SqlCommand(query,cnx) )
                 {
                     cmd.Parameters.AddWithValue("@newfee", Fee);
+                    cmd.Parameters.AddWithValue("@id", ID);
                     try
                     {
                         cnx.Open();

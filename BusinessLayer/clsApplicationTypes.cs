@@ -13,17 +13,17 @@ namespace BusinessLayer
 
         public string ApplicationTypeTitle { get; set; }
 
-        public short ApplicationFee { get; set; }
+        public decimal ApplicationFee { get; set; }
 
 
-        clsApplicationTypes (int appID,string appTitle, short appFee)
+        public clsApplicationTypes (int appID,string appTitle, decimal appFee)
         {
             this.ApplicationTypeID = appID;
             this.ApplicationTypeTitle = appTitle;
             this.ApplicationFee = appFee;
         }
 
-        public bool UpdateAppFee(int appId, short appFee)
+        public static bool UpdateAppFee(int appId, decimal appFee)
         {
             return (clsApplicationTypesDAL.UpdateAppType(appId, appFee));
         }
