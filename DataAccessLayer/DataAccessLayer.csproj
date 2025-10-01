@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsApplicationTypesDAL.cs" />
+    <Compile Include="clsTestTypesDAL.cs" />
     <Compile Include="CountriesDAL.cs" />
     <Compile Include="PeopleDAL.cs" />
     <Compile Include="DataAccessSettings.cs" />

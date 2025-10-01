@@ -24,22 +24,29 @@ namespace Project19
         private async void LoadData()
         {
             DataTable dt = await clsApplicationTypes.GetAllAppTypes();
-            dgvAllUsers.DataSource = dt;
+            dgvQpps.DataSource = dt;
+
+            dgvQpps.Columns[0].HeaderText = "App ID";
+            dgvQpps.Columns[0].Width = 70;
+            dgvQpps.Columns[1].HeaderText = "App Title";
+            dgvQpps.Columns[1].Width = 200;
+            dgvQpps.Columns[2].HeaderText = "App Fee";
+            dgvQpps.Columns[2].Width = 100;
 
             lblTotalAppsNumb.Text = dt.Rows.Count.ToString(); 
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(dgvAllUsers.SelectedRows.Count == 0)
+            if(dgvQpps.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Please select a row to edit.", "No Selection",
                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            var rowID = dgvAllUsers.CurrentRow.Cells["ApplicationTypeID"].Value;
-            var rowPrice = dgvAllUsers.CurrentRow.Cells["ApplicationFees"].Value;
-            string Title = dgvAllUsers.CurrentRow.Cells["ApplicationTypeTitle"].Value.ToString();
+            var rowID = dgvQpps.CurrentRow.Cells["ApplicationTypeID"].Value;
+            var rowPrice = dgvQpps.CurrentRow.Cells["ApplicationFees"].Value;
+            string Title = dgvQpps.CurrentRow.Cells["ApplicationTypeTitle"].Value.ToString();
 
             if(int.TryParse(rowID.ToString(), out int id) && decimal.TryParse(rowPrice.ToString(), out decimal fee))
             {
