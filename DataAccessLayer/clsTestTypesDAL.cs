@@ -13,7 +13,7 @@ namespace DataAccessLayer
         public static async Task<DataTable> GetAllTestTypes()
         {
             DataTable dt = new DataTable();
-            string query = "SELECT * FROM TestTypes ORDER BY TestTypeID ACS;";
+            string query = "SELECT * FROM TestTypes ORDER BY TestTypeID ASC;";
 
             using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
             {
@@ -42,7 +42,38 @@ namespace DataAccessLayer
         }
 
 
+        public static bool UpdateTestType(int ID, string Title,string Description ,decimal Fee)
+        {
+            string query = @"UPDATE TestTypes 
+                                        SET TestTypeFees = @newfee,
+                                            TestTypeTitle = @title,
+                                            TestTypeDescription = @Descrp
+                                        WHERE TestTypeID = @id;";
+            int RowAffected = 0;
 
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, cnx))
+                {
+                    cmd.Parameters.AddWithValue("@newfee", Fee);
+                    cmd.Parameters.AddWithValue("@title", Title);
+                    cmd.Parameters.AddWithValue("@Descrp", Description);
+                    cmd.Parameters.AddWithValue("@id", ID);
+                    try
+                    {
+                        cnx.Open();
+                        RowAffected = cmd.ExecuteNonQuery();
+                        return (RowAffected != 0);
+                    }
+                    catch { return false; }
+
+
+                }
+            }
+
+
+
+        }
 
 
     }

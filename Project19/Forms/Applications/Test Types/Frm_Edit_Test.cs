@@ -1,44 +1,40 @@
-﻿using BusinessLayer;
-using ComponentFactory.Krypton.Toolkit;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
+using ComponentFactory.Krypton.Toolkit;
 
-
-namespace Project19
+namespace Project19.Forms.Applications.Test_Types
 {
-    public partial class Frm_edit_apps_price : KryptonForm
+    public partial class Frm_Edit_Test : KryptonForm
     {
-        public Frm_edit_apps_price(clsApplicationTypes Type)
+        public Frm_Edit_Test(clsTestTypes TP)
         {
             InitializeComponent();
-            LoadexPrice(Type);
+            LoadLabels(TP);
         }
 
-        private clsApplicationTypes Type = null;
+        private clsTestTypes UpdTest = null;
 
-        private void LoadexPrice(clsApplicationTypes apType)
+        private void LoadLabels(clsTestTypes tp)
         {
-            Type = apType;
-
-            tbPrice.Text = apType.ApplicationFee.ToString();
-            tbTitle.Text = apType.ApplicationTypeTitle.ToString();
-            lblAppIDNumb.Text = apType.ApplicationTypeID.ToString();
-            this.DialogResult = DialogResult.Abort;
-
+            lblTestIDNumb.Text = tp.TestID.ToString();
+            tbTitle.Text = tp.TestTitle.ToString();
+            tbPrice.Text = tp.TestFee.ToString();
+            tbDescription.Text =tp.TestDescription.ToString();
+            UpdTest = tp;
         }
 
         private void btncancel_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -49,16 +45,21 @@ namespace Project19
             }
             else
             {
-                Type.ApplicationFee = newFee;
-                Type.ApplicationTypeTitle = tbTitle.Text;
-                Type.ApplicationTypeID = int.Parse(lblAppIDNumb.Text);
+                UpdTest.TestFee = newFee;
+                UpdTest.TestTitle = tbTitle.Text;
+                if (Decimal.TryParse(lblNewPrice.Text,out decimal np))
+                {
+                    UpdTest.TestFee = np;
+                }
+                
+                UpdTest.TestDescription = tbDescription.Text;
 
-                if (Type.UpdateAppFee())
+                if (UpdTest.UpdateTest())
                 {
                     this.DialogResult = DialogResult.OK;
 
                     DialogResult res = MessageBox.Show("Edited Successfully!", "Edit Fees", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+
                     if (res == DialogResult.OK)
                     {
                         this.Close();

@@ -97,17 +97,29 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Applications\Types and Fees\Frm_Application_Types.cs">
+    <Compile Include="Forms\Applications\Apps Types\Frm_Application_Types.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Applications\Types and Fees\Frm_Application_Types.Designer.cs">
+    <Compile Include="Forms\Applications\Apps Types\Frm_Application_Types.Designer.cs">
       <DependentUpon>Frm_Application_Types.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Applications\Types and Fees\Frm_edit_apps_price.cs">
+    <Compile Include="Forms\Applications\Apps Types\Frm_edit_apps_price.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Applications\Types and Fees\Frm_edit_apps_price.Designer.cs">
+    <Compile Include="Forms\Applications\Apps Types\Frm_edit_apps_price.Designer.cs">
       <DependentUpon>Frm_edit_apps_price.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Applications\Test Types\Frm_Edit_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Applications\Test Types\Frm_Edit_Test.Designer.cs">
+      <DependentUpon>Frm_Edit_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Applications\Test Types\Frm_Test_Types.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Applications\Test Types\Frm_Test_Types.Designer.cs">
+      <DependentUpon>Frm_Test_Types.cs</DependentUpon>
     </Compile>
     <Compile Include="Handlers\Global Setting.cs" />
     <Compile Include="Handlers\DragFormHandler.cs" />
@@ -199,6 +211,12 @@
     <Compile Include="Controles\UsrCrtlLogingInfo.Designer.cs">
       <DependentUpon>UsrCrtlLogingInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\Applications\Test Types\Frm_Edit_Test.resx">
+      <DependentUpon>Frm_Edit_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Applications\Test Types\Frm_Test_Types.resx">
+      <DependentUpon>Frm_Test_Types.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main\Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,10 +247,10 @@
     <EmbeddedResource Include="Forms\User\Frm_Edit_User_Info.resx">
       <DependentUpon>Frm_Edit_User_Info.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Applications\Types and Fees\Frm_Application_Types.resx">
+    <EmbeddedResource Include="Forms\Applications\Apps Types\Frm_Application_Types.resx">
       <DependentUpon>Frm_Application_Types.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Applications\Types and Fees\Frm_edit_apps_price.resx">
+    <EmbeddedResource Include="Forms\Applications\Apps Types\Frm_edit_apps_price.resx">
       <DependentUpon>Frm_edit_apps_price.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -462,5 +480,6 @@
     <Content Include="Resources\user %281%29.png" />
     <None Include="Resources\user %281%291.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

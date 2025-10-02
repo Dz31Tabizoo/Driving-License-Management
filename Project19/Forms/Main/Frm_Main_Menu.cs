@@ -12,6 +12,7 @@ using ComponentFactory.Krypton.Toolkit;
 using System.Runtime.InteropServices;
 using BusinessLayer;
 using System.Security;
+using Project19.Forms.Applications.Test_Types;
 
 namespace Project19
 {
@@ -250,7 +251,9 @@ namespace Project19
             
         }
 
-
-
+        private void btnMngTestTypes_Click(object sender, EventArgs e)
+        {
+            loadForm(new Frm_Test_Types());
+        }
     }
 }

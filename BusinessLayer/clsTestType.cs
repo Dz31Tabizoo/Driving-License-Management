@@ -10,20 +10,33 @@ using System.Threading.Tasks;
 namespace BusinessLayer
 {
 
-    internal class clsTestTypes
+    public class clsTestTypes
     {
-        int TestID { get; set; }
-        string TestTitle { get; set; }
-        string TestDescription { get; set; }
-        decimal TestFee { get; set; }
+        public enum enTestType {VisionTest = 1 , WrittenTest = 2, StreetTest = 3 };
+        public clsTestTypes.enTestType TestID { get; set; }
+        public string TestTitle { get; set; }
+        public string TestDescription { get; set; }
+        public decimal TestFee { get; set; }
 
-        public clsTestTypes(int id, string title, string description, decimal fee)
+        public clsTestTypes(enTestType id, string title, string description, decimal fee)
         {
             this.TestID = id;
             this.TestTitle = title;
             this.TestDescription = description;
             this.TestFee = fee;
         }
+
+
+        public static async Task<DataTable> GetData()
+        {
+            return await clsTestTypeDAL.GetAllTestTypes();
+        }
+
+        public bool UpdateTest()
+        {
+            return clsTestTypeDAL.UpdateTestType((int)this.TestID, this.TestTitle, this.TestDescription, this.TestFee);
+        }
+
 
     }
 }
