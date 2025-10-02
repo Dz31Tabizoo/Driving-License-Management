@@ -1,4 +1,10 @@
-﻿
+﻿Class to create : 
 
-finish price app type price 
+▬ License Classes
+▬ Applications
+▬ Drivers
+▬ licenses 
+▬ localDrivingLicenseApplications
+
+
 

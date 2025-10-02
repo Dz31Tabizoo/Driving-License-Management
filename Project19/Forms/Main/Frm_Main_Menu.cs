@@ -84,10 +84,7 @@ namespace Project19
             }
 
         }
-
-        
-
-        
+                
 
         private void kryptonButton7_Click(object sender, EventArgs e)
         {
@@ -254,6 +251,11 @@ namespace Project19
         private void btnMngTestTypes_Click(object sender, EventArgs e)
         {
             loadForm(new Frm_Test_Types());
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

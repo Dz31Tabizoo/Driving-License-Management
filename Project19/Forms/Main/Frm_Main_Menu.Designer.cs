@@ -35,7 +35,6 @@ namespace Project19
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Main_Menu));
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.pnlMainPanel = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kryptonBorderEdge1 = new ComponentFactory.Krypton.Toolkit.KryptonBorderEdge();
             this.SideBarre = new System.Windows.Forms.FlowLayoutPanel();
             this.kryptonPanel2 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.pbMainMenu = new System.Windows.Forms.PictureBox();
@@ -55,6 +54,8 @@ namespace Project19
             this.btnApplication = new System.Windows.Forms.Button();
             this.kryptonPanel4 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.btnPeopleaMagement = new System.Windows.Forms.Button();
+            this.kryptonPanel5 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.btnUserM = new System.Windows.Forms.Button();
             this.pnlAccountSetting = new System.Windows.Forms.Panel();
             this.kryptonPanel15 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.button13 = new System.Windows.Forms.Button();
@@ -64,15 +65,13 @@ namespace Project19
             this.button15 = new System.Windows.Forms.Button();
             this.kryptonPanel18 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.button4 = new System.Windows.Forms.Button();
-            this.kryptonPanel5 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.btnUserM = new System.Windows.Forms.Button();
             this.kryptonPanel7 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.button5 = new System.Windows.Forms.Button();
             this.SideBarreTimer = new System.Windows.Forms.Timer(this.components);
             this.ApplicationTimer = new System.Windows.Forms.Timer(this.components);
             this.AccSetTimer = new System.Windows.Forms.Timer(this.components);
+            this.borderLayout1 = new Syncfusion.Windows.Forms.Tools.BorderLayout(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pnlMainPanel)).BeginInit();
-            this.pnlMainPanel.SuspendLayout();
             this.SideBarre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).BeginInit();
             this.kryptonPanel2.SuspendLayout();
@@ -92,6 +91,8 @@ namespace Project19
             this.kryptonPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).BeginInit();
             this.kryptonPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel5)).BeginInit();
+            this.kryptonPanel5.SuspendLayout();
             this.pnlAccountSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel15)).BeginInit();
             this.kryptonPanel15.SuspendLayout();
@@ -101,10 +102,9 @@ namespace Project19
             this.kryptonPanel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel18)).BeginInit();
             this.kryptonPanel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel5)).BeginInit();
-            this.kryptonPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel7)).BeginInit();
             this.kryptonPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.borderLayout1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonContextMenuItem1
@@ -113,26 +113,17 @@ namespace Project19
             // 
             // pnlMainPanel
             // 
-            this.pnlMainPanel.Controls.Add(this.kryptonBorderEdge1);
             this.pnlMainPanel.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlMainPanel.Location = new System.Drawing.Point(78, 0);
             this.pnlMainPanel.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMainPanel.Name = "pnlMainPanel";
-            this.pnlMainPanel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.HeaderPrimary;
+            this.pnlMainPanel.PanelBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.HeaderForm;
             this.pnlMainPanel.Size = new System.Drawing.Size(1202, 720);
             this.pnlMainPanel.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(207)))), ((int)(((byte)(203)))));
             this.pnlMainPanel.StateNormal.Color2 = System.Drawing.Color.White;
             this.pnlMainPanel.StateNormal.ColorAngle = 0F;
             this.pnlMainPanel.StateNormal.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.pnlMainPanel.TabIndex = 13;
-            // 
-            // kryptonBorderEdge1
-            // 
-            this.kryptonBorderEdge1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonBorderEdge1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.kryptonBorderEdge1.Name = "kryptonBorderEdge1";
-            this.kryptonBorderEdge1.Size = new System.Drawing.Size(75, 1);
-            this.kryptonBorderEdge1.Text = "kryptonBorderEdge1";
             // 
             // SideBarre
             // 
@@ -147,7 +138,7 @@ namespace Project19
             this.SideBarre.Location = new System.Drawing.Point(0, 0);
             this.SideBarre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SideBarre.MaximumSize = new System.Drawing.Size(240, 720);
-            this.SideBarre.MinimumSize = new System.Drawing.Size(78, 720);
+            this.SideBarre.MinimumSize = new System.Drawing.Size(75, 720);
             this.SideBarre.Name = "SideBarre";
             this.SideBarre.Size = new System.Drawing.Size(240, 720);
             this.SideBarre.TabIndex = 9;
@@ -204,7 +195,7 @@ namespace Project19
             this.pnlApplications.MaximumSize = new System.Drawing.Size(342, 421);
             this.pnlApplications.MinimumSize = new System.Drawing.Size(334, 74);
             this.pnlApplications.Name = "pnlApplications";
-            this.pnlApplications.Size = new System.Drawing.Size(342, 74);
+            this.pnlApplications.Size = new System.Drawing.Size(334, 74);
             this.pnlApplications.TabIndex = 16;
             // 
             // kryptonPanel12
@@ -377,7 +368,7 @@ namespace Project19
             this.btnApplication.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnApplication.Name = "btnApplication";
             this.btnApplication.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnApplication.Size = new System.Drawing.Size(388, 103);
+            this.btnApplication.Size = new System.Drawing.Size(384, 103);
             this.btnApplication.TabIndex = 12;
             this.btnApplication.Text = "                     Application";
             this.btnApplication.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -401,7 +392,7 @@ namespace Project19
             this.btnPeopleaMagement.ForeColor = System.Drawing.Color.White;
             this.btnPeopleaMagement.Image = ((System.Drawing.Image)(resources.GetObject("btnPeopleaMagement.Image")));
             this.btnPeopleaMagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPeopleaMagement.Location = new System.Drawing.Point(-28, -20);
+            this.btnPeopleaMagement.Location = new System.Drawing.Point(-30, -20);
             this.btnPeopleaMagement.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPeopleaMagement.Name = "btnPeopleaMagement";
             this.btnPeopleaMagement.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
@@ -411,6 +402,34 @@ namespace Project19
             this.btnPeopleaMagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPeopleaMagement.UseVisualStyleBackColor = true;
             this.btnPeopleaMagement.Click += new System.EventHandler(this.btnPeopleaMagement_Click);
+            // 
+            // kryptonPanel5
+            // 
+            this.kryptonPanel5.Controls.Add(this.btnUserM);
+            this.kryptonPanel5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonPanel5.Location = new System.Drawing.Point(4, 320);
+            this.kryptonPanel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.kryptonPanel5.Name = "kryptonPanel5";
+            this.kryptonPanel5.Size = new System.Drawing.Size(334, 74);
+            this.kryptonPanel5.TabIndex = 13;
+            // 
+            // btnUserM
+            // 
+            this.btnUserM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserM.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUserM.ForeColor = System.Drawing.Color.White;
+            this.btnUserM.Image = ((System.Drawing.Image)(resources.GetObject("btnUserM.Image")));
+            this.btnUserM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUserM.Location = new System.Drawing.Point(-30, -20);
+            this.btnUserM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnUserM.Name = "btnUserM";
+            this.btnUserM.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnUserM.Size = new System.Drawing.Size(388, 103);
+            this.btnUserM.TabIndex = 12;
+            this.btnUserM.Text = "               Users Managment";
+            this.btnUserM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUserM.UseVisualStyleBackColor = true;
+            this.btnUserM.Click += new System.EventHandler(this.btnUserM_Click);
             // 
             // pnlAccountSetting
             // 
@@ -425,7 +444,7 @@ namespace Project19
             this.pnlAccountSetting.MaximumSize = new System.Drawing.Size(342, 279);
             this.pnlAccountSetting.MinimumSize = new System.Drawing.Size(334, 74);
             this.pnlAccountSetting.Name = "pnlAccountSetting";
-            this.pnlAccountSetting.Size = new System.Drawing.Size(342, 74);
+            this.pnlAccountSetting.Size = new System.Drawing.Size(338, 74);
             this.pnlAccountSetting.TabIndex = 17;
             // 
             // kryptonPanel15
@@ -439,7 +458,7 @@ namespace Project19
             // 
             // button13
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(35)))), ((int)(((byte)(39)))));
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.White;
@@ -467,7 +486,7 @@ namespace Project19
             // 
             // button14
             // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(35)))), ((int)(((byte)(39)))));
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.White;
@@ -495,7 +514,7 @@ namespace Project19
             // 
             // button15
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(35)))), ((int)(((byte)(39)))));
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.White;
@@ -529,44 +548,16 @@ namespace Project19
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(-32, -18);
+            this.button4.Location = new System.Drawing.Point(-30, -21);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(388, 103);
+            this.button4.Size = new System.Drawing.Size(391, 103);
             this.button4.TabIndex = 12;
             this.button4.Text = "                 Account Settings";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // kryptonPanel5
-            // 
-            this.kryptonPanel5.Controls.Add(this.btnUserM);
-            this.kryptonPanel5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonPanel5.Location = new System.Drawing.Point(4, 320);
-            this.kryptonPanel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.kryptonPanel5.Name = "kryptonPanel5";
-            this.kryptonPanel5.Size = new System.Drawing.Size(334, 74);
-            this.kryptonPanel5.TabIndex = 13;
-            // 
-            // btnUserM
-            // 
-            this.btnUserM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUserM.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUserM.ForeColor = System.Drawing.Color.White;
-            this.btnUserM.Image = ((System.Drawing.Image)(resources.GetObject("btnUserM.Image")));
-            this.btnUserM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserM.Location = new System.Drawing.Point(-28, -20);
-            this.btnUserM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnUserM.Name = "btnUserM";
-            this.btnUserM.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnUserM.Size = new System.Drawing.Size(388, 103);
-            this.btnUserM.TabIndex = 12;
-            this.btnUserM.Text = "               Users Managment";
-            this.btnUserM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUserM.UseVisualStyleBackColor = true;
-            this.btnUserM.Click += new System.EventHandler(this.btnUserM_Click);
             // 
             // kryptonPanel7
             // 
@@ -585,7 +576,7 @@ namespace Project19
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(190)))), ((int)(((byte)(197)))));
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(-28, -20);
+            this.button5.Location = new System.Drawing.Point(-30, -20);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
@@ -594,6 +585,7 @@ namespace Project19
             this.button5.Text = "                      Sign Out";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // SideBarreTimer
             // 
@@ -609,6 +601,11 @@ namespace Project19
             // 
             this.AccSetTimer.Interval = 7;
             this.AccSetTimer.Tick += new System.EventHandler(this.AccSetTimer_Tick);
+            // 
+            // borderLayout1
+            // 
+            this.borderLayout1.HGap = 0;
+            this.borderLayout1.VGap = 0;
             // 
             // Frm_Main_Menu
             // 
@@ -627,8 +624,6 @@ namespace Project19
             this.Text = "Frm_Main_Menu";
             this.Load += new System.EventHandler(this.Frm_Main_Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnlMainPanel)).EndInit();
-            this.pnlMainPanel.ResumeLayout(false);
-            this.pnlMainPanel.PerformLayout();
             this.SideBarre.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel2)).EndInit();
             this.kryptonPanel2.ResumeLayout(false);
@@ -649,6 +644,8 @@ namespace Project19
             this.kryptonPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel4)).EndInit();
             this.kryptonPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel5)).EndInit();
+            this.kryptonPanel5.ResumeLayout(false);
             this.pnlAccountSetting.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel15)).EndInit();
             this.kryptonPanel15.ResumeLayout(false);
@@ -658,10 +655,9 @@ namespace Project19
             this.kryptonPanel17.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel18)).EndInit();
             this.kryptonPanel18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel5)).EndInit();
-            this.kryptonPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel7)).EndInit();
             this.kryptonPanel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.borderLayout1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -669,7 +665,6 @@ namespace Project19
         #endregion
         private KryptonContextMenuItem kryptonContextMenuItem1;
         private KryptonPanel pnlMainPanel;
-        private KryptonBorderEdge kryptonBorderEdge1;
         private System.Windows.Forms.FlowLayoutPanel SideBarre;
         private KryptonPanel kryptonPanel3;
         private System.Windows.Forms.Button btnApplication;
@@ -705,5 +700,6 @@ namespace Project19
         private KryptonPanel kryptonPanel2;
         private System.Windows.Forms.PictureBox pbMainMenu;
         private KryptonLabel lblFormTitle;
+        private Syncfusion.Windows.Forms.Tools.BorderLayout borderLayout1;
     }
 }
