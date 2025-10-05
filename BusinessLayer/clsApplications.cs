@@ -91,12 +91,17 @@ namespace BusinessLayer
 
         public enMode Mode => _mode;
 
+
+
+
+
         public clsApplications()
         {
             AppID = -1;
             AppDate = DateTime.Now;
             ApplicationStatus = enAppStatus.New; // this will set LastStatusDate = Now
             PaidFees = 0;
+           
         }
 
         public clsApplications(int appID, clsPeople applicant, DateTime appDate,
