@@ -61,6 +61,48 @@ namespace DataAccessLayer
         }
 
 
+        public static async Task<bool> isApplicationExisteAsync(int ID)
+        {
+            string query = "SELECT 1 as Found FROM Applications WHERE ApplicationID = @id;";
+            
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(query,cnx))
+                {
+                    cmd.Parameters.AddWithValue("@id", ID);
+                    await cnx.OpenAsync();
+
+                    object result = await cmd.ExecuteScalarAsync();
+
+                    return (result != null);
+                }
+            }
+        }
+
+
+        public static async Task<bool> UpdateApplicationStatusAsync(int applicationID, byte applicationStatus, DateTime lastStatusDate )
+        {
+            string query = @"UPDATE Application
+                                                SET ApplicationStatus = @appstat , LastStatusDate = @lastStDate
+                                       WHERE ApplicationID = @appId ;";
+            int rowAffected = -1;
+
+            using (SqlConnection conx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(query,conx))
+                {
+                    cmd.Parameters.AddWithValue("@appstat", applicationStatus);
+                    cmd.Parameters.AddWithValue("@lastStDate", lastStatusDate);
+                    cmd.Parameters.AddWithValue("@appId",applicationID);
+
+                    await conx.OpenAsync();
+
+                    rowAffected  = await cmd.ExecuteNonQueryAsync();
+                    return rowAffected > 0;
+                }
+            }
+
+        }
 
 
 

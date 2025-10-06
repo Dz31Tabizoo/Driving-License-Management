@@ -151,7 +151,7 @@ namespace DataAccessLayer
                     try
                     {
                         cnx.Open();
-                        Object result = cmd.ExecuteScalar();
+                        object result = cmd.ExecuteScalar();
 
                         found =  result != null ? (bool)result : false;
 
