@@ -64,7 +64,7 @@ namespace BusinessLayer
         public DateTime LastStatusDate
         {
             get => _lastStatusDate;
-            private set // Make setter private since it's auto-managed
+            set
             {
                 if (value > DateTime.Now)
                     throw new ArgumentException("Last status date cannot be in the future");

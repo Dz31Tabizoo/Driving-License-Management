@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +37,7 @@ namespace BusinessLayer
             Application = new clsApplications();
             LicenseClass = new clsLicenseClasses();
         }
+
         public clsLocalDrivingLicenseApplication( clsApplications application, clsLicenseClasses licenseClass)
         {
             LocalDrivingLicenseApplicationID = -1;
@@ -46,8 +49,59 @@ namespace BusinessLayer
 
 
 
+        public static async Task<List<clsLocalDrivingLicenseApplication>> GetAllLocalDriveLicenseApps()
+        {
+            List<clsLocalDrivingLicenseApplication> LocalApplicationList = new List<clsLocalDrivingLicenseApplication>();
+            
+         
+           // to be continued
 
 
+            return LocalApplicationList;
+        }
+
+
+        private static clsApplications MapToApplication( clsLocalDrivingLicenseApplicationDAL.LocalDrivingLicenseAppDTO dto)
+        {
+
+            return new clsApplications
+            {
+                AppID = dto.applicationID,
+                Applicant = new clsPeople
+                {
+                    PersonID = dto.applicantId,
+                    FirstName = dto.FirstName,
+                    SecondName = dto.SecondName,
+                    ThirdName = dto.ThirdName,
+                    LastName = dto.LastName,
+                    Email = dto.Email,
+                    Phone = dto.Phone
+                },
+                AppDate = dto.appDate,
+                ApplicationStatus = (clsApplications.enAppStatus)dto.appStatus,
+                LastStatusDate = dto.lastStatusDate,
+                PaidFees = dto.paidFees,
+                CreatedByUser = new clsUser
+                {
+                    UserID = dto.userID,
+                    UserName = dto.Username,
+                    IsActive = dto.IsActive
+                }
+            };
+        }
+
+        private static clsLicenseClasses MapToLicenseClass(clsLocalDrivingLicenseApplicationDAL.LocalDrivingLicenseAppDTO dto)
+        {
+            return new clsLicenseClasses
+            {
+                LicenseClassID = dto.licenseClassID,
+                ClassName = dto.className,
+                ClassDescription = dto.classDescription,
+                MinimumAge = dto.minimumAllowedAge,
+                DefaultValidityLength = dto.defaultValidityLength,
+                ClassFees = dto.classFees
+            };
+        }
 
     }
 }
