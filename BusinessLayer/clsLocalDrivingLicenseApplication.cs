@@ -51,13 +51,42 @@ namespace BusinessLayer
 
         public static async Task<List<clsLocalDrivingLicenseApplication>> GetAllLocalDriveLicenseApps()
         {
-            List<clsLocalDrivingLicenseApplication> LocalApplicationList = new List<clsLocalDrivingLicenseApplication>();
-            
-         
-           // to be continued
+            var dtos = await clsLocalDrivingLicenseApplicationDAL.GetAllLocalDrivingLicenseApps();
+            var result = new List<clsLocalDrivingLicenseApplication>();
 
+            foreach (var dto in dtos)
+            {
+                result.Add(new clsLocalDrivingLicenseApplication
+                {
+                    LocalDrivingLicenseApplicationID = dto.localDrivingLicenseApplicationID,
+                    ApplicationID = dto.applicationID,
+                    LicenseClassID = dto.licenseClassID,
+                    Application = new clsApplications
+                    {
+                        AppID = dto.appId,
+                        Applicant = new clsPeople
+                        {
+                            PersonID = dto.applicantId,
+                            FirstName = dto.FirstName,
+                            LastName = dto.LastName
+                        },
+                        AppDate = dto.appDate,
+                        ApplicationStatus = (clsApplications.enAppStatus)dto.appStatus,
+                        PaidFees = dto.paidFees
+                    },
+                    LicenseClass = new clsLicenseClasses
+                    {
+                        LicenseClassID = dto.licenseClassID,
+                        ClassName = dto.className,
+                        ClassDescription = dto.classDescription,
+                        MinimumAge = dto.minimumAllowedAge,
+                        DefaultValidityLength = dto.defaultValidityLength,
+                        ClassFees = dto.classFees
+                    }
+                });
+            }
 
-            return LocalApplicationList;
+            return result;
         }
 
 

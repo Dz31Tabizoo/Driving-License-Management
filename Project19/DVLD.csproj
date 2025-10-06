@@ -121,6 +121,12 @@
     <Compile Include="Forms\Applications\Test Types\Frm_Test_Types.Designer.cs">
       <DependentUpon>Frm_Test_Types.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_LocalLicendeDrivingManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_LocalLicendeDrivingManagement.Designer.cs">
+      <DependentUpon>Frm_LocalLicendeDrivingManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Handlers\Global Setting.cs" />
     <Compile Include="Handlers\DragFormHandler.cs" />
     <Compile Include="Forms\Main\Frm_Login.cs">
@@ -252,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Applications\Apps Types\Frm_edit_apps_price.resx">
       <DependentUpon>Frm_edit_apps_price.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_LocalLicendeDrivingManagement.resx">
+      <DependentUpon>Frm_LocalLicendeDrivingManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -425,6 +434,7 @@
     <None Include="Resources\add.png" />
     <None Include="Resources\2346679_310821-P8DC3I-291.png" />
     <None Include="Resources\360526283_11452747.png" />
+    <None Include="Resources\app.png" />
     <Content Include="Resources\close_RED.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
