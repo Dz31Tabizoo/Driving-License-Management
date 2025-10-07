@@ -35,6 +35,7 @@ namespace DataAccessLayer
             public decimal classFees { get; set; }
 
             // Person data
+            public string NationalNo { get; set; }
             public string FirstName { get; set; }
             public string SecondName { get; set; }
             public string ThirdName { get; set; }
@@ -78,6 +79,7 @@ namespace DataAccessLayer
                     p.SecondName,
                     p.ThirdName,
                     p.LastName,
+                    p.NationalNo,
                     p.Email,
                     p.Phone,
                       
@@ -126,6 +128,7 @@ namespace DataAccessLayer
                                 classFees = (decimal)reader["ClassFees"],
 
                                 // Person
+                                NationalNo = reader["NationalNo"].ToString(),
                                 FirstName = reader["FirstName"].ToString(),
                                 SecondName = reader["SecondName"].ToString(),
                                 ThirdName = reader["ThirdName"].ToString(),

@@ -257,5 +257,10 @@ namespace Project19
         {
 
         }
+
+        private void btnMngApplicatins_Click(object sender, EventArgs e)
+        {
+            loadForm(new Frm_LocalLicendeDrivingManagement());
+        }
     }
 }

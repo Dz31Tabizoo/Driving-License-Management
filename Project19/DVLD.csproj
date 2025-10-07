@@ -476,6 +476,7 @@
     <None Include="Resources\INDENTIFCARD.png" />
     <None Include="Resources\road_6696329.png" />
     <None Include="Resources\price-tag %281%29.png" />
+    <None Include="Resources\filter.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />

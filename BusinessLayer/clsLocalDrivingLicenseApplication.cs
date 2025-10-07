@@ -67,7 +67,10 @@ namespace BusinessLayer
                         Applicant = new clsPeople
                         {
                             PersonID = dto.applicantId,
+                            NationalNo = dto.NationalNo,
                             FirstName = dto.FirstName,
+                            SecondName = dto.SecondName,
+                            ThirdName = dto.ThirdName,
                             LastName = dto.LastName
                         },
                         AppDate = dto.appDate,
