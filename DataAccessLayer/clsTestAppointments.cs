@@ -10,6 +10,12 @@ namespace DataAccessLayer
     {
         public class TestAppsDTO
         {
+            
+
+
+
+
+
 
             public TestAppsDTO() { }
         }
