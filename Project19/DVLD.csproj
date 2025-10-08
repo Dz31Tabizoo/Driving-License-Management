@@ -121,10 +121,10 @@
     <Compile Include="Forms\Applications\Test Types\Frm_Test_Types.Designer.cs">
       <DependentUpon>Frm_Test_Types.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_LocalLicendeDrivingManagement.cs">
+    <Compile Include="Forms\Applications\Local Driving License Apps\Frm_LocalLicendeDrivingManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_LocalLicendeDrivingManagement.Designer.cs">
+    <Compile Include="Forms\Applications\Local Driving License Apps\Frm_LocalLicendeDrivingManagement.Designer.cs">
       <DependentUpon>Frm_LocalLicendeDrivingManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Handlers\Global Setting.cs" />
@@ -259,7 +259,7 @@
     <EmbeddedResource Include="Forms\Applications\Apps Types\Frm_edit_apps_price.resx">
       <DependentUpon>Frm_edit_apps_price.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_LocalLicendeDrivingManagement.resx">
+    <EmbeddedResource Include="Forms\Applications\Local Driving License Apps\Frm_LocalLicendeDrivingManagement.resx">
       <DependentUpon>Frm_LocalLicendeDrivingManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
