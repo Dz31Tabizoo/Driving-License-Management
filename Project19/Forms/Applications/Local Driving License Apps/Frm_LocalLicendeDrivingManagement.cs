@@ -17,34 +17,29 @@ namespace Project19
         {
             InitializeComponent();
             LoadDataGridView();
+            
         }
 
         private async void LoadDataGridView()
         {
             try
             {
-                var appList = await clsLocalDrivingLicenseApplication.GetAllLocalDriveLicenseApps();
+                DataTable dt = await clsLocalDrivingLicenseApplication.GetAllLocalDriveLicenseApps();
                 this.Cursor = Cursors.WaitCursor;
 
-
-                if (appList == null)
+                if (dt.Rows.Count == 0)
                 {
                     MessageBox.Show("Load Applications Data Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 dgvApplications.AutoGenerateColumns = true;
-                dgvApplications.DataSource = appList.Select(app => new
-                {
-                    ID = app.LocalDrivingLicenseApplicationID,
-                    ClassName = app.LicenseClass.ClassName,
-                    NationalNumber = app.Application.Applicant.NationalNo,
-                    FullName = app.Application.Applicant.FirstName + app.Application.Applicant.SecondName + app.Application.Applicant.ThirdName + app.Application.Applicant.LastName,
-                    Status = app.Application.ApplicationStatus
-                }).ToList();
+                dgvApplications.DataSource = dt;
 
+                dgvApplications.Columns["LocalDrivingLicenseApplicationID"].HeaderText = "Local DVL Applic Id";
 
+                lblTotalUserNum.Text = dgvApplications.RowCount.ToString();
 
-
+                LoadComboBox();
             }
             catch (Exception ex)
             {
@@ -57,7 +52,27 @@ namespace Project19
 
         }
 
+        private void LoadComboBox()
+        {
+            cmbSearchCriteria.Items.Clear();
 
+            cmbSearchCriteria.Items.Add("Select Filter..");
+
+            foreach (DataGridViewColumn Col  in dgvApplications.Columns)
+            {
+                cmbSearchCriteria.Items.Add(Col.HeaderText);
+            }
+            cmbSearchCriteria.SelectedIndex = 0;
+        }
+
+
+
+
+
+        private void btnClosePeopleMng_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

@@ -435,6 +435,7 @@
     <None Include="Resources\2346679_310821-P8DC3I-291.png" />
     <None Include="Resources\360526283_11452747.png" />
     <None Include="Resources\app.png" />
+    <None Include="Resources\calendar1.png" />
     <Content Include="Resources\close_RED.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -477,6 +478,11 @@
     <None Include="Resources\road_6696329.png" />
     <None Include="Resources\price-tag %281%29.png" />
     <None Include="Resources\filter.png" />
+    <None Include="Resources\tab.png" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\history.png" />
+    <None Include="Resources\registered-document.png" />
+    <None Include="Resources\licensing.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />
