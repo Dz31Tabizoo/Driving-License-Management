@@ -17,6 +17,7 @@ namespace Project19
         {
             InitializeComponent();
             LoadDataGridView();
+            
         }
 
         private async void LoadDataGridView()
@@ -36,7 +37,9 @@ namespace Project19
 
                 dgvApplications.Columns["LocalDrivingLicenseApplicationID"].HeaderText = "Local DVL Applic Id";
 
+                lblTotalUserNum.Text = dgvApplications.RowCount.ToString();
 
+                LoadComboBox();
             }
             catch (Exception ex)
             {
@@ -48,6 +51,23 @@ namespace Project19
 
 
         }
+
+        private void LoadComboBox()
+        {
+            cmbSearchCriteria.Items.Clear();
+
+            cmbSearchCriteria.Items.Add("Select Filter..");
+
+            foreach (DataGridViewColumn Col  in dgvApplications.Columns)
+            {
+                cmbSearchCriteria.Items.Add(Col.HeaderText);
+            }
+            cmbSearchCriteria.SelectedIndex = 0;
+        }
+
+
+
+
 
         private void btnClosePeopleMng_Click(object sender, EventArgs e)
         {
