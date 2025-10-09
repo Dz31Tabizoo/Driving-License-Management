@@ -54,13 +54,19 @@ namespace Project19
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddNewtoolstrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.ChangePAsswordtoolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ChangePAsswordtoolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.issueDrivingLicense1stTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phoneCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.emailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showDrivingLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -79,30 +85,36 @@ namespace Project19
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showDetailsToolStripMenuItem,
-            this.AddNewtoolstrip,
             this.toolStripSeparator1,
-            this.ChangePAsswordtoolStrip,
+            this.AddNewtoolstrip,
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem,
-            this.toolStripSeparator2,
+            this.toolStripSeparator6,
+            this.ChangePAsswordtoolStrip,
+            this.toolStripSeparator3,
             this.phoneCallToolStripMenuItem,
+            this.toolStripSeparator5,
+            this.issueDrivingLicense1stTimeToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.showDrivingLicenseToolStripMenuItem,
+            this.toolStripSeparator4,
             this.emailToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(197, 282);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(278, 382);
             this.contextMenuStrip1.Text = "User Options";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(193, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(274, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(193, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(274, 6);
             // 
             // kryptonPanel1
             // 
@@ -193,6 +205,7 @@ namespace Project19
             this.btnClosePeopleMng.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClosePeopleMng.TabIndex = 2;
             this.btnClosePeopleMng.Values.Text = "Close";
+            this.btnClosePeopleMng.Click += new System.EventHandler(this.btnClosePeopleMng_Click);
             // 
             // dgvApplications
             // 
@@ -533,6 +546,24 @@ namespace Project19
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(274, 6);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(274, 6);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(274, 6);
+            // 
             // showDetailsToolStripMenuItem
             // 
             this.showDetailsToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -540,27 +571,17 @@ namespace Project19
             this.showDetailsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.showDetailsToolStripMenuItem.Image = global::Project19.Properties.Resources.info;
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.showDetailsToolStripMenuItem.Text = "Show Details";
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.showDetailsToolStripMenuItem.Text = "Show Application Details";
             // 
             // AddNewtoolstrip
             // 
             this.AddNewtoolstrip.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddNewtoolstrip.ForeColor = System.Drawing.Color.White;
-            this.AddNewtoolstrip.Image = global::Project19.Properties.Resources.add_friend;
+            this.AddNewtoolstrip.Image = global::Project19.Properties.Resources.tab;
             this.AddNewtoolstrip.Name = "AddNewtoolstrip";
-            this.AddNewtoolstrip.Size = new System.Drawing.Size(196, 38);
-            this.AddNewtoolstrip.Text = "Add New User";
-            // 
-            // ChangePAsswordtoolStrip
-            // 
-            this.ChangePAsswordtoolStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ChangePAsswordtoolStrip.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangePAsswordtoolStrip.ForeColor = System.Drawing.Color.White;
-            this.ChangePAsswordtoolStrip.Image = global::Project19.Properties.Resources.locked__1_;
-            this.ChangePAsswordtoolStrip.Name = "ChangePAsswordtoolStrip";
-            this.ChangePAsswordtoolStrip.Size = new System.Drawing.Size(196, 38);
-            this.ChangePAsswordtoolStrip.Text = "Edit Password";
+            this.AddNewtoolstrip.Size = new System.Drawing.Size(277, 38);
+            this.AddNewtoolstrip.Text = "Add New Application";
             // 
             // editToolStripMenuItem
             // 
@@ -568,8 +589,8 @@ namespace Project19
             this.editToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.editToolStripMenuItem.Image = global::Project19.Properties.Resources.edit;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.editToolStripMenuItem.Text = "Edit Informations";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.editToolStripMenuItem.Text = "Edit Application";
             // 
             // deleteToolStripMenuItem
             // 
@@ -577,26 +598,60 @@ namespace Project19
             this.deleteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.deleteToolStripMenuItem.Image = global::Project19.Properties.Resources.delete__3_;
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.deleteToolStripMenuItem.Text = "Delete ";
+            // 
+            // ChangePAsswordtoolStrip
+            // 
+            this.ChangePAsswordtoolStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ChangePAsswordtoolStrip.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangePAsswordtoolStrip.ForeColor = System.Drawing.Color.White;
+            this.ChangePAsswordtoolStrip.Image = global::Project19.Properties.Resources.cross;
+            this.ChangePAsswordtoolStrip.Name = "ChangePAsswordtoolStrip";
+            this.ChangePAsswordtoolStrip.Size = new System.Drawing.Size(277, 38);
+            this.ChangePAsswordtoolStrip.Text = "Cancel Application";
+            // 
+            // issueDrivingLicense1stTimeToolStripMenuItem
+            // 
+            this.issueDrivingLicense1stTimeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.issueDrivingLicense1stTimeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.issueDrivingLicense1stTimeToolStripMenuItem.Image = global::Project19.Properties.Resources.registered_document;
+            this.issueDrivingLicense1stTimeToolStripMenuItem.Name = "issueDrivingLicense1stTimeToolStripMenuItem";
+            this.issueDrivingLicense1stTimeToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.issueDrivingLicense1stTimeToolStripMenuItem.Text = "Issue Driving License (1st Time)";
             // 
             // phoneCallToolStripMenuItem
             // 
             this.phoneCallToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneCallToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.phoneCallToolStripMenuItem.Image = global::Project19.Properties.Resources.phone_call;
+            this.phoneCallToolStripMenuItem.Image = global::Project19.Properties.Resources.calendar1;
             this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.phoneCallToolStripMenuItem.Text = "Phone Call";
+            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.phoneCallToolStripMenuItem.Text = "Sechdule Tests";
             // 
             // emailToolStripMenuItem
             // 
             this.emailToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.emailToolStripMenuItem.Image = global::Project19.Properties.Resources.email;
+            this.emailToolStripMenuItem.Image = global::Project19.Properties.Resources.history;
             this.emailToolStripMenuItem.Name = "emailToolStripMenuItem";
-            this.emailToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
-            this.emailToolStripMenuItem.Text = "Email";
+            this.emailToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.emailToolStripMenuItem.Text = "Show Person License History";
+            // 
+            // showDrivingLicenseToolStripMenuItem
+            // 
+            this.showDrivingLicenseToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.showDrivingLicenseToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.showDrivingLicenseToolStripMenuItem.Image = global::Project19.Properties.Resources.licensing;
+            this.showDrivingLicenseToolStripMenuItem.Name = "showDrivingLicenseToolStripMenuItem";
+            this.showDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.showDrivingLicenseToolStripMenuItem.Text = "Show Driving License";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(274, 6);
             // 
             // Frm_LocalLicendeDrivingManagement
             // 
@@ -648,5 +703,11 @@ namespace Project19
         private KryptonTextBox TxtSearchTerm;
         private KryptonLabel kryptonLabel2;
         private KryptonButton btnSearch;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem issueDrivingLicense1stTimeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem showDrivingLicenseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
     }
 }
