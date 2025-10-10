@@ -38,6 +38,8 @@ namespace Project19
 
         private DataTable DtPerson = clsPeople.GetAllPeople();
 
+
+
         private void LoadPersonsToSearch()
         {
             DataTable DtPerson = new DataTable();
@@ -133,7 +135,13 @@ namespace Project19
         {
             if (row.Table.Columns.Contains("PersonID"))
             {
-                lblPersonIdOutput.Text = row["PersonID"].ToString();
+                if (int.TryParse(row["PersonID"].ToString() ,out int Pid))
+                {
+                    lblPersonIdOutput.Text = Pid.ToString();
+                    _PersonID = Pid;
+                }
+                
+                
             }
 
             if (row.Table.Columns.Contains("FirstName") && row.Table.Columns.Contains("SecondName") && row.Table.Columns.Contains("ThirdName") && row.Table.Columns.Contains("LastName"))

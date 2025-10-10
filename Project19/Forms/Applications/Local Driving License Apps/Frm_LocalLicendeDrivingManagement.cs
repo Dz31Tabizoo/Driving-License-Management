@@ -73,6 +73,22 @@ namespace Project19
         {
             this.Close();
         }
+
+        private void lblAddPerson_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblAddPerson_Click(object sender, EventArgs e)
+        {
+            Form frm = new Frm_New_Local_DVL();
+            frm.ShowDialog();
+        }
     }
 
 }

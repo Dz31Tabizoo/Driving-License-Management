@@ -127,6 +127,12 @@
     <Compile Include="Forms\Applications\Local Driving License Apps\Frm_LocalLicendeDrivingManagement.Designer.cs">
       <DependentUpon>Frm_LocalLicendeDrivingManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_New_Local_DVL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_New_Local_DVL.Designer.cs">
+      <DependentUpon>Frm_New_Local_DVL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Handlers\Global Setting.cs" />
     <Compile Include="Handlers\DragFormHandler.cs" />
     <Compile Include="Forms\Main\Frm_Login.cs">
@@ -261,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Applications\Local Driving License Apps\Frm_LocalLicendeDrivingManagement.resx">
       <DependentUpon>Frm_LocalLicendeDrivingManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_New_Local_DVL.resx">
+      <DependentUpon>Frm_New_Local_DVL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -483,6 +492,7 @@
     <None Include="Resources\history.png" />
     <None Include="Resources\registered-document.png" />
     <None Include="Resources\licensing.png" />
+    <None Include="Resources\right-arrow.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />
