@@ -36,9 +36,22 @@
             this.btnLogin = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.crtlPersonCardWithFilter1 = new Project19.crtlPersonCardWithFilter();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbxLicenseClasses = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.lblLicenseClass = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblUserCreatedByOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblAppFeeOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblApplicationFee = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblApplicationDateOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblApplicationDate = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblldvlApplicationOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblApplicationID = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.btnSaveEdit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxLicenseClasses)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
@@ -100,7 +113,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(16, 64);
+            this.tabControl1.Location = new System.Drawing.Point(21, 64);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(868, 604);
@@ -196,6 +209,17 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnSaveEdit);
+            this.tabPage2.Controls.Add(this.cbxLicenseClasses);
+            this.tabPage2.Controls.Add(this.lblLicenseClass);
+            this.tabPage2.Controls.Add(this.lblUserCreatedByOutput);
+            this.tabPage2.Controls.Add(this.kryptonLabel3);
+            this.tabPage2.Controls.Add(this.lblAppFeeOutput);
+            this.tabPage2.Controls.Add(this.lblApplicationFee);
+            this.tabPage2.Controls.Add(this.lblApplicationDateOutput);
+            this.tabPage2.Controls.Add(this.lblApplicationDate);
+            this.tabPage2.Controls.Add(this.lblldvlApplicationOutput);
+            this.tabPage2.Controls.Add(this.lblApplicationID);
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -203,6 +227,190 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Application";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // cbxLicenseClasses
+            // 
+            this.cbxLicenseClasses.DropDownWidth = 205;
+            this.cbxLicenseClasses.Location = new System.Drawing.Point(278, 176);
+            this.cbxLicenseClasses.Name = "cbxLicenseClasses";
+            this.cbxLicenseClasses.Size = new System.Drawing.Size(205, 21);
+            this.cbxLicenseClasses.StateNormal.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.cbxLicenseClasses.StateNormal.ComboBox.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cbxLicenseClasses.StateNormal.ComboBox.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cbxLicenseClasses.StateNormal.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cbxLicenseClasses.StateNormal.ComboBox.Border.Rounding = 5;
+            this.cbxLicenseClasses.StateNormal.ComboBox.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.cbxLicenseClasses.StateNormal.ComboBox.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxLicenseClasses.StateNormal.Item.Back.Color1 = System.Drawing.Color.White;
+            this.cbxLicenseClasses.StateNormal.Item.Back.Color2 = System.Drawing.Color.White;
+            this.cbxLicenseClasses.StateNormal.Item.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cbxLicenseClasses.StateNormal.Item.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cbxLicenseClasses.StateNormal.Item.Border.ColorAngle = 45F;
+            this.cbxLicenseClasses.StateNormal.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cbxLicenseClasses.StateNormal.Item.Border.Rounding = 0;
+            this.cbxLicenseClasses.StateNormal.Item.Border.Width = 1;
+            this.cbxLicenseClasses.StateNormal.Item.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.cbxLicenseClasses.StateNormal.Item.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.cbxLicenseClasses.StateNormal.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxLicenseClasses.StateTracking.Item.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.cbxLicenseClasses.StateTracking.Item.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.cbxLicenseClasses.StateTracking.Item.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.cbxLicenseClasses.StateTracking.Item.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.cbxLicenseClasses.StateTracking.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cbxLicenseClasses.StateTracking.Item.Border.Rounding = 0;
+            this.cbxLicenseClasses.StateTracking.Item.Content.LongText.Color1 = System.Drawing.Color.White;
+            this.cbxLicenseClasses.StateTracking.Item.Content.LongText.Color2 = System.Drawing.Color.White;
+            this.cbxLicenseClasses.StateTracking.Item.Content.LongText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxLicenseClasses.StateTracking.Item.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.cbxLicenseClasses.StateTracking.Item.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.cbxLicenseClasses.StateTracking.Item.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxLicenseClasses.TabIndex = 9;
+            this.cbxLicenseClasses.Text = "Select a License Class ...";
+            // 
+            // lblLicenseClass
+            // 
+            this.lblLicenseClass.Location = new System.Drawing.Point(149, 176);
+            this.lblLicenseClass.Name = "lblLicenseClass";
+            this.lblLicenseClass.Size = new System.Drawing.Size(120, 26);
+            this.lblLicenseClass.StateCommon.ShortText.Color1 = System.Drawing.Color.Navy;
+            this.lblLicenseClass.StateCommon.ShortText.Color2 = System.Drawing.Color.Navy;
+            this.lblLicenseClass.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblLicenseClass.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblLicenseClass.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLicenseClass.TabIndex = 8;
+            this.lblLicenseClass.Values.Text = "License Class :";
+            // 
+            // lblUserCreatedByOutput
+            // 
+            this.lblUserCreatedByOutput.Location = new System.Drawing.Point(278, 240);
+            this.lblUserCreatedByOutput.Name = "lblUserCreatedByOutput";
+            this.lblUserCreatedByOutput.Size = new System.Drawing.Size(54, 26);
+            this.lblUserCreatedByOutput.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblUserCreatedByOutput.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblUserCreatedByOutput.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserCreatedByOutput.TabIndex = 7;
+            this.lblUserCreatedByOutput.Values.Text = "[****]";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(164, 240);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(105, 26);
+            this.kryptonLabel3.StateCommon.ShortText.Color1 = System.Drawing.Color.Navy;
+            this.kryptonLabel3.StateCommon.ShortText.Color2 = System.Drawing.Color.Navy;
+            this.kryptonLabel3.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.kryptonLabel3.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.kryptonLabel3.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel3.TabIndex = 6;
+            this.kryptonLabel3.Values.Text = "Created By :";
+            // 
+            // lblAppFeeOutput
+            // 
+            this.lblAppFeeOutput.Location = new System.Drawing.Point(275, 208);
+            this.lblAppFeeOutput.Name = "lblAppFeeOutput";
+            this.lblAppFeeOutput.Size = new System.Drawing.Size(45, 26);
+            this.lblAppFeeOutput.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblAppFeeOutput.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblAppFeeOutput.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppFeeOutput.TabIndex = 5;
+            this.lblAppFeeOutput.Values.Text = "15 $";
+            // 
+            // lblApplicationFee
+            // 
+            this.lblApplicationFee.Location = new System.Drawing.Point(121, 208);
+            this.lblApplicationFee.Name = "lblApplicationFee";
+            this.lblApplicationFee.Size = new System.Drawing.Size(148, 26);
+            this.lblApplicationFee.StateCommon.ShortText.Color1 = System.Drawing.Color.Navy;
+            this.lblApplicationFee.StateCommon.ShortText.Color2 = System.Drawing.Color.Navy;
+            this.lblApplicationFee.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblApplicationFee.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblApplicationFee.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApplicationFee.TabIndex = 4;
+            this.lblApplicationFee.Values.Text = "Application Fees :";
+            // 
+            // lblApplicationDateOutput
+            // 
+            this.lblApplicationDateOutput.Location = new System.Drawing.Point(275, 136);
+            this.lblApplicationDateOutput.Name = "lblApplicationDateOutput";
+            this.lblApplicationDateOutput.Size = new System.Drawing.Size(54, 26);
+            this.lblApplicationDateOutput.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblApplicationDateOutput.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblApplicationDateOutput.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApplicationDateOutput.TabIndex = 3;
+            this.lblApplicationDateOutput.Values.Text = "[****]";
+            // 
+            // lblApplicationDate
+            // 
+            this.lblApplicationDate.Location = new System.Drawing.Point(118, 136);
+            this.lblApplicationDate.Name = "lblApplicationDate";
+            this.lblApplicationDate.Size = new System.Drawing.Size(151, 26);
+            this.lblApplicationDate.StateCommon.ShortText.Color1 = System.Drawing.Color.Navy;
+            this.lblApplicationDate.StateCommon.ShortText.Color2 = System.Drawing.Color.Navy;
+            this.lblApplicationDate.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblApplicationDate.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblApplicationDate.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApplicationDate.TabIndex = 2;
+            this.lblApplicationDate.Values.Text = "Application Date :";
+            // 
+            // lblldvlApplicationOutput
+            // 
+            this.lblldvlApplicationOutput.Location = new System.Drawing.Point(275, 95);
+            this.lblldvlApplicationOutput.Name = "lblldvlApplicationOutput";
+            this.lblldvlApplicationOutput.Size = new System.Drawing.Size(54, 26);
+            this.lblldvlApplicationOutput.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblldvlApplicationOutput.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblldvlApplicationOutput.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblldvlApplicationOutput.TabIndex = 1;
+            this.lblldvlApplicationOutput.Values.Text = "[****]";
+            // 
+            // lblApplicationID
+            // 
+            this.lblApplicationID.Location = new System.Drawing.Point(137, 95);
+            this.lblApplicationID.Name = "lblApplicationID";
+            this.lblApplicationID.Size = new System.Drawing.Size(132, 26);
+            this.lblApplicationID.StateCommon.ShortText.Color1 = System.Drawing.Color.Navy;
+            this.lblApplicationID.StateCommon.ShortText.Color2 = System.Drawing.Color.Navy;
+            this.lblApplicationID.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblApplicationID.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblApplicationID.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApplicationID.TabIndex = 0;
+            this.lblApplicationID.Values.Text = "Application ID :";
+            // 
+            // btnSaveEdit
+            // 
+            this.btnSaveEdit.Location = new System.Drawing.Point(329, 421);
+            this.btnSaveEdit.Name = "btnSaveEdit";
+            this.btnSaveEdit.Size = new System.Drawing.Size(177, 39);
+            this.btnSaveEdit.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.btnSaveEdit.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.btnSaveEdit.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.btnSaveEdit.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.btnSaveEdit.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSaveEdit.StateCommon.Border.Rounding = 5;
+            this.btnSaveEdit.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnSaveEdit.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnSaveEdit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveEdit.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnSaveEdit.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnSaveEdit.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnSaveEdit.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnSaveEdit.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSaveEdit.StateTracking.Border.Rounding = 5;
+            this.btnSaveEdit.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnSaveEdit.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnSaveEdit.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveEdit.TabIndex = 10;
+            this.btnSaveEdit.Values.Text = "New Application";
             // 
             // Frm_New_Local_DVL
             // 
@@ -220,6 +428,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxLicenseClasses)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +445,16 @@
         private crtlPersonCardWithFilter crtlPersonCardWithFilter1;
         private System.Windows.Forms.TabPage tabPage2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnLogin;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblApplicationID;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblAppFeeOutput;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblApplicationFee;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblApplicationDateOutput;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblApplicationDate;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblldvlApplicationOutput;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblLicenseClass;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblUserCreatedByOutput;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbxLicenseClasses;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSaveEdit;
     }
 }
