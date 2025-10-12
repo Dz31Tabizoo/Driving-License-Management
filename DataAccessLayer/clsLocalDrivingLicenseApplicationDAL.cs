@@ -52,6 +52,46 @@ FROM                     LocalDrivingLicenseApplications l INNER JOIN
         }
 
 
+        public static async Task<int> AddNewLocalApplication(int applicationID,int licenseClassID)
+        {
+            string Query = @"Insert into LocalDrivingLicenseApplications 
+                               (LocalDrivingLicenseApplicationID , ApplicationID , LicenseClassIDD)
+                        VALUES (@appID,@licenseApp);
+                SELECT SCOPE_IDENTITY();";
+
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(Query, cnx))
+                {
+                    cmd.Parameters.AddWithValue("@appID",applicationID);
+                    cmd.Parameters.AddWithValue("@licenseApp", licenseClassID);
+                   
+
+                    try
+                    {
+                        await cnx.OpenAsync();
+                        object result = await cmd.ExecuteScalarAsync();
+
+                        if (result != null && int.TryParse(result.ToString(), out int newLDVLapp))
+                        {
+                            return newLDVLapp;
+                        }
+                        else
+                        {
+                            return -1;
+                        }
+
+                    }
+                    catch
+                    {
+                        return -1;
+
+                    }
+                }
+
+
+            }
+
 
 
     }

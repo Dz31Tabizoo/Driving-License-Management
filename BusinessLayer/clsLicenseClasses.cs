@@ -10,15 +10,20 @@ namespace BusinessLayer
 {
     public class clsLicenseClasses
     {
+        public enum enMode { AddNew = 1, Update = 2 }
+
+        public enMode Mode { get; set; } = enMode.AddNew;
         public int LicenseClassID { get; set; }
         public string ClassName { get; set; } = string.Empty;
         public string ClassDescription { get; set; } = string.Empty;
         public byte MinimumAge { get; set; }
         public byte DefaultValidityLength { get; set; }
-        public decimal ClassFees { get; set; }
+        public decimal ClassFees { get ; set; }
 
+        
         public clsLicenseClasses()
         {
+
             LicenseClassID = 0;
             ClassName = string.Empty;
             ClassDescription = string.Empty;
@@ -35,6 +40,7 @@ namespace BusinessLayer
             MinimumAge = minAge;
             DefaultValidityLength = validityLength;
             ClassFees = fees;
+            Mode = enMode.Update;
         }
 
 
@@ -60,6 +66,12 @@ namespace BusinessLayer
             }
             return Classes;
         }
+
+
+        
+
+
+
 
 
 

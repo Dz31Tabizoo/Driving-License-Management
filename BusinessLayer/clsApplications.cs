@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
 using System.Linq;
@@ -18,13 +19,13 @@ namespace BusinessLayer
         private clsApplicationTypes _appType;
         private clsUser _createdByUser;
 
-        public enum enAppStatus { New = 1, Cancelled = 2, Completed = 3 };
         public enum enMode { AddNew = 0, Update = 1 };
-
         private enMode _mode = enMode.AddNew;
 
-        public int AppID { get; set; }
 
+
+        public enum enAppStatus { New = 1, Cancelled = 2, Completed = 3 };              
+        public int AppID { get; set; }
         public clsPeople Applicant
         {
             get => _applicant;
@@ -99,10 +100,15 @@ namespace BusinessLayer
         {
             AppID = -1;
             AppDate = DateTime.Now;
+            AppType = new clsApplicationTypes();
             ApplicationStatus = enAppStatus.New; // this will set LastStatusDate = Now
-            PaidFees = 0;
+            PaidFees = AppType.ApplicationFee;
+            CreatedByUser = new clsUser();
            
         }
+
+
+
 
         public clsApplications(int appID, clsPeople applicant, DateTime appDate,
                              clsApplicationTypes appType, enAppStatus applicationStatus,
@@ -122,13 +128,58 @@ namespace BusinessLayer
 
 
 
+        public async Task<bool> Save()
+        {
+            switch (Mode)
+            {
+                case enMode.Update:
+                    
+                    return true;
+                   
+
+                case enMode.AddNew:
+                    return await _AddNewApp();
+                    
+                    
+
+            }
+            return false;
+        }
+
+
+        private async Task<bool> _AddNewApp()
+        {
+            this.AppID = await clsApplicationsDAL.AddNewApplication(this.Applicant.PersonID, this.AppDate, this.AppType.ApplicationTypeID, (byte)this.ApplicationStatus, this.LastStatusDate, this.PaidFees, this.CreatedByUser.UserID);
+
+
+            return AppID != -1;
+        }
+
+
+        public static async Task<clsApplications> FindApplicationByID(int appID)
+        {
+            var obj = await clsApplicationsDAL.FindApplicationByIDasync(appID);
+            if (obj == null)
+            {
+                return null;
+            }
+
+            clsApplications newObj = new clsApplications();
+            newObj._mode = enMode.Update;
+            newObj.Applicant = clsPeople.FindPersonByID(obj.applicantId);
+            newObj.ApplicationStatus = (enAppStatus) obj.appStatus;
+            newObj.AppDate = obj.appDate;
+            newObj.AppType = clsApplicationTypes.FindAppTypeBtID(obj.appTypeId);
+            newObj.PaidFees = obj.paidFees;
+            newObj.LastStatusDate = obj.lastStatusDate;
+            newObj.CreatedByUser = clsUser.FindUserByID(obj.userID);
 
 
 
+            // it's a bad practice for me to call database every time + 3  we should call one time all tables using joins and filter to get data easly
 
-
-
-
+            return newObj;
+        }
 
 
     }

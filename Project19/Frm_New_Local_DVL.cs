@@ -13,6 +13,7 @@ namespace Project19
 {
     public partial class Frm_New_Local_DVL : KryptonForm
     {
+        
         public Frm_New_Local_DVL()
         {
             InitializeComponent();
@@ -24,10 +25,24 @@ namespace Project19
             lblApplicationDateOutput.Text = DateTime.Now.ToString("dd-MM-yyyy");
             lblUserCreatedByOutput.Text = GlobalSetting.CurrentUser.UserName;
             lblUserCreatedByOutput.Tag = GlobalSetting.CurrentUser.UserID;
-           
+
+
+
+            
+            var licenseClasses = new List<clsLicenseClasses>();
+
+            var listdata = await clsLicenseClasses.GetAllLicensesClasses();
+
+
+       
+            licenseClasses.Add(new clsLicenseClasses { LicenseClassID = -1, ClassName = "Select a class..." });
+            licenseClasses.AddRange(listdata);
+
             cbxLicenseClasses.DisplayMember = "ClassName";
             cbxLicenseClasses.ValueMember = "LicenseClassID";
-            cbxLicenseClasses.DataSource = await clsLicenseClasses.GetAllLicensesClasses();
+            cbxLicenseClasses.DataSource = licenseClasses;
+            cbxLicenseClasses.SelectedIndex = 0;
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)

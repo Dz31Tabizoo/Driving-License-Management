@@ -11,8 +11,10 @@ namespace BusinessLayer
 {
     public class clsLocalDrivingLicenseApplication
     {
+        public enum enMode { Addnew = 1, Update = 2 }
 
-        public int LocalDrivingLicenseApplicationID { get; set; }
+        public enMode Mode { get; set; } = enMode.Addnew;
+        public int LocalDrivingLicenseApplicationID {get; set; }
         public int ApplicationID { get; set; }
         public int LicenseClassID { get; set; }
 
@@ -26,8 +28,8 @@ namespace BusinessLayer
             LocalDrivingLicenseApplicationID = -1;
             ApplicationID = -1;
             LicenseClassID = -1;
-            Application = new clsApplications();
-            LicenseClass = new clsLicenseClasses();
+            Mode = enMode.Addnew;
+            
         }
 
         public clsLocalDrivingLicenseApplication(int applicationId, int licenseClassId)
@@ -35,8 +37,8 @@ namespace BusinessLayer
             LocalDrivingLicenseApplicationID = -1;
             ApplicationID = applicationId;
             LicenseClassID = licenseClassId;
-            Application = new clsApplications();
-            LicenseClass = new clsLicenseClasses();
+            Mode = enMode.Update;
+          
         }
 
         public clsLocalDrivingLicenseApplication(clsApplications application, clsLicenseClasses licenseClass)
@@ -55,6 +57,31 @@ namespace BusinessLayer
             return await clsLocalDrivingLicenseApplicationDAL.GetAllLocalDrivingLicenseApps();
         }
 
+
+        private async Task <bool> _AddNewLDVLApplication()
+        {
+            this.LocalDrivingLicenseApplicationID = await clsLocalDrivingLicenseApplicationDAL.AddNewLocalApplication(ApplicationID, LicenseClassID);
+            return this.LocalDrivingLicenseApplicationID != -1;
+        }
+
+
+        public async Task<bool> Save()
+        {
+            switch (Mode)
+            {
+                case enMode.Update:
+
+                    return true;
+
+
+                case enMode.Addnew:
+                    return await _AddNewLDVLApplication();
+
+
+
+            }
+            return false;
+        }
 
     }
 

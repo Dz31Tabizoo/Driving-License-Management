@@ -75,7 +75,40 @@ namespace DataAccessLayer
         }
 
 
+        public static bool FindApplicationTypeByID(int AppTypeID,ref string ApplicationTypeTitle , ref decimal ApplicationFees)
+        {
+            bool isFouned = false;
+            string Query = "SELECT * FROM ApplicationTypes WHERE ApplicationTypeID = @appTypeId;";
 
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(Query, cnx))
+                {
+                    cmd.Parameters.AddWithValue("@appTypeId", AppTypeID);
+                    try
+                    {
+                        cnx.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                isFouned = true;
+
+                                ApplicationTypeTitle = reader["ApplicationTypeTitle"].ToString();
+                                ApplicationFees = reader["ApplicationFees"] as decimal? ?? int.MinValue;
+
+                                return isFouned;
+                            }
+
+                        }
+                    }
+                    catch { return false; }
+                }
+            }
+
+            return false;
+
+        }
 
     }
 }

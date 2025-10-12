@@ -16,6 +16,7 @@ namespace BusinessLayer
         public decimal ApplicationFee { get; set; }
 
 
+        public clsApplicationTypes() { }
         public clsApplicationTypes (int appID,string appTitle, decimal appFee)
         {
             this.ApplicationTypeID = appID;
@@ -34,7 +35,28 @@ namespace BusinessLayer
             return await clsApplicationTypesDAL.GetApplicationTypes();
         }
             
+        public static clsApplicationTypes FindAppTypeBtID(int applicationTypeId)
+        {
+            clsApplicationTypes Obj = new clsApplicationTypes();
 
+            string appTypeTitle = string.Empty;
+            decimal appFee = 0;
+
+            if (clsApplicationTypesDAL.FindApplicationTypeByID(applicationTypeId,ref appTypeTitle,ref appFee))
+            {
+                Obj.ApplicationTypeID = applicationTypeId;
+                Obj.ApplicationTypeTitle = appTypeTitle; Obj.ApplicationFee = appFee;
+                return Obj;
+            }
+            else
+            {
+                return null;
+            }
+
+
+
+
+        }
 
     }
 }
