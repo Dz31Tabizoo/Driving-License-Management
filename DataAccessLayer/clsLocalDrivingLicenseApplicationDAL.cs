@@ -10,8 +10,8 @@ namespace DataAccessLayer
 {
     public class clsLocalDrivingLicenseApplicationDAL
     {
-        
-    
+
+
         public static async Task<DataTable> GetAllLocalDrivingLicenseApps()
         {
             DataTable LDLA_dt = new DataTable();
@@ -36,14 +36,14 @@ FROM                     LocalDrivingLicenseApplications l INNER JOIN
 
             using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
             {
-                using (SqlCommand cmd = new SqlCommand(query,cnx))
+                using (SqlCommand cmd = new SqlCommand(query, cnx))
                 {
 
                     await cnx.OpenAsync();
 
                     using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
                     {
-                       LDLA_dt.Load(reader);
+                        LDLA_dt.Load(reader);
 
                         return LDLA_dt;
                     }
@@ -52,7 +52,7 @@ FROM                     LocalDrivingLicenseApplications l INNER JOIN
         }
 
 
-        public static async Task<int> AddNewLocalApplication(int applicationID,int licenseClassID)
+        public static async Task<int> AddNewLocalApplication(int applicationID, int licenseClassID)
         {
             string Query = @"Insert into LocalDrivingLicenseApplications 
                                (LocalDrivingLicenseApplicationID , ApplicationID , LicenseClassIDD)
@@ -63,9 +63,9 @@ FROM                     LocalDrivingLicenseApplications l INNER JOIN
             {
                 using (SqlCommand cmd = new SqlCommand(Query, cnx))
                 {
-                    cmd.Parameters.AddWithValue("@appID",applicationID);
+                    cmd.Parameters.AddWithValue("@appID", applicationID);
                     cmd.Parameters.AddWithValue("@licenseApp", licenseClassID);
-                   
+
 
                     try
                     {
@@ -94,5 +94,6 @@ FROM                     LocalDrivingLicenseApplications l INNER JOIN
 
 
 
+        }
     }
 }
