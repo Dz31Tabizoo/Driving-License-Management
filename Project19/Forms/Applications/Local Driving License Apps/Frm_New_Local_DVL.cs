@@ -26,7 +26,7 @@ namespace Project19
             lblUserCreatedByOutput.Text = GlobalSetting.CurrentUser.UserName;
             lblUserCreatedByOutput.Tag = GlobalSetting.CurrentUser.UserID;
 
-
+            
 
             
             var licenseClasses = new List<clsLicenseClasses>();
@@ -52,7 +52,12 @@ namespace Project19
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 1;
+            if(crtlPersonCardWithFilter1.PersID > 0)
+            {
+                btnNewAppSav.Enabled = true;
+                tabControl1.SelectedIndex = 1;
+            }
+            
         }
 
         private async void btnSaveEdit_Click(object sender, EventArgs e)
@@ -64,6 +69,7 @@ namespace Project19
             application.Applicant = clsPeople.FindPersonByID(crtlPersonCardWithFilter1.PersID);
             application.AppType = clsApplicationTypes.FindAppTypeBtID(1); // 1 for LocalapplicationType
             application.CreatedByUser = GlobalSetting.CurrentUser;
+            application.PaidFees = application.AppType.ApplicationFee;
 
             if (await application.Save())
             {

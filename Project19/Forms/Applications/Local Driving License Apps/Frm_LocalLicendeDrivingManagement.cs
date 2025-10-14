@@ -86,8 +86,24 @@ namespace Project19
 
         private void lblAddPerson_Click(object sender, EventArgs e)
         {
-            Form frm = new Frm_New_Local_DVL();
-            frm.ShowDialog();
+            OpenAddNewLocalDVLApplication();
+        }
+
+        private void AddNewtoolstrip_Click(object sender, EventArgs e)
+        {
+            OpenAddNewLocalDVLApplication();
+        }
+
+
+        private void OpenAddNewLocalDVLApplication()
+        {
+
+
+            using (var form = new Frm_New_Local_DVL())
+            {
+                form.ShowDialog();
+            }
+
         }
     }
 

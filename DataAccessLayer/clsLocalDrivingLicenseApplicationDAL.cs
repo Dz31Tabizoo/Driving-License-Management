@@ -55,7 +55,7 @@ FROM                     LocalDrivingLicenseApplications l INNER JOIN
         public static async Task<int> AddNewLocalApplication(int applicationID, int licenseClassID)
         {
             string Query = @"Insert into LocalDrivingLicenseApplications 
-                               (LocalDrivingLicenseApplicationID , ApplicationID , LicenseClassIDD)
+                               (ApplicationID , LicenseClassID)
                         VALUES (@appID,@licenseApp);
                 SELECT SCOPE_IDENTITY();";
 

@@ -103,7 +103,7 @@ namespace Project19
             this.emailToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(278, 382);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(278, 404);
             this.contextMenuStrip1.Text = "User Options";
             // 
             // showDetailsToolStripMenuItem
@@ -130,6 +130,7 @@ namespace Project19
             this.AddNewtoolstrip.Name = "AddNewtoolstrip";
             this.AddNewtoolstrip.Size = new System.Drawing.Size(277, 38);
             this.AddNewtoolstrip.Text = "Add New Application";
+            this.AddNewtoolstrip.Click += new System.EventHandler(this.AddNewtoolstrip_Click);
             // 
             // editToolStripMenuItem
             // 

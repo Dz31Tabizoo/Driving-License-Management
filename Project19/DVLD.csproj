@@ -127,10 +127,10 @@
     <Compile Include="Forms\Applications\Local Driving License Apps\Frm_LocalLicendeDrivingManagement.Designer.cs">
       <DependentUpon>Frm_LocalLicendeDrivingManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_New_Local_DVL.cs">
+    <Compile Include="Forms\Applications\Local Driving License Apps\Frm_New_Local_DVL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_New_Local_DVL.Designer.cs">
+    <Compile Include="Forms\Applications\Local Driving License Apps\Frm_New_Local_DVL.Designer.cs">
       <DependentUpon>Frm_New_Local_DVL.cs</DependentUpon>
     </Compile>
     <Compile Include="Handlers\Global Setting.cs" />
@@ -268,7 +268,7 @@
     <EmbeddedResource Include="Forms\Applications\Local Driving License Apps\Frm_LocalLicendeDrivingManagement.resx">
       <DependentUpon>Frm_LocalLicendeDrivingManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_New_Local_DVL.resx">
+    <EmbeddedResource Include="Forms\Applications\Local Driving License Apps\Frm_New_Local_DVL.resx">
       <DependentUpon>Frm_New_Local_DVL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

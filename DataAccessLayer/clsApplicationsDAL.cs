@@ -107,7 +107,7 @@ namespace DataAccessLayer
         {
             string query = @"INSERT INTO Applications (ApplicantPersonID, ApplicationDate, ApplicationTypeID, ApplicationStatus, LastStatusDate, PaidFees , CreatedByUserID)
                                 VALUES (@personId,@appDate,@AppTypeId,@appStat,@lastStatDate, @paidFees,@userID);
-                                SELECT SCOPE_IDENTITY();";
+                                SELECT CAST (SCOPE_IDENTITY() AS INT );";
 
 
 
@@ -118,6 +118,7 @@ namespace DataAccessLayer
                     cmd.Parameters.AddWithValue("@personId", PersonID);
                     cmd.Parameters.AddWithValue("@appDate", ApplicationDate);
                     cmd.Parameters.AddWithValue("@appTypeId", ApplicationTypeID);
+                    cmd.Parameters.AddWithValue("@lastStatDate", LastStatusDate);
                     cmd.Parameters.AddWithValue("@appStat", ApplicationSatus);
                     cmd.Parameters.AddWithValue("@paidFees", PaidFees);
                     cmd.Parameters.AddWithValue("@userID", CreatedByUserID);
@@ -127,9 +128,9 @@ namespace DataAccessLayer
                         await cnx.OpenAsync();
                         object result = await cmd.ExecuteScalarAsync();
 
-                        if (result != null && int.TryParse(result.ToString(), out int newUserID))
+                        if (result != null && int.TryParse(result.ToString(), out int newAppID))
                         {
-                            return newUserID;
+                            return newAppID;
                         }
                         else
                         {
