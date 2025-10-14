@@ -54,5 +54,42 @@ namespace Project19
         {
             tabControl1.SelectedIndex = 1;
         }
+
+        private async void btnSaveEdit_Click(object sender, EventArgs e)
+        {
+            clsApplications application = new clsApplications();
+            clsLocalDrivingLicenseApplication localDrivingLicenseApplication = new clsLocalDrivingLicenseApplication();
+
+            
+            application.Applicant = clsPeople.FindPersonByID(crtlPersonCardWithFilter1.PersID);
+            application.AppType = clsApplicationTypes.FindAppTypeBtID(1); // 1 for LocalapplicationType
+            application.CreatedByUser = GlobalSetting.CurrentUser;
+
+            if (await application.Save())
+            {
+                localDrivingLicenseApplication.ApplicationID = application.AppID;
+                localDrivingLicenseApplication.LicenseClassID = cbxLicenseClasses.SelectedIndex;
+
+                if (await localDrivingLicenseApplication.Save())
+                {
+                    MessageBox.Show("New local driving license application created sucssesfuly","Saved",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Application created but local not", "Massive Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("failed to save Application", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+
+
+
+
+        }
     }
 }

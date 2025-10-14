@@ -36,6 +36,7 @@
             this.btnLogin = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.crtlPersonCardWithFilter1 = new Project19.crtlPersonCardWithFilter();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnSaveEdit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.cbxLicenseClasses = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.lblLicenseClass = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblUserCreatedByOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -46,7 +47,6 @@
             this.lblApplicationDate = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblldvlApplicationOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblApplicationID = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.btnSaveEdit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -228,6 +228,37 @@
             this.tabPage2.Text = "Application";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnSaveEdit
+            // 
+            this.btnSaveEdit.Location = new System.Drawing.Point(329, 421);
+            this.btnSaveEdit.Name = "btnSaveEdit";
+            this.btnSaveEdit.Size = new System.Drawing.Size(177, 39);
+            this.btnSaveEdit.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.btnSaveEdit.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.btnSaveEdit.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.btnSaveEdit.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.btnSaveEdit.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSaveEdit.StateCommon.Border.Rounding = 5;
+            this.btnSaveEdit.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnSaveEdit.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnSaveEdit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveEdit.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnSaveEdit.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnSaveEdit.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnSaveEdit.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnSaveEdit.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSaveEdit.StateTracking.Border.Rounding = 5;
+            this.btnSaveEdit.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnSaveEdit.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnSaveEdit.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveEdit.TabIndex = 10;
+            this.btnSaveEdit.Values.Text = "New Application";
+            this.btnSaveEdit.Click += new System.EventHandler(this.btnSaveEdit_Click);
+            // 
             // cbxLicenseClasses
             // 
             this.cbxLicenseClasses.DropDownWidth = 205;
@@ -381,36 +412,6 @@
             this.lblApplicationID.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApplicationID.TabIndex = 0;
             this.lblApplicationID.Values.Text = "Application ID :";
-            // 
-            // btnSaveEdit
-            // 
-            this.btnSaveEdit.Location = new System.Drawing.Point(329, 421);
-            this.btnSaveEdit.Name = "btnSaveEdit";
-            this.btnSaveEdit.Size = new System.Drawing.Size(177, 39);
-            this.btnSaveEdit.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.btnSaveEdit.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.btnSaveEdit.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.btnSaveEdit.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.btnSaveEdit.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSaveEdit.StateCommon.Border.Rounding = 5;
-            this.btnSaveEdit.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnSaveEdit.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnSaveEdit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveEdit.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.btnSaveEdit.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.btnSaveEdit.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.btnSaveEdit.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.btnSaveEdit.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnSaveEdit.StateTracking.Border.Rounding = 5;
-            this.btnSaveEdit.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnSaveEdit.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnSaveEdit.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveEdit.TabIndex = 10;
-            this.btnSaveEdit.Values.Text = "New Application";
             // 
             // Frm_New_Local_DVL
             // 
