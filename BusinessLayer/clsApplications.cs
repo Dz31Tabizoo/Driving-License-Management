@@ -104,6 +104,7 @@ namespace BusinessLayer
             ApplicationStatus = enAppStatus.New; // this will set LastStatusDate = Now
             PaidFees = AppType.ApplicationFee;
             CreatedByUser = new clsUser();
+            _mode = enMode.AddNew;
            
         }
 
