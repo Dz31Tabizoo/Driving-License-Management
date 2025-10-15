@@ -97,6 +97,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="crtlLDVLappInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="crtlLDVLappInfo.Designer.cs">
+      <DependentUpon>crtlLDVLappInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Applications\Apps Types\Frm_Application_Types.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     <Compile Include="Controles\UsrCrtlLogingInfo.Designer.cs">
       <DependentUpon>UsrCrtlLogingInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="crtlLDVLappInfo.resx">
+      <DependentUpon>crtlLDVLappInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Applications\Test Types\Frm_Edit_Test.resx">
       <DependentUpon>Frm_Edit_Test.cs</DependentUpon>
     </EmbeddedResource>
@@ -493,6 +502,7 @@
     <None Include="Resources\registered-document.png" />
     <None Include="Resources\licensing.png" />
     <None Include="Resources\right-arrow.png" />
+    <None Include="Resources\drivers-license.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />
