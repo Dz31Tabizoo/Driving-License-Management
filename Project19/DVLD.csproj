@@ -103,6 +103,12 @@
     <Compile Include="Controles\crtlLDVLappInfo.Designer.cs">
       <DependentUpon>crtlLDVLappInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="crtlApplicationInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="crtlApplicationInfo.Designer.cs">
+      <DependentUpon>crtlApplicationInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Applications\Apps Types\Frm_Application_Types.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </Compile>
     <EmbeddedResource Include="Controles\crtlLDVLappInfo.resx">
       <DependentUpon>crtlLDVLappInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crtlApplicationInfo.resx">
+      <DependentUpon>crtlApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Applications\Test Types\Frm_Edit_Test.resx">
       <DependentUpon>Frm_Edit_Test.cs</DependentUpon>
@@ -454,6 +463,8 @@
     <None Include="Resources\360526283_11452747.png" />
     <None Include="Resources\app.png" />
     <None Include="Resources\calendar1.png" />
+    <None Include="Resources\checklist.png" />
+    <None Include="Resources\check-list %281%29.png" />
     <Content Include="Resources\close_RED.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -503,6 +514,7 @@
     <None Include="Resources\licensing.png" />
     <None Include="Resources\right-arrow.png" />
     <None Include="Resources\drivers-license.png" />
+    <None Include="Resources\indesign.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />

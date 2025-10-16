@@ -105,10 +105,11 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::Project19.Properties.Resources.bank_acount__1_;
+            this.pictureBox5.Image = global::Project19.Properties.Resources.checklist;
             this.pictureBox5.Location = new System.Drawing.Point(138, 88);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 41;
             this.pictureBox5.TabStop = false;
             // 
