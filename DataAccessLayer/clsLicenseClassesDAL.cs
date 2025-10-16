@@ -21,7 +21,7 @@ namespace DataAccessLayer
             public decimal ClassFees { get; set; }
         }
 
-        public static async Task<List<LicenseClassDTO>> GetClassesList()
+        public static async Task<List<LicenseClassDTO>> GetAllLicenseClassesList()
         {
             List<LicenseClassDTO> classesList = new List<LicenseClassDTO>();
             string query = "SELECT * FROM LicenseClasses ORDER BY LicenseClassID ASC;";
@@ -53,5 +53,39 @@ namespace DataAccessLayer
             }
         }
 
+
+        public static async Task<LicenseClassDTO> GetLicenseClassObjectByID(int LicenseClassID)
+        {
+            LicenseClassDTO Licenseclass = new LicenseClassDTO();
+            string query = "SELECT * FROM LicenseClasses WHERE LicenseClassID = @licenseClassId;";
+
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, cnx))
+                {
+                    cmd.Parameters.AddWithValue("@licenseClassId", LicenseClassID);
+
+                    await cnx.OpenAsync();
+
+                    using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
+                    {
+                        if (reader.Read())
+                        {
+                            Licenseclass.LicenseClassID = (int)reader["LicenseClassID"];
+                            Licenseclass.ClassName = (string)reader["ClassName"];
+                            Licenseclass.ClassDescription = (string)reader["ClassDescription"];
+                            Licenseclass.MinimumAge = (byte)reader["MinimumAllowedAge"];
+                            Licenseclass.DefaultValidityLength = (byte)reader["DefaultValidityLength"];
+                            Licenseclass.ClassFees = (decimal)reader["ClassFees"];
+                        }
+                        
+                        return Licenseclass;
+                    }
+
+                }
+            }
+            
+
+        }
     }
 }

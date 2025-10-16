@@ -62,6 +62,7 @@ namespace BusinessLayer
         {
             this.LocalDrivingLicenseApplicationID = await clsLocalDrivingLicenseApplicationDAL.AddNewLocalApplication(ApplicationID, LicenseClassID);
             return this.LocalDrivingLicenseApplicationID != -1;
+
         }
 
 

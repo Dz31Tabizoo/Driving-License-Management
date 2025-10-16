@@ -97,10 +97,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="crtlLDVLappInfo.cs">
+    <Compile Include="Controles\crtlLDVLappInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="crtlLDVLappInfo.Designer.cs">
+    <Compile Include="Controles\crtlLDVLappInfo.Designer.cs">
       <DependentUpon>crtlLDVLappInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Applications\Apps Types\Frm_Application_Types.cs">
@@ -229,7 +229,7 @@
     <Compile Include="Controles\UsrCrtlLogingInfo.Designer.cs">
       <DependentUpon>UsrCrtlLogingInfo.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="crtlLDVLappInfo.resx">
+    <EmbeddedResource Include="Controles\crtlLDVLappInfo.resx">
       <DependentUpon>crtlLDVLappInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Applications\Test Types\Frm_Edit_Test.resx">

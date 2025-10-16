@@ -47,7 +47,7 @@ namespace BusinessLayer
 
         public static async Task<List<clsLicenseClasses>> GetAllLicensesClasses()
         {
-            var dtos = await clsLicenseClassesDAL.GetClassesList();
+            var dtos = await clsLicenseClassesDAL.GetAllLicenseClassesList();
 
             List<clsLicenseClasses> Classes = new List<clsLicenseClasses>();
 
@@ -68,7 +68,25 @@ namespace BusinessLayer
         }
 
 
-        
+        public static async Task<clsLicenseClasses> GetLicenseClassObjByIDAsync(int licenseClassID)
+        {
+            var dtos = await clsLicenseClassesDAL.GetLicenseClassObjectByID(licenseClassID);
+
+            var licenseClass = new clsLicenseClasses
+            {
+
+                LicenseClassID = licenseClassID,
+                DefaultValidityLength = dtos.DefaultValidityLength,
+                ClassFees = dtos.ClassFees,
+                ClassDescription = dtos.ClassDescription,
+                ClassName = dtos.ClassName,
+                MinimumAge = dtos.MinimumAge,
+                Mode = enMode.Update,
+
+            };
+            return licenseClass;
+
+        }
 
 
 
