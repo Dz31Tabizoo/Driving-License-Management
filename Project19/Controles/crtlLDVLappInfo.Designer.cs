@@ -66,7 +66,7 @@
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblPsdTest);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblClass);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblLDVLappID);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(799, 178);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(799, 122);
             this.kryptonGroupBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonGroupBox1.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.kryptonGroupBox1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
@@ -86,7 +86,7 @@
             this.LnkLblLicenseView.Enabled = false;
             this.LnkLblLicenseView.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
             this.LnkLblLicenseView.LinkBehavior = ComponentFactory.Krypton.Toolkit.KryptonLinkBehavior.HoverUnderline;
-            this.LnkLblLicenseView.Location = new System.Drawing.Point(459, 78);
+            this.LnkLblLicenseView.Location = new System.Drawing.Point(603, 36);
             this.LnkLblLicenseView.Name = "LnkLblLicenseView";
             this.LnkLblLicenseView.Size = new System.Drawing.Size(179, 34);
             this.LnkLblLicenseView.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -97,7 +97,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Project19.Properties.Resources.id_card__1_;
-            this.pictureBox6.Location = new System.Drawing.Point(510, 27);
+            this.pictureBox6.Location = new System.Drawing.Point(507, 5);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(24, 24);
             this.pictureBox6.TabIndex = 42;
@@ -106,7 +106,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Project19.Properties.Resources.checklist;
-            this.pictureBox5.Location = new System.Drawing.Point(138, 88);
+            this.pictureBox5.Location = new System.Drawing.Point(171, 41);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(24, 24);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -116,7 +116,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Project19.Properties.Resources.id_card;
-            this.pictureBox3.Location = new System.Drawing.Point(172, 27);
+            this.pictureBox3.Location = new System.Drawing.Point(169, 5);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,7 +127,7 @@
             // 
             this.lblPassedTestCount.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassedTestCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.lblPassedTestCount.Location = new System.Drawing.Point(172, 88);
+            this.lblPassedTestCount.Location = new System.Drawing.Point(205, 41);
             this.lblPassedTestCount.Name = "lblPassedTestCount";
             this.lblPassedTestCount.Size = new System.Drawing.Size(0, 20);
             this.lblPassedTestCount.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,7 +137,7 @@
             // 
             this.lblClassesOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClassesOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.lblClassesOutput.Location = new System.Drawing.Point(540, 31);
+            this.lblClassesOutput.Location = new System.Drawing.Point(537, 9);
             this.lblClassesOutput.Name = "lblClassesOutput";
             this.lblClassesOutput.Size = new System.Drawing.Size(0, 20);
             this.lblClassesOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,7 +148,7 @@
             this.lblLocalDVLAppIDOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocalDVLAppIDOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
             this.lblLocalDVLAppIDOutput.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblLocalDVLAppIDOutput.Location = new System.Drawing.Point(204, 31);
+            this.lblLocalDVLAppIDOutput.Location = new System.Drawing.Point(201, 9);
             this.lblLocalDVLAppIDOutput.Name = "lblLocalDVLAppIDOutput";
             this.lblLocalDVLAppIDOutput.Size = new System.Drawing.Size(0, 20);
             this.lblLocalDVLAppIDOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,34 +156,34 @@
             // 
             // lblPsdTest
             // 
-            this.lblPsdTest.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPsdTest.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPsdTest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblPsdTest.Location = new System.Drawing.Point(33, 88);
+            this.lblPsdTest.Location = new System.Drawing.Point(66, 41);
             this.lblPsdTest.Name = "lblPsdTest";
-            this.lblPsdTest.Size = new System.Drawing.Size(99, 20);
-            this.lblPsdTest.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPsdTest.Size = new System.Drawing.Size(96, 20);
+            this.lblPsdTest.StateCommon.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPsdTest.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lblPsdTest.Text = "Tests Passed :";
             // 
             // lblClass
             // 
-            this.lblClass.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblClass.Location = new System.Drawing.Point(360, 31);
+            this.lblClass.Location = new System.Drawing.Point(357, 9);
             this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(144, 20);
-            this.lblClass.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.Size = new System.Drawing.Size(141, 20);
+            this.lblClass.StateCommon.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClass.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lblClass.Text = "Applied for license :";
             // 
             // lblLDVLappID
             // 
-            this.lblLDVLappID.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDVLappID.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLDVLappID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblLDVLappID.Location = new System.Drawing.Point(15, 31);
+            this.lblLDVLappID.Location = new System.Drawing.Point(12, 9);
             this.lblLDVLappID.Name = "lblLDVLappID";
-            this.lblLDVLappID.Size = new System.Drawing.Size(153, 20);
-            this.lblLDVLappID.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDVLappID.Size = new System.Drawing.Size(150, 20);
+            this.lblLDVLappID.StateCommon.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLDVLappID.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.lblLDVLappID.Text = "LDVL Application ID :";
             // 
@@ -194,7 +194,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.kryptonGroupBox1);
             this.Name = "crtlLDVLappInfo";
-            this.Size = new System.Drawing.Size(814, 195);
+            this.Size = new System.Drawing.Size(814, 136);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
             this.kryptonGroupBox1.Panel.ResumeLayout(false);
             this.kryptonGroupBox1.Panel.PerformLayout();

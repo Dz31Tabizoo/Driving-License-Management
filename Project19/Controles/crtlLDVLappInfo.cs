@@ -14,17 +14,14 @@ namespace Project19
     public partial class crtlLDVLappInfo : UserControl
     {
 
-        public crtlLDVLappInfo(clsLocalDrivingLicenseApplication localApp, int testPassed)
-        {
-            InitializeComponent();
-            _LoadCrtlLocalAppInfo(localApp, testPassed);
-
-        }
-
         public crtlLDVLappInfo()
         {
             InitializeComponent();
+            
+
         }
+
+        
 
         private void _LoadCrtlLocalAppInfo(clsLocalDrivingLicenseApplication localApp,int TestPassed)
         {

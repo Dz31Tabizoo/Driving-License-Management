@@ -145,6 +145,12 @@
     <Compile Include="Forms\Applications\Local Driving License Apps\Frm_New_Local_DVL.Designer.cs">
       <DependentUpon>Frm_New_Local_DVL.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Shcuduel_Tests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Shcuduel_Tests.Designer.cs">
+      <DependentUpon>Frm_Shcuduel_Tests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Handlers\Global Setting.cs" />
     <Compile Include="Handlers\DragFormHandler.cs" />
     <Compile Include="Forms\Main\Frm_Login.cs">
@@ -288,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Applications\Local Driving License Apps\Frm_New_Local_DVL.resx">
       <DependentUpon>Frm_New_Local_DVL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Shcuduel_Tests.resx">
+      <DependentUpon>Frm_Shcuduel_Tests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -465,6 +474,7 @@
     <None Include="Resources\calendar1.png" />
     <None Include="Resources\checklist.png" />
     <None Include="Resources\check-list %281%29.png" />
+    <None Include="Resources\calendar %281%29.png" />
     <Content Include="Resources\close_RED.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -515,6 +525,10 @@
     <None Include="Resources\right-arrow.png" />
     <None Include="Resources\drivers-license.png" />
     <None Include="Resources\indesign.png" />
+    <None Include="Resources\coin.png" />
+    <None Include="Resources\dimensions.png" />
+    <None Include="Resources\user %285%29.png" />
+    <None Include="Resources\user %284%29.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />
