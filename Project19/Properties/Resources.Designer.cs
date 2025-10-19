@@ -63,6 +63,16 @@ namespace Project19.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _19795265411582994870_24 {
+            get {
+                object obj = ResourceManager.GetObject("19795265411582994870-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2346679_310821_P8DC3I_291 {
             get {
                 object obj = ResourceManager.GetObject("2346679_310821-P8DC3I-291", resourceCulture);
