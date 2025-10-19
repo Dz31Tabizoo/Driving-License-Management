@@ -42,7 +42,7 @@ namespace DataAccessLayer
         }
 
 
-        public static bool UpdateTestType(int ID, string Title,string Description ,decimal Fee)
+        public static bool UpdateTestType(int ID, string Title, string Description, decimal Fee)
         {
             string query = @"UPDATE TestTypes 
                                         SET TestTypeFees = @newfee,
@@ -75,6 +75,44 @@ namespace DataAccessLayer
 
         }
 
+
+        public static bool GetTestTypeByID(int iD, ref string testTitle, ref string testDescription, ref decimal testTypeFee)
+        {
+            string query = "SELECT * FROM TestTypes WHERE TestTypeID = @id;";
+
+
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, cnx))
+                {
+
+                    cmd.Parameters.AddWithValue("@id", iD);
+
+                    try
+                    {
+                        cnx.Open();
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                testTitle = reader["TestTypeTitle"].ToString();
+                                testDescription = reader["TestTypeDescription"].ToString();
+                                testTypeFee = (decimal)reader["TestTypeFees"];
+                                return true;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+                    }
+                    catch { return false; }
+                }
+            }
+
+
+        }
 
     }
 

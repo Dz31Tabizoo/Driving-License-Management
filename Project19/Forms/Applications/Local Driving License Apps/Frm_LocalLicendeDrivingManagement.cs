@@ -105,6 +105,22 @@ namespace Project19
             }
 
         }
+
+        private void visionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvApplications.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Please select a user first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DataGridViewRow Row = dgvApplications.SelectedRows[0];
+
+
+            // create appointment object
+            // create other object 
+            
+        }
     }
 
 }

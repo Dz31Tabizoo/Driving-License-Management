@@ -37,6 +37,17 @@ namespace BusinessLayer
             return clsTestTypeDAL.UpdateTestType((int)this.TestID, this.TestTitle, this.TestDescription, this.TestFee);
         }
 
+        public static clsTestTypes GetTestTypeByID (int ID )
+        {
+            string testTypeTitle = string.Empty;
+            string testTypeDescription = string.Empty;
+
+            decimal testTypeFees = -1;
+
+            bool isFound = clsTestTypeDAL.GetTestTypeByID(ID, ref testTypeTitle, ref testTypeDescription,ref testTypeFees);
+
+            return new clsTestTypes((enTestType)ID,testTypeTitle,testTypeDescription,testTypeFees);
+        }
 
     }
 }

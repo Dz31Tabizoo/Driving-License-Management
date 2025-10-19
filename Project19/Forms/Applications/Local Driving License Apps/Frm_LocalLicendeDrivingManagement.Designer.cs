@@ -46,6 +46,9 @@ namespace Project19
             this.ChangePAsswordtoolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.phoneCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visionTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.writtenTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.practicalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.issueDrivingLicense1stTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -174,12 +177,44 @@ namespace Project19
             // 
             // phoneCallToolStripMenuItem
             // 
+            this.phoneCallToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.visionTestToolStripMenuItem,
+            this.writtenTestToolStripMenuItem,
+            this.practicalToolStripMenuItem});
             this.phoneCallToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneCallToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.phoneCallToolStripMenuItem.Image = global::Project19.Properties.Resources.calendar1;
             this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
             this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
             this.phoneCallToolStripMenuItem.Text = "Sechdule Tests";
+            // 
+            // visionTestToolStripMenuItem
+            // 
+            this.visionTestToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.visionTestToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.visionTestToolStripMenuItem.Image = global::Project19.Properties.Resources.eye__2_;
+            this.visionTestToolStripMenuItem.Name = "visionTestToolStripMenuItem";
+            this.visionTestToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.visionTestToolStripMenuItem.Text = "Vision Test";
+            this.visionTestToolStripMenuItem.Click += new System.EventHandler(this.visionTestToolStripMenuItem_Click);
+            // 
+            // writtenTestToolStripMenuItem
+            // 
+            this.writtenTestToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.writtenTestToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.writtenTestToolStripMenuItem.Image = global::Project19.Properties.Resources.document;
+            this.writtenTestToolStripMenuItem.Name = "writtenTestToolStripMenuItem";
+            this.writtenTestToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.writtenTestToolStripMenuItem.Text = "Written Test";
+            // 
+            // practicalToolStripMenuItem
+            // 
+            this.practicalToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.practicalToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.practicalToolStripMenuItem.Image = global::Project19.Properties.Resources.steering_wheel;
+            this.practicalToolStripMenuItem.Name = "practicalToolStripMenuItem";
+            this.practicalToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.practicalToolStripMenuItem.Text = "Practical";
             // 
             // toolStripSeparator5
             // 
@@ -259,7 +294,7 @@ namespace Project19
             // lblTotalPeople
             // 
             this.lblTotalPeople.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblTotalPeople.Location = new System.Drawing.Point(12, 648);
+            this.lblTotalPeople.Location = new System.Drawing.Point(12, 659);
             this.lblTotalPeople.Name = "lblTotalPeople";
             this.lblTotalPeople.Size = new System.Drawing.Size(127, 29);
             this.lblTotalPeople.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
@@ -728,5 +763,8 @@ namespace Project19
         private System.Windows.Forms.ToolStripMenuItem showDrivingLicenseToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ToolStripMenuItem visionTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem writtenTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem practicalToolStripMenuItem;
     }
 }

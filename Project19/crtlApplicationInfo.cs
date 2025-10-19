@@ -23,7 +23,7 @@ namespace Project19
 
        
 
-        private void LoadApplicationInfo(clsApplications app)
+        public void LoadApplicationInfo(clsApplications app)
         {
             lblApp_ID.Text = app.AppID.ToString();
             lblApp_Date.Text = app.AppDate.ToString("dd/MMM/yyyy");

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public class clsTestAppointments
+    public class clsTestAppointmentsDAL
     {
         public class TestAppsDTO
         {
@@ -27,6 +27,7 @@ namespace DataAccessLayer
             public int TesterUserID {  get; set; }
 
             //TestTypes
+            public int TestTypeID { get;set; }
             public string TestTypeTitle { get; set; }
             public string TestDescrip { get; set; }
             public decimal TestTypeFee { get; set; }
@@ -57,6 +58,7 @@ namespace DataAccessLayer
                                         t.Notes,
                                         t.CreatedByUserID as User_Tester,
 
+                                        tt.TestTypeID,  
                                         tt.TestTypeTitle,
                                         tt.TestTypeDescription,
                                         tt.TestTypeFees,
@@ -104,6 +106,7 @@ namespace DataAccessLayer
                                     TesterUserID = (int)rdr["User_Tester"],
 
                                     // Test Types
+                                    TestTypeID = (int)rdr["TestTypeID"],
                                     TestTypeTitle = rdr["TestTypeTitle"].ToString(),
                                     TestDescrip = rdr["TestTypeDescription"].ToString(),
                                     TestTypeFee = (decimal)rdr["TestTypeFees"],

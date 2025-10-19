@@ -23,7 +23,7 @@ namespace Project19
 
         
 
-        private void _LoadCrtlLocalAppInfo(clsLocalDrivingLicenseApplication localApp,int TestPassed)
+        public void _LoadCrtlLocalAppInfo(clsLocalDrivingLicenseApplication localApp,int TestPassed)
         {
             lblLocalDVLAppIDOutput.Text = localApp.LocalDrivingLicenseApplicationID.ToString();
             lblClassesOutput.Text = localApp.LicenseClass.ClassName;

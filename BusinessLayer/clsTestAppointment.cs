@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -52,9 +54,36 @@ namespace BusinessLayer
             TestAppointmentDate = testAppointmentDate;
             PaidFees = paidFees;            
             IsLocked = isLocked;
-            Types = types;
-            LDLA = lDLA;
-            TheUser = theUser;
+            Types = types ?? null;
+            LDLA = lDLA ?? null;
+
+            TheUser = theUser ?? null   ;
         }
+
+
+        public static async Task<List<clsTestAppointment>> GetAllAppointments()
+        {
+
+            var appointmentsListDTOs = await clsTestAppointmentsDAL.GetTestApps();
+            List<clsTestAppointment> testAppointmentList = new List<clsTestAppointment>();
+
+            foreach (var dto in appointmentsListDTOs)
+            {
+                testAppointmentList.Add(new clsTestAppointment
+                {
+                    TestAppointmentID = dto.TestAppointId,
+                    TestTypeID = dto.TestID,
+                    LDLA_ID = dto.LocalDLAppID,
+                    TestAppointmentDate = dto.AppointDate,
+                    PaidFees = dto.AppointFees,
+                    IsLocked = dto.IsLocked,
+                    CreatedUSerID = dto.TesterUserID,
+                    });
+            }
+
+            return testAppointmentList;
+        }
+
+
     }
 }

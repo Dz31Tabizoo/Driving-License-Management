@@ -530,6 +530,11 @@
     <None Include="Resources\dimensions.png" />
     <None Include="Resources\user %285%29.png" />
     <None Include="Resources\user %284%29.png" />
+    <None Include="Resources\eye.png" />
+    <None Include="Resources\eye %281%29.png" />
+    <None Include="Resources\eye %282%29.png" />
+    <None Include="Resources\document.png" />
+    <None Include="Resources\steering-wheel.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />
