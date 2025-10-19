@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
+using System.Reflection;
+using System.Runtime.Remoting.Messaging;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -94,6 +98,40 @@ FROM                     LocalDrivingLicenseApplications l INNER JOIN
 
 
 
+        }
+
+
+        public static bool FindLDVlApplicationByID(int ID, ref int appID, ref int licenClassID)
+        {
+            bool isFound = false;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                string Query = "SELECT * FROM LocalDrivingLicenseApplications WHERE LocalDrivingLicenseApplicationID = @ldvlID";
+                using (SqlCommand cmd = new SqlCommand(Query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@ldvlID", ID);
+
+                    connection.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            isFound = true;
+
+                            appID = (int)reader["ApplicationID"];
+                            licenClassID = (int)reader["LicenseClassID"];
+
+                            return isFound;
+                        }
+                        else
+                        {
+                            return isFound;
+                        }
+
+                    }
+                }
+            }
         }
     }
 }

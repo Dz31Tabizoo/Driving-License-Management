@@ -45,7 +45,7 @@ namespace Project19
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.ChangePAsswordtoolStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.phoneCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SechduleTestsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visionTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.writtenTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.practicalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +57,7 @@ namespace Project19
             this.emailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.lblTotalUserNum = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.lblTotalPeople = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblLdvlAppCount = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnClosePeopleMng = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dgvApplications = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -83,7 +83,7 @@ namespace Project19
             // 
             // contextMenuStrip1
             // 
-            this.contextMenuStrip1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.contextMenuStrip1.AllowDrop = true;
             this.contextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.contextMenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -97,7 +97,7 @@ namespace Project19
             this.toolStripSeparator6,
             this.ChangePAsswordtoolStrip,
             this.toolStripSeparator3,
-            this.phoneCallToolStripMenuItem,
+            this.SechduleTestsToolStripMenuItem,
             this.toolStripSeparator5,
             this.issueDrivingLicense1stTimeToolStripMenuItem,
             this.toolStripSeparator2,
@@ -175,18 +175,20 @@ namespace Project19
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(274, 6);
             // 
-            // phoneCallToolStripMenuItem
+            // SechduleTestsToolStripMenuItem
             // 
-            this.phoneCallToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SechduleTestsToolStripMenuItem.AutoToolTip = true;
+            this.SechduleTestsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.visionTestToolStripMenuItem,
             this.writtenTestToolStripMenuItem,
             this.practicalToolStripMenuItem});
-            this.phoneCallToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneCallToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.phoneCallToolStripMenuItem.Image = global::Project19.Properties.Resources.calendar1;
-            this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
-            this.phoneCallToolStripMenuItem.Text = "Sechdule Tests";
+            this.SechduleTestsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SechduleTestsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.SechduleTestsToolStripMenuItem.Image = global::Project19.Properties.Resources.calendar1;
+            this.SechduleTestsToolStripMenuItem.Name = "SechduleTestsToolStripMenuItem";
+            this.SechduleTestsToolStripMenuItem.Size = new System.Drawing.Size(277, 38);
+            this.SechduleTestsToolStripMenuItem.Text = "Sechdule Tests";
+            this.SechduleTestsToolStripMenuItem.DropDownOpening += new System.EventHandler(this.SechduleTestsToolStripMenuItem_DropDownOpening);
             // 
             // visionTestToolStripMenuItem
             // 
@@ -267,7 +269,7 @@ namespace Project19
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonPanel1.Controls.Add(this.lblTotalUserNum);
-            this.kryptonPanel1.Controls.Add(this.lblTotalPeople);
+            this.kryptonPanel1.Controls.Add(this.lblLdvlAppCount);
             this.kryptonPanel1.Controls.Add(this.btnClosePeopleMng);
             this.kryptonPanel1.Controls.Add(this.dgvApplications);
             this.kryptonPanel1.Controls.Add(this.panel1);
@@ -280,7 +282,8 @@ namespace Project19
             // 
             // lblTotalUserNum
             // 
-            this.lblTotalUserNum.Location = new System.Drawing.Point(145, 668);
+            this.lblTotalUserNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblTotalUserNum.Location = new System.Drawing.Point(281, 659);
             this.lblTotalUserNum.Name = "lblTotalUserNum";
             this.lblTotalUserNum.Size = new System.Drawing.Size(45, 29);
             this.lblTotalUserNum.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
@@ -291,19 +294,19 @@ namespace Project19
             this.lblTotalUserNum.TabIndex = 4;
             this.lblTotalUserNum.Values.Text = "000";
             // 
-            // lblTotalPeople
+            // lblLdvlAppCount
             // 
-            this.lblTotalPeople.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblTotalPeople.Location = new System.Drawing.Point(12, 659);
-            this.lblTotalPeople.Name = "lblTotalPeople";
-            this.lblTotalPeople.Size = new System.Drawing.Size(127, 29);
-            this.lblTotalPeople.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.lblTotalPeople.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.lblTotalPeople.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.lblTotalPeople.StateNormal.ShortText.Font = new System.Drawing.Font("Yu Gothic Medium", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPeople.StateNormal.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.lblTotalPeople.TabIndex = 3;
-            this.lblTotalPeople.Values.Text = "Total People";
+            this.lblLdvlAppCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblLdvlAppCount.Location = new System.Drawing.Point(12, 659);
+            this.lblLdvlAppCount.Name = "lblLdvlAppCount";
+            this.lblLdvlAppCount.Size = new System.Drawing.Size(263, 29);
+            this.lblLdvlAppCount.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.lblLdvlAppCount.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblLdvlAppCount.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblLdvlAppCount.StateNormal.ShortText.Font = new System.Drawing.Font("Yu Gothic Medium", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLdvlAppCount.StateNormal.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.lblLdvlAppCount.TabIndex = 3;
+            this.lblLdvlAppCount.Values.Text = "Total Local DL Application :";
             // 
             // btnClosePeopleMng
             // 
@@ -734,14 +737,14 @@ namespace Project19
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private System.Windows.Forms.DataGridView dgvApplications;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnClosePeopleMng;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblTotalPeople;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblLdvlAppCount;
         private ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem kryptonContextMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem phoneCallToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SechduleTestsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem emailToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ErrorProvider errorProvider1;

@@ -32,9 +32,9 @@ namespace BusinessLayer
             
         }
 
-        public clsLocalDrivingLicenseApplication(int applicationId, int licenseClassId)
+        public clsLocalDrivingLicenseApplication(int LDVLappID ,int applicationId, int licenseClassId)
         {
-            LocalDrivingLicenseApplicationID = -1;
+            LocalDrivingLicenseApplicationID = LDVLappID;
             ApplicationID = applicationId;
             LicenseClassID = licenseClassId;
             Mode = enMode.Update;
@@ -82,6 +82,27 @@ namespace BusinessLayer
 
             }
             return false;
+        }
+
+
+        public static clsLocalDrivingLicenseApplication FindLDVLapplicationById(int ID)
+        {
+
+            int appId = -1;
+            int licenseClassID = -1;
+
+            if (clsLocalDrivingLicenseApplicationDAL.FindLDVlApplicationByID(ID,ref appId,ref licenseClassID))
+            {
+                return new clsLocalDrivingLicenseApplication(ID, appId, licenseClassID);
+            }
+            else
+            {
+                return null;
+            }
+
+
+
+
         }
 
     }

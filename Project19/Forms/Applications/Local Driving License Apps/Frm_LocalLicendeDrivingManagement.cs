@@ -13,11 +13,14 @@ namespace Project19
 {
     public partial class Frm_LocalLicendeDrivingManagement : KryptonForm
     {
+        private bool isDropDownOpening = false;
+
         public Frm_LocalLicendeDrivingManagement()
         {
             InitializeComponent();
             LoadDataGridView();
-            
+            this.dgvApplications.ContextMenuStrip = this.contextMenuStrip1;
+
         }
 
         private async void LoadDataGridView()
@@ -106,7 +109,7 @@ namespace Project19
 
         }
 
-        private void visionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void visionTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dgvApplications.SelectedRows.Count <= 0)
             {
@@ -116,11 +119,47 @@ namespace Project19
 
             DataGridViewRow Row = dgvApplications.SelectedRows[0];
 
+            int TestPassed = (int)Row.Cells["PassedTestCount"].Value;
+            clsLocalDrivingLicenseApplication LDVlapp = clsLocalDrivingLicenseApplication.FindLDVLapplicationById((int)Row.Cells["LocalDrivingLicenseApplicationID"].Value);
+            clsApplications app = await clsApplications.FindApplicationByID(LDVlapp.ApplicationID);
 
-            // create appointment object
-            // create other object 
-            
+
+            using (var frm = new Frm_Shcuduel_Tests(LDVlapp,TestPassed,app))
+            {
+                frm.ShowDialog();
+            }
+
+
+
         }
+
+
+        private void SechduleTestsToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
+        {
+            // Prevent infinite recursion
+            if (isDropDownOpening) return;
+
+            isDropDownOpening = true;
+
+            try
+            {
+                // Force the dropdown to show all items
+                foreach (ToolStripItem item in SechduleTestsToolStripMenuItem.DropDownItems)
+                {
+                    item.Visible = true;
+                    item.Enabled = true;
+                }
+
+                // Don't call ShowDropDown() here - it causes the infinite loop
+            }
+            finally
+            {
+                isDropDownOpening = false;
+            }
+        }
+
+
+
     }
 
 }
