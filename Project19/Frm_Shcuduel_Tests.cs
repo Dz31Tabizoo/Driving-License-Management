@@ -31,6 +31,9 @@ namespace Project19
             dgvAppointments.DataSource = list;
         }
 
-
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

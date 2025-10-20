@@ -134,7 +134,11 @@ namespace DataAccessLayer
         public static async Task<DataTable> GetAppointmentByLocalDVL_ID(int LDVL_ID)
         {
             DataTable dt = new DataTable();
-            string Query = @"SELECT * FROM TestAppointments WHERE LocalDrivingLicenseApplicationID = @ldvlID";
+            string Query = @"SELECT TestAppointmentID , 
+                                    AppointmentDate ,
+                                    PaidFees,
+                                    IsLocked                               
+                               FROM TestAppointments WHERE LocalDrivingLicenseApplicationID = @ldvlID";
 
             using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
             {
