@@ -85,5 +85,11 @@ namespace BusinessLayer
         }
 
 
+        public static async Task<DataTable> GetAllAppointments(int locald)
+        {
+           return await clsTestAppointmentsDAL.GetAppointmentByLocalDVL_ID(locald);
+        }
+
+
     }
 }

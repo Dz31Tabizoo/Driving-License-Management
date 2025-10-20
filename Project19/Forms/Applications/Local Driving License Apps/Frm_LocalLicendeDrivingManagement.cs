@@ -122,7 +122,9 @@ namespace Project19
             DataGridViewRow Row = dgvApplications.SelectedRows[0];
 
             int TestPassed = (int)Row.Cells["PassedTestCount"].Value;
-            clsLocalDrivingLicenseApplication LDVlapp = clsLocalDrivingLicenseApplication.FindLDVLapplicationById((int)Row.Cells["LocalDrivingLicenseApplicationID"].Value);
+            int ldvlAppID = (int)Row.Cells["LocalDrivingLicenseApplicationID"].Value;
+
+            clsLocalDrivingLicenseApplication LDVlapp = clsLocalDrivingLicenseApplication.FindLDVLapplicationById(ldvlAppID);
             clsApplications app = await clsApplications.FindApplicationByID(LDVlapp.ApplicationID);
 
 

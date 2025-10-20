@@ -41,9 +41,9 @@ namespace BusinessLayer
           
         }
 
-        public clsLocalDrivingLicenseApplication(clsApplications application, clsLicenseClasses licenseClass)
+        public clsLocalDrivingLicenseApplication(int LDVLID, clsApplications application, clsLicenseClasses licenseClass)
         {
-            LocalDrivingLicenseApplicationID = -1;
+            LocalDrivingLicenseApplicationID = LDVLID;
             ApplicationID = application?.AppID ?? -1;
             LicenseClassID = licenseClass?.LicenseClassID ?? -1;
             Application = application ?? new clsApplications();

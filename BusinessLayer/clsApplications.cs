@@ -166,6 +166,7 @@ namespace BusinessLayer
             }
 
             clsApplications newObj = new clsApplications();
+            newObj.AppID = appID;
             newObj._mode = enMode.Update;
             newObj.Applicant = clsPeople.FindPersonByID(obj.applicantId);
             newObj.ApplicationStatus = (enAppStatus) obj.appStatus;

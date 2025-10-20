@@ -19,13 +19,14 @@ namespace Project19
             InitializeComponent();
             crtlLDVLappInfo1._LoadCrtlLocalAppInfo(localApp, testPassed);
             crtlApplicationInfo1.LoadApplicationInfo(application);
-            LoadDataGridView();
+            LoadDataGridView(localApp.LocalDrivingLicenseApplicationID);
         }
 
         
-        private async void LoadDataGridView()
+        private async void LoadDataGridView(int localDVL_ID)
         {
-            List<clsTestAppointment> list = await clsTestAppointment.GetAllAppointments();
+            //to fix
+            DataTable list = await clsTestAppointment.GetAllAppointments(localDVL_ID);
             dgvAppointments.AutoGenerateColumns = true;
             dgvAppointments.DataSource = list;
         }

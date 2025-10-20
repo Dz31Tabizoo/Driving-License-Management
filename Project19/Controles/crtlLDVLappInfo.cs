@@ -23,10 +23,12 @@ namespace Project19
 
         
 
-        public void _LoadCrtlLocalAppInfo(clsLocalDrivingLicenseApplication localApp,int TestPassed)
+        public async void _LoadCrtlLocalAppInfo(clsLocalDrivingLicenseApplication localApp,int TestPassed)
         {
             lblLocalDVLAppIDOutput.Text = localApp.LocalDrivingLicenseApplicationID.ToString();
-            lblClassesOutput.Text = localApp.LicenseClass.ClassName;
+            clsLicenseClasses licenceClass = await clsLicenseClasses.GetLicenseClassObjByIDAsync(localApp.LicenseClassID);
+
+            lblClassesOutput.Text = licenceClass.ClassName;
             lblPassedTestCount.Text = TestPassed.ToString();    
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
 using System.Linq;
@@ -98,7 +99,7 @@ namespace DataAccessLayer
                                     AppointDate = (DateTime)rdr["AppointmentDate"],
                                     AppointFees = (decimal)rdr["PaidFees"],
                                     UserIDApointTaker = (int)rdr["User_Appointment"],
-                                    IsLocked = (bool)rdr["IsLocked"],
+                                    IsLocked = (bool)rdr["Passed"],
                                     // Tests
                                     TestID = (int)rdr["TestID"],
                                     TestResult = (bool)rdr["TestResult"],
@@ -124,17 +125,32 @@ namespace DataAccessLayer
 
                 }
             }
-
-
-
-
         }
 
 
 
 
 
+        public static async Task<DataTable> GetAppointmentByLocalDVL_ID(int LDVL_ID)
+        {
+            DataTable dt = new DataTable();
+            string Query = @"SELECT * FROM TestAppointments WHERE LocalDrivingLicenseApplicationID = @ldvlID";
 
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                await cnx.OpenAsync();
+                using (SqlCommand cmd = new SqlCommand(Query, cnx))
+                {
+                    cmd.Parameters.AddWithValue("ldvlID", LDVL_ID);
+
+                    using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
+                    {
+                        dt.Load(reader);
+                    }
+                }
+            }
+            return dt;
+        }
 
 
 
