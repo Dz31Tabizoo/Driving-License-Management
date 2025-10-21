@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnExit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.lblFormTitle = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblApointmentTitle = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblClassesOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblLocalDVLAppIDOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
@@ -46,6 +45,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gbRetakInfo = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.lblFormTitle = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -53,12 +54,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.gbRetakInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbRetakInfo.Panel)).BeginInit();
             this.gbRetakInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
+            this.kryptonPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnExit
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(422, 422);
+            this.btnExit.Location = new System.Drawing.Point(421, 412);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(97, 30);
             this.btnExit.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
@@ -85,22 +88,9 @@
             this.btnExit.Tag = "btnAddNewPerson";
             this.btnExit.Values.Text = "Exit";
             // 
-            // lblFormTitle
-            // 
-            this.lblFormTitle.Location = new System.Drawing.Point(12, 7);
-            this.lblFormTitle.Name = "lblFormTitle";
-            this.lblFormTitle.Size = new System.Drawing.Size(142, 26);
-            this.lblFormTitle.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
-            this.lblFormTitle.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.lblFormTitle.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.lblFormTitle.StateNormal.ShortText.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormTitle.StateNormal.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.lblFormTitle.TabIndex = 22;
-            this.lblFormTitle.Values.Text = "Shedule Test";
-            // 
             // lblApointmentTitle
             // 
-            this.lblApointmentTitle.Location = new System.Drawing.Point(89, 257);
+            this.lblApointmentTitle.Location = new System.Drawing.Point(134, 239);
             this.lblApointmentTitle.Name = "lblApointmentTitle";
             this.lblApointmentTitle.Size = new System.Drawing.Size(77, 26);
             this.lblApointmentTitle.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
@@ -199,7 +189,7 @@
             // 
             // dtpAppointmentDateSelect
             // 
-            this.dtpAppointmentDateSelect.Location = new System.Drawing.Point(187, 260);
+            this.dtpAppointmentDateSelect.Location = new System.Drawing.Point(232, 242);
             this.dtpAppointmentDateSelect.Name = "dtpAppointmentDateSelect";
             this.dtpAppointmentDateSelect.Size = new System.Drawing.Size(154, 20);
             this.dtpAppointmentDateSelect.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -214,7 +204,7 @@
             // 
             // btnAddApointment
             // 
-            this.btnAddApointment.Location = new System.Drawing.Point(187, 407);
+            this.btnAddApointment.Location = new System.Drawing.Point(12, 397);
             this.btnAddApointment.Name = "btnAddApointment";
             this.btnAddApointment.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btnAddApointment.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -302,8 +292,10 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = global::Project19.Properties.Resources.close;
-            this.pictureBox2.Location = new System.Drawing.Point(497, 7);
+            this.pictureBox2.Location = new System.Drawing.Point(503, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(22, 22);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -312,7 +304,7 @@
             // 
             // gbRetakInfo
             // 
-            this.gbRetakInfo.Location = new System.Drawing.Point(12, 293);
+            this.gbRetakInfo.Location = new System.Drawing.Point(12, 283);
             this.gbRetakInfo.Name = "gbRetakInfo";
             this.gbRetakInfo.Size = new System.Drawing.Size(506, 102);
             this.gbRetakInfo.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -329,12 +321,33 @@
             this.gbRetakInfo.Values.Heading = "Retake Info";
             this.gbRetakInfo.Values.Image = global::Project19.Properties.Resources.information;
             // 
+            // kryptonPanel1
+            // 
+            this.kryptonPanel1.Controls.Add(this.lblFormTitle);
+            this.kryptonPanel1.Location = new System.Drawing.Point(-4, -1);
+            this.kryptonPanel1.Name = "kryptonPanel1";
+            this.kryptonPanel1.Size = new System.Drawing.Size(556, 34);
+            this.kryptonPanel1.StateCommon.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.kryptonPanel1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.kryptonPanel1.TabIndex = 80;
+            // 
+            // lblFormTitle
+            // 
+            this.lblFormTitle.Location = new System.Drawing.Point(7, 3);
+            this.lblFormTitle.Name = "lblFormTitle";
+            this.lblFormTitle.Size = new System.Drawing.Size(115, 26);
+            this.lblFormTitle.StateNormal.ShortText.Color1 = System.Drawing.Color.White;
+            this.lblFormTitle.StateNormal.ShortText.Color2 = System.Drawing.Color.White;
+            this.lblFormTitle.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormTitle.TabIndex = 81;
+            this.lblFormTitle.Values.Text = "Shcedule Test";
+            // 
             // Frm_Add_Retake_VisionTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(530, 460);
+            this.ClientSize = new System.Drawing.Size(530, 449);
             this.Controls.Add(this.gbRetakInfo);
             this.Controls.Add(this.dtpAppointmentDateSelect);
             this.Controls.Add(this.pictureBox1);
@@ -350,11 +363,12 @@
             this.Controls.Add(this.lblLDVLappID);
             this.Controls.Add(this.lblApointmentTitle);
             this.Controls.Add(this.btnAddApointment);
-            this.Controls.Add(this.lblFormTitle);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Add_Retake_VisionTest";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Frm_Add_User";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -363,6 +377,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gbRetakInfo.Panel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbRetakInfo)).EndInit();
             this.gbRetakInfo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
+            this.kryptonPanel1.ResumeLayout(false);
+            this.kryptonPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,7 +388,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnExit;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblFormTitle;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblApointmentTitle;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -387,5 +403,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtpAppointmentDateSelect;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnAddApointment;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox gbRetakInfo;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblFormTitle;
     }
 }

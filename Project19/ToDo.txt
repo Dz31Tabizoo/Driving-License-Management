@@ -1,7 +1,6 @@
 ﻿Class to create : 
 
-Create DTOs appointments
-
+watch full vedio part II and fill ToDo list of Dal Functions to start buid .
 
 
 

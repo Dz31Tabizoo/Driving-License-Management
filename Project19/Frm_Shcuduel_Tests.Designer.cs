@@ -156,7 +156,7 @@ namespace Project19
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Project19.Properties.Resources.close;
-            this.pictureBox2.Location = new System.Drawing.Point(787, 7);
+            this.pictureBox2.Location = new System.Drawing.Point(798, 8);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(22, 22);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -245,7 +245,7 @@ namespace Project19
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(826, 720);
+            this.ClientSize = new System.Drawing.Size(826, 715);
             this.Controls.Add(this.lblApointmentTitle);
             this.Controls.Add(this.dgvAppointments);
             this.Controls.Add(this.btnAddApointment);
