@@ -151,6 +151,7 @@ namespace Project19
             this.btnAddApointment.TabIndex = 42;
             this.btnAddApointment.Values.Image = global::Project19.Properties.Resources.calendar__1_;
             this.btnAddApointment.Values.Text = "";
+            this.btnAddApointment.Click += new System.EventHandler(this.btnAddApointment_Click);
             // 
             // pictureBox2
             // 

@@ -159,7 +159,46 @@ namespace DataAccessLayer
 
 
 
+        public static async Task<int> AddNewTestAppointmentAsyncDAL(int TestTtypeId, int LocalDLAppID, DateTime AppointDate, decimal AppointFees, int UserIDApointTaker, bool IsLocked = false)
+        {
+            string Query = "Insert into TestAppointments (TestTypeID , LocalDrivingLicenseApplicationID , AppointmentDate , PaidFees, CreatedByUserID, IsLocked) "+
+                "VALUES (@testTypeID,@LDVLappID,@AppDate,@appFees,@userID, @isLocked);" +
+                "SELECT SCOPE_IDENTITY();";
 
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(Query, cnx))
+                {
+                    cmd.Parameters.AddWithValue("@testTypeID", TestTtypeId);
+                    cmd.Parameters.AddWithValue("@LDVLappID", LocalDLAppID);
+                    cmd.Parameters.AddWithValue("@AppDate", AppointDate);
+                    cmd.Parameters.AddWithValue("@appFees", AppointFees);
+                    cmd.Parameters.AddWithValue("@userID", UserIDApointTaker);
+                    cmd.Parameters.AddWithValue("@isLocked", IsLocked);
+
+                    try
+                    {
+                        await cnx.OpenAsync();
+                        object result = await cmd.ExecuteScalarAsync();
+
+                        if (result != null && int.TryParse(result.ToString(), out int newUserID))
+                        {
+                            return newUserID;
+                        }
+                        else
+                        {
+                            return -1;
+                        }
+
+                    }
+                    catch
+                    {
+                        return -1;
+
+                    }
+                }
+            }
+        }
 
 
 

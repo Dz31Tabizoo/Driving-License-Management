@@ -91,5 +91,35 @@ namespace BusinessLayer
         }
 
 
+        private async Task<bool> _AddNewTestAppointmentAsync()
+        {
+            this.TestAppointmentID = await clsTestAppointmentsDAL.AddNewTestAppointmentAsyncDAL(TestTypeID, LDLA_ID, TestAppointmentDate, PaidFees, CreatedUSerID);
+
+            return  TestAppointmentID != -1;
+        }
+
+
+
+        public async Task<bool> Save()
+        {
+            switch(Mode)
+            {
+                case enMode.AddNew:
+                    return await _AddNewTestAppointmentAsync();
+                    
+
+
+                default:
+                    return false;
+
+            }
+
+            
+        }
+
+
+
+
+
     }
 }

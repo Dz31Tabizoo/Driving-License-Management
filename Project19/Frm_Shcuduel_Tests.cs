@@ -35,5 +35,10 @@ namespace Project19
         {
             this.Close();
         }
+
+        private void btnAddApointment_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,0 +1,391 @@
+﻿namespace Project19
+{
+    partial class Frm_Add_Retake_VisionTest
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btnExit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.lblFormTitle = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblApointmentTitle = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblClassesOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblLocalDVLAppIDOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblClass = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblLDVLappID = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lbl_ApplicantOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblApplicant = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblTrialOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.kryptonWrapLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.dtpAppointmentDateSelect = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.btnAddApointment = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.gbRetakInfo = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbRetakInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbRetakInfo.Panel)).BeginInit();
+            this.gbRetakInfo.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // btnExit
+            // 
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Location = new System.Drawing.Point(422, 422);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(97, 30);
+            this.btnExit.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.btnExit.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.btnExit.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.btnExit.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.btnExit.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnExit.StateCommon.Border.Rounding = 5;
+            this.btnExit.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnExit.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnExit.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnExit.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnExit.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnExit.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.btnExit.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnExit.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnExit.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnExit.TabIndex = 39;
+            this.btnExit.Tag = "btnAddNewPerson";
+            this.btnExit.Values.Text = "Exit";
+            // 
+            // lblFormTitle
+            // 
+            this.lblFormTitle.Location = new System.Drawing.Point(12, 7);
+            this.lblFormTitle.Name = "lblFormTitle";
+            this.lblFormTitle.Size = new System.Drawing.Size(142, 26);
+            this.lblFormTitle.StateNormal.Draw = ComponentFactory.Krypton.Toolkit.InheritBool.True;
+            this.lblFormTitle.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblFormTitle.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblFormTitle.StateNormal.ShortText.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormTitle.StateNormal.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
+            this.lblFormTitle.TabIndex = 22;
+            this.lblFormTitle.Values.Text = "Shedule Test";
+            // 
+            // lblApointmentTitle
+            // 
+            this.lblApointmentTitle.Location = new System.Drawing.Point(89, 257);
+            this.lblApointmentTitle.Name = "lblApointmentTitle";
+            this.lblApointmentTitle.Size = new System.Drawing.Size(77, 26);
+            this.lblApointmentTitle.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblApointmentTitle.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblApointmentTitle.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApointmentTitle.TabIndex = 54;
+            this.lblApointmentTitle.Values.Image = global::Project19.Properties.Resources._19795265411582994870_24;
+            this.lblApointmentTitle.Values.Text = "Date :";
+            // 
+            // lblClassesOutput
+            // 
+            this.lblClassesOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClassesOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblClassesOutput.Location = new System.Drawing.Point(149, 149);
+            this.lblClassesOutput.Name = "lblClassesOutput";
+            this.lblClassesOutput.Size = new System.Drawing.Size(0, 20);
+            this.lblClassesOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClassesOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            // 
+            // lblLocalDVLAppIDOutput
+            // 
+            this.lblLocalDVLAppIDOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalDVLAppIDOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblLocalDVLAppIDOutput.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLocalDVLAppIDOutput.Location = new System.Drawing.Point(151, 105);
+            this.lblLocalDVLAppIDOutput.Name = "lblLocalDVLAppIDOutput";
+            this.lblLocalDVLAppIDOutput.Size = new System.Drawing.Size(0, 20);
+            this.lblLocalDVLAppIDOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalDVLAppIDOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            // 
+            // lblClass
+            // 
+            this.lblClass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblClass.Location = new System.Drawing.Point(26, 149);
+            this.lblClass.Name = "lblClass";
+            this.lblClass.Size = new System.Drawing.Size(87, 20);
+            this.lblClass.StateCommon.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblClass.Text = "LDVL Class :";
+            // 
+            // lblLDVLappID
+            // 
+            this.lblLDVLappID.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDVLappID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblLDVLappID.Location = new System.Drawing.Point(17, 105);
+            this.lblLDVLappID.Name = "lblLDVLappID";
+            this.lblLDVLappID.Size = new System.Drawing.Size(101, 20);
+            this.lblLDVLappID.StateCommon.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDVLappID.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblLDVLappID.Text = "LDVL App ID :";
+            // 
+            // lbl_ApplicantOutput
+            // 
+            this.lbl_ApplicantOutput.Location = new System.Drawing.Point(249, 58);
+            this.lbl_ApplicantOutput.Name = "lbl_ApplicantOutput";
+            this.lbl_ApplicantOutput.Size = new System.Drawing.Size(69, 24);
+            this.lbl_ApplicantOutput.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.lbl_ApplicantOutput.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.lbl_ApplicantOutput.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ApplicantOutput.TabIndex = 66;
+            this.lbl_ApplicantOutput.Values.Text = "XXXXXX";
+            // 
+            // lblApplicant
+            // 
+            this.lblApplicant.Location = new System.Drawing.Point(134, 58);
+            this.lblApplicant.Name = "lblApplicant";
+            this.lblApplicant.Size = new System.Drawing.Size(109, 26);
+            this.lblApplicant.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblApplicant.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblApplicant.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApplicant.TabIndex = 65;
+            this.lblApplicant.Values.Image = global::Project19.Properties.Resources.user__5_;
+            this.lblApplicant.Values.Text = "Applicant :";
+            // 
+            // lblTrialOutput
+            // 
+            this.lblTrialOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrialOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblTrialOutput.Location = new System.Drawing.Point(149, 192);
+            this.lblTrialOutput.Name = "lblTrialOutput";
+            this.lblTrialOutput.Size = new System.Drawing.Size(0, 20);
+            this.lblTrialOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrialOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            // 
+            // kryptonWrapLabel2
+            // 
+            this.kryptonWrapLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonWrapLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.kryptonWrapLabel2.Location = new System.Drawing.Point(69, 192);
+            this.kryptonWrapLabel2.Name = "kryptonWrapLabel2";
+            this.kryptonWrapLabel2.Size = new System.Drawing.Size(44, 20);
+            this.kryptonWrapLabel2.StateCommon.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonWrapLabel2.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.kryptonWrapLabel2.Text = "Trial :";
+            // 
+            // dtpAppointmentDateSelect
+            // 
+            this.dtpAppointmentDateSelect.Location = new System.Drawing.Point(187, 260);
+            this.dtpAppointmentDateSelect.Name = "dtpAppointmentDateSelect";
+            this.dtpAppointmentDateSelect.Size = new System.Drawing.Size(154, 20);
+            this.dtpAppointmentDateSelect.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.dtpAppointmentDateSelect.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.dtpAppointmentDateSelect.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.dtpAppointmentDateSelect.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.dtpAppointmentDateSelect.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.dtpAppointmentDateSelect.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpAppointmentDateSelect.TabIndex = 72;
+            // 
+            // btnAddApointment
+            // 
+            this.btnAddApointment.Location = new System.Drawing.Point(187, 407);
+            this.btnAddApointment.Name = "btnAddApointment";
+            this.btnAddApointment.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btnAddApointment.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnAddApointment.OverrideDefault.Back.ColorAngle = 45F;
+            this.btnAddApointment.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btnAddApointment.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnAddApointment.OverrideDefault.Border.ColorAngle = 45F;
+            this.btnAddApointment.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAddApointment.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAddApointment.OverrideDefault.Border.Rounding = 20;
+            this.btnAddApointment.OverrideDefault.Border.Width = 1;
+            this.btnAddApointment.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnAddApointment.Size = new System.Drawing.Size(131, 45);
+            this.btnAddApointment.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnAddApointment.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnAddApointment.StateCommon.Back.ColorAngle = 45F;
+            this.btnAddApointment.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnAddApointment.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnAddApointment.StateCommon.Border.ColorAngle = 45F;
+            this.btnAddApointment.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAddApointment.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAddApointment.StateCommon.Border.Rounding = 20;
+            this.btnAddApointment.StateCommon.Border.Width = 1;
+            this.btnAddApointment.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnAddApointment.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnAddApointment.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddApointment.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnAddApointment.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnAddApointment.StatePressed.Back.ColorAngle = 135F;
+            this.btnAddApointment.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnAddApointment.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnAddApointment.StatePressed.Border.ColorAngle = 135F;
+            this.btnAddApointment.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAddApointment.StatePressed.Border.Rounding = 20;
+            this.btnAddApointment.StatePressed.Border.Width = 1;
+            this.btnAddApointment.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnAddApointment.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnAddApointment.StateTracking.Back.ColorAngle = 45F;
+            this.btnAddApointment.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnAddApointment.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnAddApointment.StateTracking.Border.ColorAngle = 45F;
+            this.btnAddApointment.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnAddApointment.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnAddApointment.StateTracking.Border.Rounding = 20;
+            this.btnAddApointment.StateTracking.Border.Width = 1;
+            this.btnAddApointment.TabIndex = 42;
+            this.btnAddApointment.Values.Image = global::Project19.Properties.Resources.save;
+            this.btnAddApointment.Values.Text = " Save";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Project19.Properties.Resources.ambition;
+            this.pictureBox1.Location = new System.Drawing.Point(119, 188);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.TabIndex = 69;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Project19.Properties.Resources.id_card__1_;
+            this.pictureBox6.Location = new System.Drawing.Point(119, 145);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.TabIndex = 60;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Project19.Properties.Resources.id_card;
+            this.pictureBox3.Location = new System.Drawing.Point(119, 101);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 59;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Project19.Properties.Resources.close;
+            this.pictureBox2.Location = new System.Drawing.Point(497, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(22, 22);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
+            // gbRetakInfo
+            // 
+            this.gbRetakInfo.Location = new System.Drawing.Point(12, 293);
+            this.gbRetakInfo.Name = "gbRetakInfo";
+            this.gbRetakInfo.Size = new System.Drawing.Size(506, 102);
+            this.gbRetakInfo.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.gbRetakInfo.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.gbRetakInfo.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.gbRetakInfo.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.gbRetakInfo.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.gbRetakInfo.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.gbRetakInfo.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.gbRetakInfo.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbRetakInfo.TabIndex = 73;
+            this.gbRetakInfo.Values.Heading = "Retake Info";
+            this.gbRetakInfo.Values.Image = global::Project19.Properties.Resources.information;
+            // 
+            // Frm_Add_Retake_VisionTest
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(530, 460);
+            this.Controls.Add(this.gbRetakInfo);
+            this.Controls.Add(this.dtpAppointmentDateSelect);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblTrialOutput);
+            this.Controls.Add(this.kryptonWrapLabel2);
+            this.Controls.Add(this.lbl_ApplicantOutput);
+            this.Controls.Add(this.lblApplicant);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.lblClassesOutput);
+            this.Controls.Add(this.lblLocalDVLAppIDOutput);
+            this.Controls.Add(this.lblClass);
+            this.Controls.Add(this.lblLDVLappID);
+            this.Controls.Add(this.lblApointmentTitle);
+            this.Controls.Add(this.btnAddApointment);
+            this.Controls.Add(this.lblFormTitle);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Frm_Add_Retake_VisionTest";
+            this.Text = "Frm_Add_User";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbRetakInfo.Panel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gbRetakInfo)).EndInit();
+            this.gbRetakInfo.ResumeLayout(false);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+        #endregion
+
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnExit;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblFormTitle;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblApointmentTitle;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblClassesOutput;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblLocalDVLAppIDOutput;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblClass;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblLDVLappID;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_ApplicantOutput;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblApplicant;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblTrialOutput;
+        private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtpAppointmentDateSelect;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAddApointment;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox gbRetakInfo;
+    }
+}

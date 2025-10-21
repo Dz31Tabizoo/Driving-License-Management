@@ -145,6 +145,12 @@
     <Compile Include="Forms\Applications\Local Driving License Apps\Frm_New_Local_DVL.Designer.cs">
       <DependentUpon>Frm_New_Local_DVL.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Add_Retake_VisionTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Add_Retake_VisionTest.Designer.cs">
+      <DependentUpon>Frm_Add_Retake_VisionTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Shcuduel_Tests.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Applications\Local Driving License Apps\Frm_New_Local_DVL.resx">
       <DependentUpon>Frm_New_Local_DVL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Add_Retake_VisionTest.resx">
+      <DependentUpon>Frm_Add_Retake_VisionTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Shcuduel_Tests.resx">
       <DependentUpon>Frm_Shcuduel_Tests.cs</DependentUpon>
@@ -476,6 +485,7 @@
     <None Include="Resources\check-list %281%29.png" />
     <None Include="Resources\calendar %281%29.png" />
     <None Include="Resources\19795265411582994870-24.png" />
+    <None Include="Resources\ambition.png" />
     <Content Include="Resources\close_RED.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -535,6 +545,7 @@
     <None Include="Resources\eye %282%29.png" />
     <None Include="Resources\document.png" />
     <None Include="Resources\steering-wheel.png" />
+    <None Include="Resources\save.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />
