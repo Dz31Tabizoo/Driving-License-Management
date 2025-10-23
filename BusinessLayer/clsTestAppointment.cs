@@ -39,7 +39,7 @@ namespace BusinessLayer
             TestAppointmentID = -1;
             TestTypeID = -1;
             LDLA_ID = -1;
-            TestAppointmentDate = DateTime.Now;
+            TestAppointmentDate = DateTime.MinValue;
             PaidFees = 0;
             IsLocked = false;
 
@@ -85,9 +85,9 @@ namespace BusinessLayer
         }
 
 
-        public static async Task<DataTable> GetAllAppointments(int locald)
+        public static async Task<DataTable> GetAllAppointments(int locald,int testTypeID)
         {
-           return await clsTestAppointmentsDAL.GetAppointmentByLocalDVL_ID(locald);
+           return await clsTestAppointmentsDAL.GetAppointmentByLocalDVL_IDAndTestTypeID(locald,testTypeID);
         }
 
 
@@ -118,7 +118,10 @@ namespace BusinessLayer
         }
 
 
-
+        public static async Task<bool> CheckIfNoAppointmentisON(int LocalDvLicenseID)
+        {
+            return await clsTestAppointmentsDAL.CheckIfApplicantHasNoOtherAppointmentNotLocked(LocalDvLicenseID);
+        }
 
 
     }

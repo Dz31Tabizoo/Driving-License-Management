@@ -128,8 +128,9 @@ namespace Project19
             clsApplications app = await clsApplications.FindApplicationByID(LDVlapp.ApplicationID);
 
 
-            using (var frm = new Frm_Shcuduel_Tests(LDVlapp, TestPassed, app))
+            using (var frm = new Frm_Shcuduel_Tests(LDVlapp, TestPassed, app,1))
             {
+                // (1) is TestTypeID of vision test
                 frm.ShowDialog();
             }
         }

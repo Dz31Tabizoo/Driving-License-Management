@@ -1,6 +1,14 @@
-﻿Class to create : 
-
-watch full vedio part II and fill ToDo list of Dal Functions to start buid .
+﻿to do : 
 
 
+✔ Disable Tests if result = null : Test Apoointement DAL : check by ldvlID if : there is testapointment ID for ldvlID and isLocked = false ? check for active appoiontment 
 
+▬ Trials : Test Appointments DAL : count the test apointment for the same TestType 
+
+▬ Add Test : TestAppointment DAL chek if there is the same testtype appointment is not locked
+
+▬ retake test : if he has a locked test application we check if he failed the last time to enable retake filed 
+
+▬ from 2 & 3 : if there is testtypeID Pased the applicant can't get another apointment.
+
+▬ if the 3 tests are passed (we disable shcudle tests) we create a driver license by "esue a driver licence (first Time and )"  the applicant will be a driver 

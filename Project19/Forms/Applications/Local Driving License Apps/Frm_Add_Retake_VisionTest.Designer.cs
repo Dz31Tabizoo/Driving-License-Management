@@ -87,6 +87,7 @@
             this.btnExit.TabIndex = 39;
             this.btnExit.Tag = "btnAddNewPerson";
             this.btnExit.Values.Text = "Exit";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblApointmentTitle
             // 
@@ -189,9 +190,9 @@
             // 
             // dtpAppointmentDateSelect
             // 
-            this.dtpAppointmentDateSelect.Location = new System.Drawing.Point(232, 242);
+            this.dtpAppointmentDateSelect.Location = new System.Drawing.Point(228, 242);
             this.dtpAppointmentDateSelect.Name = "dtpAppointmentDateSelect";
-            this.dtpAppointmentDateSelect.Size = new System.Drawing.Size(154, 20);
+            this.dtpAppointmentDateSelect.Size = new System.Drawing.Size(158, 20);
             this.dtpAppointmentDateSelect.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.dtpAppointmentDateSelect.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.dtpAppointmentDateSelect.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
@@ -261,6 +262,7 @@
             this.btnAddApointment.TabIndex = 42;
             this.btnAddApointment.Values.Image = global::Project19.Properties.Resources.save;
             this.btnAddApointment.Values.Text = " Save";
+            this.btnAddApointment.Click += new System.EventHandler(this.btnAddApointment_Click);
             // 
             // pictureBox1
             // 
@@ -304,6 +306,7 @@
             // 
             // gbRetakInfo
             // 
+            this.gbRetakInfo.Enabled = false;
             this.gbRetakInfo.Location = new System.Drawing.Point(12, 283);
             this.gbRetakInfo.Name = "gbRetakInfo";
             this.gbRetakInfo.Size = new System.Drawing.Size(506, 102);

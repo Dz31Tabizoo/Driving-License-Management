@@ -131,21 +131,23 @@ namespace DataAccessLayer
 
 
 
-        public static async Task<DataTable> GetAppointmentByLocalDVL_ID(int LDVL_ID)
+        public static async Task<DataTable> GetAppointmentByLocalDVL_IDAndTestTypeID(int LDVL_ID,int testType)
         {
             DataTable dt = new DataTable();
             string Query = @"SELECT TestAppointmentID , 
                                     AppointmentDate ,
                                     PaidFees,
                                     IsLocked                               
-                               FROM TestAppointments WHERE LocalDrivingLicenseApplicationID = @ldvlID";
+                               FROM TestAppointments 
+                               WHERE LocalDrivingLicenseApplicationID = @ldvlID AND TestTypeID = @testTypeId";
 
             using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
             {
                 await cnx.OpenAsync();
                 using (SqlCommand cmd = new SqlCommand(Query, cnx))
                 {
-                    cmd.Parameters.AddWithValue("ldvlID", LDVL_ID);
+                    cmd.Parameters.AddWithValue("@ldvlID", LDVL_ID);
+                    cmd.Parameters.AddWithValue("@testTypeId", testType);
 
                     using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
                     {
@@ -202,5 +204,18 @@ namespace DataAccessLayer
 
 
 
+        public static async Task<bool> CheckIfApplicantHasNoOtherAppointmentNotLocked(int LocaldvAppID)
+        {
+            string query = "Select 1 FROM TestAppointments Where LocalDrivingLicenseApplicationID = @ldvlID AND IsLocked = 0 ";
+            using (var connection = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            using (var command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@ldvlID", LocaldvAppID);
+                await connection.OpenAsync();
+
+                // Returns true if any records exist
+                return await command.ExecuteScalarAsync() != null;
+            }
+        }
     }
 }
