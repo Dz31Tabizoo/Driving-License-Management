@@ -307,7 +307,7 @@
             // gbRetakInfo
             // 
             this.gbRetakInfo.Enabled = false;
-            this.gbRetakInfo.Location = new System.Drawing.Point(12, 283);
+            this.gbRetakInfo.Location = new System.Drawing.Point(12, 278);
             this.gbRetakInfo.Name = "gbRetakInfo";
             this.gbRetakInfo.Size = new System.Drawing.Size(506, 102);
             this.gbRetakInfo.StateCommon.Back.Color1 = System.Drawing.Color.White;

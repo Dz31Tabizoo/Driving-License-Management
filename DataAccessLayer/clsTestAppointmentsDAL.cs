@@ -203,18 +203,40 @@ namespace DataAccessLayer
         }
 
 
+        // To disable Test Type Choises
+        public static async Task<bool> CheckIfApplicantHasNoOtherAppointmentNotLocked(int LocaldvAppID,int testTypeID)
+        {
+            string query = "Select 1 FROM TestAppointments Where LocalDrivingLicenseApplicationID = @ldvlID AND AND TestTypeID = @testTpID AND IsLocked = 0 ";
+            using (var connection = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            using (var command = new SqlCommand(query, connection))
+            {
 
-        public static async Task<bool> CheckIfApplicantHasNoOtherAppointmentNotLocked(int LocaldvAppID)
+                command.Parameters.AddWithValue("@ldvlID", LocaldvAppID);
+                command.Parameters.AddWithValue("@testTpID", testTypeID);
+
+                await connection.OpenAsync();
+
+                // Returns true if any records exist
+                return await command.ExecuteScalarAsync() != null;
+
+            }
+        }
+
+        //to disable Add Appointment
+        public static async Task<bool> CheckIfApplicantHasAlreadyAnAppointment(int LocaldvAppID)
         {
             string query = "Select 1 FROM TestAppointments Where LocalDrivingLicenseApplicationID = @ldvlID AND IsLocked = 0 ";
             using (var connection = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
             using (var command = new SqlCommand(query, connection))
             {
+
                 command.Parameters.AddWithValue("@ldvlID", LocaldvAppID);
+                
                 await connection.OpenAsync();
 
                 // Returns true if any records exist
-                return await command.ExecuteScalarAsync() != null;
+                return (int) await command.ExecuteScalarAsync() != 1 ;
+
             }
         }
 

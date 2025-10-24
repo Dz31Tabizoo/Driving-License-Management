@@ -48,7 +48,7 @@ namespace Project19
         private async void btnAddApointment_Click(object sender, EventArgs e)
         {
 
-            if( await clsTestAppointment.CheckIfNoAppointmentisON(_LDVLAPP.ApplicationID))
+            if( await clsTestAppointment.CheckIfNoAppointmentisON(_LDVLAPP.LocalDrivingLicenseApplicationID))
             {
                 MessageBox.Show("▬ The applicant has already an appointment ▬","Appointment Failed",MessageBoxButtons.OK,MessageBoxIcon.Stop);
                 return;

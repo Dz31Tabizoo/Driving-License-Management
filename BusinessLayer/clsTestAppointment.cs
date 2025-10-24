@@ -120,7 +120,7 @@ namespace BusinessLayer
 
         public static async Task<bool> CheckIfNoAppointmentisON(int LocalDvLicenseID)
         {
-            return await clsTestAppointmentsDAL.CheckIfApplicantHasNoOtherAppointmentNotLocked(LocalDvLicenseID);
+            return await clsTestAppointmentsDAL.CheckIfApplicantHasAlreadyAnAppointment(LocalDvLicenseID);
         }
 
 
