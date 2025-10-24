@@ -43,16 +43,22 @@ namespace Project19
             this.dgvApplications = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ShowDetailsTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.AddToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.editeApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.sechduleTestsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.visionTestToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.writtenTestToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.practicalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.issueDrivingLicense1stTimeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.showDrivingLicenseToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.showPersonLicenseHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -65,12 +71,6 @@ namespace Project19
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvApplications)).BeginInit();
@@ -256,7 +256,8 @@ namespace Project19
             this.toolStripSeparator12,
             this.showPersonLicenseHistoryToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(239, 260);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(239, 238);
+            this.contextMenuStrip2.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip2_Opening);
             // 
             // ShowDetailsTSMI
             // 
@@ -267,6 +268,11 @@ namespace Project19
             this.ShowDetailsTSMI.Name = "ShowDetailsTSMI";
             this.ShowDetailsTSMI.Size = new System.Drawing.Size(238, 22);
             this.ShowDetailsTSMI.Text = "Show Application Details";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(235, 6);
             // 
             // AddToolStripMenuItem2
             // 
@@ -298,6 +304,11 @@ namespace Project19
             this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(238, 22);
             this.deleteToolStripMenuItem1.Text = "Delete ";
             // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(235, 6);
+            // 
             // cancelToolStripMenuItem
             // 
             this.cancelToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
@@ -307,6 +318,11 @@ namespace Project19
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
             this.cancelToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
             this.cancelToolStripMenuItem.Text = "Cancel";
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(235, 6);
             // 
             // sechduleTestsToolStripMenuItem1
             // 
@@ -325,6 +341,7 @@ namespace Project19
             // visionTestToolStripMenuItem1
             // 
             this.visionTestToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.visionTestToolStripMenuItem1.Enabled = false;
             this.visionTestToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.visionTestToolStripMenuItem1.Image = global::Project19.Properties.Resources.eye__2_;
             this.visionTestToolStripMenuItem1.Name = "visionTestToolStripMenuItem1";
@@ -335,6 +352,7 @@ namespace Project19
             // writtenTestToolStripMenuItem1
             // 
             this.writtenTestToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.writtenTestToolStripMenuItem1.Enabled = false;
             this.writtenTestToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.writtenTestToolStripMenuItem1.Image = global::Project19.Properties.Resources.document;
             this.writtenTestToolStripMenuItem1.Name = "writtenTestToolStripMenuItem1";
@@ -344,11 +362,17 @@ namespace Project19
             // practicalToolStripMenuItem1
             // 
             this.practicalToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.practicalToolStripMenuItem1.Enabled = false;
             this.practicalToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.practicalToolStripMenuItem1.Image = global::Project19.Properties.Resources.steering_wheel;
             this.practicalToolStripMenuItem1.Name = "practicalToolStripMenuItem1";
             this.practicalToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.practicalToolStripMenuItem1.Text = "Practical Test";
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(235, 6);
             // 
             // issueDrivingLicense1stTimeToolStripMenuItem1
             // 
@@ -360,6 +384,11 @@ namespace Project19
             this.issueDrivingLicense1stTimeToolStripMenuItem1.Size = new System.Drawing.Size(238, 22);
             this.issueDrivingLicense1stTimeToolStripMenuItem1.Text = "Issue Driving License (1st Time)";
             // 
+            // toolStripSeparator11
+            // 
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(235, 6);
+            // 
             // showDrivingLicenseToolStripMenuItem1
             // 
             this.showDrivingLicenseToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
@@ -369,6 +398,11 @@ namespace Project19
             this.showDrivingLicenseToolStripMenuItem1.Name = "showDrivingLicenseToolStripMenuItem1";
             this.showDrivingLicenseToolStripMenuItem1.Size = new System.Drawing.Size(238, 22);
             this.showDrivingLicenseToolStripMenuItem1.Text = "Show Driving License";
+            // 
+            // toolStripSeparator12
+            // 
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(235, 6);
             // 
             // showPersonLicenseHistoryToolStripMenuItem
             // 
@@ -668,36 +702,6 @@ namespace Project19
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(235, 6);
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(235, 6);
-            // 
-            // toolStripSeparator9
-            // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(235, 6);
-            // 
-            // toolStripSeparator10
-            // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(235, 6);
-            // 
-            // toolStripSeparator11
-            // 
-            this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(235, 6);
-            // 
-            // toolStripSeparator12
-            // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(235, 6);
             // 
             // Frm_LocalLicendeDrivingManagement
             // 

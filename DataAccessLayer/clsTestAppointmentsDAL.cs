@@ -235,7 +235,8 @@ namespace DataAccessLayer
                 await connection.OpenAsync();
 
                 // Returns true if any records exist
-                return (int) await command.ExecuteScalarAsync() != 1 ;
+                var result = await command.ExecuteScalarAsync();
+                return result != null && result != DBNull.Value;
 
             }
         }
@@ -270,6 +271,33 @@ namespace DataAccessLayer
 
 
 
+        }
+
+        public static async Task<bool> isApplicantHasDoneThisTypeOfTest(int localDvAppID,int testType)
+        {
+            string query = @"SELECT CASE 
+                                  WHEN EXISTS 
+                                                (SELECT 1 From Tests inner join TestAppointments 
+                                                   On Tests.TestAppointmentID = TestAppointments.TestAppointmentID 
+                                                           Where TestAppointments.LocalDrivingLicenseApplicationID= @ldrvAppID 
+                                                                  and  Tests.TestResult = 1 
+                                                                  and TestAppointments.TestTypeID = @testTypeID )
+                                         THEN CAST (1 AS BIT)  
+                                         ELSE CAST (0 AS BIT)  End as result";
+
+            using (var connection = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            using (var command = new SqlCommand(query, connection))
+            {
+
+                command.Parameters.AddWithValue("@ldrvAppID", localDvAppID);
+                command.Parameters.AddWithValue("@testTypeID", testType);
+
+                await connection.OpenAsync();
+
+                // Returns true if any records exist
+                return (bool) await command.ExecuteScalarAsync();
+
+            }
         }
     }
 }

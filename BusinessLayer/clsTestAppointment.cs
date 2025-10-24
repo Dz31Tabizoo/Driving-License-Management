@@ -129,6 +129,12 @@ namespace BusinessLayer
             return await clsTestAppointmentsDAL.CountTestTrielsForEachTestTypeAndLdvlApp(localDvAppID, testTypeId);
         }
 
+        public static async Task<bool> IsApplicantHasPassedTypeOfTest(int localDvAppID, int testTypeId)
+        {
+            return await clsTestAppointmentsDAL.isApplicantHasDoneThisTypeOfTest(localDvAppID, testTypeId);
+
+        }
+
 
     }
 }

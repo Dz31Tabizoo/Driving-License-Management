@@ -69,7 +69,7 @@ namespace Project19
         }
 
 
-
+        
 
 
         private void btnClosePeopleMng_Click(object sender, EventArgs e)
@@ -133,6 +133,39 @@ namespace Project19
                 // (1) is TestTypeID of vision test
                 frm.ShowDialog();
             }
+        }
+
+        private async void contextMenuStrip2_Opening(object sender, CancelEventArgs e)
+        {
+            ResetTestMenuItems();
+
+            DataGridViewRow row = dgvApplications.SelectedRows[0];
+            int ldvlAppID = (int)row.Cells["LocalDrivingLicenseApplicationID"].Value;
+
+            if (!await clsTestAppointment.IsApplicantHasPassedTypeOfTest(ldvlAppID,1))
+            {
+                visionTestToolStripMenuItem1.Enabled = true;
+            }
+            else if (!await clsTestAppointment.IsApplicantHasPassedTypeOfTest(ldvlAppID,2))
+            {
+                writtenTestToolStripMenuItem1.Enabled = true;
+                                
+            }
+            else if (!await clsTestAppointment.IsApplicantHasPassedTypeOfTest(ldvlAppID,3))
+            {
+                practicalToolStripMenuItem1.Enabled = true;
+            }
+            
+
+
+
+        }
+
+        private void ResetTestMenuItems()
+        {
+            visionTestToolStripMenuItem1.Enabled = false;
+            writtenTestToolStripMenuItem1.Enabled = false;
+            practicalToolStripMenuItem1.Enabled = false;
         }
     }
 
