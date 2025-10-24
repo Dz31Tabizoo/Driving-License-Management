@@ -217,5 +217,37 @@ namespace DataAccessLayer
                 return await command.ExecuteScalarAsync() != null;
             }
         }
+
+        public static async Task<int> CountTestTrielsForEachTestTypeAndLdvlApp(int localDVApplicationID, int TestType)
+        {
+            string query = "SELECT Trail = COUNT(LocalDrivingLicenseApplicationID) FROM TestAppointments WHERE TestTypeID = @testTypeId AND LocalDrivingLicenseApplicationID = @LdvlAppiD;";
+            int Trails = 0;
+            using (var cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (var cmd = new SqlCommand(query,cnx))
+                {
+                    cmd.Parameters.AddWithValue("@testTypeId", TestType);
+                    cmd.Parameters.AddWithValue("@LdvlAppiD", localDVApplicationID);
+                    try
+                    {
+                        await cnx.OpenAsync();
+
+                        Trails = (int)await cmd.ExecuteScalarAsync();
+
+                        return Trails;
+                    }
+                    catch 
+                    {
+                        return 0; 
+                    }
+
+                }
+            }
+
+
+
+
+
+        }
     }
 }

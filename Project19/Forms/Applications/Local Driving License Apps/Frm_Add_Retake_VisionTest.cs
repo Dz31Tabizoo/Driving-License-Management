@@ -21,7 +21,7 @@ namespace Project19
         public Frm_Add_Retake_VisionTest(clsLocalDrivingLicenseApplication ldvlApp,int testTypID)
         {
             InitializeComponent();
-            LoadLabels(ldvlApp );
+            LoadLabels(ldvlApp,testTypID );
             _TestTypeID = testTypID;
             CreateNEwAppointment(ldvlApp);
         }
@@ -38,12 +38,13 @@ namespace Project19
             _NewTestApp = Tapp;
         }
 
-        private void LoadLabels( clsLocalDrivingLicenseApplication app)
+        private async void LoadLabels( clsLocalDrivingLicenseApplication app,int testTypeid)
         {
             lbl_ApplicantOutput.Text =(app.Application.Applicant.FirstName + app.Application.Applicant.SecondName + app.Application.Applicant.LastName).Trim();
             lblClassesOutput.Text = app.LicenseClass.ClassName;
             lblLocalDVLAppIDOutput.Text = app.LocalDrivingLicenseApplicationID.ToString();
-
+            int trails = await clsTestAppointment.CountTrails(app.LocalDrivingLicenseApplicationID, testTypeid);
+            lblTrialOutput.Text = trails.ToString() + "/3";
         }
 
         private void btnExit_Click(object sender, EventArgs e)

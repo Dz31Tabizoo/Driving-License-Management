@@ -124,5 +124,11 @@ namespace BusinessLayer
         }
 
 
+        public static async Task<int> CountTrails(int localDvAppID , int testTypeId)
+        {
+            return await clsTestAppointmentsDAL.CountTestTrielsForEachTestTypeAndLdvlApp(localDvAppID, testTypeId);
+        }
+
+
     }
 }

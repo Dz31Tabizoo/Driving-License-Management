@@ -111,28 +111,28 @@
     <Compile Include="Controles\crtlApplicationInfo.Designer.cs">
       <DependentUpon>crtlApplicationInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Applications\Apps Types\Frm_Application_Types.cs">
+    <Compile Include="Forms\Apps Types\Frm_Application_Types.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Applications\Apps Types\Frm_Application_Types.Designer.cs">
+    <Compile Include="Forms\Apps Types\Frm_Application_Types.Designer.cs">
       <DependentUpon>Frm_Application_Types.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Applications\Apps Types\Frm_edit_apps_price.cs">
+    <Compile Include="Forms\Apps Types\Frm_edit_apps_price.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Applications\Apps Types\Frm_edit_apps_price.Designer.cs">
+    <Compile Include="Forms\Apps Types\Frm_edit_apps_price.Designer.cs">
       <DependentUpon>Frm_edit_apps_price.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Applications\Test Types\Frm_Edit_Test.cs">
+    <Compile Include="Forms\Test Types\Frm_Edit_Test.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Applications\Test Types\Frm_Edit_Test.Designer.cs">
+    <Compile Include="Forms\Test Types\Frm_Edit_Test.Designer.cs">
       <DependentUpon>Frm_Edit_Test.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Applications\Test Types\Frm_Test_Types.cs">
+    <Compile Include="Forms\Test Types\Frm_Test_Types.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Applications\Test Types\Frm_Test_Types.Designer.cs">
+    <Compile Include="Forms\Test Types\Frm_Test_Types.Designer.cs">
       <DependentUpon>Frm_Test_Types.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Applications\Local Driving License Apps\Frm_LocalLicendeDrivingManagement.cs">
@@ -255,10 +255,10 @@
     <EmbeddedResource Include="Controles\crtlApplicationInfo.resx">
       <DependentUpon>crtlApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Applications\Test Types\Frm_Edit_Test.resx">
+    <EmbeddedResource Include="Forms\Test Types\Frm_Edit_Test.resx">
       <DependentUpon>Frm_Edit_Test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Applications\Test Types\Frm_Test_Types.resx">
+    <EmbeddedResource Include="Forms\Test Types\Frm_Test_Types.resx">
       <DependentUpon>Frm_Test_Types.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main\Frm_Login.resx">
@@ -291,10 +291,10 @@
     <EmbeddedResource Include="Forms\User\Frm_Edit_User_Info.resx">
       <DependentUpon>Frm_Edit_User_Info.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Applications\Apps Types\Frm_Application_Types.resx">
+    <EmbeddedResource Include="Forms\Apps Types\Frm_Application_Types.resx">
       <DependentUpon>Frm_Application_Types.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Applications\Apps Types\Frm_edit_apps_price.resx">
+    <EmbeddedResource Include="Forms\Apps Types\Frm_edit_apps_price.resx">
       <DependentUpon>Frm_edit_apps_price.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Applications\Local Driving License Apps\Frm_LocalLicendeDrivingManagement.resx">

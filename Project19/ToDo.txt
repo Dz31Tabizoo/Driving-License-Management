@@ -3,7 +3,7 @@
 
 ✔ Disable Tests if result = null : Test Apoointement DAL : check by ldvlID if : there is testapointment ID for ldvlID and isLocked = false ? check for active appoiontment 
 
-▬ Trials : Test Appointments DAL : count the test apointment for the same TestType 
+✔ Trials : Test Appointments DAL : count the test apointment for the same TestType 
 
 ▬ Add Test : TestAppointment DAL chek if there is the same testtype appointment is not locked
 
