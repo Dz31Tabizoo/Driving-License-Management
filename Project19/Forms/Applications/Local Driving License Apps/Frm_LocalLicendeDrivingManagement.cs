@@ -124,7 +124,7 @@ namespace Project19
             int TestPassed = (int)Row.Cells["PassedTestCount"].Value;
             int ldvlAppID = (int)Row.Cells["LocalDrivingLicenseApplicationID"].Value;
 
-            clsLocalDrivingLicenseApplication LDVlapp = clsLocalDrivingLicenseApplication.FindLDVLapplicationById(ldvlAppID);
+            clsLocalDrivingLicenseApplication LDVlapp = await clsLocalDrivingLicenseApplication.FindLDVLapplicationById(ldvlAppID);
             clsApplications app = await clsApplications.FindApplicationByID(LDVlapp.ApplicationID);
 
 

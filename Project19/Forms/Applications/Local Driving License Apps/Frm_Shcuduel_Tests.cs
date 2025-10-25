@@ -32,10 +32,10 @@ namespace Project19
         }
 
         
-        private async void LoadDataGridView(int localDVL_ID,int testTypeid)
+        private async void LoadDataGridView(int localDVL_ID,int testTydeid)
         {
             //to fix
-            DataTable list = await clsTestAppointment.GetAllAppointments(localDVL_ID,testTypeid);
+            DataTable list = await clsTestAppointment.GetAllAppointments(localDVL_ID,testTydeid);
             dgvAppointments.AutoGenerateColumns = true;
             dgvAppointments.DataSource = list;
         }
@@ -79,6 +79,18 @@ namespace Project19
                     lblFormTitle.Text = "Test Appointments";
                     break;
             }
+        }
+
+        private void EditAppointmentTSM_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgvAppointments.SelectedRows[0];
+            bool isLocked = (bool)row.Cells["IsLocked"].Value;
+
+            using (Form FRM = new Frm_Add_Retake_VisionTest(_LDVLAPP, _testTypeID,isLocked))
+            {
+                FRM.ShowDialog();
+            }
+
         }
     }
 }

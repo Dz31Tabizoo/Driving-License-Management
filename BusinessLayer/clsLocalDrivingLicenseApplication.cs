@@ -85,15 +85,18 @@ namespace BusinessLayer
         }
 
 
-        public static clsLocalDrivingLicenseApplication FindLDVLapplicationById(int ID)
+        public static async Task<clsLocalDrivingLicenseApplication> FindLDVLapplicationById(int ID)
         {
 
             int appId = -1;
             int licenseClassID = -1;
 
+
             if (clsLocalDrivingLicenseApplicationDAL.FindLDVlApplicationByID(ID,ref appId,ref licenseClassID))
             {
-                return new clsLocalDrivingLicenseApplication(ID, appId, licenseClassID);
+                var ObjApplication = await clsApplications.FindApplicationByID(appId);
+                var ObjLicenseClass = await clsLicenseClasses.GetLicenseClassObjByIDAsync(licenseClassID);
+                return new clsLocalDrivingLicenseApplication(ID,ObjApplication,ObjLicenseClass);
             }
             else
             {

@@ -488,6 +488,7 @@
     <None Include="Resources\calendar %281%29.png" />
     <None Include="Resources\19795265411582994870-24.png" />
     <None Include="Resources\ambition.png" />
+    <None Include="Resources\approval.png" />
     <Content Include="Resources\close_RED.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -548,6 +549,9 @@
     <None Include="Resources\document.png" />
     <None Include="Resources\steering-wheel.png" />
     <None Include="Resources\save.png" />
+    <None Include="Resources\test.png" />
+    <None Include="Resources\test %281%291.png" />
+    <None Include="Resources\test %282%29.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />
