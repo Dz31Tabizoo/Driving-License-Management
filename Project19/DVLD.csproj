@@ -159,10 +159,10 @@
     <Compile Include="Forms\Tests Forms\Frm_View_Shcudueled_Tests.Designer.cs">
       <DependentUpon>Frm_View_Shcudueled_Tests.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Take_Tests.cs">
+    <Compile Include="Forms\Tests Forms\Frm_Take_Tests.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Take_Tests.Designer.cs">
+    <Compile Include="Forms\Tests Forms\Frm_Take_Tests.Designer.cs">
       <DependentUpon>Frm_Take_Tests.cs</DependentUpon>
     </Compile>
     <Compile Include="Handlers\Global Setting.cs" />
@@ -315,7 +315,7 @@
     <EmbeddedResource Include="Forms\Tests Forms\Frm_View_Shcudueled_Tests.resx">
       <DependentUpon>Frm_View_Shcudueled_Tests.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Take_Tests.resx">
+    <EmbeddedResource Include="Forms\Tests Forms\Frm_Take_Tests.resx">
       <DependentUpon>Frm_Take_Tests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
