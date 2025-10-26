@@ -12,14 +12,14 @@ using BusinessLayer;
 
 namespace Project19
 {
-    public partial class Frm_Shcuduel_Tests : KryptonForm
+    public partial class Frm_View_Shcudueled_Tests : KryptonForm
     {
         private clsLocalDrivingLicenseApplication _LDVLAPP = new clsLocalDrivingLicenseApplication();
         
         private clsApplications _app = new clsApplications();
         private int _testTypeID = -1;
         
-        public Frm_Shcuduel_Tests(clsLocalDrivingLicenseApplication localApp ,int testPassed, clsApplications application,int TestType)
+        public Frm_View_Shcudueled_Tests(clsLocalDrivingLicenseApplication localApp ,int testPassed, clsApplications application,int TestType)
         {
             InitializeComponent();
             LoadFormTitleText(TestType);
@@ -56,7 +56,7 @@ namespace Project19
             var LicenseClass = await clsLicenseClasses.GetLicenseClassObjByIDAsync(_LDVLAPP.LicenseClassID);
             var LdvlApp = new clsLocalDrivingLicenseApplication(_LDVLAPP.LocalDrivingLicenseApplicationID,_app,LicenseClass);
 
-            using (Form FRM = new Frm_Add_Retake_VisionTest(LdvlApp,_testTypeID))
+            using (Form FRM = new Frm_shcedule_Test(LdvlApp,_testTypeID))
             {
                 FRM.ShowDialog();
             }
@@ -85,11 +85,14 @@ namespace Project19
         {
             DataGridViewRow row = dgvAppointments.SelectedRows[0];
             bool isLocked = (bool)row.Cells["IsLocked"].Value;
+            int testAppointmentID = (int)row.Cells["TestAppointmentID"].Value;
 
-            using (Form FRM = new Frm_Add_Retake_VisionTest(_LDVLAPP, _testTypeID,isLocked))
+            using (Form FRM = new Frm_shcedule_Test(_LDVLAPP, _testTypeID,isLocked,true,testAppointmentID))
             {
                 FRM.ShowDialog();
+
             }
+            LoadDataGridView(_LDVLAPP.LocalDrivingLicenseApplicationID, _testTypeID);
 
         }
     }

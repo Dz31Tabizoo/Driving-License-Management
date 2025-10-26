@@ -202,6 +202,33 @@ namespace DataAccessLayer
             }
         }
 
+        public static async Task<bool> UpdateTestAppointmentAsyncDAL(int testAppointmentID,DateTime newAppointmentDate)
+        {
+            string query = @"UPDATE TestAppointments SET AppointmentDate  = @testAppointmentDate WHERE TestAppointmentID = @testAppId;";
+            int RowAffected = -1;
+
+            using (var cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (var cmd = new SqlCommand(query,cnx))
+                {
+                    cmd.Parameters.AddWithValue("@testAppId", testAppointmentID);
+                    cmd.Parameters.AddWithValue("@testAppointmentDate", newAppointmentDate);
+
+                    try
+                    {
+                        await cnx.OpenAsync();
+                        RowAffected = await cmd.ExecuteNonQueryAsync();
+
+                        return RowAffected != -1;
+
+                    }
+                    catch { return false; }
+
+
+                }
+            }
+        }
+
 
         // To disable Test Type Choises
         public static async Task<bool> CheckIfApplicantHasNoOtherAppointmentNotLocked(int LocaldvAppID,int testTypeID)

@@ -11,10 +11,10 @@ using BusinessLayer;
 using ComponentFactory.Krypton.Toolkit;
 namespace Project19
 {
-    public partial class Frm_New_Local_DVL : KryptonForm
+    public partial class Frm_Add_New_Local_DVL : KryptonForm
     {
         
-        public Frm_New_Local_DVL()
+        public Frm_Add_New_Local_DVL()
         {
             InitializeComponent();
             LoadForm();

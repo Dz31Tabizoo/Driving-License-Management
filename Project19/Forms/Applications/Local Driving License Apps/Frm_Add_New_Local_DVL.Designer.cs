@@ -1,6 +1,6 @@
 ﻿namespace Project19
 {
-    partial class Frm_New_Local_DVL
+    partial class Frm_Add_New_Local_DVL
     {
         /// <summary>
         /// Required designer variable.

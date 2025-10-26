@@ -98,6 +98,11 @@ namespace BusinessLayer
             return  TestAppointmentID != -1;
         }
 
+        private async Task<bool> _UpdateTestAppointmentAsync()
+        {
+            return await clsTestAppointmentsDAL.UpdateTestAppointmentAsyncDAL(this.TestAppointmentID,this.TestAppointmentDate);
+        }
+
 
 
         public async Task<bool> Save()
@@ -106,6 +111,8 @@ namespace BusinessLayer
             {
                 case enMode.AddNew:
                     return await _AddNewTestAppointmentAsync();
+                case enMode.Update:
+                    return await _UpdateTestAppointmentAsync();
                     
 
 

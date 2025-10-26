@@ -102,7 +102,7 @@ namespace Project19
         {
 
 
-            using (var form = new Frm_New_Local_DVL())
+            using (var form = new Frm_Add_New_Local_DVL())
             {
                 form.ShowDialog();
             }
@@ -128,7 +128,7 @@ namespace Project19
             clsApplications app = await clsApplications.FindApplicationByID(LDVlapp.ApplicationID);
 
 
-            using (var frm = new Frm_Shcuduel_Tests(LDVlapp, TestPassed, app,1))
+            using (var frm = new Frm_View_Shcudueled_Tests(LDVlapp, TestPassed, app,1))
             {
                 // (1) is TestTypeID of vision test
                 frm.ShowDialog();

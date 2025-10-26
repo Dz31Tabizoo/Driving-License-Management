@@ -1,6 +1,6 @@
 ﻿namespace Project19
 {
-    partial class Frm_Add_Retake_VisionTest
+    partial class Frm_shcedule_Test
     {
         /// <summary>
         /// Required designer variable.
@@ -39,7 +39,7 @@
             this.lblTrialOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.kryptonWrapLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.dtpAppointmentDateSelect = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.btnAddApointment = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnSaveAppointmentDateTest = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -211,71 +211,71 @@
             this.dtpAppointmentDateSelect.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpAppointmentDateSelect.TabIndex = 72;
             // 
-            // btnAddApointment
+            // btnSaveAppointmentDateTest
             // 
-            this.btnAddApointment.Location = new System.Drawing.Point(12, 397);
-            this.btnAddApointment.Name = "btnAddApointment";
-            this.btnAddApointment.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btnAddApointment.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btnAddApointment.OverrideDefault.Back.ColorAngle = 45F;
-            this.btnAddApointment.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btnAddApointment.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btnAddApointment.OverrideDefault.Border.ColorAngle = 45F;
-            this.btnAddApointment.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnSaveAppointmentDateTest.Location = new System.Drawing.Point(12, 397);
+            this.btnSaveAppointmentDateTest.Name = "btnSaveAppointmentDateTest";
+            this.btnSaveAppointmentDateTest.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btnSaveAppointmentDateTest.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnSaveAppointmentDateTest.OverrideDefault.Back.ColorAngle = 45F;
+            this.btnSaveAppointmentDateTest.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btnSaveAppointmentDateTest.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnSaveAppointmentDateTest.OverrideDefault.Border.ColorAngle = 45F;
+            this.btnSaveAppointmentDateTest.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAddApointment.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnAddApointment.OverrideDefault.Border.Rounding = 20;
-            this.btnAddApointment.OverrideDefault.Border.Width = 1;
-            this.btnAddApointment.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnAddApointment.Size = new System.Drawing.Size(131, 45);
-            this.btnAddApointment.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.btnAddApointment.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
-            this.btnAddApointment.StateCommon.Back.ColorAngle = 45F;
-            this.btnAddApointment.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.btnAddApointment.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
-            this.btnAddApointment.StateCommon.Border.ColorAngle = 45F;
-            this.btnAddApointment.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnSaveAppointmentDateTest.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnSaveAppointmentDateTest.OverrideDefault.Border.Rounding = 20;
+            this.btnSaveAppointmentDateTest.OverrideDefault.Border.Width = 1;
+            this.btnSaveAppointmentDateTest.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnSaveAppointmentDateTest.Size = new System.Drawing.Size(131, 45);
+            this.btnSaveAppointmentDateTest.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnSaveAppointmentDateTest.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnSaveAppointmentDateTest.StateCommon.Back.ColorAngle = 45F;
+            this.btnSaveAppointmentDateTest.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnSaveAppointmentDateTest.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnSaveAppointmentDateTest.StateCommon.Border.ColorAngle = 45F;
+            this.btnSaveAppointmentDateTest.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAddApointment.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnAddApointment.StateCommon.Border.Rounding = 20;
-            this.btnAddApointment.StateCommon.Border.Width = 1;
-            this.btnAddApointment.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnAddApointment.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnAddApointment.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddApointment.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnAddApointment.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAddApointment.StateDisabled.Back.ColorAngle = 45F;
-            this.btnAddApointment.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.Gray;
-            this.btnAddApointment.StateDisabled.Content.ShortText.Color2 = System.Drawing.Color.Gray;
-            this.btnAddApointment.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.btnAddApointment.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
-            this.btnAddApointment.StatePressed.Back.ColorAngle = 135F;
-            this.btnAddApointment.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.btnAddApointment.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
-            this.btnAddApointment.StatePressed.Border.ColorAngle = 135F;
-            this.btnAddApointment.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnSaveAppointmentDateTest.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnSaveAppointmentDateTest.StateCommon.Border.Rounding = 20;
+            this.btnSaveAppointmentDateTest.StateCommon.Border.Width = 1;
+            this.btnSaveAppointmentDateTest.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnSaveAppointmentDateTest.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnSaveAppointmentDateTest.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveAppointmentDateTest.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSaveAppointmentDateTest.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSaveAppointmentDateTest.StateDisabled.Back.ColorAngle = 45F;
+            this.btnSaveAppointmentDateTest.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.btnSaveAppointmentDateTest.StateDisabled.Content.ShortText.Color2 = System.Drawing.Color.Gray;
+            this.btnSaveAppointmentDateTest.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnSaveAppointmentDateTest.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnSaveAppointmentDateTest.StatePressed.Back.ColorAngle = 135F;
+            this.btnSaveAppointmentDateTest.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnSaveAppointmentDateTest.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnSaveAppointmentDateTest.StatePressed.Border.ColorAngle = 135F;
+            this.btnSaveAppointmentDateTest.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAddApointment.StatePressed.Border.Rounding = 20;
-            this.btnAddApointment.StatePressed.Border.Width = 1;
-            this.btnAddApointment.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
-            this.btnAddApointment.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.btnAddApointment.StateTracking.Back.ColorAngle = 45F;
-            this.btnAddApointment.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.btnAddApointment.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
-            this.btnAddApointment.StateTracking.Border.ColorAngle = 45F;
-            this.btnAddApointment.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnSaveAppointmentDateTest.StatePressed.Border.Rounding = 20;
+            this.btnSaveAppointmentDateTest.StatePressed.Border.Width = 1;
+            this.btnSaveAppointmentDateTest.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnSaveAppointmentDateTest.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnSaveAppointmentDateTest.StateTracking.Back.ColorAngle = 45F;
+            this.btnSaveAppointmentDateTest.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnSaveAppointmentDateTest.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnSaveAppointmentDateTest.StateTracking.Border.ColorAngle = 45F;
+            this.btnSaveAppointmentDateTest.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnAddApointment.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnAddApointment.StateTracking.Border.Rounding = 20;
-            this.btnAddApointment.StateTracking.Border.Width = 1;
-            this.btnAddApointment.TabIndex = 42;
-            this.btnAddApointment.Values.Image = global::Project19.Properties.Resources.save;
-            this.btnAddApointment.Values.Text = " Save";
-            this.btnAddApointment.Click += new System.EventHandler(this.btnAddApointment_Click);
+            this.btnSaveAppointmentDateTest.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnSaveAppointmentDateTest.StateTracking.Border.Rounding = 20;
+            this.btnSaveAppointmentDateTest.StateTracking.Border.Width = 1;
+            this.btnSaveAppointmentDateTest.TabIndex = 42;
+            this.btnSaveAppointmentDateTest.Values.Image = global::Project19.Properties.Resources.save;
+            this.btnSaveAppointmentDateTest.Values.Text = " Save";
+            this.btnSaveAppointmentDateTest.Click += new System.EventHandler(this.btnSaveAppointmentDateTest_Click);
             // 
             // pictureBox1
             // 
@@ -370,7 +370,7 @@
             this.lblShowCantUpdate.Text = "Can\'t edite locked Appointments";
             this.lblShowCantUpdate.Visible = false;
             // 
-            // Frm_Add_Retake_VisionTest
+            // Frm_shcedule_Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -391,12 +391,12 @@
             this.Controls.Add(this.lblClass);
             this.Controls.Add(this.lblLDVLappID);
             this.Controls.Add(this.lblApointmentTitle);
-            this.Controls.Add(this.btnAddApointment);
+            this.Controls.Add(this.btnSaveAppointmentDateTest);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.kryptonPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_Add_Retake_VisionTest";
+            this.Name = "Frm_shcedule_Test";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Frm_Add_User";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -430,7 +430,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblTrialOutput;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel2;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtpAppointmentDateSelect;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAddApointment;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSaveAppointmentDateTest;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox gbRetakInfo;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblFormTitle;

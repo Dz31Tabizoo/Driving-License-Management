@@ -141,23 +141,29 @@
     <Compile Include="Forms\Applications\Local Driving License Apps\Frm_LocalLicendeDrivingManagement.Designer.cs">
       <DependentUpon>Frm_LocalLicendeDrivingManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Applications\Local Driving License Apps\Frm_New_Local_DVL.cs">
+    <Compile Include="Forms\Applications\Local Driving License Apps\Frm_Add_New_Local_DVL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Applications\Local Driving License Apps\Frm_New_Local_DVL.Designer.cs">
-      <DependentUpon>Frm_New_Local_DVL.cs</DependentUpon>
+    <Compile Include="Forms\Applications\Local Driving License Apps\Frm_Add_New_Local_DVL.Designer.cs">
+      <DependentUpon>Frm_Add_New_Local_DVL.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Applications\Local Driving License Apps\Frm_Add_Retake_VisionTest.cs">
+    <Compile Include="Forms\Tests Forms\Frm_shcedule_Test.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Applications\Local Driving License Apps\Frm_Add_Retake_VisionTest.Designer.cs">
-      <DependentUpon>Frm_Add_Retake_VisionTest.cs</DependentUpon>
+    <Compile Include="Forms\Tests Forms\Frm_shcedule_Test.Designer.cs">
+      <DependentUpon>Frm_shcedule_Test.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Applications\Local Driving License Apps\Frm_Shcuduel_Tests.cs">
+    <Compile Include="Forms\Tests Forms\Frm_View_Shcudueled_Tests.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Applications\Local Driving License Apps\Frm_Shcuduel_Tests.Designer.cs">
-      <DependentUpon>Frm_Shcuduel_Tests.cs</DependentUpon>
+    <Compile Include="Forms\Tests Forms\Frm_View_Shcudueled_Tests.Designer.cs">
+      <DependentUpon>Frm_View_Shcudueled_Tests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Take_Tests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Take_Tests.Designer.cs">
+      <DependentUpon>Frm_Take_Tests.cs</DependentUpon>
     </Compile>
     <Compile Include="Handlers\Global Setting.cs" />
     <Compile Include="Handlers\DragFormHandler.cs" />
@@ -300,14 +306,17 @@
     <EmbeddedResource Include="Forms\Applications\Local Driving License Apps\Frm_LocalLicendeDrivingManagement.resx">
       <DependentUpon>Frm_LocalLicendeDrivingManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Applications\Local Driving License Apps\Frm_New_Local_DVL.resx">
-      <DependentUpon>Frm_New_Local_DVL.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Applications\Local Driving License Apps\Frm_Add_New_Local_DVL.resx">
+      <DependentUpon>Frm_Add_New_Local_DVL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Applications\Local Driving License Apps\Frm_Add_Retake_VisionTest.resx">
-      <DependentUpon>Frm_Add_Retake_VisionTest.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Tests Forms\Frm_shcedule_Test.resx">
+      <DependentUpon>Frm_shcedule_Test.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Applications\Local Driving License Apps\Frm_Shcuduel_Tests.resx">
-      <DependentUpon>Frm_Shcuduel_Tests.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Tests Forms\Frm_View_Shcudueled_Tests.resx">
+      <DependentUpon>Frm_View_Shcudueled_Tests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Take_Tests.resx">
+      <DependentUpon>Frm_Take_Tests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -489,6 +498,9 @@
     <None Include="Resources\19795265411582994870-24.png" />
     <None Include="Resources\ambition.png" />
     <None Include="Resources\approval.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\cancel %281%29.png" />
+    <None Include="Resources\check %282%29.png" />
     <Content Include="Resources\close_RED.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -552,6 +564,9 @@
     <None Include="Resources\test.png" />
     <None Include="Resources\test %281%291.png" />
     <None Include="Resources\test %282%29.png" />
+    <None Include="Resources\eye-test.png" />
+    <None Include="Resources\testing.png" />
+    <None Include="Resources\write %281%29.png" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\diskette.png" />
     <None Include="Resources\driving--vehicle-license-department-high-resolution-logo-transparent.png" />

@@ -2,7 +2,7 @@
 
 namespace Project19
 {
-    partial class Frm_Shcuduel_Tests
+    partial class Frm_View_Shcudueled_Tests
     {
         /// <summary>
         /// Required designer variable.
