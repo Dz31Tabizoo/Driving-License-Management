@@ -54,7 +54,7 @@ namespace Project19
         {
             if(crtlPersonCardWithFilter1.PersID > 0)
             {
-                btnNewAppSav.Enabled = true;
+                btnSaveApplication.Enabled = true;
                 tabControl1.SelectedIndex = 1;
             }
             

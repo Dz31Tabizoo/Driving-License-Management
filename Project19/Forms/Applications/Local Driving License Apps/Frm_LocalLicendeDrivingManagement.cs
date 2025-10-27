@@ -66,10 +66,7 @@ namespace Project19
                 cmbSearchCriteria.Items.Add(Col.HeaderText);
             }
             cmbSearchCriteria.SelectedIndex = 0;
-        }
-
-
-        
+        }       
 
 
         private void btnClosePeopleMng_Click(object sender, EventArgs e)
@@ -107,6 +104,7 @@ namespace Project19
                 form.ShowDialog();
             }
 
+            LoadDataGridView();
         }
 
        
@@ -133,6 +131,8 @@ namespace Project19
                 // (1) is TestTypeID of vision test
                 frm.ShowDialog();
             }
+            //REFRESH
+            LoadDataGridView();
         }
 
         private async void contextMenuStrip2_Opening(object sender, CancelEventArgs e)

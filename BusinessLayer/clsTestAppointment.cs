@@ -84,12 +84,10 @@ namespace BusinessLayer
             return testAppointmentList;
         }
 
-
         public static async Task<DataTable> GetAllAppointments(int locald,int testTypeID)
         {
            return await clsTestAppointmentsDAL.GetAppointmentByLocalDVL_IDAndTestTypeID(locald,testTypeID);
         }
-
 
         private async Task<bool> _AddNewTestAppointmentAsync()
         {
@@ -100,10 +98,8 @@ namespace BusinessLayer
 
         private async Task<bool> _UpdateTestAppointmentAsync()
         {
-            return await clsTestAppointmentsDAL.UpdateTestAppointmentAsyncDAL(this.TestAppointmentID,this.TestAppointmentDate);
+            return await clsTestAppointmentsDAL.UpdateTestAppointmentDateAsyncDAL(this.TestAppointmentID,this.TestAppointmentDate);
         }
-
-
 
         public async Task<bool> Save()
         {
@@ -124,12 +120,10 @@ namespace BusinessLayer
             
         }
 
-
         public static async Task<bool> CheckIfNoAppointmentisON(int LocalDvLicenseID)
         {
             return await clsTestAppointmentsDAL.CheckIfApplicantHasAlreadyAnAppointment(LocalDvLicenseID);
         }
-
 
         public static async Task<int> CountTrails(int localDvAppID , int testTypeId)
         {
@@ -142,6 +136,9 @@ namespace BusinessLayer
 
         }
 
-
+        public static async Task<bool> LockTheAppointment(int TestAppointmentID, bool isLocked = true)
+        {
+            return await clsTestAppointmentsDAL.LockedTestAppointmentAsyncDAL(TestAppointmentID, isLocked);
+        }
     }
 }

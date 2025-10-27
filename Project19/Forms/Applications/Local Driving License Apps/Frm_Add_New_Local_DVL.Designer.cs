@@ -33,10 +33,9 @@
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnLogin = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnToApplication = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.crtlPersonCardWithFilter1 = new Project19.crtlPersonCardWithFilter();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnNewAppSav = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.cbxLicenseClasses = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.lblLicenseClass = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblUserCreatedByOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -47,6 +46,7 @@
             this.lblApplicationDate = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblldvlApplicationOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblApplicationID = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.btnSaveApplication = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -121,7 +121,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnLogin);
+            this.tabPage1.Controls.Add(this.btnToApplication);
             this.tabPage1.Controls.Add(this.crtlPersonCardWithFilter1);
             this.tabPage1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.ForeColor = System.Drawing.Color.IndianRed;
@@ -133,66 +133,66 @@
             this.tabPage1.Text = "Person Select";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // btnLogin
+            // btnToApplication
             // 
-            this.btnLogin.Location = new System.Drawing.Point(653, 515);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btnLogin.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btnLogin.OverrideDefault.Back.ColorAngle = 45F;
-            this.btnLogin.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btnLogin.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btnLogin.OverrideDefault.Border.ColorAngle = 45F;
-            this.btnLogin.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnToApplication.Location = new System.Drawing.Point(653, 515);
+            this.btnToApplication.Name = "btnToApplication";
+            this.btnToApplication.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btnToApplication.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnToApplication.OverrideDefault.Back.ColorAngle = 45F;
+            this.btnToApplication.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btnToApplication.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnToApplication.OverrideDefault.Border.ColorAngle = 45F;
+            this.btnToApplication.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnLogin.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnLogin.OverrideDefault.Border.Rounding = 20;
-            this.btnLogin.OverrideDefault.Border.Width = 1;
-            this.btnLogin.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnLogin.Size = new System.Drawing.Size(172, 45);
-            this.btnLogin.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.btnLogin.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
-            this.btnLogin.StateCommon.Back.ColorAngle = 45F;
-            this.btnLogin.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.btnLogin.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
-            this.btnLogin.StateCommon.Border.ColorAngle = 45F;
-            this.btnLogin.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnToApplication.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnToApplication.OverrideDefault.Border.Rounding = 20;
+            this.btnToApplication.OverrideDefault.Border.Width = 1;
+            this.btnToApplication.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnToApplication.Size = new System.Drawing.Size(172, 45);
+            this.btnToApplication.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnToApplication.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnToApplication.StateCommon.Back.ColorAngle = 45F;
+            this.btnToApplication.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnToApplication.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnToApplication.StateCommon.Border.ColorAngle = 45F;
+            this.btnToApplication.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnLogin.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnLogin.StateCommon.Border.Rounding = 20;
-            this.btnLogin.StateCommon.Border.Width = 1;
-            this.btnLogin.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnLogin.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnLogin.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.btnLogin.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
-            this.btnLogin.StatePressed.Back.ColorAngle = 135F;
-            this.btnLogin.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.btnLogin.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
-            this.btnLogin.StatePressed.Border.ColorAngle = 135F;
-            this.btnLogin.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnToApplication.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnToApplication.StateCommon.Border.Rounding = 20;
+            this.btnToApplication.StateCommon.Border.Width = 1;
+            this.btnToApplication.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnToApplication.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnToApplication.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnToApplication.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnToApplication.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnToApplication.StatePressed.Back.ColorAngle = 135F;
+            this.btnToApplication.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnToApplication.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnToApplication.StatePressed.Border.ColorAngle = 135F;
+            this.btnToApplication.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnLogin.StatePressed.Border.Rounding = 20;
-            this.btnLogin.StatePressed.Border.Width = 1;
-            this.btnLogin.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
-            this.btnLogin.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.btnLogin.StateTracking.Back.ColorAngle = 45F;
-            this.btnLogin.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.btnLogin.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
-            this.btnLogin.StateTracking.Border.ColorAngle = 45F;
-            this.btnLogin.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btnToApplication.StatePressed.Border.Rounding = 20;
+            this.btnToApplication.StatePressed.Border.Width = 1;
+            this.btnToApplication.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnToApplication.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnToApplication.StateTracking.Back.ColorAngle = 45F;
+            this.btnToApplication.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnToApplication.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnToApplication.StateTracking.Border.ColorAngle = 45F;
+            this.btnToApplication.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnLogin.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnLogin.StateTracking.Border.Rounding = 20;
-            this.btnLogin.StateTracking.Border.Width = 1;
-            this.btnLogin.TabIndex = 5;
-            this.btnLogin.Values.Image = global::Project19.Properties.Resources.right_arrow;
-            this.btnLogin.Values.Text = "To Application";
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnToApplication.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnToApplication.StateTracking.Border.Rounding = 20;
+            this.btnToApplication.StateTracking.Border.Width = 1;
+            this.btnToApplication.TabIndex = 5;
+            this.btnToApplication.Values.Image = global::Project19.Properties.Resources.right_arrow;
+            this.btnToApplication.Values.Text = "To Application";
+            this.btnToApplication.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // crtlPersonCardWithFilter1
             // 
@@ -209,7 +209,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.btnNewAppSav);
+            this.tabPage2.Controls.Add(this.btnSaveApplication);
             this.tabPage2.Controls.Add(this.cbxLicenseClasses);
             this.tabPage2.Controls.Add(this.lblLicenseClass);
             this.tabPage2.Controls.Add(this.lblUserCreatedByOutput);
@@ -382,7 +382,73 @@
             this.lblApplicationID.TabIndex = 0;
             this.lblApplicationID.Values.Text = "Application ID :";
             // 
-            // Frm_New_Local_DVL
+            // btnSaveApplication
+            // 
+            this.btnSaveApplication.Location = new System.Drawing.Point(336, 413);
+            this.btnSaveApplication.Name = "btnSaveApplication";
+            this.btnSaveApplication.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btnSaveApplication.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnSaveApplication.OverrideDefault.Back.ColorAngle = 45F;
+            this.btnSaveApplication.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btnSaveApplication.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btnSaveApplication.OverrideDefault.Border.ColorAngle = 45F;
+            this.btnSaveApplication.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSaveApplication.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnSaveApplication.OverrideDefault.Border.Rounding = 20;
+            this.btnSaveApplication.OverrideDefault.Border.Width = 1;
+            this.btnSaveApplication.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btnSaveApplication.Size = new System.Drawing.Size(198, 45);
+            this.btnSaveApplication.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnSaveApplication.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnSaveApplication.StateCommon.Back.ColorAngle = 45F;
+            this.btnSaveApplication.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnSaveApplication.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnSaveApplication.StateCommon.Border.ColorAngle = 45F;
+            this.btnSaveApplication.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSaveApplication.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnSaveApplication.StateCommon.Border.Rounding = 20;
+            this.btnSaveApplication.StateCommon.Border.Width = 1;
+            this.btnSaveApplication.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnSaveApplication.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnSaveApplication.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveApplication.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSaveApplication.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSaveApplication.StateDisabled.Back.ColorAngle = 45F;
+            this.btnSaveApplication.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.btnSaveApplication.StateDisabled.Content.ShortText.Color2 = System.Drawing.Color.Gray;
+            this.btnSaveApplication.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnSaveApplication.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnSaveApplication.StatePressed.Back.ColorAngle = 135F;
+            this.btnSaveApplication.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnSaveApplication.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnSaveApplication.StatePressed.Border.ColorAngle = 135F;
+            this.btnSaveApplication.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSaveApplication.StatePressed.Border.Rounding = 20;
+            this.btnSaveApplication.StatePressed.Border.Width = 1;
+            this.btnSaveApplication.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnSaveApplication.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnSaveApplication.StateTracking.Back.ColorAngle = 45F;
+            this.btnSaveApplication.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.btnSaveApplication.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(121)))), ((int)(((byte)(111)))));
+            this.btnSaveApplication.StateTracking.Border.ColorAngle = 45F;
+            this.btnSaveApplication.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnSaveApplication.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btnSaveApplication.StateTracking.Border.Rounding = 20;
+            this.btnSaveApplication.StateTracking.Border.Width = 1;
+            this.btnSaveApplication.TabIndex = 43;
+            this.btnSaveApplication.Values.Image = global::Project19.Properties.Resources.save;
+            this.btnSaveApplication.Values.Text = " Save";
+            this.btnSaveApplication.Click += new System.EventHandler(this.btnSaveEdit_Click);
+            // 
+            // Frm_Add_New_Local_DVL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -393,7 +459,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_New_Local_DVL";
+            this.Name = "Frm_Add_New_Local_DVL";
             this.Text = "Frm_Add_User";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabControl1.ResumeLayout(false);
@@ -414,7 +480,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private crtlPersonCardWithFilter crtlPersonCardWithFilter1;
         private System.Windows.Forms.TabPage tabPage2;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnLogin;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnToApplication;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblApplicationID;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblAppFeeOutput;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblApplicationFee;
@@ -425,6 +491,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblUserCreatedByOutput;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbxLicenseClasses;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnNewAppSav;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnSaveApplication;
     }
 }

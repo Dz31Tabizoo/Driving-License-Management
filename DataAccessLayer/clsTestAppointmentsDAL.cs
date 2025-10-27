@@ -127,10 +127,6 @@ namespace DataAccessLayer
             }
         }
 
-
-
-
-
         public static async Task<DataTable> GetAppointmentByLocalDVL_IDAndTestTypeID(int LDVL_ID,int testType)
         {
             DataTable dt = new DataTable();
@@ -157,9 +153,6 @@ namespace DataAccessLayer
             }
             return dt;
         }
-
-
-
 
         public static async Task<int> AddNewTestAppointmentAsyncDAL(int TestTtypeId, int LocalDLAppID, DateTime AppointDate, decimal AppointFees, int UserIDApointTaker, bool IsLocked = false)
         {
@@ -202,7 +195,7 @@ namespace DataAccessLayer
             }
         }
 
-        public static async Task<bool> UpdateTestAppointmentAsyncDAL(int testAppointmentID,DateTime newAppointmentDate)
+        public static async Task<bool> UpdateTestAppointmentDateAsyncDAL(int testAppointmentID,DateTime newAppointmentDate)
         {
             string query = @"UPDATE TestAppointments SET AppointmentDate  = @testAppointmentDate WHERE TestAppointmentID = @testAppId;";
             int RowAffected = -1;
@@ -229,7 +222,6 @@ namespace DataAccessLayer
             }
         }
 
-
         // To disable Test Type Choises
         public static async Task<bool> CheckIfApplicantHasNoOtherAppointmentNotLocked(int LocaldvAppID,int testTypeID)
         {
@@ -244,7 +236,8 @@ namespace DataAccessLayer
                 await connection.OpenAsync();
 
                 // Returns true if any records exist
-                return await command.ExecuteScalarAsync() != null;
+                var result = await command.ExecuteScalarAsync();
+                return result != null && result != DBNull.Value;
 
             }
         }
@@ -326,5 +319,33 @@ namespace DataAccessLayer
 
             }
         }
+
+        public static async Task<bool> LockedTestAppointmentAsyncDAL(int testAppointmentID, bool IsLocked= true)
+        {
+            string query = @"UPDATE TestAppointments SET IsLocked  = @isLocked WHERE TestAppointmentID = @testAppId;";
+            int RowAffected = -1;
+
+            using (var cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (var cmd = new SqlCommand(query, cnx))
+                {
+                    cmd.Parameters.AddWithValue("@testAppId", testAppointmentID);
+                    cmd.Parameters.AddWithValue("@isLocked", IsLocked);
+
+                    try
+                    {
+                        await cnx.OpenAsync();
+                        RowAffected = await cmd.ExecuteNonQueryAsync();
+
+                        return RowAffected != -1;
+
+                    }
+                    catch { return false; }
+
+
+                }
+            }
+        }
+
     }
 }

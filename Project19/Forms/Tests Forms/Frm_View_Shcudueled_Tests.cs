@@ -48,11 +48,19 @@ namespace Project19
         private async void btnAddApointment_Click(object sender, EventArgs e)
         {
 
-            if( await clsTestAppointment.CheckIfNoAppointmentisON(_LDVLAPP.LocalDrivingLicenseApplicationID))
+            if ( await clsTestAppointment.IsApplicantHasPassedTypeOfTest(_LDVLAPP.LocalDrivingLicenseApplicationID, _testTypeID))
             {
-                MessageBox.Show("▬ The applicant has already an appointment ▬","Appointment Failed",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                MessageBox.Show("▬ The applicant has Passed this Test Type ▬", "Appointment Failed", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
+            else if (await clsTestAppointment.CheckIfNoAppointmentisON(_LDVLAPP.LocalDrivingLicenseApplicationID))
+            {
+                MessageBox.Show("▬ The applicant has already an appointment ▬", "Appointment Failed", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+            
+
+
             var LicenseClass = await clsLicenseClasses.GetLicenseClassObjByIDAsync(_LDVLAPP.LicenseClassID);
             var LdvlApp = new clsLocalDrivingLicenseApplication(_LDVLAPP.LocalDrivingLicenseApplicationID,_app,LicenseClass);
 
@@ -60,6 +68,7 @@ namespace Project19
             {
                 FRM.ShowDialog();
             }
+            
         }
 
         private void LoadFormTitleText(int TestType)

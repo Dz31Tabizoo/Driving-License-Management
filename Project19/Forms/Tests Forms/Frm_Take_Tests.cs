@@ -105,7 +105,21 @@ namespace Project19
                 lblApp_ID.Text = NewTestID.ToString();
                 btnSaveAppointmentDateTest.Enabled = false;
 
-                //lock the appointment
+                if (await clsTestAppointment.LockTheAppointment(_TestAppointmentId))
+                {
+                    using (var notification = new NotifyIcon())
+                    {
+                        notification.Visible = true;
+                        notification.Icon = SystemIcons.Application;
+                        notification.BalloonTipTitle = "Success";
+                        notification.BalloonTipText = "Appointment Locked";
+                        notification.BalloonTipIcon = ToolTipIcon.Info;
+                        notification.ShowBalloonTip(4000);
+                        await Task.Delay(4500);
+                    }
+                }
+                
+
             }
             else
             {
