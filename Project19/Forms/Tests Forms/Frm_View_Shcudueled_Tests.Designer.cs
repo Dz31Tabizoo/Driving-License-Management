@@ -247,6 +247,7 @@ namespace Project19
             this.takeTestTSMenu.Name = "takeTestTSMenu";
             this.takeTestTSMenu.Size = new System.Drawing.Size(180, 22);
             this.takeTestTSMenu.Text = "Take Test";
+            this.takeTestTSMenu.Click += new System.EventHandler(this.takeTestTSMenu_Click);
             // 
             // lblApointmentTitle
             // 
@@ -299,7 +300,7 @@ namespace Project19
             this.crtlLDVLappInfo1.Size = new System.Drawing.Size(814, 134);
             this.crtlLDVLappInfo1.TabIndex = 40;
             // 
-            // Frm_Shcuduel_Tests
+            // Frm_View_Shcudueled_Tests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -314,7 +315,7 @@ namespace Project19
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_Shcuduel_Tests";
+            this.Name = "Frm_View_Shcudueled_Tests";
             this.Text = "Frm_Add_User";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

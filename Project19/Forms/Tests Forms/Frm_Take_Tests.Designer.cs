@@ -33,37 +33,37 @@ namespace Project19
             this.components = new System.ComponentModel.Container();
             this.btnExit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.EditAppointmentTSM = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.takeTestTSMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.kryptonContextMenuHeading1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading();
             this.kryptonContextMenuItems1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItems();
             this.kryptonContextMenuItem1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuItem();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.lblClassesOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lblApp_Date = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.lbl_Status = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.lbl_Fees = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblClass = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lbl_trailsOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblLocalDVLAppIDOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lbl_FeesOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblLDVLappID = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.lbl_Applicant = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblApp_ID = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblApplicationDate = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblUser = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblFees = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.lblStatus = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lbltrails = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblID = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.lblLocalDVLAppIDOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblLDVLappID = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblClassesOutput = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.lblClass = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.btnSaveAppointmentDateTest = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonCheckBox1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
-            this.kryptonCheckBox2 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
-            this.kryptonRichTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
+            this.checkBoxFail = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.checkBoxPass = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
+            this.txtBoxNotes = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.EditAppointmentTSM = new System.Windows.Forms.ToolStripMenuItem();
-            this.takeTestTSMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.lblFomTitle = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.contextMenuStrip1.SuspendLayout();
@@ -107,6 +107,7 @@ namespace Project19
             this.btnExit.TabIndex = 39;
             this.btnExit.Tag = "btnAddNewPerson";
             this.btnExit.Values.Text = "Exit";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // contextMenuStrip1
             // 
@@ -118,11 +119,31 @@ namespace Project19
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(169, 54);
             // 
+            // EditAppointmentTSM
+            // 
+            this.EditAppointmentTSM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.EditAppointmentTSM.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditAppointmentTSM.ForeColor = System.Drawing.Color.White;
+            this.EditAppointmentTSM.Image = global::Project19.Properties.Resources.edit;
+            this.EditAppointmentTSM.Name = "EditAppointmentTSM";
+            this.EditAppointmentTSM.Size = new System.Drawing.Size(168, 22);
+            this.EditAppointmentTSM.Text = "Edit Appointment";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(165, 6);
+            // 
+            // takeTestTSMenu
+            // 
+            this.takeTestTSMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.takeTestTSMenu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.takeTestTSMenu.ForeColor = System.Drawing.Color.White;
+            this.takeTestTSMenu.Image = global::Project19.Properties.Resources.test__2_;
+            this.takeTestTSMenu.Name = "takeTestTSMenu";
+            this.takeTestTSMenu.Size = new System.Drawing.Size(168, 22);
+            this.takeTestTSMenu.Text = "Take Test";
             // 
             // kryptonContextMenuHeading1
             // 
@@ -150,16 +171,16 @@ namespace Project19
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblApp_Date);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblClass);
             this.kryptonGroupBox1.Panel.Controls.Add(this.pictureBox3);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.lbl_Status);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.lbl_trailsOutput);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblLocalDVLAppIDOutput);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.lbl_Fees);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.lbl_FeesOutput);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblLDVLappID);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lbl_Applicant);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblApp_ID);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblApplicationDate);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblUser);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblFees);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.lblStatus);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.lbltrails);
             this.kryptonGroupBox1.Panel.Controls.Add(this.lblID);
             this.kryptonGroupBox1.Size = new System.Drawing.Size(474, 353);
             this.kryptonGroupBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -175,6 +196,25 @@ namespace Project19
             this.kryptonGroupBox1.Values.Heading = " Vesion Test";
             this.kryptonGroupBox1.Values.Image = global::Project19.Properties.Resources.eye_test;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::Project19.Properties.Resources.id_card__1_;
+            this.pictureBox6.Location = new System.Drawing.Point(178, 56);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.TabIndex = 68;
+            this.pictureBox6.TabStop = false;
+            // 
+            // lblClassesOutput
+            // 
+            this.lblClassesOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClassesOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblClassesOutput.Location = new System.Drawing.Point(208, 60);
+            this.lblClassesOutput.Name = "lblClassesOutput";
+            this.lblClassesOutput.Size = new System.Drawing.Size(0, 20);
+            this.lblClassesOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClassesOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            // 
             // lblApp_Date
             // 
             this.lblApp_Date.Location = new System.Drawing.Point(130, 153);
@@ -185,25 +225,68 @@ namespace Project19
             this.lblApp_Date.TabIndex = 60;
             this.lblApp_Date.Values.Text = "XXXXXX";
             // 
-            // lbl_Status
+            // lblClass
             // 
-            this.lbl_Status.Location = new System.Drawing.Point(130, 263);
-            this.lbl_Status.Name = "lbl_Status";
-            this.lbl_Status.Size = new System.Drawing.Size(54, 20);
-            this.lbl_Status.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
-            this.lbl_Status.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
-            this.lbl_Status.TabIndex = 58;
-            this.lbl_Status.Values.Text = "XXXXXX";
+            this.lblClass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblClass.Location = new System.Drawing.Point(28, 60);
+            this.lblClass.Name = "lblClass";
+            this.lblClass.Size = new System.Drawing.Size(141, 20);
+            this.lblClass.StateCommon.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblClass.Text = "Applied for license :";
             // 
-            // lbl_Fees
+            // pictureBox3
             // 
-            this.lbl_Fees.Location = new System.Drawing.Point(130, 189);
-            this.lbl_Fees.Name = "lbl_Fees";
-            this.lbl_Fees.Size = new System.Drawing.Size(54, 20);
-            this.lbl_Fees.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
-            this.lbl_Fees.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
-            this.lbl_Fees.TabIndex = 57;
-            this.lbl_Fees.Values.Text = "XXXXXX";
+            this.pictureBox3.Image = global::Project19.Properties.Resources.id_card;
+            this.pictureBox3.Location = new System.Drawing.Point(176, 24);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 58;
+            this.pictureBox3.TabStop = false;
+            // 
+            // lbl_trailsOutput
+            // 
+            this.lbl_trailsOutput.Location = new System.Drawing.Point(130, 263);
+            this.lbl_trailsOutput.Name = "lbl_trailsOutput";
+            this.lbl_trailsOutput.Size = new System.Drawing.Size(54, 20);
+            this.lbl_trailsOutput.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.lbl_trailsOutput.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.lbl_trailsOutput.TabIndex = 58;
+            this.lbl_trailsOutput.Values.Text = "XXXXXX";
+            // 
+            // lblLocalDVLAppIDOutput
+            // 
+            this.lblLocalDVLAppIDOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalDVLAppIDOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            this.lblLocalDVLAppIDOutput.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLocalDVLAppIDOutput.Location = new System.Drawing.Point(208, 28);
+            this.lblLocalDVLAppIDOutput.Name = "lblLocalDVLAppIDOutput";
+            this.lblLocalDVLAppIDOutput.Size = new System.Drawing.Size(0, 20);
+            this.lblLocalDVLAppIDOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalDVLAppIDOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
+            // 
+            // lbl_FeesOutput
+            // 
+            this.lbl_FeesOutput.Location = new System.Drawing.Point(130, 189);
+            this.lbl_FeesOutput.Name = "lbl_FeesOutput";
+            this.lbl_FeesOutput.Size = new System.Drawing.Size(54, 20);
+            this.lbl_FeesOutput.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.lbl_FeesOutput.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.lbl_FeesOutput.TabIndex = 57;
+            this.lbl_FeesOutput.Values.Text = "XXXXXX";
+            // 
+            // lblLDVLappID
+            // 
+            this.lblLDVLappID.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDVLappID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblLDVLappID.Location = new System.Drawing.Point(19, 28);
+            this.lblLDVLappID.Name = "lblLDVLappID";
+            this.lblLDVLappID.Size = new System.Drawing.Size(150, 20);
+            this.lblLDVLappID.StateCommon.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDVLappID.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.lblLDVLappID.Text = "LDVL Application ID :";
             // 
             // lbl_Applicant
             // 
@@ -261,17 +344,17 @@ namespace Project19
             this.lblFees.Values.Image = global::Project19.Properties.Resources.coin;
             this.lblFees.Values.Text = "   Fees :";
             // 
-            // lblStatus
+            // lbltrails
             // 
-            this.lblStatus.Location = new System.Drawing.Point(28, 259);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(92, 26);
-            this.lblStatus.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.lblStatus.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.lblStatus.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.TabIndex = 46;
-            this.lblStatus.Values.Image = global::Project19.Properties.Resources.check_list__1_;
-            this.lblStatus.Values.Text = "   Trails :";
+            this.lbltrails.Location = new System.Drawing.Point(28, 259);
+            this.lbltrails.Name = "lbltrails";
+            this.lbltrails.Size = new System.Drawing.Size(92, 26);
+            this.lbltrails.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lbltrails.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lbltrails.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltrails.TabIndex = 46;
+            this.lbltrails.Values.Image = global::Project19.Properties.Resources.check_list__1_;
+            this.lbltrails.Values.Text = "   Trails :";
             // 
             // lblID
             // 
@@ -284,49 +367,6 @@ namespace Project19
             this.lblID.TabIndex = 45;
             this.lblID.Values.Image = global::Project19.Properties.Resources.indesign;
             this.lblID.Values.Text = "  Test ID :";
-            // 
-            // lblLocalDVLAppIDOutput
-            // 
-            this.lblLocalDVLAppIDOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalDVLAppIDOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.lblLocalDVLAppIDOutput.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblLocalDVLAppIDOutput.Location = new System.Drawing.Point(208, 28);
-            this.lblLocalDVLAppIDOutput.Name = "lblLocalDVLAppIDOutput";
-            this.lblLocalDVLAppIDOutput.Size = new System.Drawing.Size(0, 20);
-            this.lblLocalDVLAppIDOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalDVLAppIDOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            // 
-            // lblLDVLappID
-            // 
-            this.lblLDVLappID.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDVLappID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblLDVLappID.Location = new System.Drawing.Point(19, 28);
-            this.lblLDVLappID.Name = "lblLDVLappID";
-            this.lblLDVLappID.Size = new System.Drawing.Size(150, 20);
-            this.lblLDVLappID.StateCommon.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDVLappID.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblLDVLappID.Text = "LDVL Application ID :";
-            // 
-            // lblClassesOutput
-            // 
-            this.lblClassesOutput.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClassesOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            this.lblClassesOutput.Location = new System.Drawing.Point(208, 60);
-            this.lblClassesOutput.Name = "lblClassesOutput";
-            this.lblClassesOutput.Size = new System.Drawing.Size(0, 20);
-            this.lblClassesOutput.StateCommon.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClassesOutput.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(110)))), ((int)(((byte)(113)))));
-            // 
-            // lblClass
-            // 
-            this.lblClass.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblClass.Location = new System.Drawing.Point(28, 60);
-            this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(141, 20);
-            this.lblClass.StateCommon.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClass.StateCommon.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
-            this.lblClass.Text = "Applied for license :";
             // 
             // btnSaveAppointmentDateTest
             // 
@@ -392,6 +432,7 @@ namespace Project19
             this.btnSaveAppointmentDateTest.TabIndex = 56;
             this.btnSaveAppointmentDateTest.Values.Image = global::Project19.Properties.Resources.save;
             this.btnSaveAppointmentDateTest.Values.Text = " Save";
+            this.btnSaveAppointmentDateTest.Click += new System.EventHandler(this.btnSaveAppointmentDateTest_Click);
             // 
             // kryptonLabel1
             // 
@@ -405,72 +446,56 @@ namespace Project19
             this.kryptonLabel1.Values.Image = global::Project19.Properties.Resources.testing;
             this.kryptonLabel1.Values.Text = "  Result :";
             // 
-            // kryptonCheckBox1
+            // checkBoxFail
             // 
-            this.kryptonCheckBox1.Location = new System.Drawing.Point(187, 424);
-            this.kryptonCheckBox1.Name = "kryptonCheckBox1";
-            this.kryptonCheckBox1.Size = new System.Drawing.Size(69, 28);
-            this.kryptonCheckBox1.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
-            this.kryptonCheckBox1.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
-            this.kryptonCheckBox1.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonCheckBox1.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
-            this.kryptonCheckBox1.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
-            this.kryptonCheckBox1.TabIndex = 58;
-            this.kryptonCheckBox1.Values.Image = global::Project19.Properties.Resources.cancel__1_;
-            this.kryptonCheckBox1.Values.Text = "Fail";
+            this.checkBoxFail.Location = new System.Drawing.Point(187, 424);
+            this.checkBoxFail.Name = "checkBoxFail";
+            this.checkBoxFail.Size = new System.Drawing.Size(69, 28);
+            this.checkBoxFail.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
+            this.checkBoxFail.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
+            this.checkBoxFail.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxFail.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
+            this.checkBoxFail.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
+            this.checkBoxFail.TabIndex = 58;
+            this.checkBoxFail.Values.Image = global::Project19.Properties.Resources.cancel__1_;
+            this.checkBoxFail.Values.Text = "Fail";
+            this.checkBoxFail.CheckedChanged += new System.EventHandler(this.kryptonCheckBox1_CheckedChanged);
             // 
-            // kryptonCheckBox2
+            // checkBoxPass
             // 
-            this.kryptonCheckBox2.Location = new System.Drawing.Point(285, 424);
-            this.kryptonCheckBox2.Name = "kryptonCheckBox2";
-            this.kryptonCheckBox2.Size = new System.Drawing.Size(77, 28);
-            this.kryptonCheckBox2.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
-            this.kryptonCheckBox2.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
-            this.kryptonCheckBox2.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonCheckBox2.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
-            this.kryptonCheckBox2.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
-            this.kryptonCheckBox2.TabIndex = 59;
-            this.kryptonCheckBox2.Values.Image = global::Project19.Properties.Resources.check__2_;
-            this.kryptonCheckBox2.Values.Text = "Pass";
+            this.checkBoxPass.Location = new System.Drawing.Point(285, 424);
+            this.checkBoxPass.Name = "checkBoxPass";
+            this.checkBoxPass.Size = new System.Drawing.Size(77, 28);
+            this.checkBoxPass.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
+            this.checkBoxPass.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
+            this.checkBoxPass.StateCommon.ShortText.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxPass.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
+            this.checkBoxPass.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(98)))));
+            this.checkBoxPass.TabIndex = 59;
+            this.checkBoxPass.Values.Image = global::Project19.Properties.Resources.check__2_;
+            this.checkBoxPass.Values.Text = "Pass";
+            this.checkBoxPass.CheckedChanged += new System.EventHandler(this.checkBoxPass_CheckedChanged);
             // 
-            // kryptonRichTextBox1
+            // txtBoxNotes
             // 
-            this.kryptonRichTextBox1.Location = new System.Drawing.Point(30, 507);
-            this.kryptonRichTextBox1.Name = "kryptonRichTextBox1";
-            this.kryptonRichTextBox1.Size = new System.Drawing.Size(445, 77);
-            this.kryptonRichTextBox1.TabIndex = 60;
-            this.kryptonRichTextBox1.Text = "";
+            this.txtBoxNotes.Location = new System.Drawing.Point(30, 507);
+            this.txtBoxNotes.MaxLength = 500;
+            this.txtBoxNotes.Name = "txtBoxNotes";
+            this.txtBoxNotes.Size = new System.Drawing.Size(445, 77);
+            this.txtBoxNotes.TabIndex = 60;
+            this.txtBoxNotes.Text = "";
             // 
             // kryptonLabel2
             // 
             this.kryptonLabel2.Location = new System.Drawing.Point(26, 464);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(96, 34);
+            this.kryptonLabel2.Size = new System.Drawing.Size(103, 34);
             this.kryptonLabel2.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.kryptonLabel2.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
             this.kryptonLabel2.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonLabel2.TabIndex = 61;
             this.kryptonLabel2.Values.Image = global::Project19.Properties.Resources.write__1_;
-            this.kryptonLabel2.Values.Text = "  Note :";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::Project19.Properties.Resources.id_card__1_;
-            this.pictureBox6.Location = new System.Drawing.Point(178, 56);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox6.TabIndex = 68;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Project19.Properties.Resources.id_card;
-            this.pictureBox3.Location = new System.Drawing.Point(176, 24);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 58;
-            this.pictureBox3.TabStop = false;
+            this.kryptonLabel2.Values.Text = "  Notes :";
             // 
             // pictureBox2
             // 
@@ -481,26 +506,6 @@ namespace Project19
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
-            // 
-            // EditAppointmentTSM
-            // 
-            this.EditAppointmentTSM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
-            this.EditAppointmentTSM.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditAppointmentTSM.ForeColor = System.Drawing.Color.White;
-            this.EditAppointmentTSM.Image = global::Project19.Properties.Resources.edit;
-            this.EditAppointmentTSM.Name = "EditAppointmentTSM";
-            this.EditAppointmentTSM.Size = new System.Drawing.Size(168, 22);
-            this.EditAppointmentTSM.Text = "Edit Appointment";
-            // 
-            // takeTestTSMenu
-            // 
-            this.takeTestTSMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
-            this.takeTestTSMenu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.takeTestTSMenu.ForeColor = System.Drawing.Color.White;
-            this.takeTestTSMenu.Image = global::Project19.Properties.Resources.test__2_;
-            this.takeTestTSMenu.Name = "takeTestTSMenu";
-            this.takeTestTSMenu.Size = new System.Drawing.Size(168, 22);
-            this.takeTestTSMenu.Text = "Take Test";
             // 
             // kryptonPanel1
             // 
@@ -530,9 +535,9 @@ namespace Project19
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(493, 666);
             this.Controls.Add(this.kryptonLabel2);
-            this.Controls.Add(this.kryptonRichTextBox1);
-            this.Controls.Add(this.kryptonCheckBox2);
-            this.Controls.Add(this.kryptonCheckBox1);
+            this.Controls.Add(this.txtBoxNotes);
+            this.Controls.Add(this.checkBoxPass);
+            this.Controls.Add(this.checkBoxFail);
             this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.btnSaveAppointmentDateTest);
             this.Controls.Add(this.kryptonGroupBox1);
@@ -576,14 +581,14 @@ namespace Project19
         private ToolStripSeparator toolStripSeparator1;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblApp_Date;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_Status;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_Fees;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_trailsOutput;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_FeesOutput;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_Applicant;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblApp_ID;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblApplicationDate;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblUser;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblFees;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblStatus;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbltrails;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblID;
         private PictureBox pictureBox3;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblLocalDVLAppIDOutput;
@@ -593,9 +598,9 @@ namespace Project19
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel lblClass;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSaveAppointmentDateTest;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kryptonCheckBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kryptonCheckBox2;
-        private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox checkBoxFail;
+        private ComponentFactory.Krypton.Toolkit.KryptonCheckBox checkBoxPass;
+        private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox txtBoxNotes;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblFomTitle;

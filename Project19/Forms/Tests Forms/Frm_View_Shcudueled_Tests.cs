@@ -27,7 +27,7 @@ namespace Project19
             crtlApplicationInfo1.LoadApplicationInfo(application);
             LoadDataGridView(localApp.LocalDrivingLicenseApplicationID,TestType);
             _LDVLAPP = localApp;
-            _app = application;
+            _app = localApp.Application;
             _testTypeID = TestType;
         }
 
@@ -94,6 +94,20 @@ namespace Project19
             }
             LoadDataGridView(_LDVLAPP.LocalDrivingLicenseApplicationID, _testTypeID);
 
+        }
+
+        private void takeTestTSMenu_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgvAppointments.SelectedRows[0];
+            bool isLocked = (bool)row.Cells["IsLocked"].Value;
+            int testAppointmentID = (int)row.Cells["TestAppointmentID"].Value;
+            DateTime AppointmentDate = (DateTime)row.Cells["AppointmentDate"].Value;
+
+            using (Form takeTestForm = new Frm_Take_Tests(_LDVLAPP, AppointmentDate,_testTypeID,testAppointmentID))
+            {
+                takeTestForm.ShowDialog();
+            }
+            LoadDataGridView(_LDVLAPP.LocalDrivingLicenseApplicationID, _testTypeID);
         }
     }
 }

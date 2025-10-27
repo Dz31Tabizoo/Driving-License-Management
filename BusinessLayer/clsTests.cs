@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,14 +9,14 @@ namespace BusinessLayer
 {
     public class clsTests
     {
-        public enum enMode {AddNEw = 1 , Update=2 }
+        
         public int TestID { get; set; }
         public int TestAppointmentID { get; set; }
         public bool TestResult { get; set; }
         public string Notes { get; set; }
         public int UserID { get; set; }
 
-        public enMode Mode {  get; set; }= enMode.AddNEw;
+        
 
         public clsTests()
         {
@@ -27,14 +28,25 @@ namespace BusinessLayer
         }
 
 
-        public clsTests(int testID, int testAppointmentID, bool testResult, string notes, int userID)
+        //public clsTests(int testID, int testAppointmentID, bool testResult, string notes, int userID)
+        //{
+        //    TestID = testID;
+        //    TestAppointmentID = testAppointmentID;
+        //    TestResult = testResult;
+        //    Notes = notes;
+        //    UserID = userID;
+            
+        //}
+
+
+        public async Task<int> SaveNewTest()
         {
-            TestID = testID;
-            TestAppointmentID = testAppointmentID;
-            TestResult = testResult;
-            Notes = notes;
-            UserID = userID;
-            Mode = enMode.Update;
+            this.TestID = await clsTestsDAL.AddNewTest(this.TestAppointmentID, this.TestResult, this.Notes, this.UserID);
+            return TestID;
         }
+
+
+
+
     }
 }
