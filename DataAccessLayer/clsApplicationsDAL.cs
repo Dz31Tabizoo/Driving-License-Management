@@ -78,10 +78,10 @@ namespace DataAccessLayer
         }
 
 
-        public static async Task<bool> UpdateApplicationStatusAsync(int applicationID, byte applicationStatus, DateTime lastStatusDate)
+        public static async Task<bool> UpdateApplicationStatusAsync(int applicationID, byte applicationStatus)
         {
-            string query = @"UPDATE Application
-                                                SET ApplicationStatus = @appstat , LastStatusDate = @lastStDate
+            string query = @"UPDATE Applications
+                                                SET ApplicationStatus = @appstat , LastStatusDate = @lastStsDate
                                        WHERE ApplicationID = @appId ;";
             int rowAffected = -1;
 
@@ -90,12 +90,12 @@ namespace DataAccessLayer
                 using (SqlCommand cmd = new SqlCommand(query, conx))
                 {
                     cmd.Parameters.AddWithValue("@appstat", applicationStatus);
-                    cmd.Parameters.AddWithValue("@lastStDate", lastStatusDate);
+                    cmd.Parameters.AddWithValue("@lastStsDate", DateTime.Now);
                     cmd.Parameters.AddWithValue("@appId", applicationID);
 
                     await conx.OpenAsync();
 
-                    rowAffected = await cmd.ExecuteNonQueryAsync();
+                    rowAffected = (int) await cmd.ExecuteNonQueryAsync();
                     return rowAffected > 0;
                 }
             }

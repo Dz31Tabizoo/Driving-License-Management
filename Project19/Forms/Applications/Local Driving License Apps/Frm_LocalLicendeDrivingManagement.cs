@@ -13,7 +13,7 @@ namespace Project19
 {
     public partial class Frm_LocalLicendeDrivingManagement : KryptonForm
     {
-        private bool isDropDownOpening = false;
+        
 
         public Frm_LocalLicendeDrivingManagement()
         {
@@ -46,7 +46,7 @@ namespace Project19
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Load Applications Data Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Load Applications Data Failed \n |{ex.Message} ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             finally { this.Cursor = Cursors.Default; }
@@ -67,7 +67,6 @@ namespace Project19
             }
             cmbSearchCriteria.SelectedIndex = 0;
         }       
-
 
         private void btnClosePeopleMng_Click(object sender, EventArgs e)
         {
@@ -94,7 +93,6 @@ namespace Project19
             OpenAddNewLocalDVLApplication();
         }
 
-
         private void OpenAddNewLocalDVLApplication()
         {
 
@@ -105,9 +103,7 @@ namespace Project19
             }
 
             LoadDataGridView();
-        }
-
-       
+        }       
 
         private async void visionTestToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -142,6 +138,13 @@ namespace Project19
             DataGridViewRow row = dgvApplications.SelectedRows[0];
             int ldvlAppID = (int)row.Cells["LocalDrivingLicenseApplicationID"].Value;
 
+            clsLocalDrivingLicenseApplication ldvlApp = await clsLocalDrivingLicenseApplication.FindLDVLapplicationById(ldvlAppID);
+
+            if (ldvlApp.Application.ApplicationStatus == clsApplications.enAppStatus.Completed || ldvlApp.Application.ApplicationStatus == clsApplications.enAppStatus.Cancelled)
+            {
+                // enable or disable context menu strip items 
+            }
+
             if (!await clsTestAppointment.IsApplicantHasPassedTypeOfTest(ldvlAppID,1))
             {
                 visionTestToolStripMenuItem1.Enabled = true;
@@ -166,6 +169,30 @@ namespace Project19
             visionTestToolStripMenuItem1.Enabled = false;
             writtenTestToolStripMenuItem1.Enabled = false;
             practicalToolStripMenuItem1.Enabled = false;
+        }
+
+        private async void cancelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgvApplications.SelectedRows[0];
+            int ldvlAppID = (int)row.Cells["LocalDrivingLicenseApplicationID"].Value;
+
+            clsLocalDrivingLicenseApplication ldvlApp = await clsLocalDrivingLicenseApplication.FindLDVLapplicationById(ldvlAppID);
+
+            if (ldvlApp.Application.ApplicationStatus == clsApplications.enAppStatus.Completed || ldvlApp.Application.ApplicationStatus == clsApplications.enAppStatus.Cancelled)
+            {
+                MessageBox.Show("Can't cancel a Completed or Canceled applications", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (await clsApplications.UpdateApplicationStatus(ldvlApp.Application.AppID,(byte)clsApplications.enAppStatus.Cancelled))
+            {
+                MessageBox.Show("Application Canceled ", "Cancel", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadDataGridView();
+            }
+            
+        }
+
+        private void AddToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            OpenAddNewLocalDVLApplication();
         }
     }
 

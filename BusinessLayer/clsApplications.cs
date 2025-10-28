@@ -184,5 +184,9 @@ namespace BusinessLayer
         }
 
 
+        public static async Task<bool> UpdateApplicationStatus(int applicationID, byte status)
+        {
+            return await clsApplicationsDAL.UpdateApplicationStatusAsync(applicationID, status);
+        }
     }
 }

@@ -39,13 +39,13 @@
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.Close = new System.Windows.Forms.PictureBox();
+            this.picClose = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -219,19 +219,19 @@
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
-            // Close
+            // picClose
             // 
-            this.Close.AccessibleRole = System.Windows.Forms.AccessibleRole.Animation;
-            this.Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
-            this.Close.Image = global::Project19.Properties.Resources.close;
-            this.Close.Location = new System.Drawing.Point(805, 3);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(25, 25);
-            this.Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Close.TabIndex = 7;
-            this.Close.TabStop = false;
-            this.Close.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.picClose.AccessibleRole = System.Windows.Forms.AccessibleRole.Animation;
+            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.picClose.Image = global::Project19.Properties.Resources.close;
+            this.picClose.Location = new System.Drawing.Point(805, 3);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(25, 25);
+            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picClose.TabIndex = 7;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Frm_Login
             // 
@@ -240,7 +240,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(834, 461);
-            this.Controls.Add(this.Close);
+            this.Controls.Add(this.picClose);
             this.Controls.Add(this.kryptonPanel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(237)))), ((int)(((byte)(204)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -269,7 +269,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,7 +282,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnLogin;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox ChkbxRemaindMe;
         private System.Windows.Forms.PictureBox picLogo;
-        private System.Windows.Forms.PictureBox Close;
+        private System.Windows.Forms.PictureBox picClose;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;

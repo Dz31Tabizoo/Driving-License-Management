@@ -256,7 +256,7 @@ namespace Project19
             this.toolStripSeparator12,
             this.showPersonLicenseHistoryToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(239, 238);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(239, 260);
             this.contextMenuStrip2.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip2_Opening);
             // 
             // ShowDetailsTSMI
@@ -283,6 +283,7 @@ namespace Project19
             this.AddToolStripMenuItem2.Name = "AddToolStripMenuItem2";
             this.AddToolStripMenuItem2.Size = new System.Drawing.Size(238, 22);
             this.AddToolStripMenuItem2.Text = "Add New Application";
+            this.AddToolStripMenuItem2.Click += new System.EventHandler(this.AddToolStripMenuItem2_Click);
             // 
             // editeApplicationToolStripMenuItem
             // 
@@ -318,6 +319,7 @@ namespace Project19
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
             this.cancelToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
             this.cancelToolStripMenuItem.Text = "Cancel";
+            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.cancelToolStripMenuItem_Click);
             // 
             // toolStripSeparator9
             // 
@@ -345,7 +347,7 @@ namespace Project19
             this.visionTestToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.visionTestToolStripMenuItem1.Image = global::Project19.Properties.Resources.eye__2_;
             this.visionTestToolStripMenuItem1.Name = "visionTestToolStripMenuItem1";
-            this.visionTestToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.visionTestToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.visionTestToolStripMenuItem1.Text = "Vision Test";
             this.visionTestToolStripMenuItem1.Click += new System.EventHandler(this.visionTestToolStripMenuItem1_Click);
             // 
@@ -356,7 +358,7 @@ namespace Project19
             this.writtenTestToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.writtenTestToolStripMenuItem1.Image = global::Project19.Properties.Resources.document;
             this.writtenTestToolStripMenuItem1.Name = "writtenTestToolStripMenuItem1";
-            this.writtenTestToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.writtenTestToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.writtenTestToolStripMenuItem1.Text = "Written Test";
             // 
             // practicalToolStripMenuItem1
@@ -366,7 +368,7 @@ namespace Project19
             this.practicalToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.practicalToolStripMenuItem1.Image = global::Project19.Properties.Resources.steering_wheel;
             this.practicalToolStripMenuItem1.Name = "practicalToolStripMenuItem1";
-            this.practicalToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.practicalToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.practicalToolStripMenuItem1.Text = "Practical Test";
             // 
             // toolStripSeparator10

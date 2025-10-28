@@ -225,7 +225,7 @@ namespace DataAccessLayer
         // To disable Test Type Choises
         public static async Task<bool> CheckIfApplicantHasNoOtherAppointmentNotLocked(int LocaldvAppID,int testTypeID)
         {
-            string query = "Select 1 FROM TestAppointments Where LocalDrivingLicenseApplicationID = @ldvlID AND AND TestTypeID = @testTpID AND IsLocked = 0 ";
+            string query = "Select 1 FROM TestAppointments Where LocalDrivingLicenseApplicationID = @ldvlID AND TestTypeID = @testTpID AND IsLocked = 0 ";
             using (var connection = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
             using (var command = new SqlCommand(query, connection))
             {
