@@ -133,5 +133,30 @@ FROM                     LocalDrivingLicenseApplications l INNER JOIN
                 }
             }
         }
+
+        public static async Task<bool> DeleteLdvlApplication(int ID)
+        {
+            string Query = "DELETE FROM LocalDrivingLicenseApplications WHERE LocalDrivingApplicationID = @LappID;";
+            int RowAffected = 0;
+
+            using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (SqlCommand cmd = new SqlCommand(Query, cnx))
+                {
+                    cmd.Parameters.AddWithValue("@LappID", ID);
+                    try
+                    {
+                        await cnx.OpenAsync();
+
+                        RowAffected = await cmd.ExecuteNonQueryAsync();
+                        return (!(RowAffected == 0));
+                    }
+                    catch
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
     }
 }

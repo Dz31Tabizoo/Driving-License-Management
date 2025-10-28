@@ -304,6 +304,7 @@ namespace Project19
             this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
             this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(238, 22);
             this.deleteToolStripMenuItem1.Text = "Delete ";
+            this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.deleteToolStripMenuItem1_Click);
             // 
             // toolStripSeparator8
             // 

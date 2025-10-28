@@ -194,6 +194,34 @@ namespace Project19
         {
             OpenAddNewLocalDVLApplication();
         }
+
+        private async void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgvApplications.SelectedRows[0];
+            int ldvlAppID = (int)row.Cells["LocalDrivingLicenseApplicationID"].Value;
+
+            clsLocalDrivingLicenseApplication ldvlApp = await clsLocalDrivingLicenseApplication.FindLDVLapplicationById(ldvlAppID);
+
+            DialogResult res = MessageBox.Show("Do you really want to delete this record ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (res == DialogResult.Yes)
+            {
+                if (await clsLocalDrivingLicenseApplication.DeleteLocalDrvAppByIDAsync(ldvlAppID))
+                {
+                    MessageBox.Show("Successful application delete", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    MessageBox.Show("fail application delete : The data is spread across multiple tables.", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                return;
+            }
+
+
+        }
     }
 
 }

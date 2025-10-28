@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PHARMA LOGO FR.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ComponentFactory.Krypton.Docking">
       <HintPath>..\..\..\..\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
@@ -486,6 +489,7 @@
     <None Include="Resources\cancel.png" />
     <None Include="Resources\cancel %281%29.png" />
     <None Include="Resources\check %282%29.png" />
+    <Content Include="PHARMA LOGO FR.ico" />
     <Content Include="Resources\close_RED.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
