@@ -245,7 +245,7 @@ namespace DataAccessLayer
         //to disable Add Appointment
         public static async Task<bool> CheckIfApplicantHasAlreadyAnAppointment(int LocaldvAppID)
         {
-            string query = "Select 1 FROM TestAppointments Where LocalDrivingLicenseApplicationID = @ldvlID AND IsLocked = 0 ";
+            string query = "Select COUNT(*) FROM TestAppointments Where LocalDrivingLicenseApplicationID = @ldvlID AND IsLocked = 1 ";
             using (var connection = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
             using (var command = new SqlCommand(query, connection))
             {
