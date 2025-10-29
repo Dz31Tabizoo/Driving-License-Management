@@ -109,7 +109,7 @@ namespace Project19
         {
             if (dgvApplications.SelectedRows.Count <= 0)
             {
-                MessageBox.Show("Please select a user first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please select an application first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -222,6 +222,94 @@ namespace Project19
 
 
         }
+
+        private void showDrivingLicenseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void ShowDetailsTSMI_Click(object sender, EventArgs e)
+        {
+            if (dgvApplications.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Please select an application first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DataGridViewRow Row = dgvApplications.SelectedRows[0];
+
+            int TestPassed = (int)Row.Cells["PassedTestCount"].Value;
+            int ldvlAppID = (int)Row.Cells["LocalDrivingLicenseApplicationID"].Value;
+
+            clsLocalDrivingLicenseApplication LDVlapp = await clsLocalDrivingLicenseApplication.FindLDVLapplicationById(ldvlAppID);
+            clsApplications app = await clsApplications.FindApplicationByID(LDVlapp.ApplicationID);
+
+            using (var details_form = new Frm_Application_Details(app) )
+            {
+                details_form.ShowDialog();
+            }
+
+        }
+
+        private async void writtenTestToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (dgvApplications.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Please select an application first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DataGridViewRow Row = dgvApplications.SelectedRows[0];
+
+            int TestPassed = (int)Row.Cells["PassedTestCount"].Value;
+            int ldvlAppID = (int)Row.Cells["LocalDrivingLicenseApplicationID"].Value;
+
+            clsLocalDrivingLicenseApplication LDVlapp = await clsLocalDrivingLicenseApplication.FindLDVLapplicationById(ldvlAppID);
+            clsApplications app = await clsApplications.FindApplicationByID(LDVlapp.ApplicationID);
+
+
+            using (var frm = new Frm_View_Shcudueled_Tests(LDVlapp, TestPassed, app, 2))
+            {
+                // (1) is TestTypeID of vision test
+                frm.ShowDialog();
+            }
+            //REFRESH
+            LoadDataGridView();
+        }
+
+        private async void practicalToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (dgvApplications.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("Please select an application first.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DataGridViewRow Row = dgvApplications.SelectedRows[0];
+
+            int TestPassed = (int)Row.Cells["PassedTestCount"].Value;
+            int ldvlAppID = (int)Row.Cells["LocalDrivingLicenseApplicationID"].Value;
+
+            clsLocalDrivingLicenseApplication LDVlapp = await clsLocalDrivingLicenseApplication.FindLDVLapplicationById(ldvlAppID);
+            clsApplications app = await clsApplications.FindApplicationByID(LDVlapp.ApplicationID);
+
+
+            using (var frm = new Frm_View_Shcudueled_Tests(LDVlapp, TestPassed, app, 3))
+            {
+                // (1) is TestTypeID of vision test
+                frm.ShowDialog();
+            }
+            //REFRESH
+            LoadDataGridView();
+        }
+
+
+
+
+
+
+
+
     }
 
 }

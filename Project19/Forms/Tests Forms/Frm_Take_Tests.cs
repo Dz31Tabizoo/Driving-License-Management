@@ -10,17 +10,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayer;
 using ComponentFactory.Krypton.Toolkit;
+using Project19.Forms.Applications.Test_Types;
 
 namespace Project19
 {
     public partial class Frm_Take_Tests : KryptonForm
     {
         private int _TestAppointmentId = -1;
-        public Frm_Take_Tests(clsLocalDrivingLicenseApplication LdvlApp,DateTime AppointmentDate,int TestTypeId,int testAppID)
+        private int _Test_Types = -1;
+        private clsLocalDrivingLicenseApplication _localDvl = null ;
+
+        public Frm_Take_Tests(clsLocalDrivingLicenseApplication LdvlApp,DateTime AppointmentDate,int TestTypeId,int testAppointmentID)
         {
             InitializeComponent();
             LoadLabels(LdvlApp, AppointmentDate, TestTypeId);
-            _TestAppointmentId = testAppID;
+            _TestAppointmentId = testAppointmentID;
+            _Test_Types = TestTypeId;
+            _localDvl = LdvlApp;
         }
 
 
@@ -127,6 +133,46 @@ namespace Project19
                 this.Close();
             }
 
+             LastTestPassed(_Test_Types, _localDvl);
+
         }
+
+
+        private async void LastTestPassed(int testType,clsLocalDrivingLicenseApplication ldvlObj)
+        {
+            if (testType == 3)
+            {
+               clsDrivers driver = new clsDrivers();
+                driver.CreatedByUserID = GlobalSetting.CurrentUser.UserID;
+                driver.CreatedDate = DateTime.Now;
+                driver.PersonID = ldvlObj.Application.Applicant.PersonID;
+                if (await driver.AddNewDriver())
+                {
+                    MessageBox.Show("Congratulation Driver Created", "Succeed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+
+                //set the application as completed 
+                clsLocalDrivingLicenseApplication ldvlApp = ldvlObj;
+
+                if (ldvlApp.Application.ApplicationStatus == clsApplications.enAppStatus.Cancelled)
+                {
+                    MessageBox.Show("Can't Complete canceled applications", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (await clsApplications.UpdateApplicationStatus(ldvlApp.Application.AppID, (byte)clsApplications.enAppStatus.Completed))
+                {
+                    MessageBox.Show("Application Completed ", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
+
+
+
+
     }
 }

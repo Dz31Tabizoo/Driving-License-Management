@@ -268,6 +268,7 @@ namespace Project19
             this.ShowDetailsTSMI.Name = "ShowDetailsTSMI";
             this.ShowDetailsTSMI.Size = new System.Drawing.Size(238, 22);
             this.ShowDetailsTSMI.Text = "Show Application Details";
+            this.ShowDetailsTSMI.Click += new System.EventHandler(this.ShowDetailsTSMI_Click);
             // 
             // toolStripSeparator7
             // 
@@ -348,7 +349,7 @@ namespace Project19
             this.visionTestToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.visionTestToolStripMenuItem1.Image = global::Project19.Properties.Resources.eye__2_;
             this.visionTestToolStripMenuItem1.Name = "visionTestToolStripMenuItem1";
-            this.visionTestToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.visionTestToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.visionTestToolStripMenuItem1.Text = "Vision Test";
             this.visionTestToolStripMenuItem1.Click += new System.EventHandler(this.visionTestToolStripMenuItem1_Click);
             // 
@@ -359,8 +360,9 @@ namespace Project19
             this.writtenTestToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.writtenTestToolStripMenuItem1.Image = global::Project19.Properties.Resources.document;
             this.writtenTestToolStripMenuItem1.Name = "writtenTestToolStripMenuItem1";
-            this.writtenTestToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.writtenTestToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.writtenTestToolStripMenuItem1.Text = "Written Test";
+            this.writtenTestToolStripMenuItem1.Click += new System.EventHandler(this.writtenTestToolStripMenuItem1_Click);
             // 
             // practicalToolStripMenuItem1
             // 
@@ -369,8 +371,9 @@ namespace Project19
             this.practicalToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.practicalToolStripMenuItem1.Image = global::Project19.Properties.Resources.steering_wheel;
             this.practicalToolStripMenuItem1.Name = "practicalToolStripMenuItem1";
-            this.practicalToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
+            this.practicalToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.practicalToolStripMenuItem1.Text = "Practical Test";
+            this.practicalToolStripMenuItem1.Click += new System.EventHandler(this.practicalToolStripMenuItem1_Click);
             // 
             // toolStripSeparator10
             // 
@@ -401,6 +404,7 @@ namespace Project19
             this.showDrivingLicenseToolStripMenuItem1.Name = "showDrivingLicenseToolStripMenuItem1";
             this.showDrivingLicenseToolStripMenuItem1.Size = new System.Drawing.Size(238, 22);
             this.showDrivingLicenseToolStripMenuItem1.Text = "Show Driving License";
+            this.showDrivingLicenseToolStripMenuItem1.Click += new System.EventHandler(this.showDrivingLicenseToolStripMenuItem1_Click);
             // 
             // toolStripSeparator12
             // 
