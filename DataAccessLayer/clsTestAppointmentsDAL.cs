@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -15,20 +16,20 @@ namespace DataAccessLayer
         {
             public int TestAppointId { get; set; }
             public int TestTtypeId { get; set; }
-            public int LocalDLAppID{get; set;}
+            public int LocalDLAppID { get; set; }
             public DateTime AppointDate { get; set; }
-            public decimal  AppointFees { get; set; }
-            public int UserIDApointTaker {  get; set; }
+            public decimal AppointFees { get; set; }
+            public int UserIDApointTaker { get; set; }
             public bool IsLocked { get; set; }
 
             //test
             public int TestID { get; set; }
             public bool TestResult { get; set; }
             public string Notes { get; set; }
-            public int TesterUserID {  get; set; }
+            public int TesterUserID { get; set; }
 
             //TestTypes
-            public int TestTypeID { get;set; }
+            public int TestTypeID { get; set; }
             public string TestTypeTitle { get; set; }
             public string TestDescrip { get; set; }
             public decimal TestTypeFee { get; set; }
@@ -79,7 +80,7 @@ namespace DataAccessLayer
 
             using (SqlConnection cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
             {
-                using (SqlCommand cmd = new SqlCommand(query,cnx))
+                using (SqlCommand cmd = new SqlCommand(query, cnx))
                 {
                     try
                     {
@@ -127,7 +128,7 @@ namespace DataAccessLayer
             }
         }
 
-        public static async Task<DataTable> GetAppointmentByLocalDVL_IDAndTestTypeID(int LDVL_ID,int testType)
+        public static async Task<DataTable> GetAppointmentByLocalDVL_IDAndTestTypeID(int LDVL_ID, int testType)
         {
             DataTable dt = new DataTable();
             string Query = @"SELECT TestAppointmentID , 
@@ -156,7 +157,7 @@ namespace DataAccessLayer
 
         public static async Task<int> AddNewTestAppointmentAsyncDAL(int TestTtypeId, int LocalDLAppID, DateTime AppointDate, decimal AppointFees, int UserIDApointTaker, bool IsLocked = false)
         {
-            string Query = "Insert into TestAppointments (TestTypeID , LocalDrivingLicenseApplicationID , AppointmentDate , PaidFees, CreatedByUserID, IsLocked) "+
+            string Query = "Insert into TestAppointments (TestTypeID , LocalDrivingLicenseApplicationID , AppointmentDate , PaidFees, CreatedByUserID, IsLocked) " +
                 "VALUES (@testTypeID,@LDVLappID,@AppDate,@appFees,@userID, @isLocked);" +
                 "SELECT SCOPE_IDENTITY();";
 
@@ -195,14 +196,14 @@ namespace DataAccessLayer
             }
         }
 
-        public static async Task<bool> UpdateTestAppointmentDateAsyncDAL(int testAppointmentID,DateTime newAppointmentDate)
+        public static async Task<bool> UpdateTestAppointmentDateAsyncDAL(int testAppointmentID, DateTime newAppointmentDate)
         {
             string query = @"UPDATE TestAppointments SET AppointmentDate  = @testAppointmentDate WHERE TestAppointmentID = @testAppId;";
             int RowAffected = -1;
 
             using (var cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
             {
-                using (var cmd = new SqlCommand(query,cnx))
+                using (var cmd = new SqlCommand(query, cnx))
                 {
                     cmd.Parameters.AddWithValue("@testAppId", testAppointmentID);
                     cmd.Parameters.AddWithValue("@testAppointmentDate", newAppointmentDate);
@@ -222,41 +223,21 @@ namespace DataAccessLayer
             }
         }
 
-        // To disable Test Type Choises
-        public static async Task<bool> CheckIfApplicantHasNoOtherAppointmentNotLocked(int LocaldvAppID,int testTypeID)
-        {
-            string query = "Select 1 FROM TestAppointments Where LocalDrivingLicenseApplicationID = @ldvlID AND TestTypeID = @testTpID AND IsLocked = 0 ";
-            using (var connection = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
-            using (var command = new SqlCommand(query, connection))
-            {
-
-                command.Parameters.AddWithValue("@ldvlID", LocaldvAppID);
-                command.Parameters.AddWithValue("@testTpID", testTypeID);
-
-                await connection.OpenAsync();
-
-                // Returns true if any records exist
-                var result = await command.ExecuteScalarAsync();
-                return result != null && result != DBNull.Value;
-
-            }
-        }
-
-        //to disable Add Appointment
+       
         public static async Task<bool> CheckIfApplicantHasAlreadyAnAppointment(int LocaldvAppID)
         {
-            string query = "Select COUNT(*) FROM TestAppointments Where LocalDrivingLicenseApplicationID = @ldvlID AND IsLocked = 1 ";
+            string query = "Select COUNT(*) FROM TestAppointments Where LocalDrivingLicenseApplicationID = @ldvlID AND IsLocked = 0 ";
             using (var connection = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
             using (var command = new SqlCommand(query, connection))
             {
 
                 command.Parameters.AddWithValue("@ldvlID", LocaldvAppID);
-                
+
                 await connection.OpenAsync();
 
                 // Returns true if any records exist
-                var result = await command.ExecuteScalarAsync();
-                return result != null && result != DBNull.Value;
+                var result = (int)await command.ExecuteScalarAsync();
+                return result > 0;
 
             }
         }
@@ -267,7 +248,7 @@ namespace DataAccessLayer
             int Trails = 0;
             using (var cnx = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
             {
-                using (var cmd = new SqlCommand(query,cnx))
+                using (var cmd = new SqlCommand(query, cnx))
                 {
                     cmd.Parameters.AddWithValue("@testTypeId", TestType);
                     cmd.Parameters.AddWithValue("@LdvlAppiD", localDVApplicationID);
@@ -279,9 +260,9 @@ namespace DataAccessLayer
 
                         return Trails;
                     }
-                    catch 
+                    catch
                     {
-                        return 0; 
+                        return 0;
                     }
 
                 }
@@ -293,30 +274,63 @@ namespace DataAccessLayer
 
         }
 
-        public static async Task<bool> isApplicantHasDoneThisTypeOfTest(int localDvAppID,int testType)
+        public static async Task<bool> IsApplicantHasDoneThisTypeOfTestOnLicenceClassAsync(int localDvAppID, int testType, int licenseClassID)
         {
-            string query = @"SELECT CASE 
-                                  WHEN EXISTS 
-                                                (SELECT 1 From Tests inner join TestAppointments 
-                                                   On Tests.TestAppointmentID = TestAppointments.TestAppointmentID 
-                                                           Where TestAppointments.LocalDrivingLicenseApplicationID= @ldrvAppID 
-                                                                  and  Tests.TestResult = 1 
-                                                                  and TestAppointments.TestTypeID = @testTypeID )
-                                         THEN CAST (1 AS BIT)  
-                                         ELSE CAST (0 AS BIT)  End as result";
+            const string query = @"
+        SELECT COUNT(*)
+        FROM Tests 
+        INNER JOIN TestAppointments 
+            ON Tests.TestAppointmentID = TestAppointments.TestAppointmentID 
+        INNER JOIN LocalDrivingLicenseApplications 
+            ON TestAppointments.LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID
+        WHERE TestAppointments.LocalDrivingLicenseApplicationID = @ldrvAppID 
+            AND Tests.TestResult = 1 
+            AND LocalDrivingLicenseApplications.LicenseClassID = @licenseClassId
+            AND TestAppointments.TestTypeID = @testTypeID";
 
             using (var connection = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
-            using (var command = new SqlCommand(query, connection))
             {
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.Add("@ldrvAppID", SqlDbType.Int).Value = localDvAppID;
+                    command.Parameters.Add("@testTypeID", SqlDbType.Int).Value = testType;
+                    command.Parameters.Add("@licenseClassId", SqlDbType.Int).Value = licenseClassID;
+                    await connection.OpenAsync();
 
-                command.Parameters.AddWithValue("@ldrvAppID", localDvAppID);
-                command.Parameters.AddWithValue("@testTypeID", testType);
+                    var count = (int)await command.ExecuteScalarAsync();
+                    return count > 0;
+                }
+            }
 
-                await connection.OpenAsync();
+        }
 
-                // Returns true if any records exist
-                return (bool) await command.ExecuteScalarAsync();
+        public static async Task<bool> IsPreviousTestsIsFailAsync(int localDrivingLicenseApplicationID,int testTypeId)
+        {
+            const string query = @"
+        SELECT CAST(
+            CASE WHEN EXISTS (
+                SELECT 1 
+                FROM TestAppointments 
+                INNER JOIN Tests 
+                    ON TestAppointments.TestAppointmentID = Tests.TestAppointmentID
+                WHERE LocalDrivingLicenseApplicationID = @localDrivingLicenseApplicationID 
+                    AND TestTypeID = @testTypeID 
+                    AND TestResult = 0
+            ) THEN 1 ELSE 0 END 
+        AS BIT)";
 
+            using (var connection = new SqlConnection(clsDataAccessSettings.ConnectionAddress))
+            {
+                using (var command = new SqlCommand(query, connection))
+                {
+
+                    command.Parameters.Add("@localDrivingLicenseApplicationID", SqlDbType.Int).Value = localDrivingLicenseApplicationID;
+                    command.Parameters.Add("@testTypeID", SqlDbType.Int).Value = testTypeId;
+
+                    await connection.OpenAsync();
+
+                    return (bool)await command.ExecuteScalarAsync();
+                }
             }
         }
 

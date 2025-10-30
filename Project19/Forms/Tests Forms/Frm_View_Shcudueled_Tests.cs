@@ -18,6 +18,7 @@ namespace Project19
         
         private clsApplications _app = new clsApplications();
         private int _testTypeID = -1;
+        private bool _IsPriviousFailed = false;
         
         public Frm_View_Shcudueled_Tests(clsLocalDrivingLicenseApplication localApp ,int testPassed, clsApplications application,int TestType)
         {
@@ -48,7 +49,7 @@ namespace Project19
         private async void btnAddApointment_Click(object sender, EventArgs e)
         {
 
-            if ( await clsTestAppointment.IsApplicantHasPassedTypeOfTest(_LDVLAPP.LocalDrivingLicenseApplicationID, _testTypeID))
+            if ( await clsTestAppointment.IsApplicantHasPassedTypeOfTest(_LDVLAPP.LocalDrivingLicenseApplicationID, _testTypeID,_LDVLAPP.LicenseClassID))
             {
                 MessageBox.Show("▬ The applicant has Passed this Test Type ▬", "Appointment Failed", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
@@ -58,13 +59,13 @@ namespace Project19
                 MessageBox.Show("▬ The applicant has already an appointment ▬", "Appointment Failed", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             }
+
+            _IsPriviousFailed = await clsTestAppointment.IsPriviousTestFailed(_LDVLAPP.LocalDrivingLicenseApplicationID,_testTypeID);
             
-
-
             var LicenseClass = await clsLicenseClasses.GetLicenseClassObjByIDAsync(_LDVLAPP.LicenseClassID);
             var LdvlApp = new clsLocalDrivingLicenseApplication(_LDVLAPP.LocalDrivingLicenseApplicationID,_app,LicenseClass);
 
-            using (Form FRM = new Frm_shcedule_Test(LdvlApp,_testTypeID))
+            using (Form FRM = new Frm_shcedule_Test(LdvlApp,_testTypeID,_IsPriviousFailed))
             {
                 FRM.ShowDialog();
             }

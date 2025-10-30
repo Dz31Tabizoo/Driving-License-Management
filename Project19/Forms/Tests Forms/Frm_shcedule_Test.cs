@@ -23,9 +23,10 @@ namespace Project19
         private bool _ToEdit = false;
 
         private int _TestAppID = -1;
+        private bool _retake = false;
 
 
-        public Frm_shcedule_Test(clsLocalDrivingLicenseApplication ldvlApp,int testTypID,bool locked = false,bool Edit = false,int testAppID = -1)
+        public Frm_shcedule_Test(clsLocalDrivingLicenseApplication ldvlApp,int testTypID,bool retake,bool locked = false,bool Edit = false,int testAppID = -1)
         {
             InitializeComponent();
             LoadLabels(ldvlApp,testTypID,locked);
@@ -33,6 +34,7 @@ namespace Project19
             _LDVLAPP = ldvlApp;
             _ToEdit = Edit;
             _TestAppID = testAppID;
+            _retake = retake;
         }
 
         //Create OBject To Save
@@ -43,7 +45,13 @@ namespace Project19
                 Tapp.TestAppointmentDate = dtpAppointmentDateSelect.Value.Date;
                 Tapp.CreatedUSerID = GlobalSetting.CurrentUser.UserID;
                 Tapp.TestTypeID = _TestTypeID;
-                Tapp.LDLA_ID = ldvl.LocalDrivingLicenseApplicationID;
+
+            if (_retake)
+            {
+                // to DO
+            }
+
+            Tapp.LDLA_ID = ldvl.LocalDrivingLicenseApplicationID;
                 Tapp.PaidFees = clsTestTypes.GetTestTypeByID(_TestTypeID).TestFee;
                 _NewTestApp = Tapp;
 

@@ -145,16 +145,16 @@ namespace Project19
                 // enable or disable context menu strip items 
             }
 
-            if (!await clsTestAppointment.IsApplicantHasPassedTypeOfTest(ldvlAppID,1))
+            if (!await clsTestAppointment.IsApplicantHasPassedTypeOfTest(ldvlAppID,1,ldvlApp.LicenseClassID))
             {
                 visionTestToolStripMenuItem1.Enabled = true;
             }
-            else if (!await clsTestAppointment.IsApplicantHasPassedTypeOfTest(ldvlAppID,2))
+            else if (!await clsTestAppointment.IsApplicantHasPassedTypeOfTest(ldvlAppID,2, ldvlApp.LicenseClassID))
             {
                 writtenTestToolStripMenuItem1.Enabled = true;
                                 
             }
-            else if (!await clsTestAppointment.IsApplicantHasPassedTypeOfTest(ldvlAppID,3))
+            else if (!await clsTestAppointment.IsApplicantHasPassedTypeOfTest(ldvlAppID,3, ldvlApp.LicenseClassID))
             {
                 practicalToolStripMenuItem1.Enabled = true;
             }
