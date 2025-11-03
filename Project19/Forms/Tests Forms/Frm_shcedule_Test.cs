@@ -37,23 +37,37 @@ namespace Project19
             _retake = retake;
         }
 
-        //Create OBject To Save
-        private void CreateNEwAppointment(clsLocalDrivingLicenseApplication ldvl)
-        {            
-                clsTestAppointment Tapp = new clsTestAppointment();
+        //Create Object To Save
+        private async void CreateNEwAppointment(clsLocalDrivingLicenseApplication ldvl)
+        {
+            clsTestAppointment Tapp = new clsTestAppointment();
 
-                Tapp.TestAppointmentDate = dtpAppointmentDateSelect.Value.Date;
-                Tapp.CreatedUSerID = GlobalSetting.CurrentUser.UserID;
-                Tapp.TestTypeID = _TestTypeID;
+            Tapp.TestAppointmentDate = dtpAppointmentDateSelect.Value.Date;
+            Tapp.CreatedUSerID = GlobalSetting.CurrentUser.UserID;
+            Tapp.TestTypeID = _TestTypeID;
+            Tapp.LDLA_ID = ldvl.LocalDrivingLicenseApplicationID;
+            Tapp.PaidFees = clsTestTypes.GetTestTypeByID(_TestTypeID).TestFee;
+            _NewTestApp = Tapp;
+
+
 
             if (_retake)
             {
-                // to DO
+                clsApplications RetakeAplic = new clsApplications();
+
+                RetakeAplic.Applicant = ldvl.Application.Applicant;
+                RetakeAplic.AppType = clsApplicationTypes.FindAppTypeBtID(8); // 8 for retake
+                RetakeAplic.CreatedByUser = GlobalSetting.CurrentUser;
+                RetakeAplic.PaidFees = RetakeAplic.AppType.ApplicationFee;
+                if (await RetakeAplic.Save())
+                {
+                    lblRetakeAppId.Text = RetakeAplic.AppID.ToString();
+                }
             }
 
-            Tapp.LDLA_ID = ldvl.LocalDrivingLicenseApplicationID;
-                Tapp.PaidFees = clsTestTypes.GetTestTypeByID(_TestTypeID).TestFee;
-                _NewTestApp = Tapp;
+
+
+
 
         }
 
@@ -73,6 +87,13 @@ namespace Project19
             else if(_ToEdit)
             {
                 btnSaveAppointmentDateTest.Text = "Edit";
+            }
+
+            if (_retake)
+            {
+                clsTestTypes tp = clsTestTypes.GetTestTypeByID(testTypeid);
+                lbl_RetakeFeesOutput.Text = "5.00 $"; 
+                lblTotalFeesOut.Text = $"{5 + tp.TestFee}";
             }
         }
 

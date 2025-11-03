@@ -97,7 +97,7 @@ namespace Project19
             bool isLocked = (bool)row.Cells["IsLocked"].Value;
             int testAppointmentID = (int)row.Cells["TestAppointmentID"].Value;
 
-            using (Form FRM = new Frm_shcedule_Test(_LDVLAPP, _testTypeID,isLocked,true,testAppointmentID))
+            using (Form FRM = new Frm_shcedule_Test(_LDVLAPP, _testTypeID,isLocked,true,true,testAppointmentID))
             {
                 FRM.ShowDialog();
 

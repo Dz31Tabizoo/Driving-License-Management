@@ -48,12 +48,19 @@
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.lblFormTitle = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblShowCantUpdate = new System.Windows.Forms.Label();
+            this.lbl_RetakeFeesOutput = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblFees = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblTotalFeesOut = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblretakeApp_IdOut = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblRetakeAppId = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbRetakInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbRetakInfo.Panel)).BeginInit();
+            this.gbRetakInfo.Panel.SuspendLayout();
             this.gbRetakInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -153,7 +160,7 @@
             // 
             // lbl_ApplicantOutput
             // 
-            this.lbl_ApplicantOutput.Location = new System.Drawing.Point(244, 50);
+            this.lbl_ApplicantOutput.Location = new System.Drawing.Point(255, 50);
             this.lbl_ApplicantOutput.Name = "lbl_ApplicantOutput";
             this.lbl_ApplicantOutput.Size = new System.Drawing.Size(69, 24);
             this.lbl_ApplicantOutput.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
@@ -164,7 +171,7 @@
             // 
             // lblApplicant
             // 
-            this.lblApplicant.Location = new System.Drawing.Point(119, 50);
+            this.lblApplicant.Location = new System.Drawing.Point(140, 50);
             this.lblApplicant.Name = "lblApplicant";
             this.lblApplicant.Size = new System.Drawing.Size(109, 26);
             this.lblApplicant.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
@@ -322,7 +329,16 @@
             this.gbRetakInfo.Enabled = false;
             this.gbRetakInfo.Location = new System.Drawing.Point(12, 278);
             this.gbRetakInfo.Name = "gbRetakInfo";
-            this.gbRetakInfo.Size = new System.Drawing.Size(506, 102);
+            // 
+            // gbRetakInfo.Panel
+            // 
+            this.gbRetakInfo.Panel.Controls.Add(this.lblretakeApp_IdOut);
+            this.gbRetakInfo.Panel.Controls.Add(this.lblRetakeAppId);
+            this.gbRetakInfo.Panel.Controls.Add(this.lblTotalFeesOut);
+            this.gbRetakInfo.Panel.Controls.Add(this.kryptonLabel2);
+            this.gbRetakInfo.Panel.Controls.Add(this.lbl_RetakeFeesOutput);
+            this.gbRetakInfo.Panel.Controls.Add(this.lblFees);
+            this.gbRetakInfo.Size = new System.Drawing.Size(506, 113);
             this.gbRetakInfo.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.gbRetakInfo.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.gbRetakInfo.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
@@ -370,6 +386,72 @@
             this.lblShowCantUpdate.Text = "Can\'t edite locked Appointments";
             this.lblShowCantUpdate.Visible = false;
             // 
+            // lbl_RetakeFeesOutput
+            // 
+            this.lbl_RetakeFeesOutput.Location = new System.Drawing.Point(144, 11);
+            this.lbl_RetakeFeesOutput.Name = "lbl_RetakeFeesOutput";
+            this.lbl_RetakeFeesOutput.Size = new System.Drawing.Size(54, 20);
+            this.lbl_RetakeFeesOutput.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.lbl_RetakeFeesOutput.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.lbl_RetakeFeesOutput.TabIndex = 59;
+            this.lbl_RetakeFeesOutput.Values.Text = "XXXXXX";
+            // 
+            // lblFees
+            // 
+            this.lblFees.Location = new System.Drawing.Point(17, 8);
+            this.lblFees.Name = "lblFees";
+            this.lblFees.Size = new System.Drawing.Size(129, 26);
+            this.lblFees.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblFees.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblFees.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFees.TabIndex = 58;
+            this.lblFees.Values.Image = global::Project19.Properties.Resources.coin;
+            this.lblFees.Values.Text = " Retake Fees :";
+            // 
+            // lblTotalFeesOut
+            // 
+            this.lblTotalFeesOut.Location = new System.Drawing.Point(406, 11);
+            this.lblTotalFeesOut.Name = "lblTotalFeesOut";
+            this.lblTotalFeesOut.Size = new System.Drawing.Size(54, 20);
+            this.lblTotalFeesOut.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.lblTotalFeesOut.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.lblTotalFeesOut.TabIndex = 61;
+            this.lblTotalFeesOut.Values.Text = "XXXXXX";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(283, 8);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(117, 26);
+            this.kryptonLabel2.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.kryptonLabel2.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.kryptonLabel2.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonLabel2.TabIndex = 60;
+            this.kryptonLabel2.Values.Image = global::Project19.Properties.Resources.coin;
+            this.kryptonLabel2.Values.Text = " Total Fees :";
+            // 
+            // lblretakeApp_IdOut
+            // 
+            this.lblretakeApp_IdOut.Location = new System.Drawing.Point(283, 52);
+            this.lblretakeApp_IdOut.Name = "lblretakeApp_IdOut";
+            this.lblretakeApp_IdOut.Size = new System.Drawing.Size(54, 20);
+            this.lblretakeApp_IdOut.StateCommon.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.lblretakeApp_IdOut.StateCommon.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(102)))));
+            this.lblretakeApp_IdOut.TabIndex = 63;
+            this.lblretakeApp_IdOut.Values.Text = "XXXXXX";
+            // 
+            // lblRetakeAppId
+            // 
+            this.lblRetakeAppId.Location = new System.Drawing.Point(105, 49);
+            this.lblRetakeAppId.Name = "lblRetakeAppId";
+            this.lblRetakeAppId.Size = new System.Drawing.Size(177, 26);
+            this.lblRetakeAppId.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblRetakeAppId.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(75)))), ((int)(((byte)(99)))));
+            this.lblRetakeAppId.StateNormal.ShortText.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRetakeAppId.TabIndex = 62;
+            this.lblRetakeAppId.Values.Image = global::Project19.Properties.Resources.indesign;
+            this.lblRetakeAppId.Values.Text = " Retake Test App.ID :";
+            // 
             // Frm_shcedule_Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,6 +486,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbRetakInfo.Panel)).EndInit();
+            this.gbRetakInfo.Panel.ResumeLayout(false);
+            this.gbRetakInfo.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gbRetakInfo)).EndInit();
             this.gbRetakInfo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
@@ -435,5 +519,11 @@
         private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblFormTitle;
         private System.Windows.Forms.Label lblShowCantUpdate;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblTotalFeesOut;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl_RetakeFeesOutput;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblFees;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblretakeApp_IdOut;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblRetakeAppId;
     }
 }

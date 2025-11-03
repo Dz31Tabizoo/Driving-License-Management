@@ -17,6 +17,7 @@ namespace BusinessLayer
 
 
         public clsApplicationTypes() { }
+
         public clsApplicationTypes (int appID,string appTitle, decimal appFee)
         {
             this.ApplicationTypeID = appID;
